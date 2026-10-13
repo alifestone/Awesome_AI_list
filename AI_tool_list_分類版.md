@@ -23,6 +23,7 @@
     - **[FreeCAD MCP](https://github.com/neka-nat/freecad-mcp)** — 讓 AI 透過 MCP 操作 FreeCAD。
     - **[Rhino MCP](https://github.com/jingcheng-chen/rhinomcp)** — 讓 AI 透過 MCP 操作 Rhino。
     - **[MAC – Multi-Agent CAD](https://github.com/Pan-Chera/Multi-Agent-CAD)** — 四個 agent 分工的 text-to-CAD（build123d），直接輸出可列印的 STEP/STL，token 用量約為單一 agent 的 1/116。
+    - **[USD BRep](https://github.com/NVIDIA-Omniverse/usd-brep)** — NVIDIA Omniverse 開源的 NURBS BRep 實體建模函式庫（C++／Python），可原生匯入匯出 OpenUSD；附 text-to-3D 資產生成的 agent skill。
 - **Blender × Agent**
     - **[cc-blender-skill](https://github.com/RobLe3/cc-blender-skill)** — Claude Code skill 外掛，經 Blender MCP 用自然語言建模、上材質、打光、運鏡、渲染、做動畫與匯出。
     - **[TheLongSilence](https://github.com/achimala/TheLongSilence)** — Claude Opus 5 做的瀏覽器太空探索遊戲；repo 裡附有 `.claude/skills/blender-hardsurface` 硬表面建模 skill（原清單收錄的應是這個）。
