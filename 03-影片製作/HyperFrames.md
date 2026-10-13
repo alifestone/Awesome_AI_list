@@ -93,10 +93,10 @@ npx hyperframes add data-chart
 
 ## 相關工具
 
-- Remotion（React 版的程式化影片框架，README 有比較表）
+- [Remotion](Remotion.md)：React 版的程式化影片框架，README 有比較表
 - [OpenMontage](OpenMontage.md)：把 HyperFrames 當作其中一種渲染 runtime
 - [onetake](onetake.md)、[PDoomVideo](PDoomVideo.md)：同樣以 HTML 與 headless Chrome 渲染動畫
-- GSAP、Lottie、Three.js
+- [GSAP Skills](../04-設計---前端/GSAP-Skills.md)、Lottie、Three.js
 
 ## 資料來源
 
