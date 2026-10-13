@@ -1,6 +1,6 @@
 # AI tool list（重新分類版）
 
-> 依「用途」重新分組，每項附一句說明。整理日期：2026-10-13。
+> 依「用途」重新分組，每項附一句說明。整理日期：2026-10-14。
 > 標 ⚠️ 的是需要留意的地方；標「（依名稱判斷）」的是查不到詳細資料、只能從名稱推測的項目。
 
 ---
@@ -48,10 +48,16 @@
     - **[HyperFrames](https://github.com/heygen-com/hyperframes)**（HeyGen）— 寫 HTML/CSS/動畫，渲染成確定性 MP4，專為 AI agent 設計。Apache-2.0。
     - **[onetake](https://github.com/feitangyuan/onetake)** — Claude Agent Skill，做「一鏡到底」的產品發表片、預告與功能演示動效。⚠️ PolyForm Noncommercial（非商用）。
     - **[PDoomVideo](https://github.com/JohnHeibel/PDoomVideo)** — Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式化動畫參考。
+    - **[Remotion](https://github.com/remotion-dev/remotion)** — 用 React 元件寫影片的老牌框架，有官方 agent skills；也是 Cinetic、OpenMontage 的渲染引擎。⚠️ 自訂授權：個人與 3 人以下公司免費，較大的公司需付費。
+    - **[Cinetic](https://github.com/Leonxlnx/cinetic)** — 讓 coding agent「導演」短片的 skill：先構思故事，再定品牌、配樂、渲染，最後由多個評審角色檢查。MIT。
 - **剪輯 / 處理**
     - **[ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill)** — 給 coding agent 的本地 FFmpeg 剪輯 skill：剪接、字幕、響度、調色、平台交付檢查等 42 個工具，也可當 MCP。
+    - **[ChatCut](https://github.com/ChatCut-Inc/agent-plugin)** — 線上對話式剪輯服務；agent-plugin 讓 coding agent 透過 MCP 直接改 ChatCut 雲端專案的時間軸。商業服務。
+    - **[Palmier Pro](https://github.com/palmier-io/palmier-pro)** — 為 AI 打造的 macOS 剪輯軟體，內建 AI 生成並開放 MCP，agent 和人可以編輯同一條時間軸。⚠️ v0.7.6 之後改為專有授權。
+    - **[Higgsfield MCP](https://higgsfield.ai/mcp)** — 讓 Claude 不需 API key 呼叫 30 多個圖像／影片模型，再串 Blender、After Effects，交付可繼續編輯的 AE 專案。商業服務。
 - **影片理解**
     - **[claude-video（/watch）](https://github.com/bradautomates/claude-video)** — 讓 Claude「看」影片：下載、抽幀、轉錄後交給模型分析。
+    - **[hook-lab](https://github.com/hongfamonvAI/hook-lab)** — Claude Code skill：拆解 TikTok／Reels／Shorts 的開場鉤子、腳本結構與爆紅原因，並給小紅書、視頻號的改寫方向。MIT。
 
 ---
 
@@ -59,6 +65,8 @@
 
 - **[MotionSites](https://motionsites.ai/)** — 給 Lovable、Bolt、Cursor、Claude 用的高質感（3D／動態）網站 prompt 庫，另有 MCP。
 - **[open-slide](https://github.com/open-slide/open-slide)** — 為 AI agent 打造的簡報框架：用自然語言描述，由 Claude Code 等 agent 寫 React 投影片，可匯出 HTML／PDF／PPTX。MIT。
+- **[GSAP Skills](https://github.com/greensock/gsap-skills)**（GreenSock）— 官方給 coding agent 的 GSAP 動畫 skill 組：時間軸、ScrollTrigger、外掛與框架整合。MIT。
+- **[Hairline](https://github.com/lucasmarkes/hairline)** — 會回應滑鼠的細線等角互動插圖（React 元件），附 `hairline-create` skill 讓 agent 畫出風格一致的新圖形。MIT。
 
 ## 🎵 音訊
 
@@ -169,3 +177,4 @@
 - 補上 Qwen-Image-2.1、onetake 的授權提醒。
 - 「待確認」區的 OpenSlide 原本連到數位病理函式庫，已更正為簡報框架 [open-slide](https://github.com/open-slide/open-slide)，移回設計 / 前端。
 - 資安區新增 7 項：open-kritt、Nuclei、Nuclei MCP、Pentest Swarm AI、Claude-Red、OWASP CVE Lite CLI、Foundry Security Spec，以及 yao-meta-skill 的 security 政策。
+- 影片製作新增 6 項：Remotion、Cinetic、ChatCut、Palmier Pro、Higgsfield MCP、hook-lab；設計 / 前端新增 GSAP Skills、Hairline。

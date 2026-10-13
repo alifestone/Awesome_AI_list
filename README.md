@@ -31,6 +31,8 @@
 
 每個檔案包含：分類、連結、原清單說明、概述、核心功能、技術架構或運作原理、安裝與使用方式、適用情境、授權與成本、限制與注意事項、相關工具、資料來源。
 
+每個分類資料夾另有一份 `README.md`，簡介該類每個條目在做什麼、可以做到什麼，並附「怎麼挑」的建議。
+
 ### 注意事項
 
 - 標有「資料不足」的段落代表公開資料查不到，並非遺漏。
@@ -66,6 +68,8 @@ A categorized list of AI tools, models, and learning resources, grouped by purpo
 ### Entry format
 
 Each file contains: category, link, original one-line description, overview, key features, architecture or how it works, installation and usage, use cases, license and cost, limitations and caveats, related tools, and sources.
+
+Each category folder also has a `README.md` that briefly explains what each entry does and what it can be used for, with tips on choosing between them (in Traditional Chinese).
 
 ### Notes
 
