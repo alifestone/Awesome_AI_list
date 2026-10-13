@@ -57,6 +57,7 @@
 ## 🎨 設計 / 前端
 
 - **[MotionSites](https://motionsites.ai/)** — 給 Lovable、Bolt、Cursor、Claude 用的高質感（3D／動態）網站 prompt 庫，另有 MCP。
+- **[open-slide](https://github.com/open-slide/open-slide)** — 為 AI agent 打造的簡報框架：用自然語言描述，由 Claude Code 等 agent 寫 React 投影片，可匯出 HTML／PDF／PPTX。MIT。
 
 ## 🎵 音訊
 
@@ -109,6 +110,16 @@
 - **滲透測試**
     - **[Pentest Copilot](https://github.com/bugbasesecurity/pentest-copilot)**（BugBase）— AI 滲透測試助手。
     - **[ARTEX](https://github.com/mhtsec/ARTEX)** — AI 自主滲透測試系統，百度「agent+」攻防挑戰賽冠軍專案。AGPL-3.0。
+    - **[Pentest Swarm AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)**（Armur AI）— 以 AI agent 蜂群對 API／網頁應用做自主滲透測試，自稱 XBOW 的開源替代。多項功能仍為 alpha／beta。AGPL-3.0。
+    - **[Claude-Red](https://github.com/SnailSploit/Claude-Red)** — 攻擊性資安的 Claude Skills 集合（78 個 skill、23 類）。⚠️ 高度雙重用途，僅限授權測試。MIT。
+- **程式碼漏洞研究 / 弱點掃描**
+    - **[open-kritt](https://github.com/Kritt-ai/open-kritt)** — 自架的 AI 漏洞研究平台：把研究拆成小任務，交給 Codex／Claude Code 平行執行，再驗證、排序與去重。AGPL-3.0。
+    - **[Nuclei](https://github.com/projectdiscovery/nuclei)**（ProjectDiscovery）— 以 YAML 模板為基礎的弱點掃描器，支援以 AI prompt 產生模板與 LLM 語意比對。MIT。（原清單誤拼為「nulcei」）
+    - **[Nuclei MCP](https://github.com/addcontent/nuclei-mcp)** — 第三方 MCP server，讓 AI 呼叫 Nuclei 掃描與管理模板。⚠️ 早期專案，README 有佔位符連結。MIT。
+    - **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli)** — 本機執行的 JS/TS 相依套件弱點掃描，直接給出修正指令；支援 SARIF、SBOM、離線模式。本身不是 AI 工具。MIT。
+- **AI agent 安全規格 / 治理**
+    - **[Foundry Security Spec](https://github.com/CiscoDevNet/foundry-security-spec)**（Cisco）— 打造 agentic 安全評估系統的開放規格：8 個核心 agent 角色、11 條憲章原則，搭配 spec-kit 產生實作。不是現成工具。CC BY 4.0。
+    - **[yao-meta-skill / security](https://github.com/yaojingang/yao-meta-skill/tree/main/security)** — skill 製作工具 yao-meta-skill 的供應鏈安全政策：網路、檔案寫入、子程序權限核准與發布前信任報告。MIT。
 - **LLM 測試 / 紅隊**
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
 
@@ -147,12 +158,6 @@
 
 ---
 
-## ❓ 待確認
-
-- **[OpenSlide](https://github.com/openslide/openslide)** — 這是讀取數位病理「全切片影像（WSI）」的 C 函式庫，和簡報／設計無關。原本放在 Design，可能是存錯連結；如果想找的是做投影片的工具，建議換掉。
-
----
-
 ## 📝 這次整理改了什麼
 
 - 合併重複的分類（Robotic / Robotics）與重複項目（Hyperframe 出現兩次）。
@@ -161,3 +166,5 @@
 - 修正 quackd 的描述（Microduck，而非 LeRobot）；TheLongSilence 標明收錄的是裡面的 Blender 硬表面 skill。
 - 移除 Hyper3D 連結裡的廣告追蹤參數。
 - 補上 Qwen-Image-2.1、onetake 的授權提醒。
+- 「待確認」區的 OpenSlide 原本連到數位病理函式庫，已更正為簡報框架 [open-slide](https://github.com/open-slide/open-slide)，移回設計 / 前端。
+- 資安區新增 7 項：open-kritt、Nuclei、Nuclei MCP、Pentest Swarm AI、Claude-Red、OWASP CVE Lite CLI、Foundry Security Spec，以及 yao-meta-skill 的 security 政策。
