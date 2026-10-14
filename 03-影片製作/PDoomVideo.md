@@ -66,6 +66,7 @@ node render.mjs --encode --out=out/pdoom.mp4   # 合併畫面與歌曲輸出 MP4
 
 - [HyperFrames](HyperFrames.md)：通用的 HTML → 影片框架
 - [onetake](onetake.md)：以 HTML 與 headless Chrome 製作動態影片的 agent skill
+- [AutoMV](AutoMV.md)：多 agent 用影片生成模型從整首歌產生 MV，與本專案的程式化路線互補
 - p5.js、p5.brush、Puppeteer、ffmpeg
 - ClaudeAnimationBase（同一位作者的通用基底，未查證）
 

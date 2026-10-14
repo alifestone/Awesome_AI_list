@@ -39,6 +39,24 @@
 - 學習 LLM 結構化輸出串 ComfyUI、FFmpeg 的流水線寫法。
 - 當自建 AI 分鏡／短劇產生器的起點；還不能直接產出可發布的成片。
 
+### [OpenDirector](OpenDirector.md)
+
+自架的 AI 影片工作室：輸入一句構想，9 個 LangGraph agent 依序產出研究、故事、分鏡、角色、配音與配樂，再渲染成片；另有用素材庫量產短影音的批次模式。Docker 一鍵部署。LGPL-3.0。
+
+可以做到：
+- 從一句話做出有角色、分鏡、旁白的短故事影片（以靜態分鏡圖為主）。
+- 用 34 種內建美術風格統一畫面，分鏡可預覽、腳本可手改。
+- 批次產出知識型短影音，資料都留在自己的伺服器。
+
+### [AutoMV](AutoMV.md)
+
+輸入一整首歌，自動生成長篇音樂 MV 的多 agent 研究系統：先分析段落、人聲與歌詞，再由編劇、導演、驗證 agent 協作，用角色庫維持角色一致，演唱鏡頭會對嘴。附論文與評測基準。Apache-2.0。
+
+可以做到：
+- 為獨立音樂人的歌做出有故事、有對嘴鏡頭的 MV 初稿（論文估計每首約 $10–20、30 分鐘）。
+- 研究音樂轉影片、長片角色一致性的做法。
+- 用 12 項基準評測自己的 MV 生成系統。
+
 ## 程式化動畫 / HTML → 影片
 
 ### [Remotion](Remotion.md)
@@ -143,7 +161,8 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 
 ## 怎麼挑
 
-- **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）。
+- **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）。
+- **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。

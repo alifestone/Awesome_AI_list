@@ -44,6 +44,8 @@
     - **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md)** — 輸入主題，自動產生文案、素材、字幕、配音與背景音樂的短影音生成器。
     - **[video-autopilot-kit](https://github.com/Hao0321/video-autopilot-kit)** — YouTube／短影音自動化框架（繁中文件）：長片、Shorts、訪談三條產線，ffmpeg QA，問卷式填入自己頻道的設定。
     - **[AI video drama platform](https://github.com/dc-tw/ai-video-drama-platform)** — AI 短劇製作平台（依名稱判斷）。
+    - **[OpenDirector](https://github.com/seme-org/open-director)** — 自架的 AI 影片工作室：一句話 → 9 個 agent 產出故事、分鏡、角色、配音與配樂並渲染；另有批次量產短影音模式。Docker 部署。LGPL-3.0。
+    - **[AutoMV](https://github.com/multimodal-art-projection/AutoMV)**（M-A-P，arXiv 2512.12196）— 輸入整首歌生成長篇 MV 的多 agent 系統：音樂分析 → 編劇／導演 agent → 關鍵幀與影片生成（含對嘴）→ 驗證。依賴豆包、即夢、Gemini 等 API。Apache-2.0。
 - **程式化動畫 / HTML → 影片**
     - **[HyperFrames](https://github.com/heygen-com/hyperframes)**（HeyGen）— 寫 HTML/CSS/動畫，渲染成確定性 MP4，專為 AI agent 設計。Apache-2.0。
     - **[onetake](https://github.com/feitangyuan/onetake)** — Claude Agent Skill，做「一鏡到底」的產品發表片、預告與功能演示動效。⚠️ PolyForm Noncommercial（非商用）。
@@ -178,3 +180,4 @@
 - 「待確認」區的 OpenSlide 原本連到數位病理函式庫，已更正為簡報框架 [open-slide](https://github.com/open-slide/open-slide)，移回設計 / 前端。
 - 資安區新增 7 項：open-kritt、Nuclei、Nuclei MCP、Pentest Swarm AI、Claude-Red、OWASP CVE Lite CLI、Foundry Security Spec，以及 yao-meta-skill 的 security 政策。
 - 影片製作新增 6 項：Remotion、Cinetic、ChatCut、Palmier Pro、Higgsfield MCP、hook-lab；設計 / 前端新增 GSAP Skills、Hairline。
+- 影片製作新增 2 項：OpenDirector、AutoMV。
