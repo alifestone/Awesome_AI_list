@@ -46,6 +46,8 @@
     - **[AI video drama platform](https://github.com/dc-tw/ai-video-drama-platform)** — AI 短劇製作平台（依名稱判斷）。
     - **[OpenDirector](https://github.com/seme-org/open-director)** — 自架的 AI 影片工作室：一句話 → 9 個 agent 產出故事、分鏡、角色、配音與配樂並渲染；另有批次量產短影音模式。Docker 部署。LGPL-3.0。
     - **[AutoMV](https://github.com/multimodal-art-projection/AutoMV)**（M-A-P，arXiv 2512.12196）— 輸入整首歌生成長篇 MV 的多 agent 系統：音樂分析 → 編劇／導演 agent → 關鍵幀與影片生成（含對嘴）→ 驗證。依賴豆包、即夢、Gemini 等 API。Apache-2.0。
+    - **[ViMax](https://github.com/HKUDS/ViMax)**（港大 HKUDS，arXiv 2606.07649）— 點子／劇本／小說 → 編劇、導演、製片 agent → 逐鏡生成長片；可把自己的照片放進故事（AutoCameo），有 TUI 與 Web UI。MIT。
+    - **[PenShot](https://pypi.org/project/penshot/)**（[原始碼](https://github.com/neopen/story-shot-agent)）— 劇本分鏡 agent：把任何劇本拆成鏡頭片段，輸出給 Sora／Veo／可靈用的中英提示詞與音訊提示詞，角色跨片段一致；有 SDK、REST、MCP。不直接出影片。MIT。
 - **程式化動畫 / HTML → 影片**
     - **[HyperFrames](https://github.com/heygen-com/hyperframes)**（HeyGen）— 寫 HTML/CSS/動畫，渲染成確定性 MP4，專為 AI agent 設計。Apache-2.0。
     - **[onetake](https://github.com/feitangyuan/onetake)** — Claude Agent Skill，做「一鏡到底」的產品發表片、預告與功能演示動效。⚠️ PolyForm Noncommercial（非商用）。
@@ -133,6 +135,7 @@
     - **[yao-meta-skill / security](https://github.com/yaojingang/yao-meta-skill/tree/main/security)** — skill 製作工具 yao-meta-skill 的供應鏈安全政策：網路、檔案寫入、子程序權限核准與發布前信任報告。MIT。
 - **LLM 測試 / 紅隊**
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
+    - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。
 
 ---
 
@@ -150,6 +153,8 @@
     - **[EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2)**（Google）— 740M 多模態 embedding，文字／圖片／音訊／影片映射到同一向量空間，可端側執行。Apache 2.0。
 - **影像生成**
     - **[Qwen-Image-2.1](https://huggingface.co/Qwen/Qwen-Image-2.1)** — 7B 文生圖 + 圖像編輯，支援原生透明 RGBA。⚠️ 授權改為 Qwen Research License（非商用），與先前 Apache 2.0 的版本不同。
+- **影片生成**
+    - **[Index-AniSora](https://github.com/bilibili/Index-anisora)**（bilibili，IJCAI'25）— 開源動漫影片生成模型：圖生影片、角色 360 度旋轉、任意幀推論、風格轉換、多模態引導。Apache 2.0。⚠️ 原清單連到 [cnb.cool 的第三方鏡像](https://cnb.cool/dfdfsd/anisora)，缺 V3，建議改用官方 repo。
 - **工具 / 修正檔**
     - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
@@ -181,3 +186,4 @@
 - 資安區新增 7 項：open-kritt、Nuclei、Nuclei MCP、Pentest Swarm AI、Claude-Red、OWASP CVE Lite CLI、Foundry Security Spec，以及 yao-meta-skill 的 security 政策。
 - 影片製作新增 6 項：Remotion、Cinetic、ChatCut、Palmier Pro、Higgsfield MCP、hook-lab；設計 / 前端新增 GSAP Skills、Hairline。
 - 影片製作新增 2 項：OpenDirector、AutoMV。
+- 影片製作新增 ViMax、PenShot；模型新增「影片生成」小類（Index-AniSora）；資安的 LLM 測試區新增 DeepEval。

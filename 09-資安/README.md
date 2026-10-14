@@ -138,9 +138,18 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - 把 LLM 應用的品質回歸測試放進 CI/CD。
 - 上線前對 chatbot、RAG、agent 做紅隊測試（prompt injection、資料外洩、越權、有害輸出），並為 OWASP LLM Top 10 等合規需求準備證據。
 
+### [DeepEval](DeepEval.md)
+
+Confident AI 的 LLM 評測框架，寫法像 Pytest：30 多種現成指標（G-Eval、幻覺、RAG、agent 任務完成度與工具正確性、多輪對話、MCP），可評整條 agent 軌跡。評測為主，紅隊不是重點。Apache-2.0。
+
+可以做到：
+- 用 Python 替 RAG、chatbot、agent 寫品質測試，`deepeval test run` 放進 CI。
+- 換模型或改 prompt 前後做回歸比較；評估 agent 是否用對工具與 MCP。
+- 產生合成測試資料，跑 MMLU、GSM8K 等標準基準。
+
 ## 怎麼挑
 
 - **分析二進位程式**：Ghidra + GhidraMCP；macOS app：REA。
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI。
 - **審查自己的程式碼**：AI 深度審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
-- **測試自己的 LLM 應用**：Promptfoo；**設計 AI 資安系統**：Foundry Security Spec。
+- **測試自己的 LLM 應用**：要紅隊與 YAML 設定用 Promptfoo，要在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；**設計 AI 資安系統**：Foundry Security Spec。

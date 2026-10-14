@@ -73,6 +73,17 @@ Google DeepMind 的 740M 多模態 embedding 模型，把文字、程式碼、�
 - 用圈選、塗畫或 mask 做局部編輯。
 - 商業用途需另取授權，或改用阿里雲託管 API。
 
+## 影片生成
+
+### [Index-AniSora](Index-AniSora.md)
+
+bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列為基底，V3 系列支援角色 360 度旋轉、任意幀推論、風格轉換與姿態／線稿／音訊引導。Apache 2.0。⚠️ 原清單給的是 cnb.cool 上的第三方鏡像，缺 V3，建議用官方 GitHub。
+
+可以做到：
+- 從立繪或關鍵幀生成番劇、PV、VTuber 等風格的動漫鏡頭。
+- 產生角色轉身影片，輔助多角度一致或 3D 建模。
+- 把現有影片轉成指定的動畫風格。
+
 ## 工具 / 修正檔
 
 ### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
@@ -88,6 +99,6 @@ Google DeepMind 的 740M 多模態 embedding 模型，把文字、程式碼、�
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
 - **程式碼研究**：FrogNano；**多模型系統裡的小幫手**：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
-- **生圖**：Qwen-Image-2.1（注意非商用）。
+- **生圖**：Qwen-Image-2.1（注意非商用）；**動漫影片**：Index-AniSora。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。

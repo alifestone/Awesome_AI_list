@@ -57,6 +57,23 @@
 - 研究音樂轉影片、長片角色一致性的做法。
 - 用 12 項基準評測自己的 MV 生成系統。
 
+### [ViMax](ViMax.md)
+
+港大 HKUDS 的多 agent 影片創作框架：編劇、導演、製片、影片生成一條龍，輸入可以是一句點子、一份劇本或一部小說，目標是角色與場景一致的長片。有 TUI 與 Web UI，模型全走 API。MIT。
+
+可以做到：
+- 從構想做出多場景的故事短片或兒童動畫。
+- 把劇本或小說章節轉成影片初稿（Script2Video、Novel2Video）。
+- 上傳照片，讓自己或寵物在故事裡客串（AutoCameo）。
+
+### [PenShot](PenShot.md)
+
+只做「劇本 → 分鏡」這一段的 LangGraph 多 agent 系統：把任何劇本切成鏡頭片段，替每段寫好 Sora／Veo／可靈用的中英提示詞、負面提示詞與音訊提示詞，並用記憶與向量檢索維持角色一致。不直接出影片。MIT。
+
+可以做到：
+- 把短劇、小說改編劇本批次轉成可貼進影片模型的分鏡提示詞。
+- 當自建影片流水線的前段，透過 SDK、REST API 或 MCP 串接。
+
 ## 程式化動畫 / HTML → 影片
 
 ### [Remotion](Remotion.md)
@@ -161,7 +178,8 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 
 ## 怎麼挑
 
-- **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）。
+- **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）、ViMax（點子／劇本／小說都能轉，偏長片）。
+- **已有劇本，只要分鏡提示詞**：PenShot；要動漫風格的鏡頭，模型可用 [Index-AniSora](../10-模型/Index-AniSora.md)。
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
