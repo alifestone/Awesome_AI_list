@@ -11,7 +11,7 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式�
 
 ## 概述
 
-PDoomVideo 是 JohnHeibel 公開的音樂 MV 專案。成片發布在 YouTube（https://youtu.be/8j-hR4fJywU）。作者給模型的指示只有兩項：使用 Claude 吉祥物「Clawd」的角色設計，以及讓每句歌詞都有有趣的畫面與轉場。場景構想完全由模型自行決定。
+PDoomVideo 是 JohnHeibel 公開的音樂 MV 專案。成片發布在 [YouTube](https://youtu.be/8j-hR4fJywU)。作者給模型的指示只有兩項：使用 Claude 吉祥物「Clawd」的角色設計，以及讓每句歌詞都有有趣的畫面與轉場。場景構想完全由模型自行決定。
 
 查詢當下（2026-10-13）約 2k 顆星，主要語言為 JavaScript。作者另外做了一個更通用、更穩定的 Claude 動畫基底專案 ClaudeAnimationBase（README 推薦，本次未查證內容）。
 
