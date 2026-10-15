@@ -176,6 +176,15 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - 把海外短影音的手法改寫成適合小紅書、視頻號的內容。
 - 累積拆解紀錄，比較多支影片的共同模式。
 
+### [Code Video Model](Code-Video-Model.md)
+
+研究專案：文字先變成可編輯的 Three.js 場景程式，渲染成代理影片，再搭配參考圖交給影片模型生成，讓鏡位、動作、物理都能靠改程式控制。Apache-2.0。
+
+可以做到：
+- 用程式碼精準控制鏡頭與物體運動，再生成寫實影片。
+- 修改場景後重跑，做同一場景的編輯版本。
+- 用 CodeVideoBench 評測可控影片生成。
+
 ## 怎麼挑
 
 - **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）、ViMax（點子／劇本／小說都能轉，偏長片）。
@@ -183,4 +192,5 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
+- **要精準控制鏡位與物理的生成**：Code Video Model（需 GPU 與多個外部 API）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。

@@ -62,6 +62,8 @@
 - **影片理解**
     - **[claude-video（/watch）](https://github.com/bradautomates/claude-video)** — 讓 Claude「看」影片：下載、抽幀、轉錄後交給模型分析。
     - **[hook-lab](https://github.com/hongfamonvAI/hook-lab)** — Claude Code skill：拆解 TikTok／Reels／Shorts 的開場鉤子、腳本結構與爆紅原因，並給小紅書、視頻號的改寫方向。MIT。
+- **可控生成**
+    - **[Code Video Model](https://code-video-model.github.io/)** — 研究專案：文字 → 可編輯 Three.js 場景 → 代理影片 + 參考圖 → 影片模型生成，鏡位、動作、物理都能靠改程式控制。Apache-2.0。⚠️ 需 GPU 與多個外部模型／API。
 
 ---
 
@@ -165,6 +167,7 @@
 
 - **[Strata](https://github.com/Niko1221/Strata)** — 在消費級顯卡上跑大型 MoE 模型的本地推論引擎，把專家權重分層放在 VRAM / RAM。MIT。
 - **[Unsloth](https://github.com/unslothai/unsloth)** — 快速、省顯存的 LLM 微調函式庫。
+- **[Janas](https://github.com/prabanta-dev/janas)** — 純 C 的本地 MoE 推論引擎：權重留在 SSD、專家串流＋快取，可跑超過 RAM 的模型（如 Qwen3-Next-80B）。GPL-3.0+。⚠️ 實驗性質，僅在單一機器測過。
 
 ---
 
@@ -187,4 +190,5 @@
 - 資安區新增 7 項：open-kritt、Nuclei、Nuclei MCP、Pentest Swarm AI、Claude-Red、OWASP CVE Lite CLI、Foundry Security Spec，以及 yao-meta-skill 的 security 政策。
 - 影片製作新增 6 項：Remotion、Cinetic、ChatCut、Palmier Pro、Higgsfield MCP、hook-lab；設計 / 前端新增 GSAP Skills、Hairline。
 - 影片製作新增 2 項：OpenDirector、AutoMV。
+- 影片製作新增 Code Video Model；推論與訓練引擎新增 Janas。
 - 影片製作新增 ViMax、PenShot；模型新增「影片生成」小類（Index-AniSora）；資安的 LLM 測試區新增 DeepEval。

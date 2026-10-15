@@ -22,8 +22,18 @@
 - 不寫程式，用圖形介面走完「資料集 → 訓練 → 執行 → 匯出」。
 - 用本地模型驅動 Claude Code、Codex。
 
+### [Janas](Janas.md)
+
+純 C 寫成的本地 MoE 推論引擎，權重留在 SSD、需要的專家再串流進記憶體，可跑比 RAM 還大的模型（如 Qwen3-Next-80B）。GPL-3.0+。實驗性質。
+
+可以做到：
+- 在 32 GB 筆電上跑 48 GB 的 80B MoE 模型。
+- 提供 OpenAI 相容 API、MCP 與程式碼補全給編輯器、Claude Code。
+- 用 `janas-bench` 量測自己的機器。
+
 ## 怎麼挑
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata。
+- **想用 SSD 串流跑超過 RAM 的 MoE 模型（實驗性）**：Janas。
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
 - 可以跑哪些模型，見 [模型](../10-模型/)。
