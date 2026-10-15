@@ -51,6 +51,15 @@ Claude Code 外掛，讓 Codex、Gemini 等多個模型對同一任務各自作�
 - 讓不同廠商的模型交叉檢查程式碼與資安審查的盲點。
 - 把既有的 ChatGPT、Copilot、Cursor 訂閱納入審查流程。
 
+### [Claude Code Game Studios](Claude-Code-Game-Studios.md)
+
+Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主管／專才）、74 個 slash 指令、hooks 與路徑規則，支援 Godot、Unity、Unreal。採「提問 → 給選項 → 由你決定」的協作模式，不是全自動。
+
+可以做到：
+- 單人用 AI 從點子、GDD、架構決策、Sprint 到發行檢查，走完整遊戲開發流程。
+- 用 `modes.rigor` 調整流程重量，從 game jam 速度到完整審查。
+- 以 hooks 與規則自動把關 commit、資產與程式碼標準。
+
 ### [agency-agents](agency-agents.md)
 
 230 多個專業 agent 人設的合集，每個是一份 `.md`，定義角色身分、工作流程、交付物與成功指標，橫跨工程、設計、行銷、銷售、資安、遊戲開發等部門。
@@ -74,5 +83,5 @@ Claude Code 外掛，讓 Codex、Gemini 等多個模型對同一任務各自作�
 ## 怎麼挑
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
-- **寫程式的 agent**：Cline；已在用 Claude Code 想加多模型審查：Claude Octopus；想要現成角色：agency-agents。
+- **寫程式的 agent**：Cline；已在用 Claude Code 想加多模型審查：Claude Octopus；想要現成角色：agency-agents；用 Claude Code 做遊戲：Claude Code Game Studios。
 - **不寫程式、直接用**：AnythingLLM。

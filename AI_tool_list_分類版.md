@@ -87,6 +87,7 @@
 - **Coding agent 與外掛**
     - **[Cline](https://github.com/cline/cline)** — VS Code 裡的自主 coding agent。
     - **[Claude Octopus](https://github.com/nyldn/claude-octopus)** — Claude Code 外掛，讓 Codex、Gemini 等多個模型交叉審查、辯論，有共識閘門。
+    - **[Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)** — 把 Claude Code 變成遊戲工作室：49 個 agent、74 個 skills，涵蓋設計、架構、QA 到發行。
     - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — 各種專業角色的 agent 人設集合。
 - **本地應用**
     - **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** — 一體化本地 LLM 應用：文件 RAG 對話、agent，可接各家模型。
