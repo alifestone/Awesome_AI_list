@@ -60,6 +60,15 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 - 用 `modes.rigor` 調整流程重量，從 game jam 速度到完整審查。
 - 以 hooks 與規則自動把關 commit、資產與程式碼標準。
 
+### [pstack](pstack.md)
+
+把 Cursor 的 pstack skill 組移植到 Claude Code、Codex、GitHub Copilot、Pi 的版本。對 `poteto-mode` 說出目標，它會挑對應流程，經過調查、設計、委派、多模型審查與驗證，交回修正和證據。
+
+可以做到：
+- 修 bug 時先重現、再調查、修正、重跑失敗案例，附上前後證據。
+- 用 `arena` 平行嘗試多種解法、用 `interrogate` 讓三個模型挑一份 diff 的毛病。
+- 用 `babysit`、`fix-ci` 照顧 PR 直到可合併；用 `reflect`、`correct` 把教訓寫回 skill。
+
 ### [agency-agents](agency-agents.md)
 
 230 多個專業 agent 人設的合集，每個是一份 `.md`，定義角色身分、工作流程、交付物與成功指標，橫跨工程、設計、行銷、銷售、資安、遊戲開發等部門。
@@ -92,5 +101,5 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 ## 怎麼挑
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
-- **寫程式的 agent**：Cline；已在用 Claude Code 想加多模型審查：Claude Octopus；想要現成角色：agency-agents；用 Claude Code 做遊戲：Claude Code Game Studios；讓 agent 操作 NotebookLM：notebooklm-py。
+- **寫程式的 agent**：Cline；已在用 Claude Code 想加多模型審查：Claude Octopus；想要一套從調查到驗證的固定工作流程：pstack；想要現成角色：agency-agents；用 Claude Code 做遊戲：Claude Code Game Studios；讓 agent 操作 NotebookLM：notebooklm-py。
 - **不寫程式、直接用**：AnythingLLM。

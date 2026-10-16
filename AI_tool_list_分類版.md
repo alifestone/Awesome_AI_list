@@ -90,6 +90,7 @@
     - **[Cline](https://github.com/cline/cline)** — VS Code 裡的自主 coding agent。
     - **[Claude Octopus](https://github.com/nyldn/claude-octopus)** — Claude Code 外掛，讓 Codex、Gemini 等多個模型交叉審查、辯論，有共識閘門。
     - **[Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)** — 把 Claude Code 變成遊戲工作室：49 個 agent、74 個 skills，涵蓋設計、架構、QA 到發行。
+    - **[pstack](https://github.com/michael-denyer/pstack-claude)** — Cursor pstack skill 組的移植版，支援 Claude Code、Codex、Copilot、Pi：`poteto-mode` 依任務挑流程，搭配多模型審查（arena、interrogate）、PR 照顧與自我改進 skill。MIT。
     - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — 各種專業角色的 agent 人設集合。
     - **[notebooklm-py](https://github.com/teng-lin/notebooklm-py)** — 非官方 NotebookLM Python API／CLI／agent skill：讓 Claude Code 等 agent 操作 NotebookLM 問答、生成 podcast／簡報／測驗並批次下載。
 - **本地應用**
@@ -195,3 +196,4 @@
 - 影片製作新增 2 項：OpenDirector、AutoMV。
 - 影片製作新增 Code Video Model；推論與訓練引擎新增 Janas。
 - 影片製作新增 ViMax、PenShot；模型新增「影片生成」小類（Index-AniSora）；資安的 LLM 測試區新增 DeepEval。
+- Agent 框架的 Coding agent 與外掛區新增 pstack。
