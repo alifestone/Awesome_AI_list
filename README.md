@@ -25,7 +25,7 @@
 | [🔐 資安](09-資安/) | [Ghidra](09-資安/Ghidra.md)・[GhidraMCP](09-資安/GhidraMCP.md)・[REA](09-資安/REA.md)・[Pentest Copilot](09-資安/Pentest-Copilot.md)・[ARTEX](09-資安/ARTEX.md)・[Promptfoo](09-資安/Promptfoo.md)・[DeepEval](09-資安/DeepEval.md)・[Pentest Swarm AI](09-資安/Pentest-Swarm-AI.md)・[Claude-Red](09-資安/Claude-Red.md)・[open-kritt](09-資安/open-kritt.md)・[Nuclei](09-資安/Nuclei.md)・[Nuclei MCP](09-資安/Nuclei-MCP.md)・[OWASP CVE Lite CLI](09-資安/CVE-Lite-CLI.md)・[Foundry Security Spec](09-資安/Foundry-Security-Spec.md)・[yao-meta-skill](09-資安/yao-meta-skill.md) |
 | [🧩 模型](10-模型/) | [Bonsai 2](10-模型/Bonsai-2.md)・[Qwythos-9B](10-模型/Qwythos-9B.md)・[FrogNano-4B-2609](10-模型/FrogNano-4B-2609.md)・[Mellum2](10-模型/Mellum2.md)・[Needle](10-模型/Needle.md)・[EmbeddingGemma 2](10-模型/EmbeddingGemma-2.md)・[Qwen-Image-2.1](10-模型/Qwen-Image-2.1.md)・[Index-AniSora](10-模型/Index-AniSora.md)・[Qwen Fixed Chat Templates](10-模型/Qwen-Fixed-Chat-Templates.md) |
 | [⚙️ 推論與訓練引擎](11-推論與訓練引擎/) | [Strata](11-推論與訓練引擎/Strata.md)・[Unsloth](11-推論與訓練引擎/Unsloth.md)・[Janas](11-推論與訓練引擎/Janas.md) |
-| [📚 學習資源](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md)・[Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md) |
+| [📚 學習資源](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md)・[Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md)・[PaperRead](12-學習資源/PaperRead.md) |
 
 ### 條目格式
 
@@ -63,7 +63,7 @@ A categorized list of AI tools, models, and learning resources, grouped by purpo
 | [🔐 Security](09-資安/) | [Ghidra](09-資安/Ghidra.md) · [GhidraMCP](09-資安/GhidraMCP.md) · [REA](09-資安/REA.md) · [Pentest Copilot](09-資安/Pentest-Copilot.md) · [ARTEX](09-資安/ARTEX.md) · [Promptfoo](09-資安/Promptfoo.md) · [DeepEval](09-資安/DeepEval.md) · [Pentest Swarm AI](09-資安/Pentest-Swarm-AI.md) · [Claude-Red](09-資安/Claude-Red.md) · [open-kritt](09-資安/open-kritt.md) · [Nuclei](09-資安/Nuclei.md) · [Nuclei MCP](09-資安/Nuclei-MCP.md) · [OWASP CVE Lite CLI](09-資安/CVE-Lite-CLI.md) · [Foundry Security Spec](09-資安/Foundry-Security-Spec.md) · [yao-meta-skill](09-資安/yao-meta-skill.md) |
 | [🧩 Models](10-模型/) | [Bonsai 2](10-模型/Bonsai-2.md) · [Qwythos-9B](10-模型/Qwythos-9B.md) · [FrogNano-4B-2609](10-模型/FrogNano-4B-2609.md) · [Mellum2](10-模型/Mellum2.md) · [Needle](10-模型/Needle.md) · [EmbeddingGemma 2](10-模型/EmbeddingGemma-2.md) · [Qwen-Image-2.1](10-模型/Qwen-Image-2.1.md) · [Index-AniSora](10-模型/Index-AniSora.md) · [Qwen Fixed Chat Templates](10-模型/Qwen-Fixed-Chat-Templates.md) |
 | [⚙️ Inference & Training Engines](11-推論與訓練引擎/) | [Strata](11-推論與訓練引擎/Strata.md) · [Unsloth](11-推論與訓練引擎/Unsloth.md) · [Janas](11-推論與訓練引擎/Janas.md) |
-| [📚 Learning Resources](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md) · [Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md) |
+| [📚 Learning Resources](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md) · [Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md) · [PaperRead](12-學習資源/PaperRead.md) |
 
 ### Entry format
 

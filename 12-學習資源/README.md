@@ -20,7 +20,18 @@
 - 理解環境設計如何影響 agent 的表現。
 - 不適合想要零程式碼入門、或只關注 prompt 的人。
 
+### [PaperRead](PaperRead.md)
+
+以繁體中文閱讀學術論文的個人研究工作區（EasyRead 的 fork）。結合論文探索、候選清單、閱讀看板、閱讀路徑、心智圖與原文／譯文並排的 PDF 精讀，可接雲端或本地模型。MIT 授權；提供 Windows、Linux 與 Docker 版。
+
+可以做到：
+- 依主題或會議／期刊找論文，並整理成待讀清單與看板。
+- 為論文產生摘要、心智圖與有順序的閱讀路徑。
+- 用中英對照與 AI 標註輔助精讀英文論文。
+- 注意：macOS 沒有桌面版；AI 只整理已搜尋到的論文。
+
 ## 怎麼挑
 
 - **想學容器與 K8s**：Learn Docker and K8s。
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
+- **要讀學術論文、想要繁體中文輔助**：PaperRead。

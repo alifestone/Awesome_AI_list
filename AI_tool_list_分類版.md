@@ -175,6 +175,7 @@
 
 - **[Learn Docker and K8s](https://github.com/ericboy0224/learn-docker-and-k8s)** — Docker 與 Kubernetes 學習教材。
 - **[Learn Harness Engineering](https://github.com/walkinglabs/learn-harness-engineering)** — 從零到一的 Harness Engineering 課程：如何替 AI coding agent 打造可靠的工作環境（講義 + 實作專案）。
+- **[PaperRead](https://github.com/YuriyLin/PaperRead)** — 以繁體中文閱讀學術論文的研究工作區：論文探索、待讀看板、摘要、閱讀路徑、心智圖與 PDF 對照精讀；支援雲端與本地模型。MIT。
 
 ---
 
