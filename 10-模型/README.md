@@ -82,6 +82,15 @@ Google DeepMind 的 740M 多模態 embedding 模型，把文字、程式碼、�
 - 用圈選、塗畫或 mask 做局部編輯。
 - 商業用途需另取授權，或改用阿里雲託管 API。
 
+### [FLUX 3 Image Klein](FLUX-3-Image-Klein.md)
+
+Black Forest Labs 的 5.6B 文生圖 + 圖像編輯模型（另配 Qwen3-VL-4B 文字編碼器），最多 10 張參考圖，可在 prompt 裡用 bounding box 指定元素位置。蒸餾版 16 步。必須搭配 prompt upsampler。⚠️ FLUX Kommunity License：非商用，年營收低於 US$500 萬者可商用輸出。
+
+可以做到：
+- 用框選排版生成海報、插畫與含文字的圖像。
+- 多參考圖合成，依框移動、替換或移除元素。
+- 自架影像生成；微調或 LoRA 改用 Klein Base。
+
 ## 影片生成
 
 ### [Index-AniSora](Index-AniSora.md)
@@ -108,6 +117,6 @@ bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列�
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
 - **程式碼研究**：FrogNano；**多模型系統裡的小幫手**：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
-- **生圖**：Qwen-Image-2.1（注意非商用）；**動漫影片**：Index-AniSora。
+- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。

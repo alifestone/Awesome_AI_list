@@ -23,7 +23,7 @@
 | [⚡ Jev 決策模型生態](07-Jev-決策模型生態/) | [fast-jev-compaction](07-Jev-決策模型生態/fast-jev-compaction.md)・[jevgrep](07-Jev-決策模型生態/jevgrep.md)・[Jev Ultrafast](07-Jev-決策模型生態/Jev-Ultrafast.md)・[edgextract](07-Jev-決策模型生態/edgextract.md)・[AnyJev](07-Jev-決策模型生態/AnyJev.md)・[Laya](07-Jev-決策模型生態/Laya.md) |
 | [🌐 瀏覽器自動化](08-瀏覽器自動化/) | [Playwright](08-瀏覽器自動化/Playwright.md)・[Playwright MCP](08-瀏覽器自動化/Playwright-MCP.md) |
 | [🔐 資安](09-資安/) | [Ghidra](09-資安/Ghidra.md)・[GhidraMCP](09-資安/GhidraMCP.md)・[REA](09-資安/REA.md)・[Pentest Copilot](09-資安/Pentest-Copilot.md)・[ARTEX](09-資安/ARTEX.md)・[Promptfoo](09-資安/Promptfoo.md)・[DeepEval](09-資安/DeepEval.md)・[Pentest Swarm AI](09-資安/Pentest-Swarm-AI.md)・[Claude-Red](09-資安/Claude-Red.md)・[open-kritt](09-資安/open-kritt.md)・[Nuclei](09-資安/Nuclei.md)・[Nuclei MCP](09-資安/Nuclei-MCP.md)・[OWASP CVE Lite CLI](09-資安/CVE-Lite-CLI.md)・[Foundry Security Spec](09-資安/Foundry-Security-Spec.md)・[yao-meta-skill](09-資安/yao-meta-skill.md) |
-| [🧩 模型](10-模型/) | [Bonsai 2](10-模型/Bonsai-2.md)・[Qwythos-9B](10-模型/Qwythos-9B.md)・[Ornith 1.5](10-模型/Ornith-1.5.md)・[FrogNano-4B-2609](10-模型/FrogNano-4B-2609.md)・[Mellum2](10-模型/Mellum2.md)・[Needle](10-模型/Needle.md)・[EmbeddingGemma 2](10-模型/EmbeddingGemma-2.md)・[Qwen-Image-2.1](10-模型/Qwen-Image-2.1.md)・[Index-AniSora](10-模型/Index-AniSora.md)・[Qwen Fixed Chat Templates](10-模型/Qwen-Fixed-Chat-Templates.md) |
+| [🧩 模型](10-模型/) | [Bonsai 2](10-模型/Bonsai-2.md)・[Qwythos-9B](10-模型/Qwythos-9B.md)・[Ornith 1.5](10-模型/Ornith-1.5.md)・[FrogNano-4B-2609](10-模型/FrogNano-4B-2609.md)・[Mellum2](10-模型/Mellum2.md)・[Needle](10-模型/Needle.md)・[EmbeddingGemma 2](10-模型/EmbeddingGemma-2.md)・[Qwen-Image-2.1](10-模型/Qwen-Image-2.1.md)・[FLUX 3 Image Klein](10-模型/FLUX-3-Image-Klein.md)・[Index-AniSora](10-模型/Index-AniSora.md)・[Qwen Fixed Chat Templates](10-模型/Qwen-Fixed-Chat-Templates.md) |
 | [⚙️ 推論與訓練引擎](11-推論與訓練引擎/) | [Strata](11-推論與訓練引擎/Strata.md)・[Unsloth](11-推論與訓練引擎/Unsloth.md)・[Janas](11-推論與訓練引擎/Janas.md) |
 | [📚 學習資源](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md)・[Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md)・[PaperRead](12-學習資源/PaperRead.md) |
 
@@ -36,7 +36,7 @@
 ### 注意事項
 
 - 標有「資料不足」的段落代表公開資料查不到，並非遺漏。
-- 部分條目的授權為非商用（例如 onetake、Qwen-Image-2.1），或對較大公司收費（例如 Remotion），使用前請先確認。
+- 部分條目的授權為非商用（例如 onetake、Qwen-Image-2.1、FLUX 3 Image Klein），或對較大公司收費（例如 Remotion），使用前請先確認。
 - 資安類條目僅供防禦與合法授權測試的參考，請勿用於未經授權的系統。
 - 部分專案狀態可能已變動（例如 ARTEX 原作者已下架，連結為第三方備份），詳見各條目。
 
@@ -61,7 +61,7 @@ A categorized list of AI tools, models, and learning resources, grouped by purpo
 | [⚡ Jev Decision-Model Ecosystem](07-Jev-決策模型生態/) | [fast-jev-compaction](07-Jev-決策模型生態/fast-jev-compaction.md) · [jevgrep](07-Jev-決策模型生態/jevgrep.md) · [Jev Ultrafast](07-Jev-決策模型生態/Jev-Ultrafast.md) · [edgextract](07-Jev-決策模型生態/edgextract.md) · [AnyJev](07-Jev-決策模型生態/AnyJev.md) · [Laya](07-Jev-決策模型生態/Laya.md) |
 | [🌐 Browser Automation](08-瀏覽器自動化/) | [Playwright](08-瀏覽器自動化/Playwright.md) · [Playwright MCP](08-瀏覽器自動化/Playwright-MCP.md) |
 | [🔐 Security](09-資安/) | [Ghidra](09-資安/Ghidra.md) · [GhidraMCP](09-資安/GhidraMCP.md) · [REA](09-資安/REA.md) · [Pentest Copilot](09-資安/Pentest-Copilot.md) · [ARTEX](09-資安/ARTEX.md) · [Promptfoo](09-資安/Promptfoo.md) · [DeepEval](09-資安/DeepEval.md) · [Pentest Swarm AI](09-資安/Pentest-Swarm-AI.md) · [Claude-Red](09-資安/Claude-Red.md) · [open-kritt](09-資安/open-kritt.md) · [Nuclei](09-資安/Nuclei.md) · [Nuclei MCP](09-資安/Nuclei-MCP.md) · [OWASP CVE Lite CLI](09-資安/CVE-Lite-CLI.md) · [Foundry Security Spec](09-資安/Foundry-Security-Spec.md) · [yao-meta-skill](09-資安/yao-meta-skill.md) |
-| [🧩 Models](10-模型/) | [Bonsai 2](10-模型/Bonsai-2.md) · [Qwythos-9B](10-模型/Qwythos-9B.md) · [Ornith 1.5](10-模型/Ornith-1.5.md) · [FrogNano-4B-2609](10-模型/FrogNano-4B-2609.md) · [Mellum2](10-模型/Mellum2.md) · [Needle](10-模型/Needle.md) · [EmbeddingGemma 2](10-模型/EmbeddingGemma-2.md) · [Qwen-Image-2.1](10-模型/Qwen-Image-2.1.md) · [Index-AniSora](10-模型/Index-AniSora.md) · [Qwen Fixed Chat Templates](10-模型/Qwen-Fixed-Chat-Templates.md) |
+| [🧩 Models](10-模型/) | [Bonsai 2](10-模型/Bonsai-2.md) · [Qwythos-9B](10-模型/Qwythos-9B.md) · [Ornith 1.5](10-模型/Ornith-1.5.md) · [FrogNano-4B-2609](10-模型/FrogNano-4B-2609.md) · [Mellum2](10-模型/Mellum2.md) · [Needle](10-模型/Needle.md) · [EmbeddingGemma 2](10-模型/EmbeddingGemma-2.md) · [Qwen-Image-2.1](10-模型/Qwen-Image-2.1.md) · [FLUX 3 Image Klein](10-模型/FLUX-3-Image-Klein.md) · [Index-AniSora](10-模型/Index-AniSora.md) · [Qwen Fixed Chat Templates](10-模型/Qwen-Fixed-Chat-Templates.md) |
 | [⚙️ Inference & Training Engines](11-推論與訓練引擎/) | [Strata](11-推論與訓練引擎/Strata.md) · [Unsloth](11-推論與訓練引擎/Unsloth.md) · [Janas](11-推論與訓練引擎/Janas.md) |
 | [📚 Learning Resources](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md) · [Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md) · [PaperRead](12-學習資源/PaperRead.md) |
 
@@ -74,6 +74,6 @@ Each category folder also has a `README.md` that briefly explains what each entr
 ### Notes
 
 - Sections marked "insufficient data" (資料不足) mean the information was not publicly available, not that it was overlooked.
-- Some entries are non-commercial only (e.g. onetake, Qwen-Image-2.1) or require a paid license for larger companies (e.g. Remotion); check the license before use.
+- Some entries are non-commercial only (e.g. onetake, Qwen-Image-2.1, FLUX 3 Image Klein) or require a paid license for larger companies (e.g. Remotion); check the license before use.
 - Security entries are for defensive purposes and legally authorized testing only. Do not use them against systems you are not authorized to test.
 - Some projects may have changed status (e.g. ARTEX was taken down by its original author and the link is a third-party backup); see each entry for details.
