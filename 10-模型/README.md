@@ -21,6 +21,15 @@ Empero 以 Qwen3.5-9B 全參數微調的推理模型，每個回答先輸出 `<t
 - 在本機做 9B 級推理與工具呼叫實驗（Q4_K_M 約 5.6 GB）。
 - 長 context 的實驗性用途。
 
+### [Ornith 1.5](Ornith-1.5.md)
+
+DeepReinforce 的開放權重家族：397B MoE 旗艦、35B-A3B MoE（每 token 啟用約 3B）與 9B 密集模型，另有手機用 9B-Mobile。256K context，MIT 授權，提供 GGUF，Ollama、llama.cpp 可跑。基準皆官方自報。
+
+可以做到：
+- 本機跑 9B（約 6.6 GB）或 35B-A3B（約 20 GB）的程式與 agent 任務。
+- 手機端執行（9B-Mobile）。
+
+
 ## 程式碼模型
 
 ### [FrogNano-4B-2609](FrogNano-4B-2609.md)

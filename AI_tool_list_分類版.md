@@ -148,6 +148,7 @@
 - **本地可跑的通用 / 推理模型**
     - **[Bonsai 2](https://huggingface.co/collections/prism-ml/bonsai-2)**（PrismML）— Qwen3.8-27B 的三值（ternary）壓縮版，體積約為原本 1/9、保留約 98% 表現，可在本機跑。Apache 2.0。
     - **[Qwythos-9B](https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF)**（Empero AI）— 以 Qwen3.5-9B 為底後訓練的推理模型，提供 GGUF，可用 Ollama / LM Studio 跑。
+    - **[Ornith 1.5](https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B-GGUF)**（DeepReinforce）— 開放權重家族（397B／35B-A3B MoE／9B，另有手機用 9B-Mobile），提供 9B 與 35B-A3B 的 GGUF（[9B](https://huggingface.co/ornith-ai/Ornith-1.5-9B-GGUF)），256K context，MIT。基準皆官方自報。
 - **程式碼模型**
     - **[FrogNano-4B-2609](https://huggingface.co/microsoft/FrogNano-4B-2609)**（Microsoft）— 從 Qwen3.5-4B 經 RL 訓練的小型程式代理模型，需搭配 Leaf 工具框架；官方自報 SWE-bench Verified 61.5%。
     - **[Mellum2](https://huggingface.co/blog/JetBrains/mellum2-launch)**（JetBrains）— 12B MoE（每 token 啟用 2.5B），適合路由、RAG、子 agent 與私有部署。Apache 2.0。
