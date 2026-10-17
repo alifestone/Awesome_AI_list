@@ -69,6 +69,15 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 - 用多角色分工模擬一個小型團隊，完成 MVP、行銷活動等。
 - 當撰寫自訂 agent 人設的範本。
 
+### [notebooklm-py](notebooklm-py.md)
+
+非官方的 Google NotebookLM（現稱 Gemini Notebook）Python API、CLI 與 agent skill：讓 Claude Code、Codex 等 agent 直接操作筆記本，並提供網頁沒有的批次下載與結構化匯出。使用未公開 API，可能隨時失效。
+
+可以做到：
+- 把大量文件交給 NotebookLM 分析、取得帶引用的回答，agent 只負責編排以省 token。
+- 批次生成 podcast、影片、簡報、測驗、心智圖並下載成 MP3／PDF／CSV／JSON。
+- 用筆記本當 agent 的跨 session 記憶或專案知識庫。
+
 ## 本地應用
 
 ### [AnythingLLM](AnythingLLM.md)
@@ -83,5 +92,5 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 ## 怎麼挑
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
-- **寫程式的 agent**：Cline；已在用 Claude Code 想加多模型審查：Claude Octopus；想要現成角色：agency-agents；用 Claude Code 做遊戲：Claude Code Game Studios。
+- **寫程式的 agent**：Cline；已在用 Claude Code 想加多模型審查：Claude Octopus；想要現成角色：agency-agents；用 Claude Code 做遊戲：Claude Code Game Studios；讓 agent 操作 NotebookLM：notebooklm-py。
 - **不寫程式、直接用**：AnythingLLM。
