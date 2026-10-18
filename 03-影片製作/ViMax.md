@@ -91,7 +91,7 @@ npm run dev
 - [OpenDirector](OpenDirector.md)：同樣從一句話做出分鏡影片，自架網頁工作室
 - [PenShot](PenShot.md)：只做「劇本 → 分鏡提示詞」這一段，可接任何影片模型
 - [AutoMV](AutoMV.md)：多 agent 做音樂 MV，同樣處理長片角色一致性
-- [Index-AniSora](Index-AniSora.md)：動漫風格的影片生成模型
+- [Index-AniSora](../10-模型/Index-AniSora.md)：動漫風格的影片生成模型
 
 ## 資料來源
 
