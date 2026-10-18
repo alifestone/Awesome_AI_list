@@ -26,12 +26,22 @@
     - **[USD BRep](https://github.com/NVIDIA-Omniverse/usd-brep)** — NVIDIA Omniverse 開源的 NURBS BRep 實體建模函式庫（C++／Python），可原生匯入匯出 OpenUSD；附 text-to-3D 資產生成的 agent skill。
 - **Blender × Agent**
     - **[cc-blender-skill](https://github.com/RobLe3/cc-blender-skill)** — Claude Code skill 外掛，經 Blender MCP 用自然語言建模、上材質、打光、運鏡、渲染、做動畫與匯出。
+    - **[MCP for Blender](https://github.com/ahujasid/mcp-for-blender)** — 社群版 Blender MCP（原 blender-mcp），讓任何 LLM 在執行中的 Blender 裡用提示詞建模與搭場景。
     - **[TheLongSilence](https://github.com/achimala/TheLongSilence)** — Claude Opus 5 做的瀏覽器太空探索遊戲；repo 裡附有 `.claude/skills/blender-hardsurface` 硬表面建模 skill（原清單收錄的應是這個）。
-- **AI 生成 3D / 世界**
-    - **World Labs** — 生成可探索 3D 世界的服務（Marble）。
+- **OpenUSD / Omniverse × Agent**
+    - **[Kit USD Agents](https://github.com/NVIDIA-Omniverse/kit-usd-agents)** — NVIDIA 官方 Chat USD（白話編輯 Omniverse USD 場景）＋ USD／Kit／OmniUI／Isaac Sim 開發用 MCP 伺服器。
+- **AI 生成 3D 資產**
     - **[Hyper3D（Rodin）](https://hyper3d.ai/)** — AI 生成 3D 模型。（已移除原連結的廣告追蹤參數）
-- **3D 重建**
+    - **[TRELLIS.2](https://github.com/microsoft/TRELLIS.2)** — Microsoft 開源 4B 參數圖片生成 3D 模型，產出含完整 PBR 材質的 GLB（MIT；⚠️ 相依的 nvdiffrast／nvdiffrec 限非商業）。
+    - **[Hunyuan3D 2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)** — 騰訊開源圖片生成 3D 系統，形狀＋PBR 貼圖兩階段（⚠️ 社群授權，排除歐盟／英國／南韓）。
+    - **[Stable Fast 3D](https://github.com/Stability-AI/stable-fast-3d)** — Stability AI 單圖約 0.5 秒重建已展 UV 的貼圖網格（⚠️ 社群授權，年營收超過 100 萬美元須企業授權）。
+    - **[Meshy MCP Server](https://github.com/meshy-dev/meshy-mcp-server)** — Meshy 官方 MCP，讓 agent 生成 3D、重新網格化、重新貼圖、綁骨、做動畫與 3D 列印處理（需付費 API）。
+- **AI 生成 3D 世界**
+    - **World Labs** — 生成可探索 3D 世界的服務（Marble）。
+    - **[HY-World 2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0)** — 騰訊混元 3D 世界模型，文字／圖片生成可走動的 3D 世界，也能從照片影片重建（⚠️ 排除歐盟／英國／南韓）。
+- **3D 重建與高斯點雲**
     - **[3D Gaussian Splatting for model city](https://github.com/rakeshsuthar6322/3d_gaussian_splatting_for_model_city)** — 以 3DGS 重建模型城市場景（依名稱判斷）。
+    - **[SuperSplat](https://github.com/playcanvas/supersplat)** — 瀏覽器內檢視、編輯、最佳化並發布 3D 高斯點雲的開源編輯器。
 - **作品範例**
     - **[Anatomy](https://github.com/thebuggeddev/anatomy)** — 用 Three.js 做的互動式 3D 人體解剖瀏覽器（由 GPT 生成），偏參考作品而非工具。
 
@@ -73,6 +83,9 @@
 - **[open-slide](https://github.com/open-slide/open-slide)** — 為 AI agent 打造的簡報框架：用自然語言描述，由 Claude Code 等 agent 寫 React 投影片，可匯出 HTML／PDF／PPTX。MIT。
 - **[GSAP Skills](https://github.com/greensock/gsap-skills)**（GreenSock）— 官方給 coding agent 的 GSAP 動畫 skill 組：時間軸、ScrollTrigger、外掛與框架整合。MIT。
 - **[Hairline](https://github.com/lucasmarkes/hairline)** — 會回應滑鼠的細線等角互動插圖（React 元件），附 `hairline-create` skill 讓 agent 畫出風格一致的新圖形。MIT。
+- **網頁 3D**
+    - **[three.js](https://github.com/mrdoob/three.js)** — 網頁上最常用的 JavaScript 3D 函式庫，支援 WebGL／WebGPU，MIT。
+    - **[threejs-skills](https://github.com/CloudAI-X/threejs-skills)** — 教 Claude Code 正確使用 three.js 的 10 個 skill，從 shader 到後製特效。⚠️ 未附 LICENSE 檔。
 
 ## 🎵 音訊
 
@@ -183,6 +196,17 @@
 
 ---
 
+## 🎮 遊戲引擎 × Agent
+
+- **桌面遊戲引擎**
+    - **[Unity MCP](https://github.com/CoplayDev/unity-mcp)** — 讓 AI 用白話文操作 Unity 編輯器：建場景、寫 C# 腳本、管素材、跑測試與輸出 build（第三方，MIT）。
+    - **[Godot AI](https://github.com/hi-godot/godot-ai)** — 用 46 個 MCP 工具控制執行中的 Godot 4.7+ 編輯器：場景、GDScript、訊號、UI、材質、粒子，還能跑遊戲驗證（第三方，MIT）。
+    - **[Unreal Engine MCP](https://github.com/flopperam/unreal-engine-mcp)** — 控制執行中的 Unreal 5.5+ 編輯器：管理 Actor、程序化建構世界、編輯基礎 Blueprint（第三方，已被 Aura 收購；⚠️ 未附 LICENSE 檔）。
+- **網頁遊戲引擎**
+    - **[PlayCanvas Editor MCP](https://github.com/playcanvas/editor-mcp-server)** — PlayCanvas 官方 MCP：agent 在瀏覽器版 Editor 建場景，再自己啟動遊戲、截圖驗證真的能跑（MIT）。
+
+---
+
 ## 📝 這次整理改了什麼
 
 - 合併重複的分類（Robotic / Robotics）與重複項目（Hyperframe 出現兩次）。
@@ -199,3 +223,4 @@
 - 影片製作新增 ViMax、PenShot；模型新增「影片生成」小類（Index-AniSora）；資安的 LLM 測試區新增 DeepEval。
 - Agent 框架的 Coding agent 與外掛區新增 pstack。
 - 模型的影像生成區新增 FLUX 3 Image Klein。
+- 依 @davepoon128 的 Threads 貼文新增 14 項 3D 工作流工具：3D 建模與生成新增 MCP for Blender、Kit USD Agents、TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Meshy MCP Server、HY-World 2.0、SuperSplat，並把「AI 生成 3D / 世界」拆成「AI 生成 3D 資產」與「AI 生成 3D 世界」，「3D 重建」改為「3D 重建與高斯點雲」，新增「OpenUSD / Omniverse × Agent」小類；設計 / 前端新增「網頁 3D」（three.js、threejs-skills）；新增「🎮 遊戲引擎 × Agent」分類（Unity MCP、Godot AI、Unreal Engine MCP、PlayCanvas Editor MCP）。

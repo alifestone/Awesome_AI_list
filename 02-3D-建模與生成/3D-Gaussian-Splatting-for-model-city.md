@@ -1,6 +1,6 @@
 # 3D Gaussian Splatting for model city
 
-- **分類**：3D 建模與生成 / 3D 重建
+- **分類**：3D 建模與生成 / 3D 重建與高斯點雲
 - **連結**：https://github.com/rakeshsuthar6322/3d_gaussian_splatting_for_model_city
 
 ## 原清單說明

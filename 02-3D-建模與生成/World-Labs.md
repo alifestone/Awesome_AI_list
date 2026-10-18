@@ -1,6 +1,6 @@
 # World Labs
 
-- **分類**：3D 建模與生成 / AI 生成 3D / 世界
+- **分類**：3D 建模與生成 / AI 生成 3D 世界
 - **連結**：https://www.worldlabs.ai/ （原清單無連結，已補上官網；Marble 應用程式：https://marble.worldlabs.ai ）
 
 ## 原清單說明

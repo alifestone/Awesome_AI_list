@@ -1,6 +1,6 @@
 # 🎨 設計 / 前端
 
-讓 AI 做出好看網頁與簡報的資源：設計提示詞庫、給 agent 的動畫 skill、互動插圖元件，以及 agent 專用的簡報框架。
+讓 AI 做出好看網頁與簡報的資源：設計提示詞庫、給 agent 的動畫 skill、互動插圖元件、網頁 3D 函式庫與 skill，以及 agent 專用的簡報框架。
 
 ### [MotionSites](MotionSites.md)
 
@@ -29,6 +29,24 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 - 技術產品的概念插圖（伺服器機櫃、commit 圖、呼叫堆疊）。
 - 讓 agent 依十條設計規則畫出風格一致的新圖形，交付免依賴的單一 HTML 檔。
 
+### [three.js](three.js.md)
+
+網頁上最常用的 JavaScript 3D 函式庫，內建 WebGL 與 WebGPU renderer，附大量 addon（GLTF 載入、相機控制、後製特效、WebXR）。MIT。
+
+可以做到：
+- 產品官網、landing page 的 3D 主視覺與互動展示。
+- GLTF 模型檢視器、產品設定器、資料視覺化、網頁遊戲與 WebXR。
+- 讓 AI agent 生成可直接在瀏覽器執行的 3D 作品。
+
+### [threejs-skills](threejs-skills.md)
+
+給 Claude Code 的 10 個 three.js skill，涵蓋基礎場景、幾何、材質、光照、貼圖、動畫、載入器、shader、後製特效與互動。⚠️ README 寫 MIT，但 repo 未附 LICENSE 檔。
+
+可以做到：
+- 讓 Claude Code 寫 three.js 時少犯 API 錯誤（類別名稱、匯入路徑、色彩空間）。
+- 快速產出 3D 主視覺、GLTF 模型檢視器與互動式 3D 網頁。
+- 自訂 shader、bloom 等後製特效，或滑鼠點選、相機控制等互動。
+
 ### [open-slide](open-slide.md)
 
 為 AI agent 打造的簡報框架：由 Claude Code 等 agent 寫內容，每張投影片是 1920 × 1080 畫布上的任意 React component。MIT。
@@ -42,4 +60,5 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 
 - 要**整個網站的設計方向**：MotionSites。
 - 要**網頁動畫寫得對**：GSAP Skills；要**互動插圖**：Hairline。
+- 要**網頁 3D**：three.js；讓 Claude Code 寫 three.js 更準，加上 threejs-skills。
 - 要**簡報**：open-slide。
