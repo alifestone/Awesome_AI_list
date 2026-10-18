@@ -69,6 +69,7 @@
     - **[ChatCut](https://github.com/ChatCut-Inc/agent-plugin)** — 線上對話式剪輯服務；agent-plugin 讓 coding agent 透過 MCP 直接改 ChatCut 雲端專案的時間軸。商業服務。
     - **[Palmier Pro](https://github.com/palmier-io/palmier-pro)** — 為 AI 打造的 macOS 剪輯軟體，內建 AI 生成並開放 MCP，agent 和人可以編輯同一條時間軸。⚠️ v0.7.6 之後改為專有授權。
 - **AI 影片生成**
+    - **[WanGP](https://github.com/deepbeepmeep/WanGP)** — 給低階顯卡的本機生成 App：一個網頁介面跑 Wan、LTX、Hunyuan Video、MiniMax H3 等影片模型，另含圖像、TTS 與 3D 模型，部分只要 6 GB VRAM；有 MCP server 與內建 agent Deepy。⚠️ WanGP Community License：免費、作品可商用，但不得轉售或提供付費服務。
     - **[Higgsfield MCP](https://higgsfield.ai/mcp)** — 讓 Claude 不需 API key 呼叫 30 多個圖像／影片模型，再串 Blender、After Effects，交付可繼續編輯的 AE 專案。商業服務。
     - **[Code Video Model](https://code-video-model.github.io/)** — 研究專案：文字 → 可編輯 Three.js 場景 → 代理影片 + 參考圖 → 影片模型生成，鏡位、動作、物理都能靠改程式控制。Apache-2.0。⚠️ 需 GPU 與多個外部模型／API。
 - **影片理解**
@@ -240,3 +241,4 @@
 - 依 @davepoon128 的 Threads 貼文新增 14 項 3D 工作流工具：3D 建模與生成新增 MCP for Blender、Kit USD Agents、TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Meshy MCP Server、HY-World 2.0、SuperSplat，並把「AI 生成 3D / 世界」拆成「AI 生成 3D 資產」與「AI 生成 3D 世界」，「3D 重建」改為「3D 重建與高斯點雲」，新增「OpenUSD / Omniverse × Agent」小類；設計 / 前端新增「網頁 3D」（three.js、threejs-skills）；新增「🎮 遊戲引擎 × Agent」分類（Unity MCP、Godot AI、Unreal Engine MCP、PlayCanvas Editor MCP）。
 - 分類總檢查：Anatomy 從 3D 建模與生成移到設計 / 前端的「網頁 3D」（移除「作品範例」小類）；yao-meta-skill（改收整個專案）與 DeepEval 從資安移到 Agent 框架與編排；Agent 框架拆成「Coding agent」「Coding agent 外掛與 skill 組」「知識庫 / 文件問答」（取代「本地應用」，notebooklm-py 移入）「LLM 評測」；影片製作的「程式化動畫 / HTML → 影片」改名「程式化影片（程式碼 → 影片）」，Higgsfield MCP 與 Code Video Model 合併為「AI 影片生成」；設計 / 前端、Jev 決策模型生態、學習資源補上小類；Mellum2 移到通用 / 推理模型；機器人的「研究 / 模型」改名「研究」；更新 AI video drama platform、3DGS for model city、REA、Unsloth、Learn Docker and K8s 的說明，補上 World Labs 連結。
 - 推論與訓練引擎新增 Strata Easy TW。
+- 影片製作的 AI 影片生成區新增 WanGP。

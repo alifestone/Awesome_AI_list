@@ -150,6 +150,15 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 
 ## AI 影片生成
 
+### [WanGP](WanGP.md)
+
+給「顯卡不夠好」的人用的本機生成式 AI 整合 App：一個瀏覽器介面跑 Wan、LTX、Hunyuan Video、MiniMax H3 等開源影片模型，也包含圖像、TTS／音訊與 3D 模型，部分模型 6 GB VRAM 就能跑。約 1 萬顆星。⚠️ 自訂授權 WanGP Community License：可免費使用、作品可商用，但不能轉售或做成付費服務。
+
+可以做到：
+- 用家用顯卡在本機做文生影片、圖生影片、首尾幀、角色替換、影片配音與配樂。
+- 用內建的 Deepy 助理從一段 brief 規劃分鏡、生成並檢查整支短片。
+- 透過 MCP server 讓 Claude Code 等 agent 呼叫本機的影片、圖像與語音模型。
+
 ### [Higgsfield MCP](Higgsfield-MCP.md)
 
 AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能讓 Claude 呼叫平台上 30 多個圖像與影片模型。商業服務。
@@ -194,5 +203,5 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
-- **用 AI 生成畫面**：要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
+- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。
