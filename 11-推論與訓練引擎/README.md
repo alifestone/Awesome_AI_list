@@ -11,6 +11,15 @@
 - 聊天、程式碼生成、讀圖。
 - 提供本地 OpenAI／Anthropic 相容 API，當 Claude Code 等 coding agent 的後端模型。
 
+### [Strata Easy TW](Strata-Easy-TW.md)
+
+Strata 的非官方繁體中文 Windows 安裝導覽器：左邊跑官方安裝腳本，右邊用中文解釋每一步，可另選 SC117 的第三方低拒答模型。MIT。⚠️ 2026-10 剛發布的 pre-release，完整安裝與推論流程尚未端到端驗證。
+
+可以做到：
+- 不熟命令列也能用圖形介面在 Windows 安裝 Strata，看中文說明回答安裝問題。
+- 先用離線展示熟悉流程，不下載任何模型。
+- 實驗性地改用 SC117 的 abliterated GGUF 模型。
+
 ### [Unsloth](Unsloth.md)
 
 開源的 LLM 執行與訓練框架，主打微調更快、更省顯存。除了 Python 函式庫，也有本地 UI／桌面 App，可執行 GGUF、MLX、擴散、embedding、語音等模型。
@@ -33,7 +42,7 @@
 
 ## 怎麼挑
 
-- **想在家用 PC 跑大型 MoE 模型**：Strata。
+- **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
 - **想用 SSD 串流跑超過 RAM 的 MoE 模型（實驗性）**：Janas。
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
 - 可以跑哪些模型，見 [模型](../10-模型/)。

@@ -193,6 +193,7 @@
 ## ⚙️ 推論與訓練引擎
 
 - **[Strata](https://github.com/Niko1221/Strata)** — 在消費級顯卡上跑大型 MoE 模型的本地推論引擎，把專家權重分層放在 VRAM / RAM。MIT。
+- **[Strata Easy TW](https://github.com/encoreh78951-hub/StrataEasyTW)** — Strata 的非官方繁中 Windows 安裝導覽器：左側跑官方安裝腳本、右側中文解說，可選 SC117 第三方低拒答模型。MIT。⚠️ v1.3.0-rc1 為 pre-release，完整安裝流程尚未端到端驗證。
 - **[Unsloth](https://github.com/unslothai/unsloth)** — 在本機執行與訓練 LLM 的開源框架，主打快速、省顯存的微調；除 Python 函式庫外另有 Studio 網頁介面與桌面版。
 - **[Janas](https://github.com/prabanta-dev/janas)** — 純 C 的本地 MoE 推論引擎：權重留在 SSD、專家串流＋快取，可跑超過 RAM 的模型（如 Qwen3-Next-80B）。GPL-3.0+。⚠️ 實驗性質，僅在單一機器測過。
 
@@ -238,3 +239,4 @@
 - 模型的影像生成區新增 FLUX 3 Image Klein。
 - 依 @davepoon128 的 Threads 貼文新增 14 項 3D 工作流工具：3D 建模與生成新增 MCP for Blender、Kit USD Agents、TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Meshy MCP Server、HY-World 2.0、SuperSplat，並把「AI 生成 3D / 世界」拆成「AI 生成 3D 資產」與「AI 生成 3D 世界」，「3D 重建」改為「3D 重建與高斯點雲」，新增「OpenUSD / Omniverse × Agent」小類；設計 / 前端新增「網頁 3D」（three.js、threejs-skills）；新增「🎮 遊戲引擎 × Agent」分類（Unity MCP、Godot AI、Unreal Engine MCP、PlayCanvas Editor MCP）。
 - 分類總檢查：Anatomy 從 3D 建模與生成移到設計 / 前端的「網頁 3D」（移除「作品範例」小類）；yao-meta-skill（改收整個專案）與 DeepEval 從資安移到 Agent 框架與編排；Agent 框架拆成「Coding agent」「Coding agent 外掛與 skill 組」「知識庫 / 文件問答」（取代「本地應用」，notebooklm-py 移入）「LLM 評測」；影片製作的「程式化動畫 / HTML → 影片」改名「程式化影片（程式碼 → 影片）」，Higgsfield MCP 與 Code Video Model 合併為「AI 影片生成」；設計 / 前端、Jev 決策模型生態、學習資源補上小類；Mellum2 移到通用 / 推理模型；機器人的「研究 / 模型」改名「研究」；更新 AI video drama platform、3DGS for model city、REA、Unsloth、Learn Docker and K8s 的說明，補上 World Labs 連結。
+- 推論與訓練引擎新增 Strata Easy TW。
