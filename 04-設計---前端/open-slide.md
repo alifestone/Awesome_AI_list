@@ -1,6 +1,6 @@
 # open-slide
 
-- **分類**：設計 / 前端（簡報）
+- **分類**：設計 / 前端 / 簡報
 - **連結**：https://github.com/open-slide/open-slide
 - **官網**：https://open-slide.dev
 

@@ -1,6 +1,6 @@
 # SpatialClaw
 
-- **分類**：機器人與具身智慧 / 研究 / 模型
+- **分類**：機器人與具身智慧 / 研究
 - **連結**：https://github.com/NVlabs/SpatialClaw
 
 ## 原清單說明

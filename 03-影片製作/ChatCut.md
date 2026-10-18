@@ -1,6 +1,6 @@
 # ChatCut
 
-- **分類**：影片製作 / 剪輯與字幕 / Agent plugin（MCP）
+- **分類**：影片製作 / 剪輯 / 處理
 - **連結**：https://github.com/ChatCut-Inc/agent-plugin
 - **官網**：https://chatcut.io
 

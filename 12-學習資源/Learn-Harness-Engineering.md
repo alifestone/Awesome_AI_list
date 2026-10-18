@@ -1,6 +1,6 @@
 # Learn Harness Engineering
 
-- **分類**：學習資源
+- **分類**：學習資源 / 課程 / 教材
 - **連結**：https://github.com/walkinglabs/learn-harness-engineering
 - **課程網站**：https://walkinglabs.github.io/learn-harness-engineering/
 

@@ -1,6 +1,6 @@
 # Learn Docker and K8s
 
-- **分類**：學習資源
+- **分類**：學習資源 / 課程 / 教材
 - **連結**：https://github.com/ericboy0224/learn-docker-and-k8s
 
 ## 原清單說明

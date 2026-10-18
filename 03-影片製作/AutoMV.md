@@ -1,6 +1,6 @@
 # AutoMV
 
-- **分類**：影片製作 / Agent 影片製作系統（從歌曲到 MV）
+- **分類**：影片製作 / Agent 影片製作系統（從主題到成片）
 - **連結**：https://github.com/multimodal-art-projection/AutoMV
 - **專案頁**：https://m-a-p.ai/AutoMV/
 - **論文**：https://arxiv.org/abs/2512.12196

@@ -1,6 +1,6 @@
 # Claude-Red
 
-- **分類**：資安 / Agent skill
+- **分類**：資安 / 滲透測試
 - **連結**：https://github.com/SnailSploit/Claude-Red
 
 ## 原清單說明
@@ -73,7 +73,7 @@ README 另提到 `cat Skills/web/offensive-sqli/SKILL.md | claude --system-file 
 ## 限制與注意事項
 
 - **高度雙重用途**：內容涵蓋 EDR 規避、shellcode、exploit 開發、C2、釣魚與無線攻擊。只能用於已取得書面授權的測試；README 沒有內建授權檢查機制。
-- **第三方 skill 的信任問題**：skill 會直接影響 agent 行為，安裝前應閱讀內容，並鎖定 commit 版本，避免日後更新引入不預期的指令。可參考 [yao-meta-skill](./yao-meta-skill.md) 的 skill 信任政策。
+- **第三方 skill 的信任問題**：skill 會直接影響 agent 行為，安裝前應閱讀內容，並鎖定 commit 版本，避免日後更新引入不預期的指令。可參考 [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md) 的 skill 信任政策。
 - 路線圖中許多類別（例如部分 AD、雲端身分）尚未完成。
 - 查閱時 Releases 頁面為空，沒有正式版本標記。
 
@@ -81,7 +81,7 @@ README 另提到 `cat Skills/web/offensive-sqli/SKILL.md | claude --system-file 
 
 - [Pentest Copilot](./Pentest-Copilot.md)、[Pentest Swarm AI](./Pentest-Swarm-AI.md)：AI 滲透測試 agent
 - [Promptfoo](./Promptfoo.md)：LLM 應用紅隊測試
-- [yao-meta-skill](./yao-meta-skill.md)：skill 安全治理政策
+- [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)：skill 安全治理政策
 
 ## 資料來源
 

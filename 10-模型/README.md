@@ -29,6 +29,14 @@ DeepReinforce 的開放權重家族：397B MoE 旗艦、35B-A3B MoE（每 token 
 - 本機跑 9B（約 6.6 GB）或 35B-A3B（約 20 GB）的程式與 agent 任務。
 - 手機端執行（9B-Mobile）。
 
+### [Mellum2](Mellum2.md)
+
+JetBrains 從零訓練的 MoE 模型，總參數 12B、每個 token 只啟用 2.5B，專為大型 AI 系統中高頻、延遲敏感的中間步驟設計。有 Instruct 與 Thinking 版本。Apache-2.0。
+
+可以做到：
+- 多模型系統中的路由與編排。
+- RAG 前後處理、agent 子任務（規劃、驗證、準備 context），減少呼叫大模型的次數。
+- IDE 內高吞吐的程式功能、私有部署。
 
 ## 程式碼模型
 
@@ -39,15 +47,6 @@ Microsoft 從 Qwen3.5-4B 只用強化學習訓練的小型程式代理模型，�
 可以做到：
 - 軟體工程與長程 coding agent 研究。
 - 在沙箱中替有測試的 Python repo 產出候選 patch，再由人審查。
-
-### [Mellum2](Mellum2.md)
-
-JetBrains 從零訓練的 MoE 模型，總參數 12B、每個 token 只啟用 2.5B，專為大型 AI 系統中高頻、延遲敏感的中間步驟設計。有 Instruct 與 Thinking 版本。Apache-2.0。
-
-可以做到：
-- 多模型系統中的路由與編排。
-- RAG 前後處理、agent 子任務（規劃、驗證、準備 context），減少呼叫大模型的次數。
-- IDE 內高吞吐的程式功能、私有部署。
 
 ## 端側小模型
 
@@ -115,7 +114,7 @@ bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列�
 ## 怎麼挑
 
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
-- **程式碼研究**：FrogNano；**多模型系統裡的小幫手**：Mellum2。
+- **程式碼研究**：FrogNano；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。

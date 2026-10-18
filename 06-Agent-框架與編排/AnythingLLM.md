@@ -1,6 +1,6 @@
 # AnythingLLM
 
-- **分類**：Agent 框架與編排 / 本地應用
+- **分類**：Agent 框架與編排 / 知識庫 / 文件問答
 - **連結**：https://github.com/Mintplex-Labs/anything-llm
 
 ## 原清單說明

@@ -1,6 +1,6 @@
 # onetake
 
-- **分類**：影片製作 / 程式化動畫 / HTML → 影片
+- **分類**：影片製作 / 程式化影片（程式碼 → 影片）
 - **連結**：https://github.com/feitangyuan/onetake
 
 ## 原清單說明

@@ -2,6 +2,8 @@
 
 讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界，以及從影片重建 3D 環境、編輯高斯點雲。
 
+> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、HY-World 2.0）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
+
 ## CAD / 參數化建模
 
 ### [FreeCAD MCP](FreeCAD-MCP.md)
@@ -173,16 +175,6 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 - 在 PLY／SOG／SPZ／splat 等格式間轉換與壓縮，或匯出單一 HTML 檢視器自架。
 - 發布成可分享、可嵌入的 3D 場景頁，加註解、視角與攝影機飛越動畫。
 
-## 作品範例
-
-### [Anatomy](Anatomy.md)
-
-用 Next.js + Three.js 做的互動式 3D 人體器官教學網站（由 GPT 生成），偏參考作品而非工具。⚠️ 未附授權檔，也不適合當醫學參考。
-
-可以做到：
-- 參考 AI 產出的 Three.js 互動 3D 網站長什麼樣子。
-- 參考 3D 熱點標註、測驗互動、多語系（含 RTL）的實作方式。
-
 ## 怎麼挑
 
 - 要**精確、可製造的工程模型**：FreeCAD MCP、Rhino MCP、MAC，或在 OpenUSD 管線裡用 USD BRep。
@@ -191,4 +183,5 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 - 要**從圖片生成單一 3D 資產**：想本機跑、可商用選 TRELLIS.2（注意相依套件授權）或 Stable Fast 3D（最快、顯存需求低）；要 PBR 品質選 Hunyuan3D 2.1（注意地區限制）；不想架 GPU、要 agent 一路做到綁骨動畫，用 Meshy MCP Server 或 Hyper3D。
 - 要**整個可探索場景**：World Labs（商業服務）或 HY-World 2.0（開源，需多張 GPU）。
 - 要**從真實場景重建**：3DGS for model city；重建後要清理、壓縮、發布點雲：SuperSplat。
+- 要**網頁上的互動 3D**：見 [🎨 設計 / 前端](../04-設計---前端/) 的網頁 3D（three.js、Anatomy）。
 - 要**做遊戲**：見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/)。

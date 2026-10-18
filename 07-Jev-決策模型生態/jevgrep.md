@@ -1,6 +1,6 @@
 # jevgrep
 
-- **分類**：Jev 決策模型生態
+- **分類**：Jev 決策模型生態 / 用 Jev 做事的工具
 - **連結**：https://github.com/dzhng/jevgrep
 
 ## 原清單說明

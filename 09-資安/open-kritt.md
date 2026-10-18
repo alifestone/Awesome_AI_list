@@ -1,6 +1,6 @@
 # open-kritt
 
-- **分類**：資安 / 程式碼漏洞研究
+- **分類**：資安 / 程式碼漏洞研究 / 弱點掃描
 - **連結**：https://github.com/Kritt-ai/open-kritt
 
 ## 原清單說明

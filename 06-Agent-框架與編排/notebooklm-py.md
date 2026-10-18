@@ -1,6 +1,6 @@
 # notebooklm-py
 
-- **分類**：Agent 框架與編排 / Coding agent 與外掛
+- **分類**：Agent 框架與編排 / 知識庫 / 文件問答
 - **連結**：https://github.com/teng-lin/notebooklm-py
 - **延伸閱讀**：https://tenten.co/learning/notebooklm-py-skill/ （中文介紹；撰寫時該網站無法從本環境連線，內容未納入查證）
 

@@ -85,7 +85,7 @@ promptfoo redteam report               # 檢視報告
 ## 相關工具
 
 - [Pentest Copilot](./Pentest-Copilot.md)、[ARTEX](./ARTEX.md)：用 AI 測試傳統系統（Promptfoo 則是測試 AI 系統本身）
-- [DeepEval](DeepEval.md)：Python／Pytest 風格的 LLM 評測框架，agent 與 RAG 指標較多
+- [DeepEval](../06-Agent-框架與編排/DeepEval.md)：Python／Pytest 風格的 LLM 評測框架，agent 與 RAG 指標較多
 - 同類 LLM 紅隊工具：garak、PyRIT（僅供參考，本條目未查證其細節）
 
 ## 資料來源

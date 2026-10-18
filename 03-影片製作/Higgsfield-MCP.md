@@ -1,6 +1,6 @@
 # Higgsfield MCP
 
-- **分類**：影片製作 / 影像生成 / MCP / 動態設計
+- **分類**：影片製作 / AI 影片生成
 - **連結**：https://higgsfield.ai/mcp
 - **MCP server**：`https://mcp.higgsfield.ai/mcp`
 

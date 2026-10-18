@@ -53,3 +53,4 @@ PlayCanvas 官方的 Editor MCP 伺服器，130 個工具，連接瀏覽器中�
 - 要**做網頁上直接能玩的 3D**：PlayCanvas Editor MCP。
 - 用 **Unreal**：開源本機版適合做場景草稿與基礎 Blueprint；要材質、Niagara、動畫等深度功能得改用託管版或 Aura，並先確認授權與資料政策。
 - 素材從哪來：可搭配 [3D 建模與生成](../02-3D-建模與生成/README.md) 的 Blender、AI 生成 3D 工具，再匯入引擎。
+- 要**整套遊戲開發流程**（企劃、架構、QA 到發行），而不只是操作編輯器：見 Agent 框架類的 [Claude Code Game Studios](../06-Agent-框架與編排/Claude-Code-Game-Studios.md)，可和這裡的 MCP 搭配。

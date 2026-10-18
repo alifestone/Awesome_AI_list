@@ -1,6 +1,8 @@
 # 📚 學習資源
 
-搭配 AI coding agent 學習的課程與教材。
+搭配 AI coding agent 學習的課程與教材，以及用 AI 輔助閱讀與研究的學習工具。
+
+## 課程 / 教材
 
 ### [Learn Docker and K8s](Learn-Docker-and-K8s.md)
 
@@ -19,6 +21,8 @@
 - 讓 Claude Code、Codex 等 agent 在長任務、多 session 中更穩定。
 - 理解環境設計如何影響 agent 的表現。
 - 不適合想要零程式碼入門、或只關注 prompt 的人。
+
+## 學習工具
 
 ### [PaperRead](PaperRead.md)
 

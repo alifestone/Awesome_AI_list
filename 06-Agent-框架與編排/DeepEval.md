@@ -1,6 +1,6 @@
 # DeepEval
 
-- **分類**：資安 / LLM 測試 / 紅隊（評測為主）
+- **分類**：Agent 框架與編排 / LLM 評測
 - **連結**：https://pypi.org/project/deepeval/
 - **原始碼**：https://github.com/confident-ai/deepeval
 - **文件**：https://deepeval.com
@@ -90,9 +90,9 @@ deepeval test run test_chatbot.py
 
 ## 相關工具
 
-- [Promptfoo](Promptfoo.md)：YAML 設定的 LLM 評測與紅隊工具，紅隊功能更完整
+- [Promptfoo](../09-資安/Promptfoo.md)：YAML 設定的 LLM 評測與紅隊工具，紅隊功能更完整
 - [Jev 決策模型生態](../07-Jev-決策模型生態/)：DeepEval 的 JevEval 指標使用 Jev
-- [DSPy](../06-Agent-框架與編排/DSPy.md)、[CrewAI](../06-Agent-框架與編排/CrewAI.md)：可被 DeepEval 評測的 LLM 框架
+- [DSPy](DSPy.md)、[CrewAI](CrewAI.md)：可被 DeepEval 評測的 LLM 框架
 
 ## 資料來源
 

@@ -1,6 +1,6 @@
 # Laya
 
-- **分類**：Jev 決策模型生態
+- **分類**：Jev 決策模型生態 / 自架的 Jev 式決策模型
 - **連結**：https://huggingface.co/convaiinnovations/laya
 
 ## 原清單說明

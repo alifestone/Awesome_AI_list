@@ -1,6 +1,8 @@
 # 🎨 設計 / 前端
 
-讓 AI 做出好看網頁與簡報的資源：設計提示詞庫、給 agent 的動畫 skill、互動插圖元件、網頁 3D 函式庫與 skill，以及 agent 專用的簡報框架。
+讓 AI 做出好看網頁與簡報的資源：設計提示詞庫、給 agent 的動畫 skill、互動插圖元件、網頁 3D 函式庫、skill 與作品範例，以及 agent 專用的簡報框架。
+
+## 網站設計提示詞
 
 ### [MotionSites](MotionSites.md)
 
@@ -10,6 +12,8 @@
 - 快速做出有動態效果的 landing page、Hero 區、作品集或 SaaS 官網。
 - 接案時快速做原型或提案頁。
 - 學習怎麼寫高品質的網站生成提示詞。
+
+## 網頁動畫與插圖
 
 ### [GSAP Skills](GSAP-Skills.md)
 
@@ -29,6 +33,8 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 - 技術產品的概念插圖（伺服器機櫃、commit 圖、呼叫堆疊）。
 - 讓 agent 依十條設計規則畫出風格一致的新圖形，交付免依賴的單一 HTML 檔。
 
+## 網頁 3D
+
 ### [three.js](three.js.md)
 
 網頁上最常用的 JavaScript 3D 函式庫，內建 WebGL 與 WebGPU renderer，附大量 addon（GLTF 載入、相機控制、後製特效、WebXR）。MIT。
@@ -47,6 +53,16 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 - 快速產出 3D 主視覺、GLTF 模型檢視器與互動式 3D 網頁。
 - 自訂 shader、bloom 等後製特效，或滑鼠點選、相機控制等互動。
 
+### [Anatomy](Anatomy.md)
+
+用 Next.js + Three.js 做的互動式 3D 人體器官教學網站（由 GPT 生成），偏參考作品而非工具。⚠️ 未附授權檔，也不適合當醫學參考。
+
+可以做到：
+- 參考 AI 產出的 Three.js 互動 3D 網站長什麼樣子。
+- 參考 3D 熱點標註、測驗互動、多語系（含 RTL）的實作方式。
+
+## 簡報
+
 ### [open-slide](open-slide.md)
 
 為 AI agent 打造的簡報框架：由 Claude Code 等 agent 寫內容，每張投影片是 1920 × 1080 畫布上的任意 React component。MIT。
@@ -60,5 +76,5 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 
 - 要**整個網站的設計方向**：MotionSites。
 - 要**網頁動畫寫得對**：GSAP Skills；要**互動插圖**：Hairline。
-- 要**網頁 3D**：three.js；讓 Claude Code 寫 three.js 更準，加上 threejs-skills。
+- 要**網頁 3D**：three.js；讓 Claude Code 寫 three.js 更準，加上 threejs-skills；想看 AI 做出來的 three.js 網站長什麼樣子：Anatomy。
 - 要**簡報**：open-slide。

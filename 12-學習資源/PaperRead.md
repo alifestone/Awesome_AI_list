@@ -1,6 +1,6 @@
 # PaperRead
 
-- **分類**：學習資源
+- **分類**：學習資源 / 學習工具
 - **連結**：https://github.com/YuriyLin/PaperRead
 
 ## 原清單說明

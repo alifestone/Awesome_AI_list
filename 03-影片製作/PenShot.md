@@ -1,6 +1,6 @@
 # PenShot
 
-- **分類**：影片製作 / Agent 影片製作系統（劇本 → 分鏡提示詞）
+- **分類**：影片製作 / Agent 影片製作系統（從主題到成片）
 - **連結**：https://pypi.org/project/penshot/
 - **原始碼**：https://github.com/neopen/story-shot-agent
 - **官網與文件**：https://shot.helpenx.com

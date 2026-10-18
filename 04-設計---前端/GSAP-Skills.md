@@ -1,6 +1,6 @@
 # GSAP Skills
 
-- **分類**：設計 / 前端（網頁動畫）/ Agent Skill
+- **分類**：設計 / 前端 / 網頁動畫與插圖
 - **連結**：https://github.com/greensock/gsap-skills
 - **官網**：https://gsap.com
 

@@ -1,6 +1,6 @@
 # Nuclei
 
-- **分類**：資安 / 弱點掃描
+- **分類**：資安 / 程式碼漏洞研究 / 弱點掃描
 - **連結**：https://github.com/projectdiscovery/nuclei
 
 ## 原清單說明

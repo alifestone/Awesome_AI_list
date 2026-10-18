@@ -1,6 +1,6 @@
 # Cline
 
-- **分類**：Agent 框架與編排 / Coding agent 與外掛
+- **分類**：Agent 框架與編排 / Coding agent
 - **連結**：https://github.com/cline/cline
 
 ## 原清單說明

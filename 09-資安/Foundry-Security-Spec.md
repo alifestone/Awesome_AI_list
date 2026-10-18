@@ -1,6 +1,6 @@
 # Foundry Security Spec
 
-- **分類**：資安 / AI agent 與 skill 安全治理
+- **分類**：資安 / AI agent 安全規格 / 治理
 - **連結**：https://github.com/CiscoDevNet/foundry-security-spec
 - **公告**：https://blogs.cisco.com/ai/announcing-foundry-security-spec
 
@@ -90,7 +90,7 @@ README 建議第一次建置時，5 個擴充角色全部選「不要」。
 ## 相關工具
 
 - [open-kritt](./open-kritt.md)：已實作的開源 AI 漏洞研究平台，概念相近
-- [yao-meta-skill](./yao-meta-skill.md)：skill 層級的安全與權限政策
+- [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)：skill 層級的安全與權限政策
 - GitHub spec-kit、Project CodeGuard：本規格搭配使用的工具
 
 ## 資料來源

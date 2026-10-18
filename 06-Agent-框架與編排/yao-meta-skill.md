@@ -1,14 +1,14 @@
-# yao-meta-skill（security 政策）
+# yao-meta-skill
 
-- **分類**：資安 / AI agent 與 skill 安全治理
-- **連結**：https://github.com/yaojingang/yao-meta-skill/tree/main/security
-- **主專案**：https://github.com/yaojingang/yao-meta-skill
+- **分類**：Agent 框架與編排 / Coding agent 外掛與 skill 組
+- **連結**：https://github.com/yaojingang/yao-meta-skill
+- **security 政策**：https://github.com/yaojingang/yao-meta-skill/tree/main/security
 
 ## 原清單說明
 
 原清單只列名稱與 `security/` 目錄的連結，沒有說明。
 
-> **查證結果**：連結指向的是 yao-meta-skill 專案中的 `security/` 目錄，裡面是 skill 套件的供應鏈安全政策，而不是獨立的資安工具。yao-meta-skill 本身是「建立、評測、打包與治理 agent skill」的 meta-skill。
+> **查證結果**：連結指向的是 yao-meta-skill 專案中的 `security/` 目錄，裡面是 skill 套件的供應鏈安全政策，而不是獨立的資安工具。yao-meta-skill 本身是「建立、評測、打包與治理 agent skill」的 meta-skill，因此本清單把整個專案歸在 Agent 框架與編排，security 政策當作它的特色介紹。
 
 ## 概述
 
@@ -90,8 +90,8 @@ npx -y skills add yaojingang/yao-meta-skill -a '*' -g -y
 
 ## 相關工具
 
-- [Claude-Red](./Claude-Red.md)：資安領域的 Claude skill 集合（可用本政策的思路審查第三方 skill）
-- [Foundry Security Spec](./Foundry-Security-Spec.md)：同樣強調「以基礎設施而非 prompt 做沙箱」的規格
+- [Claude-Red](../09-資安/Claude-Red.md)：資安領域的 Claude skill 集合（可用本政策的思路審查第三方 skill）
+- [Foundry Security Spec](../09-資安/Foundry-Security-Spec.md)：同樣強調「以基礎設施而非 prompt 做沙箱」的規格
 
 ## 資料來源
 

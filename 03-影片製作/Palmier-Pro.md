@@ -1,6 +1,6 @@
 # Palmier Pro
 
-- **分類**：影片製作 / 剪輯軟體 / MCP
+- **分類**：影片製作 / 剪輯 / 處理
 - **連結**：https://github.com/palmier-io/palmier-pro
 - **官網**：https://palmier.io
 

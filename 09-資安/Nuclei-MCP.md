@@ -1,6 +1,6 @@
 # Nuclei MCP
 
-- **分類**：資安 / 弱點掃描
+- **分類**：資安 / 程式碼漏洞研究 / 弱點掃描
 - **連結**：https://github.com/addcontent/nuclei-mcp
 
 ## 原清單說明

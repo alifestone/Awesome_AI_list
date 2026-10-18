@@ -1,6 +1,6 @@
 # threejs-skills
 
-- **分類**：設計 / 前端（網頁 3D）/ Agent Skill
+- **分類**：設計 / 前端 / 網頁 3D
 - **連結**：https://github.com/CloudAI-X/threejs-skills
 
 ## 原清單說明
@@ -79,7 +79,7 @@ mkdir -p .claude/skills && cp -r threejs-skills/skills/* .claude/skills/
 - [three.js](three.js.md)：這組 skill 所教的 3D 函式庫
 - [GSAP Skills](GSAP-Skills.md)：同樣是教 agent 寫網頁動畫的 skill 組（官方出品）
 - [Hairline](Hairline.md)：附 skill 的互動插圖元件
-- [Anatomy](../02-3D-建模與生成/Anatomy.md)：AI 生成的 three.js 3D 網站範例
+- [Anatomy](Anatomy.md)：AI 生成的 three.js 3D 網站範例
 - [cc-blender-skill](../02-3D-建模與生成/cc-blender-skill.md)：讓 Claude Code 操作 Blender 的 skill
 
 ## 資料來源

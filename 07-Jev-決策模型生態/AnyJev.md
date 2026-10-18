@@ -1,6 +1,6 @@
 # AnyJev
 
-- **分類**：Jev 決策模型生態
+- **分類**：Jev 決策模型生態 / 自架的 Jev 式決策模型
 - **連結**：https://github.com/nokia-applied-research/AnyJev
 
 ## 原清單說明

@@ -1,6 +1,6 @@
 # Claude Octopus
 
-- **分類**：Agent 框架與編排 / Coding agent 與外掛
+- **分類**：Agent 框架與編排 / Coding agent 外掛與 skill 組
 - **連結**：https://github.com/nyldn/claude-octopus
 
 ## 原清單說明

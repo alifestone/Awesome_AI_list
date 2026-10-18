@@ -1,6 +1,6 @@
 # 🎬 影片製作
 
-讓 AI 做影片的工具：從「給主題就出片」的全自動系統、用程式碼寫動畫再渲染成影片的框架，到讓 agent 剪片、看懂影片、拆解爆紅短片的 skill。
+讓 AI 做影片的工具：從「給主題就出片」的全自動系統、用程式碼寫動畫再渲染成影片的框架、呼叫影片模型生成畫面的工具，到讓 agent 剪片、看懂影片、拆解爆紅短片的 skill。
 
 ## Agent 影片製作系統（從主題到成片）
 
@@ -74,7 +74,7 @@
 - 把短劇、小說改編劇本批次轉成可貼進影片模型的分鏡提示詞。
 - 當自建影片流水線的前段，透過 SDK、REST API 或 MCP 串接。
 
-## 程式化動畫 / HTML → 影片
+## 程式化影片（程式碼 → 影片）
 
 ### [Remotion](Remotion.md)
 
@@ -148,6 +148,8 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 - 讓 Claude Code 或 Codex 直接剪本機專案，同時保留圖形化時間軸可人工微調。
 - 在同一條時間軸混用實拍素材與 AI 生成片段。
 
+## AI 影片生成
+
 ### [Higgsfield MCP](Higgsfield-MCP.md)
 
 AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能讓 Claude 呼叫平台上 30 多個圖像與影片模型。商業服務。
@@ -156,7 +158,16 @@ AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能
 - 讓 Claude 依 brief 規劃整套製作：Higgsfield 生素材 → Blender 建 3D → After Effects 合成。
 - 交付可繼續編輯的 AE／Premiere 專案，而不只是壓平的 MP4。
 
-## 影片理解 / 分析
+### [Code Video Model](Code-Video-Model.md)
+
+研究專案：文字先變成可編輯的 Three.js 場景程式，渲染成代理影片，再搭配參考圖交給影片模型生成，讓鏡位、動作、物理都能靠改程式控制。Apache-2.0。
+
+可以做到：
+- 用程式碼精準控制鏡頭與物體運動，再生成寫實影片。
+- 修改場景後重跑，做同一場景的編輯版本。
+- 用 CodeVideoBench 評測可控影片生成。
+
+## 影片理解
 
 ### [claude-video（/watch）](claude-video（-watch）.md)
 
@@ -176,15 +187,6 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - 把海外短影音的手法改寫成適合小紅書、視頻號的內容。
 - 累積拆解紀錄，比較多支影片的共同模式。
 
-### [Code Video Model](Code-Video-Model.md)
-
-研究專案：文字先變成可編輯的 Three.js 場景程式，渲染成代理影片，再搭配參考圖交給影片模型生成，讓鏡位、動作、物理都能靠改程式控制。Apache-2.0。
-
-可以做到：
-- 用程式碼精準控制鏡頭與物體運動，再生成寫實影片。
-- 修改場景後重跑，做同一場景的編輯版本。
-- 用 CodeVideoBench 評測可控影片生成。
-
 ## 怎麼挑
 
 - **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）、ViMax（點子／劇本／小說都能轉，偏長片）。
@@ -192,5 +194,5 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
-- **要精準控制鏡位與物理的生成**：Code Video Model（需 GPU 與多個外部 API）。
+- **用 AI 生成畫面**：要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。

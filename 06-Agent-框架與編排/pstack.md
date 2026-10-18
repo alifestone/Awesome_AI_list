@@ -1,6 +1,6 @@
 # pstack（多 harness 移植版）
 
-- **分類**：Agent 框架與編排 / Coding agent 與外掛
+- **分類**：Agent 框架與編排 / Coding agent 外掛與 skill 組
 - **連結**：https://github.com/michael-denyer/pstack-claude
 - **上游**：https://github.com/cursor/plugins/tree/main/pstack
 

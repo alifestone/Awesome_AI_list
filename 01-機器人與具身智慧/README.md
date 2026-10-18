@@ -2,7 +2,7 @@
 
 讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent，到物理模擬器，以及用 LLM 直接指揮機器人的工具。
 
-## 研究 / 模型
+## 研究
 
 ### [ARC](ARC.md)
 
@@ -50,5 +50,5 @@ Google DeepMind 維護的通用物理引擎，專門模擬會和環境接觸、�
 
 - 想**訓練或研究機器人模型**：看 ARC。
 - 想讓 **VLM 理解 3D 空間**：看 SpatialClaw。
-- 需要**模擬環境**：MuJoCo。
+- 需要**模擬環境**：MuJoCo；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
 - 想**直接用 Claude 指揮機器人**：quackd。

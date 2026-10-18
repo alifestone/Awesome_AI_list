@@ -95,7 +95,7 @@ Claude Desktop／Cursor／專案 `.mcp.json`：
 ## 相關工具
 
 - 同資料夾：[Unity MCP](Unity-MCP.md)、[Godot AI](Godot-AI.md)、[Unreal Engine MCP](Unreal-Engine-MCP.md)（皆為桌面引擎、第三方開發；本工具是唯一官方出品、也是唯一網頁引擎）
-- [Anatomy](../02-3D-建模與生成/Anatomy.md)：另一種 AI 做網頁 3D 的範例（Three.js）
+- [Anatomy](../04-設計---前端/Anatomy.md)：另一種 AI 做網頁 3D 的範例（Three.js）
 - [PlayCanvas Engine](https://github.com/playcanvas/engine)
 
 ## 資料來源

@@ -1,6 +1,6 @@
 # Hairline
 
-- **分類**：設計 / 前端（互動插圖）/ Agent Skill
+- **分類**：設計 / 前端 / 網頁動畫與插圖
 - **連結**：https://github.com/lucasmarkes/hairline
 - **官網**：https://hairline.lucasmarkes.com
 

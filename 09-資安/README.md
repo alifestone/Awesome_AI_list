@@ -27,7 +27,7 @@ NSA 開源的逆向工程框架，可分析多種處理器指令集與執行檔�
 
 ### [REA](REA.md)
 
-「Reverse Engineer Anything」：透過 MCP 或 CLI 把逆向能力交給 AI agent，在本機分析目標並回傳附證據的發現。背後自動安裝與管理 Hopper。MIT。
+「Reverse Engineer Anything」：透過 MCP 或 CLI 把逆向能力交給 AI agent，在本機分析原生二進位、Electron、.NET、APK、WASM、韌體等目標，並回傳附證據的發現。原生分析可用 Hopper、Ghidra 或 IDA（Hopper 經核准才會選擇性安裝）。MIT。
 
 可以做到：
 - 讓 agent 逆向分析 macOS 原生 app、Electron 應用、APK 等，並附上證據。
@@ -119,14 +119,6 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 - 企業自建 AI 程式碼安全評估系統時，當架構藍圖。
 - 設計 AI 漏洞研究工具時，參考角色分工、驗證與去重的做法。
 
-### [yao-meta-skill / security](yao-meta-skill.md)
-
-skill 製作工具 yao-meta-skill 的供應鏈安全政策：把 skill 套件視為供應鏈風險，要求發布前取得網路、檔案寫入、子程序權限的核准並產出信任報告。MIT。
-
-可以做到：
-- 建立團隊內部發布 agent skill 前的安全審查流程。
-- 參考如何把權限寫成可稽核的核准紀錄與阻擋規則。
-
 ## LLM 測試 / 紅隊
 
 ### [Promptfoo](Promptfoo.md)
@@ -138,18 +130,10 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - 把 LLM 應用的品質回歸測試放進 CI/CD。
 - 上線前對 chatbot、RAG、agent 做紅隊測試（prompt injection、資料外洩、越權、有害輸出），並為 OWASP LLM Top 10 等合規需求準備證據。
 
-### [DeepEval](DeepEval.md)
-
-Confident AI 的 LLM 評測框架，寫法像 Pytest：30 多種現成指標（G-Eval、幻覺、RAG、agent 任務完成度與工具正確性、多輪對話、MCP），可評整條 agent 軌跡。評測為主，紅隊不是重點。Apache-2.0。
-
-可以做到：
-- 用 Python 替 RAG、chatbot、agent 寫品質測試，`deepeval test run` 放進 CI。
-- 換模型或改 prompt 前後做回歸比較；評估 agent 是否用對工具與 MCP。
-- 產生合成測試資料，跑 MMLU、GSM8K 等標準基準。
-
 ## 怎麼挑
 
-- **分析二進位程式**：Ghidra + GhidraMCP；macOS app：REA。
+- **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI。
 - **審查自己的程式碼**：AI 深度審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
-- **測試自己的 LLM 應用**：要紅隊與 YAML 設定用 Promptfoo，要在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；**設計 AI 資安系統**：Foundry Security Spec。
+- **測試自己的 LLM 應用**：紅隊與 YAML 設定用 Promptfoo；偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 在 Agent 框架類。
+- **設計 AI 資安系統**：Foundry Security Spec；skill 發布前的安全政策可參考 [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)。

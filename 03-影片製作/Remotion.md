@@ -1,6 +1,6 @@
 # Remotion
 
-- **分類**：影片製作 / 程式化影片 / React → 影片
+- **分類**：影片製作 / 程式化影片（程式碼 → 影片）
 - **連結**：https://github.com/remotion-dev/remotion
 - **Agent Skills**：https://github.com/remotion-dev/skills
 - **官網**：https://remotion.dev

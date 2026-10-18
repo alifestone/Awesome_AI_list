@@ -1,6 +1,6 @@
 # Mellum2
 
-- **分類**：模型 / 程式碼模型
+- **分類**：模型 / 本地可跑的通用 / 推理模型
 - **連結**：https://huggingface.co/blog/JetBrains/mellum2-launch
 
 ## 原清單說明

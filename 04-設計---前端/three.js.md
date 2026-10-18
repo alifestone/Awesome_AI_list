@@ -1,6 +1,6 @@
 # three.js
 
-- **分類**：設計 / 前端（網頁 3D）/ JavaScript 函式庫
+- **分類**：設計 / 前端 / 網頁 3D
 - **連結**：https://github.com/mrdoob/three.js
 - **官網**：https://threejs.org
 
@@ -14,7 +14,7 @@
 
 three.js 是網頁上最常用的 3D 函式庫，由 mrdoob（Ricardo Cabello）在 2010 年發起。README 寫明目標是做出「好用、輕量、跨瀏覽器、通用」的 3D 函式庫。目前的建置版本內建 WebGL 與 WebGPU 兩種 renderer，SVG 與 CSS3D renderer 則以 addon 形式提供。
 
-它是許多 AI 生成 3D 網頁的底層，例如本清單的 [Anatomy](../02-3D-建模與生成/Anatomy.md) 就是用 three.js 做的；[HyperFrames](../03-影片製作/HyperFrames.md) 也把 three.js 列為支援的動畫 adapter。
+它是許多 AI 生成 3D 網頁的底層，例如本清單的 [Anatomy](Anatomy.md) 就是用 three.js 做的；[HyperFrames](../03-影片製作/HyperFrames.md) 也把 three.js 列為支援的動畫 adapter。
 
 repo 於 2010-03-23 建立，持續活躍開發（最後 push 為 2026-10-17）。最新 release 為 r186（2026-09-24），npm 套件 `three` 目前版本為 0.186.1。
 
@@ -86,7 +86,7 @@ document.body.appendChild(renderer.domElement);
 
 - [threejs-skills](threejs-skills.md)：教 Claude Code 正確使用 three.js 的 10 個 skill
 - [GSAP Skills](GSAP-Skills.md)：網頁動畫，可與 three.js 搭配做捲動連動 3D
-- [Anatomy](../02-3D-建模與生成/Anatomy.md)：用 three.js 做的互動式 3D 人體器官網站
+- [Anatomy](Anatomy.md)：用 three.js 做的互動式 3D 人體器官網站
 - [HyperFrames](../03-影片製作/HyperFrames.md)：支援 three.js adapter 的 HTML 影片框架
 - [Hairline](Hairline.md)、[MotionSites](MotionSites.md)
 

@@ -1,6 +1,6 @@
 # hook-lab
 
-- **分類**：影片製作 / 短影音分析 / Claude Code Skill
+- **分類**：影片製作 / 影片理解
 - **連結**：https://github.com/hongfamonvAI/hook-lab
 
 ## 原清單說明

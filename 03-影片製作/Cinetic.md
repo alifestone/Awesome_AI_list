@@ -1,6 +1,6 @@
 # Cinetic
 
-- **分類**：影片製作 / Agent Skill / 產品宣傳片
+- **分類**：影片製作 / 程式化影片（程式碼 → 影片）
 - **連結**：https://github.com/Leonxlnx/cinetic
 
 ## 原清單說明

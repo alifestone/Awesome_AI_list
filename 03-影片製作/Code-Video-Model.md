@@ -1,6 +1,6 @@
 # Code Video Model
 
-- **分類**：影片製作 / 可控影片生成（研究專案）
+- **分類**：影片製作 / AI 影片生成
 - **連結**：https://code-video-model.github.io/
 - **程式碼**：https://github.com/code-video-model/CodeVideoModel
 
