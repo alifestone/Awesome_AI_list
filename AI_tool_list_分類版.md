@@ -116,6 +116,7 @@
     - **[yao-meta-skill](https://github.com/yaojingang/yao-meta-skill)** — 建立、評測、打包與治理 agent skill 的 meta-skill（「Skill OS」），附 skill 供應鏈安全政策（[security/](https://github.com/yaojingang/yao-meta-skill/tree/main/security)）：網路、檔案寫入、子程序權限核准與發布前信任報告。MIT。（原放在資安）
 - **知識庫 / 文件問答**
     - **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** — 一體化本地 LLM 應用：文件 RAG 對話、agent，可接各家模型。
+    - **[RAG-Anything](https://github.com/HKUDS/RAG-Anything)**（HKUDS）— 建在 LightRAG 上的多模態 RAG 框架：解析 PDF／Office／圖片中的文字、圖、表格、公式，建成多模態知識圖譜做混合檢索。Python 函式庫，可接本機模型。MIT。
     - **[notebooklm-py](https://github.com/teng-lin/notebooklm-py)** — 非官方 NotebookLM Python API／CLI／agent skill：讓 Claude Code 等 agent 操作 NotebookLM 問答、生成 podcast／簡報／測驗並批次下載。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
@@ -247,3 +248,4 @@
 - 影片製作的 AI 影片生成區新增 WanGP。
 - 學習資源的課程 / 教材區新增 EECS 498 AASE。
 - 模型新增「資安模型」小類與 OrcaCyber Nano 1.0。
+- Agent 框架與編排的知識庫 / 文件問答區新增 RAG-Anything。

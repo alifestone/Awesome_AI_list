@@ -100,6 +100,15 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 - 團隊用 Docker 自架多使用者知識庫。
 - 在同一介面切換多家模型，搭配 MCP 工具與排程 agent；在網站嵌入客服聊天 widget。
 
+### [RAG-Anything](RAG-Anything.md)
+
+港大 HKUDS 的多模態 RAG 框架，建在 LightRAG 之上：用 MinerU 等解析器把 PDF、Office、圖片裡的文字、圖、表格、公式拆出來，交給視覺與語言模型理解，再建成多模態知識圖譜做混合檢索。Python 函式庫，沒有圖形介面。MIT。
+
+可以做到：
+- 對圖表、表格、公式很多的論文、技術文件、財報建問答系統。
+- 用一套流程處理 PDF、PPT、Excel、掃描檔混雜的企業知識庫。
+- 搭配 Ollama、vLLM 等本機模型，全程不上雲。
+
 ### [notebooklm-py](notebooklm-py.md)
 
 非官方的 Google NotebookLM（現稱 Gemini Notebook）Python API、CLI 與 agent skill：讓 Claude Code、Codex 等 agent 直接操作筆記本，並提供網頁沒有的批次下載與結構化匯出。使用未公開 API，可能隨時失效。
@@ -125,5 +134,5 @@ Confident AI 的 LLM 評測框架，寫法像 Pytest：30 多種現成指標（G
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲用 Claude Code Game Studios（直接操作引擎見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/)）；自己做 skill 並在發布前做安全審查用 yao-meta-skill。
-- **和文件對話、建知識庫**：不寫程式、要本機私密用 AnythingLLM；讓 agent 操作 NotebookLM 用 notebooklm-py。
+- **和文件對話、建知識庫**：不寫程式、要本機私密用 AnythingLLM；寫程式處理圖表公式多的文件用 RAG-Anything；讓 agent 操作 NotebookLM 用 notebooklm-py。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；要紅隊測試見資安類的 [Promptfoo](../09-資安/Promptfoo.md)。
