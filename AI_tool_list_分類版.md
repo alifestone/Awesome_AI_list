@@ -98,6 +98,7 @@
 ## 🎵 音訊
 
 - **[Basic Pitch](https://github.com/spotify/basic-pitch)**（Spotify）— 音訊轉 MIDI 的輕量模型。
+- **[earshot](https://github.com/Leonxlnx/earshot)** — 給 coding agent 的「耳朵」：描述、比對、搜尋、檢查聲音與影片的聲畫同步，也能用程式碼做音效；本機 CPU 執行，有 CLI 與 MCP server。Cinetic 同作者。MIT。
 
 ---
 
@@ -251,3 +252,4 @@
 - 模型新增「資安模型」小類與 OrcaCyber Nano 1.0。
 - Agent 框架與編排的知識庫 / 文件問答區新增 RAG-Anything。
 - 影片製作的程式化影片區新增 Manim。
+- 音訊新增 earshot。
