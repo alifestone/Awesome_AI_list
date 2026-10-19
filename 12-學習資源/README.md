@@ -22,6 +22,15 @@
 - 理解環境設計如何影響 agent 的表現。
 - 不適合想要零程式碼入門、或只關注 prompt 的人。
 
+### [EECS 498 AASE](EECS-498-AASE.md)
+
+密西根大學 2026 秋季 EECS 498-016「Applied Agentic Software Engineering」的公開教材：每講的投影片（Markdown／PDF／PPTX）、上課 live demo 的小型程式庫，以及把 Elephant-Goldfish Model 做成五個 Agent Skills 的 `egm/`。課程從用 Aider 做出 pair-programmer，到自己寫 agent 迴圈、核准層與評測。教材隨進度公開，英文，未附 LICENSE 檔。
+
+可以做到：
+- 跟著投影片學 Big Three（context、model、prompt）、規格驅動開發、工具呼叫與 subagents。
+- 用 `reset` 腳本建立 demo 工作副本，自己操作 Aider 重現上課示範。
+- 安裝 EGM skills，走「設計文件 → 無上下文 reviewer 審查 → 照文件實作 → 嚴格 code review」流程。
+
 ## 學習工具
 
 ### [PaperRead](PaperRead.md)
@@ -38,4 +47,5 @@
 
 - **想學容器與 K8s**：Learn Docker and K8s。
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
+- **想要一整學期、有系統的大學課程，或想自己從零寫 agent**：EECS 498 AASE。
 - **要讀學術論文、想要繁體中文輔助**：PaperRead。

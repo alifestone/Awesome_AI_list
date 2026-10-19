@@ -205,6 +205,7 @@
 - **課程 / 教材**
     - **[Learn Docker and K8s](https://github.com/ericboy0224/learn-docker-and-k8s)** — 在 Claude Code、Cursor 等 AI 編輯器裡玩的互動式 Docker／Linux／網路／Kubernetes 學習遊戲，AI 扮演導師帶你解 DevOps 情境題（英文）。
     - **[Learn Harness Engineering](https://github.com/walkinglabs/learn-harness-engineering)** — 從零到一的 Harness Engineering 課程：如何替 AI coding agent 打造可靠的工作環境（講義 + 實作專案）。
+    - **[EECS 498 AASE](https://github.com/eecs498-aase/materials)** — 密西根大學 2026 秋季「應用代理式軟體工程」課程教材：投影片、可自己跑的 Aider demo，以及 Elephant-Goldfish Model 五個 Agent Skills（英文；⚠️ 未附 LICENSE 檔）。
 - **學習工具**
     - **[PaperRead](https://github.com/YuriyLin/PaperRead)** — 以繁體中文閱讀學術論文的研究工作區：論文探索、待讀看板、摘要、閱讀路徑、心智圖與 PDF 對照精讀；支援雲端與本地模型。MIT。
 
@@ -242,3 +243,4 @@
 - 分類總檢查：Anatomy 從 3D 建模與生成移到設計 / 前端的「網頁 3D」（移除「作品範例」小類）；yao-meta-skill（改收整個專案）與 DeepEval 從資安移到 Agent 框架與編排；Agent 框架拆成「Coding agent」「Coding agent 外掛與 skill 組」「知識庫 / 文件問答」（取代「本地應用」，notebooklm-py 移入）「LLM 評測」；影片製作的「程式化動畫 / HTML → 影片」改名「程式化影片（程式碼 → 影片）」，Higgsfield MCP 與 Code Video Model 合併為「AI 影片生成」；設計 / 前端、Jev 決策模型生態、學習資源補上小類；Mellum2 移到通用 / 推理模型；機器人的「研究 / 模型」改名「研究」；更新 AI video drama platform、3DGS for model city、REA、Unsloth、Learn Docker and K8s 的說明，補上 World Labs 連結。
 - 推論與訓練引擎新增 Strata Easy TW。
 - 影片製作的 AI 影片生成區新增 WanGP。
+- 學習資源的課程 / 教材區新增 EECS 498 AASE。
