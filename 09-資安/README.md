@@ -136,4 +136,5 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI。
 - **審查自己的程式碼**：AI 深度審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
 - **測試自己的 LLM 應用**：紅隊與 YAML 設定用 Promptfoo；偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 在 Agent 框架類。
+- **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
 - **設計 AI 資安系統**：Foundry Security Spec；skill 發布前的安全政策可參考 [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)。

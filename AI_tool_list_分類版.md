@@ -177,6 +177,8 @@
     - **[Mellum2](https://huggingface.co/blog/JetBrains/mellum2-launch)**（JetBrains）— 12B MoE（每 token 啟用 2.5B），適合路由、RAG、子 agent 與私有部署。Apache 2.0。
 - **程式碼模型**
     - **[FrogNano-4B-2609](https://huggingface.co/microsoft/FrogNano-4B-2609)**（Microsoft）— 從 Qwen3.5-4B 經 RL 訓練的小型程式代理模型，需搭配 Leaf 工具框架；官方自報 SWE-bench Verified 61.5%。
+- **資安模型**
+    - **[OrcaCyber Nano 1.0](https://huggingface.co/orcarouter/OrcaCyber-Nano-1.0)**（OrcaRouter）— 27B 視覺語言資安模型，逆向、漏洞分析、程式碼審查、日誌分流，GGUF 可在 16 GB 顯卡本機跑，262K context。需登入 HF 同意條件下載，Qwen 授權。⚠️ 資安評測尚未公布，通用基準為官方自報。
 - **端側小模型**
     - **[Needle](https://github.com/cactus-compute/needle)**（Cactus Compute）— 給手機、穿戴裝置、機器人用的超小型工具呼叫模型，可在本機微調。
 - **Embedding**
@@ -244,3 +246,4 @@
 - 推論與訓練引擎新增 Strata Easy TW。
 - 影片製作的 AI 影片生成區新增 WanGP。
 - 學習資源的課程 / 教材區新增 EECS 498 AASE。
+- 模型新增「資安模型」小類與 OrcaCyber Nano 1.0。

@@ -48,6 +48,17 @@ Microsoft 從 Qwen3.5-4B 只用強化學習訓練的小型程式代理模型，�
 - 軟體工程與長程 coding agent 研究。
 - 在沙箱中替有測試的 Python repo 產出候選 patch，再由人審查。
 
+## 資安模型
+
+### [OrcaCyber Nano 1.0](OrcaCyber-Nano-1.0.md)
+
+OrcaRouter 的 27B 視覺語言資安模型（Qwen3.5 系架構），可讀程式碼、日誌、反組譯與工具截圖，主打本機離線執行。只提供 GGUF（13 GB／15.7 GB），原生 llama.cpp 可跑，262K context。HF 需登入同意條件下載，授權標為 Qwen。⚠️ 公開的評測都是通用基準且為官方自報，資安專項成績尚未公布。
+
+可以做到：
+- 在 16 GB 顯卡上本機做逆向、漏洞分析、安全程式碼審查，樣本不必上雲。
+- 日誌、告警、封包擷取的分流與事件回應。
+- 讀反組譯器或掃描工具的截圖並解釋。
+
 ## 端側小模型
 
 ### [Needle](Needle.md)
@@ -114,7 +125,7 @@ bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列�
 ## 怎麼挑
 
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
-- **程式碼研究**：FrogNano；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
+- **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
