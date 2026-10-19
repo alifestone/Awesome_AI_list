@@ -61,6 +61,7 @@
 - **程式化影片（程式碼 → 影片）**
     - **[Remotion](https://github.com/remotion-dev/remotion)** — 用 React 元件寫影片的老牌框架，有官方 agent skills；也是 Cinetic、OpenMontage 的渲染引擎。⚠️ 自訂授權：個人與 3 人以下公司免費，較大的公司需付費。
     - **[HyperFrames](https://github.com/heygen-com/hyperframes)**（HeyGen）— 寫 HTML/CSS/動畫，渲染成確定性 MP4，專為 AI agent 設計。Apache-2.0。
+    - **[Manim](https://github.com/3b1b/manim)**（3Blue1Brown）— 用 Python 寫精準數學動畫的引擎（ManimGL，`pip install manimgl`），3Blue1Brown 影片的製作工具；另有社群版 [Manim CE](https://github.com/ManimCommunity/manim)，兩版不相容。本身不是 AI 工具。MIT。
     - **[Cinetic](https://github.com/Leonxlnx/cinetic)** — 讓 coding agent「導演」短片的 skill：先構思故事，再定品牌、配樂、渲染，最後由多個評審角色檢查。MIT。
     - **[onetake](https://github.com/feitangyuan/onetake)** — Claude Agent Skill，做「一鏡到底」的產品發表片、預告與功能演示動效。⚠️ PolyForm Noncommercial（非商用）。
     - **[PDoomVideo](https://github.com/JohnHeibel/PDoomVideo)** — Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式化動畫參考。
@@ -249,3 +250,4 @@
 - 學習資源的課程 / 教材區新增 EECS 498 AASE。
 - 模型新增「資安模型」小類與 OrcaCyber Nano 1.0。
 - Agent 框架與編排的知識庫 / 文件問答區新增 RAG-Anything。
+- 影片製作的程式化影片區新增 Manim。

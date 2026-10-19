@@ -95,6 +95,15 @@ HeyGen 的開源框架：寫 HTML／CSS／動畫，渲染成確定性的 MP4，�
 - 資料視覺化、chart race、地圖動畫、文件或 PDF 轉影片。
 - 在 CI 中渲染可重現的動態圖像。
 
+### [Manim](Manim.md)
+
+3Blue1Brown 用來做影片的 Python 數學動畫引擎（ManimGL，套件名 `manimgl`）：用程式碼描述公式、座標軸、圖形怎麼變化，再即時預覽或渲染成影片。另有更適合新手的社群版 Manim CE，兩版語法不相容。本身不是 AI 工具。MIT。
+
+可以做到：
+- 做數學、物理、演算法、機器學習的解說動畫，公式可以逐字變形。
+- 讓 coding agent 依文字描述寫出可重跑、可修改的教學動畫。
+- 參考 3Blue1Brown 公開的影片原始碼學寫法。
+
 ### [Cinetic](Cinetic.md)
 
 讓 coding agent「導演」一支短片的 skill：先構思故事，再定品牌、配樂並渲染，最後用腳本與多個評審角色檢查成品。MIT。
@@ -201,6 +210,7 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）、ViMax（點子／劇本／小說都能轉，偏長片）。
 - **已有劇本，只要分鏡提示詞**：PenShot；要動漫風格的鏡頭，模型可用 [Index-AniSora](../10-模型/Index-AniSora.md)。
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
+- **數學、科學解說動畫**：Manim（新手可先用社群版 Manim CE）。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
 - **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
