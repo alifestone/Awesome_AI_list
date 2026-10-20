@@ -1,6 +1,6 @@
 # 🤖 機器人與具身智慧
 
-讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent，到物理模擬器，以及用 LLM 直接指揮機器人的工具。
+讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent，到物理模擬器、操作任務基準測試，以及用 LLM 直接指揮機器人的工具。
 
 ## 研究
 
@@ -34,6 +34,17 @@ Google DeepMind 維護的通用物理引擎，專門模擬會和環境接觸、�
 - 用 MJX／MuJoCo Warp 在 GPU 上大規模平行訓練。
 - 當其他具身 AI 專案的底層模擬器（例如 quackd）。
 
+## 基準測試
+
+### [LIBERO](LIBERO.md)
+
+UT Austin 的機器人操作基準（NeurIPS 2023），原本用來研究終身學習中的知識轉移：130 個語言指令任務分成 LIBERO-Spatial／Object／Goal／100 四組，附人類遙操作示範與基線演算法。建立在 robosuite（MuJoCo）上。程式碼 MIT，資料集 CC BY 4.0。
+
+可以做到：
+- 研究機器人依序學新任務時的知識轉移與遺忘問題。
+- 評測 VLA 或模仿學習策略，和 OpenVLA、π0 等論文的 LIBERO 成功率直接比較。
+- 用 BDDL 自訂新的操作任務，或拿現成示範資料訓練策略。
+
 ## LLM 控制
 
 ### [quackd](quackd.md)
@@ -50,5 +61,5 @@ Google DeepMind 維護的通用物理引擎，專門模擬會和環境接觸、�
 
 - 想**訓練或研究機器人模型**：看 ARC。
 - 想讓 **VLM 理解 3D 空間**：看 SpatialClaw。
-- 需要**模擬環境**：MuJoCo；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
+- 需要**模擬環境**：MuJoCo；要**評測操作策略或 VLA**：LIBERO；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
 - 想**直接用 Claude 指揮機器人**：quackd。

@@ -12,6 +12,8 @@
     - **[SpatialClaw](https://github.com/NVlabs/SpatialClaw)**（NVIDIA，NeurIPS 2026）— 以「寫程式」當動作介面的空間推理 agent：VLM 在持久 Jupyter kernel 裡呼叫 SAM3、Depth-Anything-3 等感知工具，免訓練。
 - **模擬**
     - **[MuJoCo](https://github.com/google-deepmind/mujoco)** — DeepMind 的物理模擬引擎，機器人與強化學習的標準模擬器。
+- **基準測試**
+    - **[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)**（UT Austin，NeurIPS 2023）— 終身機器人學習的操作基準：130 個語言指令任務、四個任務組（Spatial／Object／Goal／100），附人類示範；也是評測 VLA 最常用的模擬基準之一。建立在 robosuite（MuJoCo）上。程式碼 MIT，資料集 CC BY 4.0。
 - **LLM 控制**
     - **[quackd](https://github.com/rokbenko/quackd)** — 用自然語言 + LLM 指揮 Pollen Robotics 的 Microduck 雙足小機器人，內建模擬器與 MCP。⚠️ 原清單標為 LeRobot，實際針對的是 Microduck。
 
@@ -253,3 +255,4 @@
 - Agent 框架與編排的知識庫 / 文件問答區新增 RAG-Anything。
 - 影片製作的程式化影片區新增 Manim。
 - 音訊新增 earshot。
+- 機器人與具身智慧新增「基準測試」小類與 LIBERO。
