@@ -205,6 +205,7 @@
 - **[Strata Easy TW](https://github.com/encoreh78951-hub/StrataEasyTW)** — Strata 的非官方繁中 Windows 安裝導覽器：左側跑官方安裝腳本、右側中文解說，可選 SC117 第三方低拒答模型。MIT。⚠️ v1.3.0-rc1 為 pre-release，完整安裝流程尚未端到端驗證。
 - **[Unsloth](https://github.com/unslothai/unsloth)** — 在本機執行與訓練 LLM 的開源框架，主打快速、省顯存的微調；除 Python 函式庫外另有 Studio 網頁介面與桌面版。
 - **[Janas](https://github.com/prabanta-dev/janas)** — 純 C 的本地 MoE 推論引擎：權重留在 SSD、專家串流＋快取，可跑超過 RAM 的模型（如 Qwen3-Next-80B）。GPL-3.0+。⚠️ 實驗性質，僅在單一機器測過。
+- **[DeepInfer](https://github.com/deepseek-ai/DeepInfer)** — DeepSeek 官方開源、支撐其線上服務的大規模推論框架：MoE 專家平行、DSpark 推測解碼、決定性推論；目前只支援 DeepSeek-V4.1-Flash，限 NVIDIA SM100／昇騰 950。Apache-2.0。⚠️ 開源版僅離線推論。
 
 ---
 
@@ -260,3 +261,4 @@
 - 機器人與具身智慧新增「基準測試」小類與 LIBERO。
 - 影片製作的 AI 影片生成區新增 BeatDesign。
 - 學習資源的課程 / 教材區新增 50 ML Projects to Understand LLMs。
+- 推論與訓練引擎新增 DeepInfer。

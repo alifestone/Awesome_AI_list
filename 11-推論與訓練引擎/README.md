@@ -40,9 +40,20 @@ Strata 的非官方繁體中文 Windows 安裝導覽器：左邊跑官方安裝�
 - 提供 OpenAI 相容 API、MCP 與程式碼補全給編輯器、Claude Code。
 - 用 `janas-bench` 量測自己的機器。
 
+### [DeepInfer](DeepInfer.md)
+
+DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服務背後的引擎。目前只支援 DeepSeek-V4.1-Flash，硬體限 NVIDIA SM100（Blackwell）與華為昇騰 950。Apache-2.0。⚠️ 開源版只有離線推論，未含 KV cache 系統與 prefill／decode 分離部署。
+
+可以做到：
+- 在 Blackwell／昇騰 950 叢集上跑 DeepSeek-V4.1-Flash 離線推論。
+- 用 MoE 專家平行（EP + EPLB）、DSpark 推測解碼加速大規模推論。
+- 開啟 batch-invariant 推論與決定性取樣，讓輸出可重現。
+- 用 regex、JSON schema 或 EBNF 限制輸出格式。
+
 ## 怎麼挑
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
 - **想用 SSD 串流跑超過 RAM 的 MoE 模型（實驗性）**：Janas。
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
+- **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
 - 可以跑哪些模型，見 [模型](../10-模型/)。
