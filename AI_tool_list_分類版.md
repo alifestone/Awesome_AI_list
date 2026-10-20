@@ -214,6 +214,7 @@
     - **[Learn Docker and K8s](https://github.com/ericboy0224/learn-docker-and-k8s)** — 在 Claude Code、Cursor 等 AI 編輯器裡玩的互動式 Docker／Linux／網路／Kubernetes 學習遊戲，AI 扮演導師帶你解 DevOps 情境題（英文）。
     - **[Learn Harness Engineering](https://github.com/walkinglabs/learn-harness-engineering)** — 從零到一的 Harness Engineering 課程：如何替 AI coding agent 打造可靠的工作環境（講義 + 實作專案）。
     - **[EECS 498 AASE](https://github.com/eecs498-aase/materials)** — 密西根大學 2026 秋季「應用代理式軟體工程」課程教材：投影片、可自己跑的 Aider demo，以及 Elephant-Goldfish Model 五個 Agent Skills（英文；⚠️ 未附 LICENSE 檔）。
+    - **[50 ML Projects to Understand LLMs](https://github.com/mikexcohen/ML4LLM_book)** — Mike X Cohen 同名書的配套 notebook：50 個專案用機器學習分析 GPT-2／BERT 的內部活化（斷詞、embedding、logits、attention、MLP），入門機制可解釋性；Colab 可跑（英文；程式碼 MIT，書需另購）。
 - **學習工具**
     - **[PaperRead](https://github.com/YuriyLin/PaperRead)** — 以繁體中文閱讀學術論文的研究工作區：論文探索、待讀看板、摘要、閱讀路徑、心智圖與 PDF 對照精讀；支援雲端與本地模型。MIT。
 
@@ -258,3 +259,4 @@
 - 音訊新增 earshot。
 - 機器人與具身智慧新增「基準測試」小類與 LIBERO。
 - 影片製作的 AI 影片生成區新增 BeatDesign。
+- 學習資源的課程 / 教材區新增 50 ML Projects to Understand LLMs。

@@ -31,6 +31,15 @@
 - 用 `reset` 腳本建立 demo 工作副本，自己操作 Aider 重現上課示範。
 - 安裝 EGM skills，走「設計文件 → 無上下文 reviewer 審查 → 照文件實作 → 嚴格 code review」流程。
 
+### [50 ML Projects to Understand LLMs](ML4LLM-Book.md)
+
+Mike X Cohen 的書《50 ML projects to understand LLMs》配套程式碼：50 個專案，把 GPT-2、BERT 的 hidden states、注意力與 embedding 當成資料，用迴歸、分類、RSA、降維等機器學習方法分析 transformer 內部機制。每個專案有 helper（自己補完）與 solution 兩份 notebook，全部可在 Colab 跑。程式碼 MIT，書需另購，英文。
+
+可以做到：
+- 從斷詞、embedding、logits 一路到 attention 與 MLP，逐章拆解 transformer。
+- 動手練 logit lens、activation patching、head 靜音、probing 等可解釋性技巧。
+- 拿 LLM 當題材練機器學習與資料視覺化。
+
 ## 學習工具
 
 ### [PaperRead](PaperRead.md)
@@ -48,4 +57,5 @@
 - **想學容器與 K8s**：Learn Docker and K8s。
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
 - **想要一整學期、有系統的大學課程，或想自己從零寫 agent**：EECS 498 AASE。
+- **想知道 LLM 內部怎麼運作（可解釋性入門）**：50 ML Projects to Understand LLMs。
 - **要讀學術論文、想要繁體中文輔助**：PaperRead。
