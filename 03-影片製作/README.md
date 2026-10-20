@@ -176,6 +176,15 @@ AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能
 - 讓 Claude 依 brief 規劃整套製作：Higgsfield 生素材 → Blender 建 3D → After Effects 合成。
 - 交付可繼續編輯的 AE／Premiere 專案，而不只是壓平的 MP4。
 
+### [BeatDesign](BeatDesign.md)
+
+本機跑的 AI 圖片／影片工作台，自稱開源版 Higgsfield：無限畫布上生成與比較素材，再接到瀏覽器內的時間軸剪輯、加字幕並匯出 MP4。開放 29 個 MCP tool，讓 Claude Code、Codex 等 agent 操作同一個專案。生成只接 BeatAPI（需自備 key）。Apache-2.0。
+
+可以做到：
+- 在畫布上用 GPT Image、Wan、Kling、MiniMax 等模型生成、分支、比較圖片與影片。
+- 把生成結果排進時間軸，剪輯、疊 logo、上 SRT 字幕，局部片段用 AI 重做。
+- 讓 agent 批次生成並排好時間軸，再由人在瀏覽器裡檢查與微調。
+
 ### [Code Video Model](Code-Video-Model.md)
 
 研究專案：文字先變成可編輯的 Three.js 場景程式，渲染成代理影片，再搭配參考圖交給影片模型生成，讓鏡位、動作、物理都能靠改程式控制。Apache-2.0。
@@ -213,5 +222,5 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - **數學、科學解說動畫**：Manim（新手可先用社群版 Manim CE）。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
-- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
+- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。
