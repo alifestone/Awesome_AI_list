@@ -211,6 +211,7 @@
 - **[DeepInfer](https://github.com/deepseek-ai/DeepInfer)** — DeepSeek 官方開源、支撐其線上服務的大規模推論框架：MoE 專家平行、DSpark 推測解碼、決定性推論；目前只支援 DeepSeek-V4.1-Flash，限 NVIDIA SM100／昇騰 950。Apache-2.0。⚠️ 開源版僅離線推論。
 - **[Project Maya](https://github.com/mw00/project-maya)** — 從 Strata 改寫的本地推論引擎，專為 GLM-5.3-Flash（321B）與 DeepSeek-V4.1-Flash-1017（748B）MoE 打造：專家分層放 VRAM／RAM／SSD，1～16 張 GPU，附 OpenAI／Anthropic 相容 API 與儀表板。MIT。⚠️ AMD 與 Windows 為實驗性。
 - **[TurboFieldfare](https://github.com/drumih/turbo-fieldfare)** — 以 Swift＋Metal 自寫的 Gemma 4 26B-A4B 推論引擎：記憶體只放約 2 GB，專家從 SSD 串流，8 GB 的 Apple Silicon Mac 也能跑；附 Mac app、CLI 與本機 OpenAI 相容伺服器。Apache-2.0。⚠️ 僅此一個模型，需 macOS 26。
+- **[QwenGyre](https://arxiv.org/abs/2609.33848)** — 阿里巴巴的超長任務 agent 強化學習訓練框架論文：GPU 在 rollout 與訓練間彈性切換、不中斷執行中的 agent，並把分支執行整理成共享前綴的軌跡樹去重；自測比 Colocate 快最多 1.85×、比 Async 快 1.78×。⚠️ 目前只有論文，未公開程式碼。
 
 ---
 
@@ -271,3 +272,4 @@
 - 推論與訓練引擎新增 TurboFieldfare。
 - 影片製作的 Agent 影片製作系統區新增 Jellyfish。
 - 模型新增「OCR／文件解析」小類（Indra OCR）。
+- 推論與訓練引擎新增 QwenGyre（論文）。

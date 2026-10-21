@@ -112,6 +112,7 @@ unsloth start claude --model unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL
 - [Hugging Face TRL / PEFT](https://github.com/huggingface/trl)：Unsloth 常搭配使用的訓練／參數高效微調生態（本條目未逐一查證整合細節）。
 - [llama.cpp](https://github.com/ggml-org/llama.cpp)：Unsloth 匯出 GGUF 後的常見推論後端，Studio 亦可設定 llama.cpp 後端。
 - [Strata](https://github.com/Niko1221/Strata)：本清單收錄的本地 MoE 推論引擎，可選用 Unsloth 的 UD 量化模型。
+- [QwenGyre](QwenGyre.md)：阿里巴巴針對超長任務 agent 的資料中心級 RL 訓練框架（僅論文）。
 
 ## 資料來源
 

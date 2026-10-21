@@ -69,6 +69,15 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 用原生 Mac app 聊天，或另裝 vision pack 讀圖（M2 以上）。
 - 開本機 OpenAI 相容 API（串流、function tools）接 OpenCode 等工具。
 
+### [QwenGyre](QwenGyre.md)
+
+阿里巴巴提出的強化學習訓練框架（論文），專門訓練單次要跑好幾小時、用掉近百萬 token 的超長任務 agent：GPU 在 rollout 與訓練之間彈性切換而不中斷執行中的 agent，並把分支軌跡整理成共享前綴的樹、去重後再訓練。⚠️ 目前只有論文，未公開程式碼；實驗規模為資料中心等級。
+
+可以做到（依論文）：
+- 訓練 Qwen 3.8 2.4T 等級模型時，比 Colocate 快最多 1.85×、比 Async 快最多 1.78×。
+- 48 步內把 NL2RepoBench 通過率從 52.5% 提升到 58.5%。
+- 對逾時的執行打部分分數，不浪費已完成的工作。
+
 ## 怎麼挑
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
@@ -77,4 +86,5 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - **想在自己的 GPU 上跑 GLM-5.3-Flash 或 DeepSeek-V4.1-Flash**：Project Maya。
 - **只有一台記憶體不大的 Mac，想跑 Gemma 4 26B-A4B**：TurboFieldfare。
 - **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
+- **想了解超長任務 agent 的大規模 RL 訓練怎麼做（研究參考）**：QwenGyre（只有論文）。
 - 可以跑哪些模型，見 [模型](../10-模型/)。
