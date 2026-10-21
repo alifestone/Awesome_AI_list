@@ -55,6 +55,7 @@ Janas 是一組以 C 撰寫、除 C 函式庫外無其他相依的 AI 工具，�
 
 - [Strata](Strata.md)：同樣讓大型 MoE 模型在消費級硬體執行（分層放 VRAM／RAM／SSD）
 - [Unsloth](Unsloth.md)：微調與執行本地模型
+- [TurboFieldfare](TurboFieldfare.md)：同樣從 SSD 串流專家，專跑 Gemma 4 26B-A4B，限 Apple Silicon Mac
 
 ## 資料來源
 
