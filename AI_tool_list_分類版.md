@@ -17,7 +17,7 @@
 - **LLM 控制**
     - **[quackd](https://github.com/rokbenko/quackd)** — 用自然語言 + LLM 指揮 Pollen Robotics 的 Microduck 雙足小機器人，內建模擬器與 MCP。⚠️ 原清單標為 LeRobot，實際針對的是 Microduck。
 - **開源硬體平台**
-    - **[RP1](https://github.com/Roboparty/RP1)**（RoboParty）— 全開源人形機器人平台（1.35 m、24／30 自由度）：機構 CAD、PCB、BOM、關節模組韌體、Linux BSP、ROS 2 部署、URDF／MJCF 與 Isaac Lab 訓練都公開，分散在十多個子 repo。⚠️ 各子 repo 授權不同（CERN-OHL-W、CC-BY、GPL-3.0），部分未標授權；整機未公開售價。
+    - **[RP1](https://github.com/Roboparty/RP1)**（RoboParty）— 全開源人形機器人平台（1.35 m、24／30 自由度）：機構 CAD、PCB、BOM、關節模組文件、Linux BSP、ROS 2 部署與 URDF／MJCF 都公開，分散在十多個子 repo。⚠️ 各子 repo 授權不同（CERN-OHL-W、CC-BY、GPL-3.0），部分未標授權；關節韌體未公開，官方訓練 repo 只有 RPO 機器人的任務；整機未公開售價。
 
 ---
 
