@@ -190,6 +190,8 @@
     - **[Needle](https://github.com/cactus-compute/needle)**（Cactus Compute）— 給手機、穿戴裝置、機器人用的超小型工具呼叫模型，可在本機微調。
 - **Embedding**
     - **[EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2)**（Google）— 740M 多模態 embedding，文字／圖片／音訊／影片映射到同一向量空間，可端側執行。Apache 2.0。
+- **OCR／文件解析**
+    - **[Indra OCR](https://huggingface.co/datalab-to/indra-ocr)**（Datalab）— 只用 CPU 的輕量 OCR 模型組（ONNX，約 76 MB）：PDF／圖片轉 Markdown、文字或含座標框的 JSON，附版面標籤與閱讀順序，80 多種語言含中日韓，32 核約 44 頁／秒。程式碼 Apache-2.0。⚠️ 權重為修改版 OpenRAIL-M：營收／募資超過 US$2,000 萬或與 Datalab API 競爭需付費授權；手寫、複雜表格、老舊掃描較弱。
 - **影像生成**
     - **[Qwen-Image-2.1](https://huggingface.co/Qwen/Qwen-Image-2.1)** — 7B 文生圖 + 圖像編輯，支援原生透明 RGBA。⚠️ 授權改為 Qwen Research License（非商用），與先前 Apache 2.0 的版本不同。
     - **[FLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein)**（Black Forest Labs）— 5.6B 文生圖 + 圖像編輯，最多 10 張參考圖，支援 bounding box 排版；需搭配 prompt upsampler。⚠️ FLUX Kommunity License：非商用，年營收低於 US$500 萬者可商用輸出。
@@ -268,3 +270,4 @@
 - 推論與訓練引擎新增 Project Maya。
 - 推論與訓練引擎新增 TurboFieldfare。
 - 影片製作的 Agent 影片製作系統區新增 Jellyfish。
+- 模型新增「OCR／文件解析」小類（Indra OCR）。

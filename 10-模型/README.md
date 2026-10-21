@@ -80,6 +80,17 @@ Google DeepMind 的 740M 多模態 embedding 模型，把文字、程式碼、�
 - 端側或筆電上的語意搜尋與 RAG（企業知識庫、程式碼搜尋、用語音搜音訊檔）。
 - 分類、分群、去重、推薦、跨語言對齊。
 
+## OCR／文件解析
+
+### [Indra OCR](Indra-OCR.md)
+
+Datalab 的輕量 OCR 模型組，只用 CPU（ONNX Runtime，不需 PyTorch 或 GPU），約 76 MB：把 PDF 和圖片轉成 Markdown、純文字或含座標框的 JSON，每行每塊都有版面標籤與閱讀順序。支援 80 多種語言，含簡繁中文、日文、韓文與直排。程式碼 Apache-2.0。⚠️ 權重為修改版 OpenRAIL-M：營收或募資超過 US$2,000 萬、或與 Datalab API 競爭的用途需付費授權。
+
+可以做到：
+- 在沒有 GPU 的機器上大量把 PDF、掃描檔轉成 Markdown 餵給 RAG（官方實測 32 核約 44 頁／秒）。
+- 數位 PDF 直接讀文字層，只對圖片內文字做 OCR；加 `--math` 把公式轉成 LaTeX。
+- 用本機網頁檢視器檢查每頁的行、區塊與閱讀順序，可和 Tesseract 並排比較。
+
 ## 影像生成
 
 ### [Qwen-Image-2.1](Qwen-Image-2.1.md)
@@ -127,6 +138,7 @@ bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列�
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
 - **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
+- **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
 - **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。
