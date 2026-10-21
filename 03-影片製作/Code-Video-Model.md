@@ -59,6 +59,7 @@ Code Video Model（團隊署名 Code Video Model Team，2026 preprint）讓 codi
 - [OpenMontage](OpenMontage.md)：agent 驅動的完整影片製作
 - [Remotion](Remotion.md)：以程式碼（React）寫影片
 - [Index-AniSora](../10-模型/Index-AniSora.md)：開源影片生成模型
+- [StreamRender-H3](../10-模型/StreamRender-H3.md)：同樣用程式碼場景驅動 MiniMax-H3，但改成即時串流的互動遊戲
 
 ## 資料來源
 

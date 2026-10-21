@@ -132,6 +132,15 @@ Skywork AI 的開源互動世界模型系列。3.0（以 Wan2.2-TI2V-5B 為基�
 - 在消費級顯卡上試玩 AI 神經渲染的射擊與賽車遊戲，或讓 coding agent 改遊戲規則。
 - 研究動作條件影片生成與世界模型（類似 Genie 的開源路線）。
 
+### [StreamRender-H3](StreamRender-H3.md)
+
+NVIDIA Research 的互動世界研究：three.js 寫的賽車遊戲負責地圖、物理與輸入，每幀只輸出語意分割圖，再由以 MiniMax-H3 微調、蒸餾成 2 步的串流影片模型即時畫成寫實畫面；換一張參考圖就能換天氣、時段與風格。程式碼與權重都已公開。⚠️ 需要 8 張 GB200 與約 270 GB 磁碟；權重為 MiniMax-H3 社群授權；目前只訓練了賽車場景。
+
+可以做到：
+- 研究遊戲引擎＋生成式渲染、串流擴散與少步蒸餾的完整做法。
+- 參考用語意圖當引擎與影片模型之間的介面，讓別的引擎接上渲染器。
+- 在 GB200／NVL72 叢集上跑可用 WASD 駕駛的即時寫實賽車 demo。
+
 ## 工具 / 修正檔
 
 ### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
@@ -148,6 +157,6 @@ Skywork AI 的開源互動世界模型系列。3.0（以 Wan2.2-TI2V-5B 為基�
 - **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
-- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora；**可操控的互動世界／遊戲畫面**：Matrix-Game。
+- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora；**可操控的互動世界／遊戲畫面**：Matrix-Game（消費級顯卡可跑 4.0）；有 GB200 叢集、要研究引擎＋生成式渲染：StreamRender-H3。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。

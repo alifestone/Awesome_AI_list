@@ -103,6 +103,7 @@ RTX 顯卡要手動選 `--preset rtx5090`／`rtx5080`／`rtx5070ti`，不會自�
 
 ## 相關工具
 
+- [StreamRender-H3](StreamRender-H3.md)：NVIDIA 的同類研究，引擎輸出語意圖、MiniMax-H3 串流渲染成寫實畫面；畫質更高但需 8 張 GB200
 - [Index-AniSora](Index-AniSora.md)：同樣以 Wan 系列為基底的影片生成模型（動漫風格）
 - [HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)：騰訊的 3D 世界模型，產出可保存的 3D 資產，而不是即時生成的像素畫面
 - [World Labs](../02-3D-建模與生成/World-Labs.md)：商業版可探索 3D 世界生成
