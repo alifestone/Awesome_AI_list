@@ -78,6 +78,7 @@ git clone https://github.com/mikexcohen/ML4LLM_book
 
 - [EECS 498 AASE](EECS-498-AASE.md)：同為學習資源，但偏向「使用」coding agent，而不是理解模型內部。
 - [Learn Harness Engineering](Learn-Harness-Engineering.md)：本清單另一個以實作為主的課程。
+- [Train LLM From Scratch](Train-LLM-From-Scratch.md)：反過來從零訓練 LLM（含 SFT 與 RL 後訓練），補上本書不談的訓練部分。
 
 ## 資料來源
 

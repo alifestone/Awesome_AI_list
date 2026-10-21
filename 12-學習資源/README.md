@@ -40,6 +40,15 @@ Mike X Cohen 的書《50 ML projects to understand LLMs》配套程式碼：50 �
 - 動手練 logit lens、activation patching、head 靜音、probing 等可解釋性技巧。
 - 拿 LLM 當題材練機器學習與資料視覺化。
 
+### [Train LLM From Scratch](Train-LLM-From-Scratch.md)
+
+Fareed Khan 的開源教學：用純 PyTorch（不用 `trl`、`peft`、`transformers`）從零寫出 Transformer，從下載資料、預訓練一路做到 SFT、獎勵模型、PPO／DPO／GRPO 與評測。原始架構與現代架構（RoPE、GQA／MLA、MoE、KV cache）並列，每個階段都能選。MIT，英文。
+
+可以做到：
+- 不用 GPU，在筆電 CPU 上約 5 分鐘訓練出會寫英文小故事的小模型。
+- 逐行看懂 DPO、PPO、GRPO 等後訓練演算法，並用 GSM8K 比較各階段的效果。
+- 用 Streamlit 控制台點選啟動每個訓練階段、看 loss，並和 checkpoint 對話。
+
 ## 學習工具
 
 ### [PaperRead](PaperRead.md)
@@ -58,4 +67,5 @@ Mike X Cohen 的書《50 ML projects to understand LLMs》配套程式碼：50 �
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
 - **想要一整學期、有系統的大學課程，或想自己從零寫 agent**：EECS 498 AASE。
 - **想知道 LLM 內部怎麼運作（可解釋性入門）**：50 ML Projects to Understand LLMs。
+- **想自己從零訓練一個 LLM，連後訓練與 RL 一起學**：Train LLM From Scratch。
 - **要讀學術論文、想要繁體中文輔助**：PaperRead。
