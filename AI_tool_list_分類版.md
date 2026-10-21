@@ -129,6 +129,7 @@
     - **[notebooklm-py](https://github.com/teng-lin/notebooklm-py)** — 非官方 NotebookLM Python API／CLI／agent skill：讓 Claude Code 等 agent 操作 NotebookLM 問答、生成 podcast／簡報／測驗並批次下載。
 - **Agent 記憶**
     - **[Cognee](https://github.com/topoteretes/cognee)** — 開源 agent 長期記憶平台：把文件、程式碼、對話建成可自架的知識圖譜＋向量索引，`remember`／`recall` 跨 session 取用；免 API key 可用本機小模型跑，附 Claude Code／Codex 外掛與 MCP server。Apache-2.0。
+    - **[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)**（騰訊雲）— 團隊級 agent 記憶中樞：把對話、文件、程式碼整理成 Chat Memory／Skill／Wiki／CodeGraph 四種資產，在面板上審核、設權限並分配給指定 agent；agent 改 base URL 指向 Proxy 即可接入（Claude Code、Codex、CodeBuddy 等）。Docker 自架，MIT。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
 
@@ -287,3 +288,4 @@
 - 模型的影片生成區新增 Matrix-Game。
 - 模型的影片生成區新增 StreamRender-H3。
 - 機器人與具身智慧新增「開源硬體平台」小類與 RP1。
+- Agent 框架與編排的 Agent 記憶區新增 TencentDB Agent Memory。

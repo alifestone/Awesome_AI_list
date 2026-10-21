@@ -105,6 +105,7 @@ Docker 部署：`docker compose --profile ui --profile mcp up`。預設埠為 AP
 
 - [RAG-Anything](RAG-Anything.md)：同樣以知識圖譜做檢索，但偏多模態文件問答。
 - [AnythingLLM](AnythingLLM.md)：有圖形介面、不用寫程式的本地文件問答 App。
+- [TencentDB Agent Memory](TencentDB-Agent-Memory.md)：騰訊雲的團隊級 agent 記憶，偏多 agent 共享、權限與資產分配，用 Proxy 接入。
 - Mem0、Letta、Zep、Graphiti：其他 agent 記憶系統，Cognee 支援從它們匯入（未逐一查證）。
 
 ## 資料來源
