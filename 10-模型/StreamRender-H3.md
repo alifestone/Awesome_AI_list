@@ -10,7 +10,7 @@
 
 （使用者新增，無原清單說明。）
 
-> **查證結果**：NVIDIA Research（Sana／Sol-Engine 團隊，含 Song Han、Enze Xie）的研究部落格與開源 runtime。做法是「程式碼跑世界、影片模型畫畫面」：three.js 寫的賽車遊戲負責地圖、物理與輸入，每幀只輸出一張語意分割圖，再由以 MiniMax-H3 Ref2VA 微調、蒸餾成 2 步的串流影片模型即時畫成寫實影片。程式碼、權重都已公開，但**部署需要 8 張 GB200 等級 GPU**，一般人無法自己跑；權重沿用 **MiniMax-H3 社群授權**，不是 Apache。
+> **查證結果**：NVIDIA Research（Sana／Sol-Engine 團隊，含 Song Han、Enze Xie）的研究部落格與開源 runtime。做法是「程式碼跑世界、影片模型畫畫面」：three.js 寫的賽車遊戲負責地圖、物理與輸入，每幀只輸出一張語意分割圖，再由以 MiniMax-H3 Ref2VA 微調、蒸餾成 2 步的串流影片模型即時畫成寫實影片。程式碼、權重都已公開，但**部署需要同一 NVLink 域內的 8 張資料中心級 GPU**（官方數字在 GB200 上量測），一般人無法自己跑；渲染器權重沿用 **MiniMax-H3 社群授權**，不是 Apache，且**不適用於歐盟、英國、南韓與美國**。
 
 ## 概述
 
@@ -26,7 +26,7 @@ HF 權重於 2026-10-11 建立；程式碼放在 NVlabs/Sana 的 `sol-engine` �
 - **訓練**：從 MiniMax-H3 Ref2VA 微調，依序 teacher forcing → Resampling Forcing → DMD 蒸餾成 2 步。賽車資料為 39 條賽道、約 5,100 場 AI 駕駛比賽切出的 10,000 段 15 秒片段；參考圖由 GPT-Image-2.5 重繪首幀、提示詞由 Claude Opus 5.5 撰寫，目標影片由原生 H3 生成。
 - **速度**：在 8 張 GB200 上每個串流步的擴散渲染 218 ms（PyTorch 基線 799.7 ms，3.67 倍加速，用到 FlashAttention-4、AdaLN 投影快取、持久化 KV 等）；另以 agent 迴圈最佳化的 Fast Causal H3 VAE，單張 GB200 解碼 2 個潛在幀（720p）23.8 ms。
 - **外觀控制**：同一條語意串流，只換參考圖與提示詞就能改天氣、時段、車身塗裝；官方展示 20 個場景各一分鐘的連續渲染。
-- **瀏覽器遊玩**：本機開 `http://127.0.0.1:5191`，可用 WASD 駕駛或開 autopilot，引擎畫面與生成畫面並排顯示；附 60 個範例場景。
+- **瀏覽器遊玩**：本機開 `http://127.0.0.1:5191`，可用 WASD 駕駛或開 autopilot，引擎畫面與生成畫面並排顯示；附 60 個精選範例（20 個不同場景，加上 10 條路線各配 4 種外觀），語意影片與參考圖要另從 GitHub Release 下載。
 
 ## 安裝與使用方式
 
@@ -53,13 +53,17 @@ GPUS=8 PYTHON_BIN=python bash scripts/launch_local.sh --assets configs/example.l
 
 ## 授權與成本
 
-- **授權**：部署程式碼為 Apache-2.0；權重標為 **minimax-h3-community** 授權（沿用 MiniMax-H3），使用前請讀 HF 上的 LICENSE。賽車引擎保留 TORCS 原始碼聲明與 Free Art License 素材授權。
-- **成本**：完全免費下載，但需 8 張 GB200 等級 GPU 與約 270 GB 磁碟，實際只適合研究機構或雲端叢集。
+- **授權**：部署程式碼為 Apache-2.0。權重包不是單一授權：渲染器、因果解碼器與音訊 codec 依 **MiniMax H3 Community License**；Qwen 元件為 Apache-2.0，TAE 為 MIT。賽車引擎保留 TORCS 原始碼聲明與 Free Art License 素材授權。
+- ⚠️ **MiniMax H3 授權重點**：
+  - 適用地區排除**歐盟、英國、南韓與美國**，這些地區要另向 MiniMax 申請。
+  - 商業產品年營收超過 US$2,000 萬需事先取得書面授權，商業產品介面須明顯標示「MiniMax H3」。
+  - 不得用模型或其輸出改進 MiniMax H3 以外的 AI 模型。
+- **成本**：免費下載，但需同一 NVLink 域內 8 張 GPU（官方用 GB200／NVL72）與約 273 GB 磁碟，實際只適合研究機構或雲端叢集。
 
 ## 限制與注意事項
 
 - 目前只有一個場景：渲染器只用賽車資料（第三人稱追車視角）訓練，換別的遊戲需要自己蒐集資料重訓。
-- 218 ms／步是官方在 GB200 上自報的數字，不含網路與瀏覽器解碼；官方也承認仍在用完整 MiniMax-H3 DiT，下一步是縮小模型、提升畫質。
+- 218 ms／步是官方在 GB200 上自報、只計擴散渲染的數字，實際遊玩還要加上編解碼、網路與瀏覽器的延遲；官方也承認仍在用完整 MiniMax-H3 DiT，下一步是縮小模型、提升畫質。
 - 語意圖對所有對手車塗同一色，車輛塗裝只能靠參考圖、提示詞與模型自己的歷史維持。
 - 開發端點預設綁 loopback，官方要求不要直接公開到網路。
 
@@ -75,5 +79,7 @@ GPUS=8 PYTHON_BIN=python bash scripts/launch_local.sh --assets configs/example.l
 - https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/ （研究部落格：架構、訓練資料、速度、限制）
 - https://github.com/NVlabs/Sana/tree/sol-engine/models/streamrender_h3 （README：runtime 設定、需求、安裝、授權來源）
 - https://huggingface.co/Efficient-Large-Model/StreamRender-H3 （模型卡、權重內容、授權標籤、建立日期）
+- https://huggingface.co/Efficient-Large-Model/StreamRender-H3/blob/main/LICENSE （MiniMax H3 Community License 全文：排除地區、商業條款、使用限制）
+- https://github.com/NVlabs/Sana/blob/sol-engine/models/streamrender_h3/examples/README.md （60 個範例的組成）
 - https://huggingface.co/MiniMaxAI/MiniMax-H3 （基底模型與其授權名稱）
 - https://api.github.com/repos/NVlabs/Sana （星數、授權）

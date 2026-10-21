@@ -54,6 +54,7 @@ git clone https://github.com/SkyworkAI/Matrix-Game.git
 cd Matrix-Game/Matrix-Game-3
 conda create -n matrix-game-3.0 python=3.12 -y && conda activate matrix-game-3.0
 pip install -r requirements.txt
+pip install "huggingface_hub[cli]"
 hf download Skywork/Matrix-Game-3.0 --local-dir Matrix-Game-3.0
 
 torchrun --nproc_per_node=$NUM_GPUS generate.py --size 704*1280 --dit_fsdp --t5_fsdp \
@@ -65,7 +66,8 @@ torchrun --nproc_per_node=$NUM_GPUS generate.py --size 704*1280 --dit_fsdp --t5_
 - 總幀數 = 57 + (num_iterations − 1) × 40。
 - 用基礎模型改加 `--use_base_model --num_inference_steps 50`；多 GPU 可加 `--use_async_vae --async_vae_warmup_iters 1`。
 - ⚠️ HF 模型卡與 3.0 README 的指令有兩處錯：clone 的 `SkyworkAI/Matrix-Game-3.0.git` 不存在（應 clone 主 repo 再進 `Matrix-Game-3/`），下載指令少了 `Skywork/` 前綴。上面已改正。
-- 權重：5B DiT 約 13 GB、umT5-XXL 文字編碼器約 11.4 GB、Wan2.2 VAE 約 2.8 GB，另有兩版 LightVAE。
+- `--fa_version 3` 照抄官方指令，FlashAttention 3 主要支援 H 系列；A100 等其他 GPU 可能要改用 2（官方未說明，本條目推測）。
+- 權重：蒸餾模型（預設使用）約 25.9 GB、基礎模型約 12.9 GB、umT5-XXL 文字編碼器約 11.4 GB、Wan2.2 VAE 約 2.8 GB，另有兩版 LightVAE（2.7 GB／0.8 GB）；整個 repo 約 82 GB。
 
 **4.0**（Linux、NVIDIA GPU、Python 3.12、PyTorch 2.12／CUDA 13.2）：
 
@@ -91,8 +93,8 @@ RTX 顯卡要手動選 `--preset rtx5090`／`rtx5080`／`rtx5070ti`，不會自�
 
 ## 授權與成本
 
-- **授權**：3.0、4.0 為 Apache-2.0；1.0、2.0 為 MIT。第三方元件與遊戲資產保有各自授權。
-- **成本**：開源可自架；3.0 實際上需要資料中心級 GPU，4.0 最低到 RTX 5070 Ti。
+- **授權**：3.0、4.0 各自資料夾內附 Apache-2.0 授權檔；1.0、2.0 沒有自己的授權檔，沿用 repo 根目錄的 MIT（GitHub 因此把整個 repo 標成 MIT）。第三方元件與遊戲資產保有各自授權。
+- **成本**：開源可自架；3.0 官方只在 A／H 系列 GPU 上測過（消費級顯卡能否跑未說明），4.0 最低到 RTX 5070 Ti。
 
 ## 限制與注意事項
 
@@ -103,7 +105,7 @@ RTX 顯卡要手動選 `--preset rtx5090`／`rtx5080`／`rtx5070ti`，不會自�
 
 ## 相關工具
 
-- [StreamRender-H3](StreamRender-H3.md)：NVIDIA 的同類研究，引擎輸出語意圖、MiniMax-H3 串流渲染成寫實畫面；畫質更高但需 8 張 GB200
+- [StreamRender-H3](StreamRender-H3.md)：NVIDIA 的同類研究，引擎輸出語意圖、MiniMax-H3 串流渲染成寫實畫面；畫質更高但需同一 NVLink 域內 8 張資料中心級 GPU
 - [Index-AniSora](Index-AniSora.md)：同樣以 Wan 系列為基底的影片生成模型（動漫風格）
 - [HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)：騰訊的 3D 世界模型，產出可保存的 3D 資產，而不是即時生成的像素畫面
 - [World Labs](../02-3D-建模與生成/World-Labs.md)：商業版可探索 3D 世界生成

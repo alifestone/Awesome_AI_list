@@ -203,7 +203,7 @@
 - **影片生成**
     - **[Index-AniSora](https://github.com/bilibili/Index-anisora)**（bilibili，IJCAI'25）— 開源動漫影片生成模型：圖生影片、角色 360 度旋轉、任意幀推論、風格轉換、多模態引導。Apache 2.0。⚠️ 原清單連到 [cnb.cool 的第三方鏡像](https://cnb.cool/dfdfsd/anisora)，缺 V3，建議改用官方 repo。
     - **[Matrix-Game](https://github.com/SkyworkAI/Matrix-Game)**（Skywork AI）— 開源互動世界模型系列：3.0 依鍵盤滑鼠動作即時生成可探索的第一人稱影片（5B，官方稱 720p 40 FPS，含長時記憶）；4.0 改由遊戲引擎跑玩法、模型把低多邊形畫面神經渲染成精緻畫面，RTX 5070 Ti 起可跑。Apache-2.0（1.0／2.0 為 MIT）。⚠️ 3.0 需 A／H 系列 GPU；HF 模型卡的 clone 與下載指令有誤。
-    - **[StreamRender-H3](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)**（NVIDIA Research）— 「程式碼跑世界、影片模型畫畫面」：three.js 賽車遊戲每幀輸出語意圖，以 MiniMax-H3 蒸餾成 2 步的串流模型即時畫成寫實影片，換參考圖就換天氣與風格。程式碼與權重公開。⚠️ 需 8 張 GB200；權重為 MiniMax-H3 社群授權；目前只有賽車場景。
+    - **[StreamRender-H3](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)**（NVIDIA Research）— 「程式碼跑世界、影片模型畫畫面」：three.js 賽車遊戲每幀輸出語意圖，以 MiniMax-H3 蒸餾成 2 步的串流模型即時畫成寫實影片，換參考圖就換天氣與風格。程式碼與權重公開。⚠️ 需同一 NVLink 域內 8 張資料中心級 GPU（官方用 GB200）；權重為 MiniMax-H3 社群授權，排除歐盟／英國／南韓／美國；目前只有賽車場景。
 - **工具 / 修正檔**
     - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
