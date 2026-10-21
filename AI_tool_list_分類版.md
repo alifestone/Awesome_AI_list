@@ -200,6 +200,7 @@
     - **[FLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein)**（Black Forest Labs）— 5.6B 文生圖 + 圖像編輯，最多 10 張參考圖，支援 bounding box 排版；需搭配 prompt upsampler。⚠️ FLUX Kommunity License：非商用，年營收低於 US$500 萬者可商用輸出。
 - **影片生成**
     - **[Index-AniSora](https://github.com/bilibili/Index-anisora)**（bilibili，IJCAI'25）— 開源動漫影片生成模型：圖生影片、角色 360 度旋轉、任意幀推論、風格轉換、多模態引導。Apache 2.0。⚠️ 原清單連到 [cnb.cool 的第三方鏡像](https://cnb.cool/dfdfsd/anisora)，缺 V3，建議改用官方 repo。
+    - **[Matrix-Game](https://github.com/SkyworkAI/Matrix-Game)**（Skywork AI）— 開源互動世界模型系列：3.0 依鍵盤滑鼠動作即時生成可探索的第一人稱影片（5B，官方稱 720p 40 FPS，含長時記憶）；4.0 改由遊戲引擎跑玩法、模型把低多邊形畫面神經渲染成精緻畫面，RTX 5070 Ti 起可跑。Apache-2.0（1.0／2.0 為 MIT）。⚠️ 3.0 需 A／H 系列 GPU；HF 模型卡的 clone 與下載指令有誤。
 - **工具 / 修正檔**
     - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
@@ -280,3 +281,4 @@
 - Agent 框架與編排新增「Agent 記憶」小類（Cognee）。
 - 學習資源的課程 / 教材區新增 Train LLM From Scratch。
 - 影片製作的程式化影片區新增 Awesome Opus 5.5 Videos。
+- 模型的影片生成區新增 Matrix-Game。

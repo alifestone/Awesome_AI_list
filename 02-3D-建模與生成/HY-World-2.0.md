@@ -100,6 +100,7 @@ python -m hyworld2.worldrecon.gradio_app                             # 網頁介
 ## 相關工具
 
 - 同資料夾：[World Labs](World-Labs.md)（商業版的可探索 3D 世界生成，Marble）、[3D Gaussian Splatting for model city](3D-Gaussian-Splatting-for-model-city.md)（從影片重建 3DGS 並放進 Isaac Sim）、[SuperSplat](SuperSplat.md)（在瀏覽器中清理、編輯生成的 3DGS）、[Hyper3D（Rodin）](Hyper3D（Rodin）.md)（生成單一 3D 物件）
+- 生成像素影片的互動世界模型：[Matrix-Game](../10-模型/Matrix-Game.md)（Skywork，開源）
 - 前作：[HunyuanWorld 1.0](https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0)、[HunyuanWorld-Mirror](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror)、[HY-WorldPlay](https://github.com/Tencent-Hunyuan/HY-WorldPlay)、[WorldStereo](https://github.com/FuchengSu/WorldStereo)
 
 ## 資料來源

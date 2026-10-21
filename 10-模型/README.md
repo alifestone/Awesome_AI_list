@@ -123,6 +123,15 @@ bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列�
 - 產生角色轉身影片，輔助多角度一致或 3D 建模。
 - 把現有影片轉成指定的動畫風格。
 
+### [Matrix-Game](Matrix-Game.md)
+
+Skywork AI 的開源互動世界模型系列。3.0（以 Wan2.2-TI2V-5B 為基底）給一張圖和一段文字，就依鍵盤滑鼠動作即時生成第一人稱畫面，加了長時記憶讓場景前後一致，官方稱 720p 40 FPS。4.0 改成遊戲引擎負責玩法與物理、模型只把低多邊形畫面渲染成精緻畫面，附三個可玩場景。Apache-2.0。⚠️ 3.0 只在 A／H 系列 GPU 測過；4.0 最低支援 RTX 5070 Ti。
+
+可以做到：
+- 從一張圖生成可用動作操控、一分鐘以上仍保持一致的探索影片。
+- 在消費級顯卡上試玩 AI 神經渲染的射擊與賽車遊戲，或讓 coding agent 改遊戲規則。
+- 研究動作條件影片生成與世界模型（類似 Genie 的開源路線）。
+
 ## 工具 / 修正檔
 
 ### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
@@ -139,6 +148,6 @@ bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列�
 - **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
-- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora。
+- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora；**可操控的互動世界／遊戲畫面**：Matrix-Game。
 - **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。
