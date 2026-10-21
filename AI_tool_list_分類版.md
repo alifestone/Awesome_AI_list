@@ -206,6 +206,7 @@
 - **[Unsloth](https://github.com/unslothai/unsloth)** — 在本機執行與訓練 LLM 的開源框架，主打快速、省顯存的微調；除 Python 函式庫外另有 Studio 網頁介面與桌面版。
 - **[Janas](https://github.com/prabanta-dev/janas)** — 純 C 的本地 MoE 推論引擎：權重留在 SSD、專家串流＋快取，可跑超過 RAM 的模型（如 Qwen3-Next-80B）。GPL-3.0+。⚠️ 實驗性質，僅在單一機器測過。
 - **[DeepInfer](https://github.com/deepseek-ai/DeepInfer)** — DeepSeek 官方開源、支撐其線上服務的大規模推論框架：MoE 專家平行、DSpark 推測解碼、決定性推論；目前只支援 DeepSeek-V4.1-Flash，限 NVIDIA SM100／昇騰 950。Apache-2.0。⚠️ 開源版僅離線推論。
+- **[Project Maya](https://github.com/mw00/project-maya)** — 從 Strata 改寫的本地推論引擎，專為 GLM-5.3-Flash（321B）與 DeepSeek-V4.1-Flash-1017（748B）MoE 打造：專家分層放 VRAM／RAM／SSD，1～16 張 GPU，附 OpenAI／Anthropic 相容 API 與儀表板。MIT。⚠️ AMD 與 Windows 為實驗性。
 
 ---
 
@@ -262,3 +263,4 @@
 - 影片製作的 AI 影片生成區新增 BeatDesign。
 - 學習資源的課程 / 教材區新增 50 ML Projects to Understand LLMs。
 - 推論與訓練引擎新增 DeepInfer。
+- 推論與訓練引擎新增 Project Maya。

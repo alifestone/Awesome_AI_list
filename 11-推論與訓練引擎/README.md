@@ -50,10 +50,21 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 開啟 batch-invariant 推論與決定性取樣，讓輸出可重現。
 - 用 regex、JSON schema 或 EBNF 限制輸出格式。
 
+### [Project Maya](Project-Maya.md)
+
+從 Strata 引擎改寫的本地推論引擎，專為 GLM-5.3-Flash（321B MoE）與 DeepSeek-V4.1-Flash-1017（748B MoE）打造：專家分層放在 VRAM／RAM／NVMe SSD，一張到 16 張 GPU 都能跑。MIT。⚠️ AMD 與 Windows 為實驗性；執行時會佔住幾乎所有空閒 RAM。
+
+可以做到：
+- 用一張 24 GB 顯卡 + 32 GB 以上 RAM 在本機跑 GLM-5.3-Flash，資料不上雲。
+- 提供 OpenAI／Anthropic 相容 API，當 Claude Code 等 coding agent 的後端，最多 8 個請求平行。
+- 用 KV streaming 在單張 RTX 3090 上開到 1M context。
+- 用 `--calibrate` 依自己的硬體自動調校。
+
 ## 怎麼挑
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
 - **想用 SSD 串流跑超過 RAM 的 MoE 模型（實驗性）**：Janas。
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
+- **想在自己的 GPU 上跑 GLM-5.3-Flash 或 DeepSeek-V4.1-Flash**：Project Maya。
 - **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
 - 可以跑哪些模型，見 [模型](../10-模型/)。

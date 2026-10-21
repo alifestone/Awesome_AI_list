@@ -107,6 +107,7 @@ ANTHROPIC_BASE_URL=http://127.0.0.1:8080
 
 - [llama.cpp / ggml](https://github.com/ggml-org/llama.cpp)：Strata 使用其部分程式碼。
 - [Strata Easy TW](Strata-Easy-TW.md)：非官方繁中 Windows 安裝導覽器（測試版）。
+- [Project Maya](Project-Maya.md)：從 Strata 引擎改寫，改跑 GLM-5.3-Flash 與 DeepSeek-V4.1-Flash-1017。
 - [Unsloth](https://github.com/unslothai/unsloth)：提供 Strata 可選用的 UD 量化版本（本清單亦有收錄）。
 - 其他本地推論方案（如 Ollama、LM Studio 等）可作為比較對象；本條目未逐一查證其細節。
 
