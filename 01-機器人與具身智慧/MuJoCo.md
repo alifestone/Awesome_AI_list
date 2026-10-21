@@ -90,6 +90,7 @@ MuJoCo 是「Multi-Joint dynamics with Contact」的縮寫，是一套通用物�
 
 ## 相關工具
 
+- [RP1](RP1.md)：開源人形機器人，提供 MJCF 並用 MuJoCo 做 Sim2Sim
 - dm_control（DeepMind 的環境套件，含 PyMJCF）
 - MJX、MuJoCo Warp（GPU 後端）
 - mjswan（JavaScript 綁定的擴充）

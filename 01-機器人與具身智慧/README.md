@@ -1,6 +1,6 @@
 # 🤖 機器人與具身智慧
 
-讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent，到物理模擬器、操作任務基準測試，以及用 LLM 直接指揮機器人的工具。
+讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent，到物理模擬器、操作任務基準測試，用 LLM 直接指揮機器人的工具，以及全開源的人形機器人硬體平台。
 
 ## 研究
 
@@ -57,9 +57,21 @@ UT Austin 的機器人操作基準（NeurIPS 2023），原本用來研究終身�
 - 替 LeRobot SO-101 手臂接上 LLM 高層規劃。
 - 讓多台機器人組成「flock」分工合作。
 
+## 開源硬體平台
+
+### [RP1](RP1.md)
+
+RoboParty 的全開源人形機器人：身高 1.35 m、約 39 kg、24／30 自由度、跑速 ≤4 m/s。機構 SolidWorks 原始檔、PCB、線材、BOM、自研關節模組與韌體、Linux BSP、ROS 2 部署框架、URDF／MJCF，到 Isaac Lab 的行走與動作模仿訓練全部公開。⚠️ 總覽 repo 只是索引，內容分散在十多個子 repo，授權各不相同，部分沒有授權檔。
+
+可以做到：
+- 照著 CAD、PCB 與 BOM 自製或改裝一台人形機器人。
+- 用 URDF／MJCF 在 Isaac Lab 或 MuJoCo 訓練行走、AMP、BeyondMimic 等策略，再部署到實機。
+- 研究行為基礎模型（UFO、P-BFM、I-BFM）與從意圖到動作的學習（INTACT-JEPA）。
+
 ## 怎麼挑
 
 - 想**訓練或研究機器人模型**：看 ARC。
 - 想讓 **VLM 理解 3D 空間**：看 SpatialClaw。
 - 需要**模擬環境**：MuJoCo；要**評測操作策略或 VLA**：LIBERO；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
 - 想**直接用 Claude 指揮機器人**：quackd。
+- 想要**整台都能看到原始設計的人形機器人**（硬體、韌體到訓練）：RP1。

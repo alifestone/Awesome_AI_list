@@ -16,6 +16,8 @@
     - **[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)**（UT Austin，NeurIPS 2023）— 終身機器人學習的操作基準：130 個語言指令任務、四個任務組（Spatial／Object／Goal／100），附人類示範；也是評測 VLA 最常用的模擬基準之一。建立在 robosuite（MuJoCo）上。程式碼 MIT，資料集 CC BY 4.0。
 - **LLM 控制**
     - **[quackd](https://github.com/rokbenko/quackd)** — 用自然語言 + LLM 指揮 Pollen Robotics 的 Microduck 雙足小機器人，內建模擬器與 MCP。⚠️ 原清單標為 LeRobot，實際針對的是 Microduck。
+- **開源硬體平台**
+    - **[RP1](https://github.com/Roboparty/RP1)**（RoboParty）— 全開源人形機器人平台（1.35 m、24／30 自由度）：機構 CAD、PCB、BOM、關節模組韌體、Linux BSP、ROS 2 部署、URDF／MJCF 與 Isaac Lab 訓練都公開，分散在十多個子 repo。⚠️ 各子 repo 授權不同（CERN-OHL-W、CC-BY、GPL-3.0），部分未標授權；整機未公開售價。
 
 ---
 
@@ -284,3 +286,4 @@
 - 影片製作的程式化影片區新增 Awesome Opus 5.5 Videos。
 - 模型的影片生成區新增 Matrix-Game。
 - 模型的影片生成區新增 StreamRender-H3。
+- 機器人與具身智慧新增「開源硬體平台」小類與 RP1。
