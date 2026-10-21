@@ -74,6 +74,15 @@
 - 把短劇、小說改編劇本批次轉成可貼進影片模型的分鏡提示詞。
 - 當自建影片流水線的前段，透過 SDK、REST API 或 MCP 串接。
 
+### [Jellyfish](Jellyfish.md)
+
+自架的 AI 短劇製作工作台：劇本拆成鏡頭，抽出角色、場景、道具、服裝集中管理以維持一致，鏡頭確認就緒後再派發圖片與影片生成，所有任務在同一個任務中心追蹤。React＋FastAPI，Docker Compose 部署。Apache-2.0。⚠️ 內建只接 OpenAI、火山引擎、阿里百鍊；介面以簡體中文為主。
+
+可以做到：
+- 把短劇劇本拆成分鏡，逐鏡確認素材與對白後批次生成圖片與影片。
+- 在多集、多鏡頭之間重複使用同一組角色、場景、服裝，減少長相與風格飄移。
+- 當團隊的 AI 短劇製作後台，追蹤每個生成任務的狀態與結果。
+
 ## 程式化影片（程式碼 → 影片）
 
 ### [Remotion](Remotion.md)
@@ -217,6 +226,7 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 ## 怎麼挑
 
 - **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）、ViMax（點子／劇本／小說都能轉，偏長片）。
+- **要一個管理劇本、分鏡、素材一致性與生成任務的短劇製作後台**：Jellyfish。
 - **已有劇本，只要分鏡提示詞**：PenShot；要動漫風格的鏡頭，模型可用 [Index-AniSora](../10-模型/Index-AniSora.md)。
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **數學、科學解說動畫**：Manim（新手可先用社群版 Manim CE）。

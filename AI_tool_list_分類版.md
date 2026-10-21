@@ -60,6 +60,7 @@
     - **[AutoMV](https://github.com/multimodal-art-projection/AutoMV)**（M-A-P，arXiv 2512.12196）— 輸入整首歌生成長篇 MV 的多 agent 系統：音樂分析 → 編劇／導演 agent → 關鍵幀與影片生成（含對嘴）→ 驗證。依賴豆包、即夢、Gemini 等 API。Apache-2.0。
     - **[ViMax](https://github.com/HKUDS/ViMax)**（港大 HKUDS，arXiv 2606.07649）— 點子／劇本／小說 → 編劇、導演、製片 agent → 逐鏡生成長片；可把自己的照片放進故事（AutoCameo），有 TUI 與 Web UI。MIT。
     - **[PenShot](https://pypi.org/project/penshot/)**（[原始碼](https://github.com/neopen/story-shot-agent)）— 劇本分鏡 agent：把任何劇本拆成鏡頭片段，輸出給 Sora／Veo／可靈用的中英提示詞與音訊提示詞，角色跨片段一致；有 SDK、REST、MCP。不直接出影片。MIT。
+    - **[Jellyfish](https://github.com/Forget-C/Jellyfish)** — 自架的 AI 短劇製作工作台：劇本拆分鏡、抽角色／場景／道具／服裝維持一致，鏡頭就緒後派發圖片／影片生成，統一任務中心追蹤。React＋FastAPI，Docker Compose 部署。Apache-2.0。⚠️ 內建供應商只有 OpenAI、火山引擎、阿里百鍊；介面以簡中為主。
 - **程式化影片（程式碼 → 影片）**
     - **[Remotion](https://github.com/remotion-dev/remotion)** — 用 React 元件寫影片的老牌框架，有官方 agent skills；也是 Cinetic、OpenMontage 的渲染引擎。⚠️ 自訂授權：個人與 3 人以下公司免費，較大的公司需付費。
     - **[HyperFrames](https://github.com/heygen-com/hyperframes)**（HeyGen）— 寫 HTML/CSS/動畫，渲染成確定性 MP4，專為 AI agent 設計。Apache-2.0。
@@ -266,3 +267,4 @@
 - 推論與訓練引擎新增 DeepInfer。
 - 推論與訓練引擎新增 Project Maya。
 - 推論與訓練引擎新增 TurboFieldfare。
+- 影片製作的 Agent 影片製作系統區新增 Jellyfish。
