@@ -138,6 +138,15 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 - 參考 LLM 如何規劃長篇程式化動畫（分鏡文件、subagent 風格指南、分章節程式碼）。
 - 學習 p5.js + headless Chrome 逐幀渲染、再用 ffmpeg 合成的做法。
 
+### [Awesome Opus 5.5 Videos](Awesome-Opus-5.5-Videos.md)
+
+收集社群用 Claude Opus 5.5「寫程式」做出的動畫影片與背後的 prompt：703 個 prompt，分動態設計、解說動畫、3D 場景、遊戲與互動四類，每個都連回創作者的原始貼文；其中 418 個在 Skillry 有重製版可並排對照。MIT（影片與 prompt 版權屬原作者）。⚠️ 約 3 成 prompt 只公開了一部分，且沒有附程式碼。
+
+可以做到：
+- 找現成的動畫 prompt，貼給 Opus 5.5 輸出成單一 HTML 檔再錄成影片。
+- 依類型或技術（Canvas、SVG、Three.js、shader…）找靈感，用 `data/videos.json` 批次篩選。
+- 比較不同人怎麼寫動畫類 prompt。
+
 ## 剪輯 / 處理
 
 ### [ffmpeg-skill](ffmpeg-skill.md)
@@ -229,6 +238,7 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - **要一個管理劇本、分鏡、素材一致性與生成任務的短劇製作後台**：Jellyfish。
 - **已有劇本，只要分鏡提示詞**：PenShot；要動漫風格的鏡頭，模型可用 [Index-AniSora](../10-模型/Index-AniSora.md)。
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
+- **想找 LLM 寫程式做動畫的範例與 prompt**：Awesome Opus 5.5 Videos（有完整原始碼的範例看 PDoomVideo）。
 - **數學、科學解說動畫**：Manim（新手可先用社群版 Manim CE）。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。

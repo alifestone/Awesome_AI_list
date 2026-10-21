@@ -68,6 +68,7 @@
     - **[Cinetic](https://github.com/Leonxlnx/cinetic)** — 讓 coding agent「導演」短片的 skill：先構思故事，再定品牌、配樂、渲染，最後由多個評審角色檢查。MIT。
     - **[onetake](https://github.com/feitangyuan/onetake)** — Claude Agent Skill，做「一鏡到底」的產品發表片、預告與功能演示動效。⚠️ PolyForm Noncommercial（非商用）。
     - **[PDoomVideo](https://github.com/JohnHeibel/PDoomVideo)** — Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式化動畫參考。
+    - **[Awesome Opus 5.5 Videos](https://github.com/yihui-dev/awesome-opus5-5-videos)** — 社群用 Claude Opus 5.5 寫程式（Canvas、SVG、Three.js、GSAP、shader）做出的動畫影片清單：703 個 prompt，分動態設計、解說、3D、遊戲四類，每個連回原貼文，418 個可在 Skillry 看重製版對照。MIT。⚠️ 約 3 成 prompt 不完整；只有 prompt、沒有原始碼。
 - **剪輯 / 處理**
     - **[ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill)** — 給 coding agent 的本地 FFmpeg 剪輯 skill：剪接、字幕、響度、調色、平台交付檢查等 42 個工具，也可當 MCP。
     - **[ChatCut](https://github.com/ChatCut-Inc/agent-plugin)** — 線上對話式剪輯服務；agent-plugin 讓 coding agent 透過 MCP 直接改 ChatCut 雲端專案的時間軸。商業服務。
@@ -278,3 +279,4 @@
 - 推論與訓練引擎新增 QwenGyre（論文）。
 - Agent 框架與編排新增「Agent 記憶」小類（Cognee）。
 - 學習資源的課程 / 教材區新增 Train LLM From Scratch。
+- 影片製作的程式化影片區新增 Awesome Opus 5.5 Videos。
