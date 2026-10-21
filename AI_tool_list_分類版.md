@@ -124,6 +124,8 @@
     - **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** — 一體化本地 LLM 應用：文件 RAG 對話、agent，可接各家模型。
     - **[RAG-Anything](https://github.com/HKUDS/RAG-Anything)**（HKUDS）— 建在 LightRAG 上的多模態 RAG 框架：解析 PDF／Office／圖片中的文字、圖、表格、公式，建成多模態知識圖譜做混合檢索。Python 函式庫，可接本機模型。MIT。
     - **[notebooklm-py](https://github.com/teng-lin/notebooklm-py)** — 非官方 NotebookLM Python API／CLI／agent skill：讓 Claude Code 等 agent 操作 NotebookLM 問答、生成 podcast／簡報／測驗並批次下載。
+- **Agent 記憶**
+    - **[Cognee](https://github.com/topoteretes/cognee)** — 開源 agent 長期記憶平台：把文件、程式碼、對話建成可自架的知識圖譜＋向量索引，`remember`／`recall` 跨 session 取用；免 API key 可用本機小模型跑，附 Claude Code／Codex 外掛與 MCP server。Apache-2.0。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
 
@@ -273,3 +275,4 @@
 - 影片製作的 Agent 影片製作系統區新增 Jellyfish。
 - 模型新增「OCR／文件解析」小類（Indra OCR）。
 - 推論與訓練引擎新增 QwenGyre（論文）。
+- Agent 框架與編排新增「Agent 記憶」小類（Cognee）。

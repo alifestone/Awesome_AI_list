@@ -118,6 +118,18 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 - 批次生成 podcast、影片、簡報、測驗、心智圖並下載成 MP3／PDF／CSV／JSON。
 - 用筆記本當 agent 的跨 session 記憶或專案知識庫。
 
+## Agent 記憶
+
+### [Cognee](cognee.md)
+
+開源的 agent 長期記憶平台：把文件、程式碼、對話轉成可自架的知識圖譜加向量索引，agent 用 `remember`／`recall` 跨 session 存取，session 學到的經驗也能併進永久記憶。沒有 LLM API key 也能用本機小模型在 CPU 上跑。Apache-2.0。⚠️ 內建本機抽取模型官方定位為 demo，準確度有限。
+
+可以做到：
+- 裝 Claude Code 或 Codex 外掛，讓 coding agent 記住專案脈絡、過去的決定與修正。
+- 用 MCP server 接 Cursor、Cline 等工具。
+- 把文件、工單、程式碼建成「公司大腦」，從決策查到背後的討論與實作。
+- 自訂本體與資料模型，並在網頁 UI 看知識圖譜。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -135,4 +147,5 @@ Confident AI 的 LLM 評測框架，寫法像 Pytest：30 多種現成指標（G
 - **寫程式的 agent**：Cline。
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲用 Claude Code Game Studios（直接操作引擎見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/)）；自己做 skill 並在發布前做安全審查用 yao-meta-skill。
 - **和文件對話、建知識庫**：不寫程式、要本機私密用 AnythingLLM；寫程式處理圖表公式多的文件用 RAG-Anything；讓 agent 操作 NotebookLM 用 notebooklm-py。
+- **讓 agent 跨 session 記住事情**：Cognee。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；要紅隊測試見資安類的 [Promptfoo](../09-資安/Promptfoo.md)。

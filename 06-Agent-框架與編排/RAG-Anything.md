@@ -94,6 +94,7 @@ answer = await rag.aquery("第三季營收和去年比如何？", mode="hybrid")
 - [MinerU](https://github.com/opendatalab/MinerU)：預設文件解析器
 - [AnythingLLM](AnythingLLM.md)：有圖形介面、不用寫程式的文件問答 App
 - [ViMax](../03-影片製作/ViMax.md)：同為 HKUDS 的專案
+- [Cognee](cognee.md)：以知識圖譜＋向量做 agent 長期記憶的開源平台
 
 ## 資料來源
 

@@ -97,6 +97,7 @@ mintplexlabs/anythingllm
 - Open WebUI、LibreChat、LM Studio、Ollama（類似的本地 LLM 介面／執行環境；Ollama、LM Studio 亦為其支援的後端）
 - AnythingLLM Mobile（Android，開源）、AnythingLLM Browser Extension、AnythingLLM Embed
 - [CrewAI](./CrewAI.md)、[DSPy](./DSPy.md)（偏開發者的程式化框架，對照用）
+- [Cognee](cognee.md)：以知識圖譜＋向量做 agent 長期記憶的開源平台
 
 ## 資料來源
 
