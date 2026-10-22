@@ -79,6 +79,15 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 48 步內把 NL2RepoBench 通過率從 52.5% 提升到 58.5%。
 - 對逾時的執行打部分分數，不浪費已完成的工作。
 
+### [dLLM](dLLM.md)
+
+擴散語言模型（一次並行去遮罩多個 token，而非逐字自迴歸生成）的訓練、推論與評測函式庫，建立在 `transformers` Trainer 與 `lm-evaluation-harness` 上，附 LLaDA、Dream 的範例與 MDLM、BD3LM、Edit Flows 等演算法實作。Apache-2.0。
+
+可以做到：
+- 預訓練、微調、評測 LLaDA 與 Dream，支援 LoRA、4-bit、DeepSpeed、FSDP。
+- 把任意自迴歸模型或 BERT 微調成擴散模型（官方釋出 0.5B／0.6B 的 Tiny-A2D 與 BERT-Chat）。
+- 用 Fast-dLLM 加速推論，或用 diffu-GRPO 做強化學習。
+
 ## 怎麼挑
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
@@ -88,4 +97,5 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - **只有一台記憶體不大的 Mac，想跑 Gemma 4 26B-A4B**：TurboFieldfare。
 - **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
 - **想了解超長任務 agent 的大規模 RL 訓練怎麼做（研究參考）**：QwenGyre（只有論文）。
+- **想訓練或研究擴散語言模型（LLaDA、Dream 等）**：dLLM。
 - 可以跑哪些模型，見 [模型](../10-模型/)。

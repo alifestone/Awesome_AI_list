@@ -220,6 +220,7 @@
 - **[Project Maya](https://github.com/mw00/project-maya)** — 從 Strata 改寫的本地推論引擎，專為 GLM-5.3-Flash（321B）與 DeepSeek-V4.1-Flash-1017（748B）MoE 打造：專家分層放 VRAM／RAM／SSD，1～16 張 GPU，附 OpenAI／Anthropic 相容 API 與儀表板。MIT。⚠️ AMD 與 Windows 為實驗性。
 - **[TurboFieldfare](https://github.com/drumih/turbo-fieldfare)** — 以 Swift＋Metal 自寫的 Gemma 4 26B-A4B 推論引擎：記憶體只放約 2 GB，專家從 SSD 串流，8 GB 的 Apple Silicon Mac 也能跑；附 Mac app、CLI 與本機 OpenAI 相容伺服器。Apache-2.0。⚠️ 僅此一個模型，需 macOS 26。
 - **[QwenGyre](https://arxiv.org/abs/2609.33848)** — 阿里巴巴的超長任務 agent 強化學習訓練框架論文：GPU 在 rollout 與訓練間彈性切換、不中斷執行中的 agent，並把分支執行整理成共享前綴的軌跡樹去重；自測比 Colocate 快最多 1.85×、比 Async 快 1.78×。⚠️ 目前只有論文，未公開程式碼。
+- **[dLLM](https://github.com/ZHZisZZ/dllm)** — 擴散語言模型的訓練、推論與評測函式庫：LLaDA、Dream 範例，MDLM、BD3LM、Edit Flows、Fast-dLLM、diffu-GRPO，可把自迴歸模型或 BERT 改成擴散模型。Apache-2.0。
 
 ---
 
@@ -290,3 +291,4 @@
 - 機器人與具身智慧新增「開源硬體平台」小類與 RP1。
 - Agent 框架與編排的 Agent 記憶區新增 TencentDB Agent Memory。
 - 更新 Janas：補上 Intel NPU 支援、裝置指定選項與 2026-10-21 的新效能數字。
+- 推論與訓練引擎新增 dLLM。
