@@ -33,11 +33,12 @@ Strata 的非官方繁體中文 Windows 安裝導覽器：左邊跑官方安裝�
 
 ### [Janas](Janas.md)
 
-純 C 寫成的本地 MoE 推論引擎，權重留在 SSD、需要的專家再串流進記憶體，可跑比 RAM 還大的模型（如 Qwen3-Next-80B）。GPL-3.0+。實驗性質。
+純 C 寫成的本地 MoE 推論引擎，權重留在 SSD、需要的專家再串流進記憶體，可跑比 RAM 還大的模型（如 Qwen3-Next-80B）；可搭配 Vulkan GPU 與 Intel Core Ultra 的 NPU 加速讀提示。GPL-3.0+。實驗性質。
 
 可以做到：
 - 在 32 GB 筆電上跑 48 GB 的 80B MoE 模型。
 - 提供 OpenAI 相容 API、MCP 與程式碼補全給編輯器、Claude Code。
+- 在 Intel Core Ultra 筆電上用 NPU 加快小模型讀長提示（Linux，實驗性）。
 - 用 `janas-bench` 量測自己的機器。
 
 ### [DeepInfer](DeepInfer.md)
