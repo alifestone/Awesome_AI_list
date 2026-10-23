@@ -244,6 +244,7 @@
     - **[Unity MCP](https://github.com/CoplayDev/unity-mcp)** — 讓 AI 用白話文操作 Unity 編輯器：建場景、寫 C# 腳本、管素材、跑測試與輸出 build（第三方，MIT）。
     - **[Godot AI](https://github.com/hi-godot/godot-ai)** — 用 46 個 MCP 工具控制執行中的 Godot 4.7+ 編輯器：場景、GDScript、訊號、UI、材質、粒子，還能跑遊戲驗證（第三方，MIT）。
     - **[Unreal Engine MCP](https://github.com/flopperam/unreal-engine-mcp)** — 控制執行中的 Unreal 5.5+ 編輯器：管理 Actor、程序化建構世界、編輯基礎 Blueprint（第三方，已被 Aura 收購；⚠️ 未附 LICENSE 檔）。
+    - **[Unreal Engine Skills for Claude Code](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin)** — Epic Games 官方 Claude Code 外掛：接上 Unreal 5.8 內建的實驗性 MCP 伺服器，操作 Actor、Blueprint、材質、Niagara、Sequencer、GAS 等數百個工具，另附撰寫自訂 toolset 的 skill。MIT；⚠️ 引擎端仍是 Experimental，可在編輯器內執行任意 Python。
 - **網頁遊戲引擎**
     - **[PlayCanvas Editor MCP](https://github.com/playcanvas/editor-mcp-server)** — PlayCanvas 官方 MCP：agent 在瀏覽器版 Editor 建場景，再自己啟動遊戲、截圖驗證真的能跑（MIT）。
 - **遊戲開發 Skill 組**
@@ -297,3 +298,4 @@
 - 推論與訓練引擎新增 dLLM。
 - 3D 建模與生成的 CAD / 參數化建模區新增 text-to-cad。
 - 遊戲引擎 × Agent 新增「遊戲開發 Skill 組」小類與 awesome-gamedev-agent-skills。
+- 遊戲引擎 × Agent 的桌面遊戲引擎區新增 Unreal Engine Skills for Claude Code。

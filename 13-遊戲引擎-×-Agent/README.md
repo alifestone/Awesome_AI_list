@@ -33,6 +33,15 @@ Flopperam（已被 Aura 收購）的 Unreal 5.5+ MCP（非 Epic 官方）；開�
 - 管理 Actor、套用材質、設定物理。
 - 建立 Blueprint、加變數與函式、連接節點並編譯。
 
+### [Unreal Engine Skills for Claude Code](Unreal-Engine-Skills-for-Claude-Code.md)
+
+Epic Games 官方的 Claude Code 外掛，接上 Unreal 5.8 內建的實驗性 MCP 伺服器（數百個工具、30 多個 toolset）。repo 本身只有 3 個 skill 和 1 個 hook，工具在引擎端，需在專案啟用 `ModelContextProtocol` 與 `AllToolsets` 外掛。已上架 Anthropic 官方外掛市集。MIT。⚠️ 引擎端仍是 Experimental；可在編輯器內執行任意 Python。
+
+可以做到：
+- 操作 Actor、Blueprint、材質、Niagara、Control Rig、Sequencer、UMG、Gameplay Ability System。
+- 改完 C++ 後用 Live Coding 重新編譯、讀錯誤，再跑自動化測試。
+- 依官方規範替團隊撰寫新的 toolset 與引擎內 Agent Skill，擴充 AI 能做的事。
+
 ## 網頁遊戲引擎
 
 ### [PlayCanvas Editor MCP](PlayCanvas-Editor-MCP.md)
@@ -59,11 +68,12 @@ PlayCanvas 官方的 Editor MCP 伺服器，130 個工具，連接瀏覽器中�
 
 ## 怎麼挑
 
-- 看**你已經在用哪個引擎**：這四個 MCP 工具各綁一個引擎，沒有互通。
+- 看**你已經在用哪個引擎**：這幾個 MCP 工具各綁一個引擎，沒有互通。
 - 要 agent **寫遊戲程式時懂引擎寫法**，而不是去操作編輯器：awesome-gamedev-agent-skills，可和任一個 MCP 工具一起用；它也涵蓋 Phaser、Bevy、pygame、LÖVE、Roblox 等這裡沒有 MCP 的引擎。
 - 要**最成熟、社群最大**：Unity MCP（約 15k 星，版本迭代穩定）。
-- 要**完全開源、驗證迴圈完整**：Godot AI 或 PlayCanvas Editor MCP；要**官方支援**：只有 PlayCanvas Editor MCP 是引擎廠商自己出的。
+- 要**完全開源、驗證迴圈完整**：Godot AI 或 PlayCanvas Editor MCP；要**官方支援**：PlayCanvas Editor MCP 與 Unreal Engine Skills for Claude Code 是引擎廠商自己出的。
 - 要**做網頁上直接能玩的 3D**：PlayCanvas Editor MCP。
-- 用 **Unreal**：開源本機版適合做場景草稿與基礎 Blueprint；要材質、Niagara、動畫等深度功能得改用託管版或 Aura，並先確認授權與資料政策。
+- 用 **Unreal 5.8 以上又用 Claude Code**：優先選 Epic 官方的 Unreal Engine Skills for Claude Code，涵蓋材質、Niagara、Sequencer、GAS 等深度功能；工具本身在引擎裡，用 Cursor、Codex 等也能直接接引擎內建的 MCP 伺服器。
+- 用 **Unreal 5.5～5.7**：Flopperam 的 Unreal Engine MCP，開源本機版適合做場景草稿與基礎 Blueprint；要深度功能得改用託管版或 Aura，並先確認授權與資料政策。
 - 素材從哪來：可搭配 [3D 建模與生成](../02-3D-建模與生成/README.md) 的 Blender、AI 生成 3D 工具，再匯入引擎。
 - 要**整套遊戲開發流程**（企劃、架構、QA 到發行），而不只是操作編輯器：見 Agent 框架類的 [Claude Code Game Studios](../06-Agent-框架與編排/Claude-Code-Game-Studios.md)，可和這裡的 MCP 搭配。

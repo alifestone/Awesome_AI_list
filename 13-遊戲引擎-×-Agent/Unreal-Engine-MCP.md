@@ -83,7 +83,7 @@ MCP 用戶端設定以 `uv --directory <repo>/Python run unreal_mcp_server_advan
 
 ## 相關工具
 
-- 同資料夾：[Unity MCP](Unity-MCP.md)（同屬 Aura 旗下）、[Godot AI](Godot-AI.md)、[PlayCanvas Editor MCP](PlayCanvas-Editor-MCP.md)
+- 同資料夾：[Unreal Engine Skills for Claude Code](Unreal-Engine-Skills-for-Claude-Code.md)（Epic 官方 Claude Code 外掛，接 Unreal 5.8 內建的 MCP 伺服器）、[Unity MCP](Unity-MCP.md)（同屬 Aura 旗下）、[Godot AI](Godot-AI.md)、[PlayCanvas Editor MCP](PlayCanvas-Editor-MCP.md)
 - [cc-blender-skill](../02-3D-建模與生成/cc-blender-skill.md)：v1.4.0 起含 Unreal 碰撞網格匯出前檢，可在 Blender 做素材再匯入 Unreal
 - [World Labs](../02-3D-建模與生成/World-Labs.md)：生成可匯出網格的 3D 場景，可作為 Unreal 場景素材來源
 
