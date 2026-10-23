@@ -96,7 +96,7 @@ Claude Desktop 設定（`claude_desktop_config.json`）：
 ## 相關工具
 
 - [FreeCAD](https://www.freecad.org/)、[CalculiX](http://www.calculix.de/)
-- 同資料夾：Rhino MCP（Rhino／Grasshopper 版本）、MAC – Multi-Agent CAD（text-to-CAD，build123d）
+- 同資料夾：Rhino MCP（Rhino／Grasshopper 版本）、MAC – Multi-Agent CAD（text-to-CAD，build123d）、text-to-cad（agent CAD 外掛，build123d）
 
 ## 資料來源
 

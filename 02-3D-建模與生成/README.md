@@ -34,6 +34,15 @@ FreeCAD 的 MCP 伺服器，讓 Claude Desktop 等 MCP 用戶端直接操作開�
 - 把機構拆成多個零件分別生成，再組裝、驗證並匯出（可產生 URDF 給模擬器）。
 - token 用量約為單一 agent 做法的 1/116。
 
+### [text-to-cad](text-to-cad.md)
+
+給 Claude Code、Codex、Cursor、Gemini、Grok 等 agent 的 CAD 外掛與 12 個 skill：在本機用 build123d 寫程式產生模型，輸出 STEP／STL／3MF／GLB，並在對話或瀏覽器裡的 CAD Viewer 檢視。MIT；⚠️ 預設送出匿名用量統計（可關閉）。
+
+可以做到：
+- 用文字或參考圖建立、修改零件，從 step.parts 抓現成螺絲、軸承、馬達的 STEP 檔來組裝。
+- 做鈑金／CNC／射出成型的 DFM 檢查與 3D 列印可列印性檢查，產出標註尺寸的工程圖 PDF 與 DXF。
+- 寫 URDF／SRDF／SDF 給機器人模擬，或用 OrcaSlicer 切片、直接送到 Bambu Lab 印表機。
+
 ### [USD BRep](USD-BRep.md)
 
 NVIDIA Omniverse 開源的 NURBS BRep 實體建模函式庫（C++／Python），可原生匯入匯出 OpenUSD。Apache-2.0。
@@ -177,7 +186,7 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 
 ## 怎麼挑
 
-- 要**精確、可製造的工程模型**：FreeCAD MCP、Rhino MCP、MAC，或在 OpenUSD 管線裡用 USD BRep。
+- 要**精確、可製造的工程模型**：FreeCAD MCP、Rhino MCP、MAC，或在 OpenUSD 管線裡用 USD BRep；想讓自己的 agent 一路做到製造檢查、工程圖與送印，用 text-to-cad。
 - 要**讓 AI 操作 Blender**：MCP for Blender 是底層連線，再搭 cc-blender-skill 或 TheLongSilence 的 skill 提升品質。
 - 要**在 Omniverse／Isaac Sim 裡用 agent**：Kit USD Agents。
 - 要**從圖片生成單一 3D 資產**：想本機跑、可商用選 TRELLIS.2（注意相依套件授權）或 Stable Fast 3D（最快、顯存需求低）；要 PBR 品質選 Hunyuan3D 2.1（注意地區限制）；不想架 GPU、要 agent 一路做到綁骨動畫，用 Meshy MCP Server 或 Hyper3D。

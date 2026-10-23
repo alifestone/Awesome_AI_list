@@ -109,7 +109,7 @@ python -m mac_assembly
 
 - [build123d](https://github.com/gumyr/build123d)、[LangGraph](https://langchain-ai.github.io/langgraph/)、[Aider](https://aider.chat/)
 - [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad)（CAD Skills，基準比較對象）
-- 同資料夾：FreeCAD MCP、Rhino MCP
+- 同資料夾：FreeCAD MCP、Rhino MCP、[text-to-cad](text-to-cad.md)
 
 ## 資料來源
 

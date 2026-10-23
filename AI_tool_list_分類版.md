@@ -29,6 +29,7 @@
     - **[FreeCAD MCP](https://github.com/neka-nat/freecad-mcp)** — 讓 AI 透過 MCP 操作 FreeCAD。
     - **[Rhino MCP](https://github.com/jingcheng-chen/rhinomcp)** — 讓 AI 透過 MCP 操作 Rhino。
     - **[MAC – Multi-Agent CAD](https://github.com/Pan-Chera/Multi-Agent-CAD)** — 四個 agent 分工的 text-to-CAD（build123d），直接輸出可列印的 STEP/STL，token 用量約為單一 agent 的 1/116。
+    - **[text-to-cad](https://github.com/earthtojake/text-to-cad)** — 給 Claude Code、Codex、Cursor、Gemini 等 agent 的 CAD 外掛／skill 組：本機用 build123d 產生 STEP／STL／3MF／GLB，附 DFM／DfAM 檢查、工程圖、DXF、URDF／SDF、step.parts 現成零件、切片與 Bambu Lab 送印。MIT；預設送出匿名遙測。
     - **[USD BRep](https://github.com/NVIDIA-Omniverse/usd-brep)** — NVIDIA Omniverse 開源的 NURBS BRep 實體建模函式庫（C++／Python），可原生匯入匯出 OpenUSD；附 text-to-3D 資產生成的 agent skill。
 - **Blender × Agent**
     - **[cc-blender-skill](https://github.com/RobLe3/cc-blender-skill)** — Claude Code skill 外掛，經 Blender MCP 用自然語言建模、上材質、打光、運鏡、渲染、做動畫與匯出。
@@ -292,3 +293,4 @@
 - Agent 框架與編排的 Agent 記憶區新增 TencentDB Agent Memory。
 - 更新 Janas：補上 Intel NPU 支援、裝置指定選項與 2026-10-21 的新效能數字。
 - 推論與訓練引擎新增 dLLM。
+- 3D 建模與生成的 CAD / 參數化建模區新增 text-to-cad。
