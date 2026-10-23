@@ -246,6 +246,8 @@
     - **[Unreal Engine MCP](https://github.com/flopperam/unreal-engine-mcp)** — 控制執行中的 Unreal 5.5+ 編輯器：管理 Actor、程序化建構世界、編輯基礎 Blueprint（第三方，已被 Aura 收購；⚠️ 未附 LICENSE 檔）。
 - **網頁遊戲引擎**
     - **[PlayCanvas Editor MCP](https://github.com/playcanvas/editor-mcp-server)** — PlayCanvas 官方 MCP：agent 在瀏覽器版 Editor 建場景，再自己啟動遊戲、截圖驗證真的能跑（MIT）。
+- **遊戲開發 Skill 組**
+    - **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)** — 74 個遊戲開發 Agent Skills 加 router，涵蓋 Godot、Unity、Unreal、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Roblox；自動判斷引擎與任務只載入需要的 skill，另有類型模板、美術資產流程與 Steam／itch 上架。不是連結清單，也不操作編輯器。Apache-2.0。
 
 - （另見 Agent 框架的 Claude Code Game Studios：用 Claude Code 走完整遊戲開發流程）
 ---
@@ -294,3 +296,4 @@
 - 更新 Janas：補上 Intel NPU 支援、裝置指定選項與 2026-10-21 的新效能數字。
 - 推論與訓練引擎新增 dLLM。
 - 3D 建模與生成的 CAD / 參數化建模區新增 text-to-cad。
+- 遊戲引擎 × Agent 新增「遊戲開發 Skill 組」小類與 awesome-gamedev-agent-skills。

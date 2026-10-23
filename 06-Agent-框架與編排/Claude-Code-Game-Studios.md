@@ -58,6 +58,7 @@ claude          # 務必在專案根目錄（有 CLAUDE.md 與 project.yaml 處�
 
 - [agency-agents](./agency-agents.md)（含遊戲開發在內的專業角色人設集合）
 - [Claude Octopus](./Claude-Octopus.md)（Claude Code 外掛，多模型交叉審查）
+- [awesome-gamedev-agent-skills](../13-遊戲引擎-×-Agent/awesome-gamedev-agent-skills.md)（10 個引擎的遊戲開發 skill 組，偏引擎寫法與類型模板，可補足本模板的引擎知識）
 - Claude Code（宿主）；Godot、Unity、Unreal Engine（支援的遊戲引擎）
 
 ## 資料來源

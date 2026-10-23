@@ -1,6 +1,6 @@
 # 🎮 遊戲引擎 × Agent
 
-讓 AI agent 直接操作遊戲引擎編輯器的 MCP 工具：在開著的 Unity、Godot、Unreal 或 PlayCanvas 編輯器裡，用自然語言建場景、寫腳本、調素材、跑遊戲並回頭檢查錯誤與畫面。
+讓 AI agent 直接操作遊戲引擎編輯器的 MCP 工具：在開著的 Unity、Godot、Unreal 或 PlayCanvas 編輯器裡，用自然語言建場景、寫腳本、調素材、跑遊戲並回頭檢查錯誤與畫面；以及讓 coding agent 寫遊戲程式時懂各引擎寫法的 skill 組。
 
 ## 桌面遊戲引擎
 
@@ -45,9 +45,22 @@ PlayCanvas 官方的 Editor MCP 伺服器，130 個工具，連接瀏覽器中�
 - 處理光照貼圖、貼圖壓縮、圖集，從 Store／Sketchfab 匯入素材。
 - 用分支與 checkpoint 讓 agent 安全實驗。
 
+## 遊戲開發 Skill 組
+
+### [awesome-gamedev-agent-skills](awesome-gamedev-agent-skills.md)
+
+74 個遊戲開發 Agent Skills 加一個 router，涵蓋 Godot、Unity、Unreal、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Roblox 十個引擎；router 從專案檔判斷引擎、從需求判斷主題，只載入需要的 skill。名字有 awesome 但不是連結清單，也不操作編輯器。Claude Code、Cursor、Codex、Gemini CLI、Copilot 等都能用。Apache-2.0。
+
+可以做到：
+- 讓 agent 照專案的引擎版本寫出正確的 API，例如 Godot 4.7、Unity 6.3 LTS、Unreal 5.8。
+- 套用平台跳躍、roguelike、RPG、塔防等 9 種類型模板，以及存檔、對話、遊戲 AI、程序生成等跨引擎主題。
+- 用 `create-game-assets` 先定美術方向，再成批產出、檢查並匯入風格一致的資產。
+- 照 Game Jam、快速原型、Steam／itch.io 上架流程走。
+
 ## 怎麼挑
 
-- 看**你已經在用哪個引擎**：這四個工具各綁一個引擎，沒有互通。
+- 看**你已經在用哪個引擎**：這四個 MCP 工具各綁一個引擎，沒有互通。
+- 要 agent **寫遊戲程式時懂引擎寫法**，而不是去操作編輯器：awesome-gamedev-agent-skills，可和任一個 MCP 工具一起用；它也涵蓋 Phaser、Bevy、pygame、LÖVE、Roblox 等這裡沒有 MCP 的引擎。
 - 要**最成熟、社群最大**：Unity MCP（約 15k 星，版本迭代穩定）。
 - 要**完全開源、驗證迴圈完整**：Godot AI 或 PlayCanvas Editor MCP；要**官方支援**：只有 PlayCanvas Editor MCP 是引擎廠商自己出的。
 - 要**做網頁上直接能玩的 3D**：PlayCanvas Editor MCP。
