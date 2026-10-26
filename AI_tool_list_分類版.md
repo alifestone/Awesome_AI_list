@@ -94,6 +94,7 @@
 - **網頁動畫與插圖**
     - **[GSAP Skills](https://github.com/greensock/gsap-skills)**（GreenSock）— 官方給 coding agent 的 GSAP 動畫 skill 組：時間軸、ScrollTrigger、外掛與框架整合。MIT。
     - **[Hairline](https://github.com/lucasmarkes/hairline)** — 會回應滑鼠的細線等角互動插圖（React 元件），附 `hairline-create` skill 讓 agent 畫出風格一致的新圖形。MIT。
+    - **[Motion Prompt](https://github.com/showheyohtaki/motion-prompt)** — 168 個具名動態效果（動態圖形、鏡頭運動、UI 元件、landing page 特效、攝影風格），讓你用名稱向 AI 描述想要的動作，附 `motion-prompt` skill。MIT。⚠️ 名稱清單目前僅英文與日文。
 - **網頁 3D**
     - **[three.js](https://github.com/mrdoob/three.js)** — 網頁上最常用的 JavaScript 3D 函式庫，支援 WebGL／WebGPU，MIT。
     - **[threejs-skills](https://github.com/CloudAI-X/threejs-skills)** — 教 Claude Code 正確使用 three.js 的 10 個 skill，從 shader 到後製特效。⚠️ 未附 LICENSE 檔。

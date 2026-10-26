@@ -33,6 +33,15 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 - 技術產品的概念插圖（伺服器機櫃、commit 圖、呼叫堆疊）。
 - 讓 agent 依十條設計規則畫出風格一致的新圖形，交付免依賴的單一 HTML 檔。
 
+### [Motion Prompt](Motion-Prompt.md)
+
+一組具名的動態效果清單（168 個，分七組：動態圖形、鏡頭運動、UI 元件、landing page 特效、攝影風格），每個名稱附動態範例與提示語。附 `motion-prompt` skill，agent 可依編號重建效果。MIT。
+
+可以做到：
+- 向 AI 或同事用精確名稱描述動態效果，減少「做得精緻一點」這類模糊需求。
+- 在 landing page、UI 元件中快速套用有名稱的動作，並由 agent 在專案中重建。
+- 為自己的領域製作類似的名稱庫（`make-your-own/` 內附提示詞）。
+
 ## 網頁 3D
 
 ### [three.js](three.js.md)
@@ -75,6 +84,6 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 ## 怎麼挑
 
 - 要**整個網站的設計方向**：MotionSites。
-- 要**網頁動畫寫得對**：GSAP Skills；要**互動插圖**：Hairline。
+- 要**網頁動畫寫得對**：GSAP Skills；要**互動插圖**：Hairline；要**用名稱指定動態效果**：Motion Prompt。
 - 要**網頁 3D**：three.js；讓 Claude Code 寫 three.js 更準，加上 threejs-skills；想看 AI 做出來的 three.js 網站長什麼樣子：Anatomy。
 - 要**簡報**：open-slide。
