@@ -167,7 +167,7 @@
     - **[REA](https://github.com/morluto/rea)** — 「Reverse Engineer Anything」：透過 MCP／CLI 讓 agent 逆向分析原生二進位、Electron、.NET、APK、WASM、韌體等目標並附證據；原生分析可用 Hopper、Ghidra 或 IDA。
 - **滲透測試**
     - **[Pentest Copilot](https://github.com/bugbasesecurity/pentest-copilot)**（BugBase）— AI 滲透測試助手。
-    - **[ARTEX](https://github.com/mhtsec/ARTEX)** — AI 自主滲透測試系統，百度「agent+」攻防挑戰賽冠軍專案。AGPL-3.0。
+    - **[ARTEX](https://github.com/Hinln/ARTEX)**（備份：[artex-global](https://github.com/jiwoochris/artex-global)、[trhhubsd](https://github.com/trhhubsd/ARTEX)） — AI 自主滲透測試系統，百度「agent+」攻防挑戰賽冠軍專案。AGPL-3.0。
     - **[Pentest Swarm AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)**（Armur AI）— 以 AI agent 蜂群對 API／網頁應用做自主滲透測試，自稱 XBOW 的開源替代。多項功能仍為 alpha／beta。AGPL-3.0。
     - **[Claude-Red](https://github.com/SnailSploit/Claude-Red)** — 攻擊性資安的 Claude Skills 集合（78 個 skill、23 類）。⚠️ 高度雙重用途，僅限授權測試。MIT。
 - **程式碼漏洞研究 / 弱點掃描**

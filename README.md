@@ -39,7 +39,7 @@
 - 標有「資料不足」的段落代表公開資料查不到，並非遺漏。
 - 部分條目的授權為非商用（例如 onetake、Qwen-Image-2.1、FLUX 3 Image Klein），或對較大公司收費（例如 Remotion、Stable Fast 3D），或排除特定地區（例如 Hunyuan3D 2.1、HY-World 2.0 不適用歐盟、英國、南韓），使用前請先確認。
 - 資安類條目僅供防禦與合法授權測試的參考，請勿用於未經授權的系統。
-- 部分專案狀態可能已變動（例如 ARTEX 原作者已下架，連結為第三方備份），詳見各條目。
+- 部分專案狀態可能已變動（例如 ARTEX 原作者已下架，連結為第三方備份或 fork），詳見各條目。
 
 ---
 
@@ -78,4 +78,4 @@ Each category folder also has a `README.md` that briefly explains what each entr
 - Sections marked "insufficient data" (資料不足) mean the information was not publicly available, not that it was overlooked.
 - Some entries are non-commercial only (e.g. onetake, Qwen-Image-2.1, FLUX 3 Image Klein), require a paid license for larger companies (e.g. Remotion, Stable Fast 3D), or exclude certain regions (e.g. Hunyuan3D 2.1 and HY-World 2.0 do not apply in the EU, UK, or South Korea); check the license before use.
 - Security entries are for defensive purposes and legally authorized testing only. Do not use them against systems you are not authorized to test.
-- Some projects may have changed status (e.g. ARTEX was taken down by its original author and the link is a third-party backup); see each entry for details.
+- Some projects may have changed status (e.g. ARTEX was taken down by its original author and links are third-party backups or forks); see each entry for details.
