@@ -175,6 +175,17 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 - 讓 Claude Code 或 Codex 直接剪本機專案，同時保留圖形化時間軸可人工微調。
 - 在同一條時間軸混用實拍素材與 AI 生成片段。
 
+### [FilmCraft](FilmCraft.md)
+
+開源非線性剪輯軟體，用純 Rust 寫成，可在 macOS、Windows、Linux 與瀏覽器中執行。每個操作都是一個命令，UI、CLI 與 MCP server 共用同一套命令，agent 可以像人一樣剪、調色、混音與匯出。MIT 或 Apache-2.0 雙授權。
+
+可以做到：
+- 多軌時間軸剪輯、三點剪輯與各種修剪工具，並有調色、特效、混音與字幕。
+- 讓 agent 透過 MCP 或 JSON 控制通道操作專案。
+- 研究或參與開源 NLE 的開發。
+
+⚠️ alpha 階段，尚不能直接開啟 `.prproj`，大型素材與部分色彩處理仍偏慢。
+
 ## AI 影片生成
 
 ### [WanGP](WanGP.md)

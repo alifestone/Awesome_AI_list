@@ -76,6 +76,7 @@
     - **[ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill)** — 給 coding agent 的本地 FFmpeg 剪輯 skill：剪接、字幕、響度、調色、平台交付檢查等 42 個工具，也可當 MCP。
     - **[ChatCut](https://github.com/ChatCut-Inc/agent-plugin)** — 線上對話式剪輯服務；agent-plugin 讓 coding agent 透過 MCP 直接改 ChatCut 雲端專案的時間軸。商業服務。
     - **[Palmier Pro](https://github.com/palmier-io/palmier-pro)** — 為 AI 打造的 macOS 剪輯軟體，內建 AI 生成並開放 MCP，agent 和人可以編輯同一條時間軸。⚠️ v0.7.6 之後改為專有授權。
+    - **[FilmCraft](https://github.com/storytold/filmcraft)** — 純 Rust 開源非線性剪輯軟體（alpha），每個操作都是 agent 可呼叫的命令，UI、CLI 與 MCP 共用；內建調色、特效、混音與字幕。MIT 或 Apache-2.0。⚠️ 尚不能開啟 .prproj。
 - **AI 影片生成**
     - **[WanGP](https://github.com/deepbeepmeep/WanGP)** — 給低階顯卡的本機生成 App：一個網頁介面跑 Wan、LTX、Hunyuan Video、MiniMax H3 等影片模型，另含圖像、TTS 與 3D 模型，部分只要 6 GB VRAM；有 MCP server 與內建 agent Deepy。⚠️ WanGP Community License：免費、作品可商用，但不得轉售或提供付費服務。
     - **[Higgsfield MCP](https://higgsfield.ai/mcp)** — 讓 Claude 不需 API key 呼叫 30 多個圖像／影片模型，再串 Blender、After Effects，交付可繼續編輯的 AE 專案。商業服務。
@@ -156,6 +157,7 @@
 
 - **[Playwright](https://github.com/microsoft/playwright)** — 跨瀏覽器自動化與 E2E 測試框架。
 - **[Playwright MCP](https://github.com/microsoft/playwright-mcp)** — 讓 AI 透過 MCP 操作瀏覽器。
+- **[moli](https://github.com/lexmount/moli)** — 給 AI agent 用的 Rust 無頭瀏覽器，抓取網頁與執行瀏覽器任務。
 - （另見上方 Jev 區的 Jev Ultrafast）
 
 ---
