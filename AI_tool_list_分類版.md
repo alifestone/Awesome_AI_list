@@ -157,6 +157,7 @@
 
 - **[Playwright](https://github.com/microsoft/playwright)** — 跨瀏覽器自動化與 E2E 測試框架。
 - **[Playwright MCP](https://github.com/microsoft/playwright-mcp)** — 讓 AI 透過 MCP 操作瀏覽器。
+- **[moli](https://github.com/lexmount/moli)** — 給 AI agent 用的 Rust 無頭瀏覽器，抓取網頁與執行瀏覽器任務。
 - （另見上方 Jev 區的 Jev Ultrafast）
 
 ---
