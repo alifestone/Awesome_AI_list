@@ -1,6 +1,6 @@
 # 🤖 機器人與具身智慧
 
-讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent，到物理模擬器、操作任務基準測試，用 LLM 直接指揮機器人的工具，以及全開源的人形機器人硬體平台。
+讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent、即時動作生成模型，到物理模擬器、操作任務基準測試，用 LLM 直接指揮機器人的工具，以及全開源的人形機器人硬體平台。
 
 ## 研究
 
@@ -21,6 +21,17 @@ NVIDIA 與 KAIST 的空間推理 agent（NeurIPS 2026）。主張「程式碼才
 - 回答圖片、多視角、影片與 4D 場景的空間問題（距離、方位、視角轉換、動態關係）。
 - 不微調模型，就替既有 VLM 加上幾何與感知工具。
 - 比較「寫程式」與「結構化 tool call」兩種 agent 動作介面。
+
+## 動作生成
+
+### [MotionBricks](MotionBricks.md)
+
+NVIDIA 的即時動作生成模型（SIGGRAPH 2026），也是 GR00T Whole-Body Control 的動作生成層。給角色最近 4 個姿勢和最多 4 個目標姿勢，模型自己補出中間的動作；同一個模型驅動人類骨架（SOMA）與 Unitree G1。專案頁報告約 15,000 FPS、約 2 ms 延遲。程式碼 Apache-2.0，模型採 NVIDIA Open Model Agreement（可商用）。
+
+可以做到：
+- 用目標姿勢組出走、跑、橫移、蹲行與多種風格的連續移動。
+- 用 Smart Primitives 編出翻越、坐下、撿東西等物件互動，不用重新訓練。
+- 替遊戲角色或 G1 機器人做動作補間與原型；需要 NVIDIA GPU（TensorRT）。
 
 ## 模擬
 
@@ -72,6 +83,7 @@ RoboParty 的全開源人形機器人：身高 1.35 m、約 39 kg、24／30 自�
 
 - 想**訓練或研究機器人模型**：看 ARC。
 - 想讓 **VLM 理解 3D 空間**：看 SpatialClaw。
+- 想**即時生成角色或人形機器人的動作**（補間、移動、物件互動）：MotionBricks。
 - 需要**模擬環境**：MuJoCo；要**評測操作策略或 VLA**：LIBERO；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
 - 想**直接用 Claude 指揮機器人**：quackd。
 - 想要**整台都能看到原始設計的人形機器人**（機構、電路到 ROS 2 部署）：RP1。

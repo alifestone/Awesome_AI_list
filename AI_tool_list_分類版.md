@@ -10,6 +10,8 @@
 - **研究**
     - **[ARC](https://arc-robot-reasoning.github.io/)** — 機器人基礎模型的推理訓練法：自動替既有示範資料標註「以動作為依據的因果推理」，再微調 π0.5 等 VLA，不需收新示範。程式碼與模型待釋出。
     - **[SpatialClaw](https://github.com/NVlabs/SpatialClaw)**（NVIDIA，NeurIPS 2026）— 以「寫程式」當動作介面的空間推理 agent：VLM 在持久 Jupyter kernel 裡呼叫 SAM3、Depth-Anything-3 等感知工具，免訓練。
+- **動作生成**
+    - **[MotionBricks](https://github.com/NVlabs/motionbricks)**（NVIDIA，SIGGRAPH 2026）— 即時生成人物與人形機器人動作的模組化潛在生成模型：給最近姿勢與目標姿勢自動補間，Smart Primitives 組出移動與物件互動；同一模型驅動 SOMA 人體與 Unitree G1，專案頁報告約 15,000 FPS、2 ms 延遲。程式碼 Apache-2.0，模型 NVIDIA Open Model Agreement（可商用）。⚠️ 需 NVIDIA GPU；不含訓練流程；範例動作檔僅限評估；未經實體機器人控制驗證。
 - **模擬**
     - **[MuJoCo](https://github.com/google-deepmind/mujoco)** — DeepMind 的物理模擬引擎，機器人與強化學習的標準模擬器。
 - **基準測試**
