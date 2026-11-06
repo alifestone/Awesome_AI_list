@@ -35,6 +35,27 @@
 
 每個分類資料夾另有一份 `README.md`，簡介該類每個條目在做什麼、可以做到什麼，並附「怎麼挑」的建議。
 
+### 用 Claude Code 查詢：tool-finder
+
+清單越來越長，可以直接用問的。本 repo 附有 Claude Code 的 `tool-finder` agent：描述你想做的事，它會讀總索引與相關條目，推薦最合適的工具，並說明其他選項、怎麼開始與注意事項。它只根據清單內容回答，找不到合適工具時會直接說明。
+
+**在本 repo 內使用**（clone 後不需設定）：在 repo 目錄啟動 Claude Code，然後：
+
+```
+/find-tool 我想讓 agent 操作 Blender 建模
+```
+
+或直接問「清單裡有沒有能本機跑 OCR 的模型？」，Claude 會自動交給 tool-finder。
+
+**在所有專案中使用**：執行安裝腳本，把 agent 與 `/find-tool` 安裝到 `~/.claude/`（會自動填入你 clone 的位置），重新啟動 Claude Code 即可：
+
+```bash
+bash scripts/install-tool-finder.sh              # 安裝；repo 更新後重跑一次即可同步
+bash scripts/install-tool-finder.sh --uninstall  # 移除
+```
+
+> 安裝後 agent 會讀取你本機 clone 的清單，記得定期 `git pull` 取得新條目。若之後移動了 repo 位置，請重新執行安裝腳本。
+
 ### 注意事項
 
 - 標有「資料不足」的段落代表公開資料查不到，並非遺漏。
@@ -74,6 +95,27 @@ A categorized list of AI tools, models, and learning resources, grouped by purpo
 Each file contains: category, link, original one-line description, overview, key features, architecture or how it works, installation and usage, use cases, license and cost, limitations and caveats, related tools, and sources.
 
 Each category folder also has a `README.md` that briefly explains what each entry does and what it can be used for, with tips on choosing between them (in Traditional Chinese).
+
+### Ask with Claude Code: tool-finder
+
+The list is getting long, so you can just ask. This repo ships a Claude Code `tool-finder` agent: describe what you want to do, and it reads the index and the relevant entries, recommends the best-fitting tool, and covers alternatives, how to get started, and caveats. It answers only from the list and says so when nothing fits. Answers are in Traditional Chinese.
+
+**Inside this repo** (no setup after cloning): start Claude Code in the repo directory, then:
+
+```
+/find-tool I want an agent to model things in Blender
+```
+
+Or just ask, e.g. "Is there a model in the list that does OCR locally?", and Claude will hand it to tool-finder.
+
+**In every project**: run the install script to put the agent and `/find-tool` into `~/.claude/` (it fills in where you cloned the repo), then restart Claude Code:
+
+```bash
+bash scripts/install-tool-finder.sh              # install; rerun after pulling updates
+bash scripts/install-tool-finder.sh --uninstall  # remove
+```
+
+> The installed agent reads your local clone, so `git pull` regularly to get new entries. If you move the repo, rerun the install script.
 
 ### Notes
 
