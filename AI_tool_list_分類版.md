@@ -235,6 +235,7 @@
     - **[EECS 498 AASE](https://github.com/eecs498-aase/materials)** — 密西根大學 2026 秋季「應用代理式軟體工程」課程教材：投影片、可自己跑的 Aider demo，以及 Elephant-Goldfish Model 五個 Agent Skills（英文；⚠️ 未附 LICENSE 檔）。
     - **[50 ML Projects to Understand LLMs](https://github.com/mikexcohen/ML4LLM_book)** — Mike X Cohen 同名書的配套 notebook：50 個專案用機器學習分析 GPT-2／BERT 的內部活化（斷詞、embedding、logits、attention、MLP），入門機制可解釋性；Colab 可跑（英文；程式碼 MIT，書需另購）。
     - **[Train LLM From Scratch](https://github.com/FareedKhan-dev/train-llm-from-scratch)** — 用純 PyTorch 從零手寫 LLM 全流程：資料、Transformer（原始版與 RoPE／GQA／MLA／MoE 現代版）、預訓練，再到 SFT、獎勵模型、PPO／DPO／GRPO 與 GSM8K 評測；筆電 CPU 幾分鐘就能訓練出小模型，附 Streamlit 控制台與文件網站（英文，MIT）。
+    - **[The Ultimate MoE Training Handbook](https://huggingface.co/spaces/huggingface/moe-blogpost)**（Hugging Face）— 約 7 萬字的 MoE 訓練實戰手冊：router、負載平衡、專家設計、upcycling、all-to-all 通訊與部署，以 Megatron-LM 為主，附互動圖表與自家叢集實驗數據；預設讀者已訓練過 dense 模型（英文，線上免費，未標示授權）。
     - **[AI Engineering from Scratch](https://github.com/rohitg00/ai-engineering-from-scratch)**（Rohit Ghumare）— 542 堂課、20 個階段的開源 AI 工程課程：數學、ML、深度學習、Transformer、從零做 LLM，到 MCP、agent、多 agent 與上線；每堂課從原始數學寫起再用框架重做，並產出可重用的 skill／MCP server。可用 `npx skills add` 讓 coding agent 當家教，另有六冊電子書（課文英文，README 有繁中；MIT）。
 - **學習工具**
     - **[PaperRead](https://github.com/YuriyLin/PaperRead)** — 以繁體中文閱讀學術論文的研究工作區：論文探索、待讀看板、摘要、閱讀路徑、心智圖與 PDF 對照精讀；支援雲端與本地模型。MIT。
@@ -318,3 +319,4 @@
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 desloppify。
 - 推論與訓練引擎新增 edge0。
 - 更新 awesome-gamedev-agent-skills：77 個 skill、新增 Ebitengine 與 Defold，星數與版本基準更新至 2026-11-06。
+- 學習資源的課程 / 教材區新增 The Ultimate MoE Training Handbook。

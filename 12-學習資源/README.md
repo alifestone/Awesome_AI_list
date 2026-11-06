@@ -49,6 +49,15 @@ Fareed Khan 的開源教學：用純 PyTorch（不用 `trl`、`peft`、`transfor
 - 逐行看懂 DPO、PPO、GRPO 等後訓練演算法，並用 GSM8K 比較各階段的效果。
 - 用 Streamlit 控制台點選啟動每個訓練階段、看 loss，並和 checkpoint 對話。
 
+### [The Ultimate MoE Training Handbook](MoE-Training-Handbook.md)
+
+Hugging Face 的 Mixture-of-Experts 訓練長篇手冊（Nouamane Tazi、Leandro von Werra、Thomas Wolf，2026-11）：約 7 萬字、數十個互動圖表，以 Megatron-LM 為主，逐項拆解 router、負載平衡、專家數量與大小、upcycling、all-to-all 通訊與部署，多數設定附自家叢集實驗數據。線上免費閱讀，英文；Space 未標示授權。⚠️ 偏實戰，預設讀者已在 GPU 叢集上訓練過 dense 模型。
+
+可以做到：
+- 照第 2 章在單節點（或 HF Jobs 租的 8×H200）上從 dense baseline 訓練出第一個 MoE。
+- 訓練跑壞時，用「症狀 → 異常訊號 → 章節」的除錯地圖找原因。
+- 看懂 DeepSeek、Kimi 等前沿 MoE 的 router、共享專家與負載平衡設計。
+
 ### [AI Engineering from Scratch](AI-Engineering-From-Scratch.md)
 
 Rohit Ghumare 的大型開源 AI 工程課程：542 堂課、20 個階段，從數學、ML、深度學習、Transformer、從零做 LLM，一路到 MCP、agent、多 agent 與上線部署。每堂課先不用框架從原始數學寫起，再用 PyTorch 等函式庫做一次，最後產出可重用的 prompt、skill 或 MCP server。程式碼有 Python／TypeScript／Rust／Julia。README 有繁中版，課文是英文。MIT。
@@ -78,4 +87,5 @@ Rohit Ghumare 的大型開源 AI 工程課程：542 堂課、20 個階段，從�
 - **想知道 LLM 內部怎麼運作（可解釋性入門）**：50 ML Projects to Understand LLMs。
 - **想要一套從數學到 agent 上線的完整路線，或讓 coding agent 當家教**：AI Engineering from Scratch。
 - **想自己從零訓練一個 LLM，連後訓練與 RL 一起學**：Train LLM From Scratch。
+- **已經會訓練 dense 模型，要在叢集上訓練 MoE**：The Ultimate MoE Training Handbook。
 - **要讀學術論文、想要繁體中文輔助**：PaperRead。
