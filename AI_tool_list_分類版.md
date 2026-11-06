@@ -135,6 +135,7 @@
     - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — 各種專業角色的 agent 人設集合。
     - **[yao-meta-skill](https://github.com/yaojingang/yao-meta-skill)** — 建立、評測、打包與治理 agent skill 的 meta-skill（「Skill OS」），附 skill 供應鏈安全政策（[security/](https://github.com/yaojingang/yao-meta-skill/tree/main/security)）：網路、檔案寫入、子程序權限核准與發布前信任報告。MIT。（原放在資安）
     - **[TokenEconomizer](https://github.com/microsoft/TokenEconomizer)**（Microsoft Research）— coding agent 成本控制外掛（Claude Code、Codex、Copilot CLI、Pi）：從同一 repo 過去的 session 學習，記住 repo 事實、排除沒用到的工具、偵測失敗迴圈並提示換方法，不改 agent 本身。論文自述 SWE-Bench 上平均成本降 18.4–30.9%。Apache-2.0。⚠️ v0.1.0，支援版本範圍窄。
+    - **[desloppify](https://github.com/peteromallet/desloppify)** — 讓 coding agent 整理 vibe coding 程式碼的 harness：機械式偵測（死碼、重複、複雜度）+ LLM 主觀審查（命名、抽象、模組邊界）算出健康分數，照優先佇列反覆修，狀態跨 session 保存，設計成難以刷分。支援 Claude Code、Codex、Cursor 等與 29 種語言。⚠️ 授權為作者自訂的 OSNL（非 OSI 開源）：內部使用免費，非開源公司包進產品散布需依營收付費。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
@@ -313,3 +314,4 @@
 - 遊戲引擎 × Agent 新增「遊戲開發 Skill 組」小類與 awesome-gamedev-agent-skills。
 - 遊戲引擎 × Agent 的桌面遊戲引擎區新增 Unreal Engine Skills for Claude Code。
 - 分類調整：Agent 框架與編排的「知識庫 / 文件問答」「Agent 記憶」獨立成「🗂️ RAG、知識庫與記憶」；Claude Code Game Studios 移到遊戲引擎 × Agent 的「遊戲開發 Skill 組」；Promptfoo 從資安移到 Agent 框架與編排的「LLM 評測」；Qwen Fixed Chat Templates 從模型移到推論與訓練引擎；Index-AniSora 從模型移到影片製作的「AI 影片生成」；Matrix-Game、StreamRender-H3 從模型移到 3D 建模與生成，「AI 生成 3D 世界」改名「世界模型」；影片製作與設計 / 前端新增「作品與案例」小類（PDoomVideo、Awesome Opus 5.5 Videos、Anatomy）。
+- Agent 框架的 Coding agent 外掛與 skill 組區新增 desloppify。

@@ -91,6 +91,17 @@ Microsoft Research 與 UC Berkeley 的 coding agent 成本控制外掛，支援 
 
 ⚠️ v0.1.0，支援的 agent 版本範圍很窄；成效數字為作者自己的量測。
 
+### [desloppify](desloppify.md)
+
+讓 coding agent 把 vibe coding 出來的程式碼整理乾淨的 harness（Python 3.11+）：機械式偵測（死碼、重複、複雜度、測試缺口）加上 LLM 主觀審查（命名、抽象、模組邊界），算出 0–100 的健康分數，再照排好優先順序的佇列 `next` → 修 → `resolve` 反覆進行。狀態存在 `.desloppify/`，可跨 session 推進；分數設計成難以刷分。支援 Claude Code、Codex、Cursor、Copilot 等，29 種語言。
+
+可以做到：
+- 讓 agent 有系統地整理 AI 生成的 codebase：結構、命名、重複、錯誤處理一致性。
+- 跨多個 session 持續重構，進度不會每次歸零。
+- 在 CI 設整體程式碼品質門檻；產生分數徽章放在 README。
+
+⚠️ 授權為作者自訂的 OSNL，非 OSI 開源：內部使用免費，非開源公司把它包進產品散布要依營收付費。分數有 75% 來自 LLM 審查。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -115,6 +126,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
-- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer。
+- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
