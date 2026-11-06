@@ -220,6 +220,7 @@
 - **[DeepInfer](https://github.com/deepseek-ai/DeepInfer)** — DeepSeek 官方開源、支撐其線上服務的大規模推論框架：MoE 專家平行、DSpark 推測解碼、決定性推論；目前只支援 DeepSeek-V4.1-Flash，限 NVIDIA SM100／昇騰 950。Apache-2.0。⚠️ 開源版僅離線推論。
 - **[Project Maya](https://github.com/mw00/project-maya)** — 從 Strata 改寫的本地推論引擎，專為 GLM-5.3-Flash（321B）與 DeepSeek-V4.1-Flash-1017（748B）MoE 打造：專家分層放 VRAM／RAM／SSD，1～16 張 GPU，附 OpenAI／Anthropic 相容 API 與儀表板。MIT。⚠️ AMD 與 Windows 為實驗性。
 - **[TurboFieldfare](https://github.com/drumih/turbo-fieldfare)** — 以 Swift＋Metal 自寫的 Gemma 4 26B-A4B 推論引擎：記憶體只放約 2 GB，專家從 SSD 串流，8 GB 的 Apple Silicon Mac 也能跑；附 Mac app、CLI 與本機 OpenAI 相容伺服器。Apache-2.0。⚠️ 僅此一個模型，需 macOS 26。
+- **[edge0](https://github.com/Edge0-AI/Edge0)** — 開源串流 MoE 推論框架：SSD 專家卸載＋訓練過的 prerouter 提前預測專家＋Recover-LoRA 補回 4-bit 損失，附 Edge0-35B-A3B／8B-A1B 兩個模型與 macOS、iOS、Android、Windows 原生引擎。Apache-2.0。⚠️ Python 版僅 Apple Silicon；「約 2.5 GB 跑 35B」為 MLX allocator 峰值，非程序 RSS。
 - **[QwenGyre](https://arxiv.org/abs/2609.33848)** — 阿里巴巴的超長任務 agent 強化學習訓練框架論文：GPU 在 rollout 與訓練間彈性切換、不中斷執行中的 agent，並把分支執行整理成共享前綴的軌跡樹去重；自測比 Colocate 快最多 1.85×、比 Async 快 1.78×。⚠️ 目前只有論文，未公開程式碼。
 - **[dLLM](https://github.com/ZHZisZZ/dllm)** — 擴散語言模型的訓練、推論與評測函式庫：LLaDA、Dream 範例，MDLM、BD3LM、Edit Flows、Fast-dLLM、diffu-GRPO，可把自迴歸模型或 BERT 改成擴散模型。Apache-2.0。
 - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
@@ -315,3 +316,4 @@
 - 遊戲引擎 × Agent 的桌面遊戲引擎區新增 Unreal Engine Skills for Claude Code。
 - 分類調整：Agent 框架與編排的「知識庫 / 文件問答」「Agent 記憶」獨立成「🗂️ RAG、知識庫與記憶」；Claude Code Game Studios 移到遊戲引擎 × Agent 的「遊戲開發 Skill 組」；Promptfoo 從資安移到 Agent 框架與編排的「LLM 評測」；Qwen Fixed Chat Templates 從模型移到推論與訓練引擎；Index-AniSora 從模型移到影片製作的「AI 影片生成」；Matrix-Game、StreamRender-H3 從模型移到 3D 建模與生成，「AI 生成 3D 世界」改名「世界模型」；影片製作與設計 / 前端新增「作品與案例」小類（PDoomVideo、Awesome Opus 5.5 Videos、Anatomy）。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 desloppify。
+- 推論與訓練引擎新增 edge0。

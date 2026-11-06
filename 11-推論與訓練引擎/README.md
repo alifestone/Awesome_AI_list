@@ -70,6 +70,15 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 用原生 Mac app 聊天，或另裝 vision pack 讀圖（M2 以上）。
 - 開本機 OpenAI 相容 API（串流、function tools）接 OpenCode 等工具。
 
+### [edge0](edge0.md)
+
+開源的串流 MoE 推論框架：專家權重從 SSD 按需串流，搭配訓練過的 prerouter 提前一步預測要載入哪些專家，以及補回 4-bit 量化損失的 Recover-LoRA。附兩個調校好的模型（Edge0-35B-A3B、Edge0-8B-A1B），另有 macOS、iOS、Android、Windows 原生引擎。Apache-2.0。⚠️ Python 版目前只支援 Apple Silicon；「35B 約 2.5–2.9 GB」是 MLX allocator 峰值，不是程序實際佔用。
+
+可以做到：
+- 在 24 GB 的 Mac mini 上跑 35B MoE（作者實測 decode 約 15–18 tok/s），開 OpenAI 相容 API。
+- 在 iPhone、Android 手機或 Windows PC 上離線跑 8B／35B MoE。
+- 研究 SSD 專家卸載與路由預測（附技術報告）。
+
 ### [QwenGyre](QwenGyre.md)
 
 阿里巴巴提出的強化學習訓練框架（論文），專門訓練單次要跑好幾小時、用掉近百萬 token 的超長任務 agent：GPU 在 rollout 與訓練之間彈性切換而不中斷執行中的 agent，並把分支軌跡整理成共享前綴的樹、去重後再訓練。⚠️ 目前只有論文，未公開程式碼；實驗規模為資料中心等級。
@@ -103,6 +112,7 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
 - **想在自己的 GPU 上跑 GLM-5.3-Flash 或 DeepSeek-V4.1-Flash**：Project Maya。
 - **只有一台記憶體不大的 Mac，想跑 Gemma 4 26B-A4B**：TurboFieldfare。
+- **想在 Mac、手機或 Windows 上跑 35B MoE，模型與調校一起包好**：edge0。
 - **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
 - **想了解超長任務 agent 的大規模 RL 訓練怎麼做（研究參考）**：QwenGyre（只有論文）。
 - **想訓練或研究擴散語言模型（LLaDA、Dream 等）**：dLLM。
