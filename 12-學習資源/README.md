@@ -49,6 +49,15 @@ Fareed Khan 的開源教學：用純 PyTorch（不用 `trl`、`peft`、`transfor
 - 逐行看懂 DPO、PPO、GRPO 等後訓練演算法，並用 GSM8K 比較各階段的效果。
 - 用 Streamlit 控制台點選啟動每個訓練階段、看 loss，並和 checkpoint 對話。
 
+### [AI Engineering from Scratch](AI-Engineering-From-Scratch.md)
+
+Rohit Ghumare 的大型開源 AI 工程課程：542 堂課、20 個階段，從數學、ML、深度學習、Transformer、從零做 LLM，一路到 MCP、agent、多 agent 與上線部署。每堂課先不用框架從原始數學寫起，再用 PyTorch 等函式庫做一次，最後產出可重用的 prompt、skill 或 MCP server。程式碼有 Python／TypeScript／Rust／Julia。README 有繁中版，課文是英文。MIT。
+
+可以做到：
+- 用 `npx skills add` 安裝家教 skills，在 Claude Code、Codex 裡做入門測驗、拿到個人化學習計畫，一次學一堂課。
+- 只走 MCP（17 堂）、Agent Skills（5 堂）或逆向工程等專題路線。
+- 下載六冊 EPUB／PDF 電子書，或準備 Claude 認證與 MCPA 考試（非官方教材）。
+
 ## 學習工具
 
 ### [PaperRead](PaperRead.md)
@@ -67,5 +76,6 @@ Fareed Khan 的開源教學：用純 PyTorch（不用 `trl`、`peft`、`transfor
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
 - **想要一整學期、有系統的大學課程，或想自己從零寫 agent**：EECS 498 AASE。
 - **想知道 LLM 內部怎麼運作（可解釋性入門）**：50 ML Projects to Understand LLMs。
+- **想要一套從數學到 agent 上線的完整路線，或讓 coding agent 當家教**：AI Engineering from Scratch。
 - **想自己從零訓練一個 LLM，連後訓練與 RL 一起學**：Train LLM From Scratch。
 - **要讀學術論文、想要繁體中文輔助**：PaperRead。
