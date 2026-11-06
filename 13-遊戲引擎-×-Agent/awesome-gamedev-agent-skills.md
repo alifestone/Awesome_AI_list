@@ -8,23 +8,23 @@
 
 （使用者新增，無原清單說明。）
 
-> **查證結果**：名字叫 awesome，但**不是連結清單**，而是一整套自己撰寫的 Agent Skills（`SKILL.md` 格式）：74 個遊戲開發 skill 加 1 個 router，repo 內實際有 75 個 `SKILL.md`，與 README 數字相符。它**不連接、不操作**引擎編輯器，只在 agent 寫程式前載入對應引擎與主題的知識，和本資料夾其他 MCP 工具是互補關係。NOTICE 聲明所有 skill 皆依官方文件原創撰寫，並註明與各引擎廠商無關聯。
+> **查證結果**：名字叫 awesome，但**不是連結清單**，而是一整套自己撰寫的 Agent Skills（`SKILL.md` 格式）：77 個遊戲開發 skill 加 1 個 router，repo 內實際有 78 個 `SKILL.md`，與 README 數字相符。它**不連接、不操作**引擎編輯器，只在 agent 寫程式前載入對應引擎與主題的知識，和本資料夾其他 MCP 工具是互補關係。NOTICE 聲明所有 skill 皆依官方文件原創撰寫，並註明與各引擎廠商無關聯。
 
 ## 概述
 
-給 Claude Code、Cursor、Codex、Gemini CLI、GitHub Copilot、Kiro、Windsurf、Cline 等 coding agent 用的遊戲開發 skill 庫，涵蓋 10 個引擎：Godot、Unity、Unreal、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Roblox。使用者不必指定 skill 名稱，router 會從專案檔判斷引擎、從需求判斷主題，只載入需要的 skill。例如「幫我的 Godot 角色加二段跳」會載入 `godot-2d-movement` + `platformer`。
+給 Claude Code、Cursor、Codex、Gemini CLI、GitHub Copilot、Kiro、Windsurf、Cline 等 coding agent 用的遊戲開發 skill 庫，涵蓋 12 個引擎：Godot、Unity、Unreal、Ebitengine、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Defold、Roblox。使用者不必指定 skill 名稱，router 會從專案檔判斷引擎、從需求判斷主題，只載入需要的 skill。例如「幫我的 Godot 角色加二段跳」會載入 `godot-2d-movement` + `platformer`。
 
-截至 2026-10-23：Apache-2.0 授權、約 3.0k 顆星，repo 建立於 2026-06-24，GitHub Release 最新為 v1.1.0（2026-06-26），但 main 分支持續更新，最近一次推送為 2026-10-22。維護者為 Abhishek Barali。
+截至 2026-11-06：Apache-2.0 授權、約 7.1k 顆星，repo 建立於 2026-06-24，GitHub Release 最新為 v1.1.0（2026-06-26），但 main 分支持續更新，最近一次推送為 2026-10-28。2026-10 下旬新增 Ebitengine、Defold 與 Roblox 模擬器經濟系統 skill，並於 2026-10-24 重新核對所有引擎版本基準。維護者為 Abhishek Barali。
 
 ## 核心功能／特色
 
 - **Router**：依 `project.godot`、`*.uproject`、`package.json`、`Cargo.toml` 等檔案判斷引擎（一次只選一個引擎），判斷不出來就詢問；再疊加主題、類型與流程 skill，依「引擎基礎 → 概念 → 類型」的順序載入，換主題時重新路由。
-- **引擎 skill（46 個）**：Godot 16（GDScript、場景樹、TileMap、shader、多人連線、C#、headless 測試等）、Unity 8（Input System、ScriptableObject、NavMesh、Build pipeline 等）、Unreal 6（Blueprint、C++ Gameplay Framework、Enhanced Input、Behavior Tree、Niagara、打包）、網頁引擎 6（Phaser、PixiJS、three.js）、其他 10（Bevy ECS、pygame、LÖVE、Roblox 的 Luau／DataStore／UI／網路／物理／Studio 流程等）。
+- **引擎 skill（49 個）**：Godot 16（GDScript、場景樹、TileMap、shader、多人連線、C#、headless 測試等）、Unity 8（Input System、ScriptableObject、NavMesh、Build pipeline 等）、Unreal 6（Blueprint、C++ Gameplay Framework、Enhanced Input、Behavior Tree、Niagara、打包）、Ebitengine 1（Go 2D 遊戲：update/draw、輸入、繪製、音訊、gameplay 測試）、網頁引擎 6（Phaser、PixiJS、three.js）、其他 12（Bevy ECS、pygame、LÖVE、Defold，以及 Roblox 的 Luau／DataStore／UI／網路／角色／物理／Studio 流程／模擬器經濟系統）。
 - **跨引擎主題（15 個）**：遊戲 AI、行為樹與 Utility AI、程序生成、對話系統、存檔、音訊、shader、物理手感、關卡設計、輸入系統、game feel、遊戲 UI/UX、相機、效能最佳化，以及 `create-game-assets`。
 - **類型模板（9 個）**：平台跳躍、roguelike、RPG、FPS、塔防、卡牌、視覺小說、生存製作、解謎；只負責組合引擎與主題 skill，不重教基礎。
 - **流程（4 個）**：Game Jam、快速原型、Steam 上架、itch.io 發布（`butler`）。
 - **美術資產流程（`create-game-assets`）**：先鎖定美術方向與技術規格（視角、解析度、調色盤、像素比例），做出一個代表資產確認後再成批產出同系列資產，再用確定性的工具裁切、對齊、檢查透明度，最後在遊戲實際畫面中驗收並記錄來源與授權。附 `art-direction-brief.md`、`asset-manifest.json` 範本與兩支 Python QA 腳本（資產報告、contact sheet）。本身不生成圖片：有 `imagegen` 之類的生圖 skill 時才交給它，沒有就產出規格書與清單或用佔位圖。
-- **版本釘選**：每個 skill 以指定版本為準撰寫（Godot 4.7、Unity 6.3 LTS、Unreal 5.8、Phaser 4.2、PixiJS 8.21、three.js r186、Bevy 0.20、pygame-ce 2.5.8、LÖVE 11.5），既有專案沿用其鎖定版本，不會擅自升級；`docs/VERSION-SUPPORT.md` 規定至少每季複查。
+- **版本釘選**：每個 skill 以指定版本為準撰寫（Godot 4.7、Unity 6.3 LTS、Unreal 5.8、Ebitengine v2.10.5（Go 1.25+）、Phaser 4.2、PixiJS 8.22、three.js r186、Bevy 0.20、pygame-ce 2.5.8、LÖVE 11.5、Defold 1.14.0），既有專案沿用其鎖定版本，不會擅自升級；`docs/VERSION-SUPPORT.md` 規定至少每季複查。
 - **品質檢查**：`scripts/validate-skills.py` 驗證每個 skill 的格式，並附回歸測試；網頁版目錄由 `SKILL.md` 自動產生。
 
 ## 技術架構或運作原理
@@ -53,10 +53,10 @@ Claude Code 外掛市集：
 ```bash
 claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills
 claude plugin install gamedev@awesome-gamedev-agent-skills
-# 只用單一引擎：裝 router 再加 godot / unity / unreal / web-engines / other-engines
+# 只用單一引擎：裝 router 再加 godot / unity / unreal / ebitengine / web-engines / other-engines
 ```
 
-裝好後直接用白話描述需求，例如「幫我的 Unity RPG 做背包」「用 Godot 做程序生成地城的 roguelike」「用 butler 把遊戲發到 itch」。手動複製路徑見 `docs/INSTALLATION.md`。
+裝好後直接用白話描述需求，例如「幫我的 Unity RPG 做背包」「用 Godot 做程序生成地城的 roguelike」「用 Go 和 Ebitengine 做 2D 解謎」「幫我的 Defold 遊戲加角色移動」「用 butler 把遊戲發到 itch」。手動複製路徑見 `docs/INSTALLATION.md`。
 
 ## 適用情境
 
@@ -74,8 +74,8 @@ claude plugin install gamedev@awesome-gamedev-agent-skills
 
 - 只提供知識與流程，**不會**自己開編輯器、跑遊戲或截圖驗證；要 agent 直接操作引擎，需搭配同資料夾的 MCP 工具。
 - 內容以 2026 年的新版引擎為基準（如 Godot 4.7、Unreal 5.8、Unity 6.3），舊專案需注意 API 差異；作者已說明不會自動遷移。
-- 各引擎深度不一：Godot 16 個，Unreal 只有 6 個，PixiJS、Phaser 各只有 1～2 個。
-- GitHub Release 停在 2026-06 的 v1.1.0，實際內容以 main 分支為準；README 目錄表 Bevy 仍寫 0.19，skill 本體已改為 0.20。
+- 各引擎深度不一：Godot 16 個，Unreal 只有 6 個，PixiJS、Phaser 各只有 1～2 個，Ebitengine、Defold、Bevy、pygame、LÖVE 各只有 1 個。
+- GitHub Release 停在 2026-06 的 v1.1.0，之後新增的引擎與 skill 都只在 main 分支，沒有對應的版本號可以釘選。
 - 專案很新（2026-06 建立），skill 由單一主要維護者撰寫，品質主要靠自訂 validator 與審查規範，並非引擎官方內容。
 
 ## 相關工具
@@ -89,8 +89,9 @@ claude plugin install gamedev@awesome-gamedev-agent-skills
 - https://github.com/gamedev-skills/awesome-gamedev-agent-skills （README）
 - https://api.github.com/repos/gamedev-skills/awesome-gamedev-agent-skills （repo 中繼資料：授權、星數、建立與推送日期）
 - https://api.github.com/repos/gamedev-skills/awesome-gamedev-agent-skills/releases （v1.0.0、v1.1.0）
-- https://api.github.com/repos/gamedev-skills/awesome-gamedev-agent-skills/git/trees/main?recursive=1 （75 個 `SKILL.md`）
+- https://api.github.com/repos/gamedev-skills/awesome-gamedev-agent-skills/git/trees/main?recursive=1 （78 個 `SKILL.md`）
 - https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/main/NOTICE
 - https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/main/docs/VERSION-SUPPORT.md
 - https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/main/skills/disciplines/create-game-assets/SKILL.md
 - https://raw.githubusercontent.com/gamedev-skills/awesome-gamedev-agent-skills/main/skills/other-engines/bevy-ecs/SKILL.md
+- https://api.github.com/repos/gamedev-skills/awesome-gamedev-agent-skills/commits （2026-10-24～10-28 的新增與修正）

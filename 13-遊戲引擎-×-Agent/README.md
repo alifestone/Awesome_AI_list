@@ -58,7 +58,7 @@ PlayCanvas 官方的 Editor MCP 伺服器，130 個工具，連接瀏覽器中�
 
 ### [awesome-gamedev-agent-skills](awesome-gamedev-agent-skills.md)
 
-74 個遊戲開發 Agent Skills 加一個 router，涵蓋 Godot、Unity、Unreal、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Roblox 十個引擎；router 從專案檔判斷引擎、從需求判斷主題，只載入需要的 skill。名字有 awesome 但不是連結清單，也不操作編輯器。Claude Code、Cursor、Codex、Gemini CLI、Copilot 等都能用。Apache-2.0。
+77 個遊戲開發 Agent Skills 加一個 router，涵蓋 Godot、Unity、Unreal、Ebitengine、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Defold、Roblox 十二個引擎；router 從專案檔判斷引擎、從需求判斷主題，只載入需要的 skill。名字有 awesome 但不是連結清單，也不操作編輯器。Claude Code、Cursor、Codex、Gemini CLI、Copilot 等都能用。Apache-2.0。
 
 可以做到：
 - 讓 agent 照專案的引擎版本寫出正確的 API，例如 Godot 4.7、Unity 6.3 LTS、Unreal 5.8。
@@ -78,7 +78,7 @@ Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主�
 ## 怎麼挑
 
 - 看**你已經在用哪個引擎**：這幾個 MCP 工具各綁一個引擎，沒有互通。
-- 要 agent **寫遊戲程式時懂引擎寫法**，而不是去操作編輯器：awesome-gamedev-agent-skills，可和任一個 MCP 工具一起用；它也涵蓋 Phaser、Bevy、pygame、LÖVE、Roblox 等這裡沒有 MCP 的引擎。
+- 要 agent **寫遊戲程式時懂引擎寫法**，而不是去操作編輯器：awesome-gamedev-agent-skills，可和任一個 MCP 工具一起用；它也涵蓋 Ebitengine、Phaser、Bevy、pygame、LÖVE、Defold、Roblox 等這裡沒有 MCP 的引擎。
 - 要**最成熟、社群最大**：Unity MCP（約 15k 星，版本迭代穩定）。
 - 要**完全開源、驗證迴圈完整**：Godot AI 或 PlayCanvas Editor MCP；要**官方支援**：PlayCanvas Editor MCP 與 Unreal Engine Skills for Claude Code 是引擎廠商自己出的。
 - 要**做網頁上直接能玩的 3D**：PlayCanvas Editor MCP。

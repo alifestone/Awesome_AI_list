@@ -251,7 +251,7 @@
 - **網頁遊戲引擎**
     - **[PlayCanvas Editor MCP](https://github.com/playcanvas/editor-mcp-server)** — PlayCanvas 官方 MCP：agent 在瀏覽器版 Editor 建場景，再自己啟動遊戲、截圖驗證真的能跑（MIT）。
 - **遊戲開發 Skill 組**
-    - **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)** — 74 個遊戲開發 Agent Skills 加 router，涵蓋 Godot、Unity、Unreal、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Roblox；自動判斷引擎與任務只載入需要的 skill，另有類型模板、美術資產流程與 Steam／itch 上架。不是連結清單，也不操作編輯器。Apache-2.0。
+    - **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)** — 77 個遊戲開發 Agent Skills 加 router，涵蓋 Godot、Unity、Unreal、Ebitengine、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Defold、Roblox；自動判斷引擎與任務只載入需要的 skill，另有類型模板、美術資產流程與 Steam／itch 上架。不是連結清單，也不操作編輯器。Apache-2.0。
     - **[Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)** — 把 Claude Code 變成遊戲工作室：49 個 agent、74 個 skills，涵蓋設計、架構、QA 到發行。
 
 ---
@@ -317,3 +317,4 @@
 - 分類調整：Agent 框架與編排的「知識庫 / 文件問答」「Agent 記憶」獨立成「🗂️ RAG、知識庫與記憶」；Claude Code Game Studios 移到遊戲引擎 × Agent 的「遊戲開發 Skill 組」；Promptfoo 從資安移到 Agent 框架與編排的「LLM 評測」；Qwen Fixed Chat Templates 從模型移到推論與訓練引擎；Index-AniSora 從模型移到影片製作的「AI 影片生成」；Matrix-Game、StreamRender-H3 從模型移到 3D 建模與生成，「AI 生成 3D 世界」改名「世界模型」；影片製作與設計 / 前端新增「作品與案例」小類（PDoomVideo、Awesome Opus 5.5 Videos、Anatomy）。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 desloppify。
 - 推論與訓練引擎新增 edge0。
+- 更新 awesome-gamedev-agent-skills：77 個 skill、新增 Ebitengine 與 Defold，星數與版本基準更新至 2026-11-06。
