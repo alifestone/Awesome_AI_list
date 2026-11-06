@@ -80,6 +80,17 @@ Claude Code 外掛，讓 Codex、Gemini 等多個模型對同一任務各自作�
 - 建立團隊內部發布 agent skill 前的安全審查流程。
 - 參考如何把權限寫成可稽核的核准紀錄與阻擋規則。
 
+### [TokenEconomizer](TokenEconomizer.md)
+
+Microsoft Research 與 UC Berkeley 的 coding agent 成本控制外掛，支援 Claude Code、Codex、Copilot CLI、Pi。不改 agent 本身，從同一個 repo 過去的 session 學經驗：記住 repo 的事實（micro-skills）、排除一直沒用到的工具（tool pruning）、在卡進失敗迴圈時提示換方法（loop guard）。Apache-2.0。
+
+可以做到：
+- 在常用的 repo 裡降低 coding agent 的 token 成本（論文自述 SWE-Bench 上平均降 18.4–30.9%）。
+- 自動把沒用到的工具與 MCP server 從 agent 設定中排除，一個指令就能還原。
+- 偵測 agent 原地打轉並提示換方法，但不會自己中斷。
+
+⚠️ v0.1.0，支援的 agent 版本範圍很窄；成效數字為作者自己的量測。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -104,6 +115,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
-- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill。
+- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
