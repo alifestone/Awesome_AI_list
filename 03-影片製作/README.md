@@ -113,9 +113,9 @@ HeyGen 的開源框架：寫 HTML／CSS／動畫，渲染成確定性的 MP4，�
 - 讓 coding agent 依文字描述寫出可重跑、可修改的教學動畫。
 - 參考 3Blue1Brown 公開的影片原始碼學寫法。
 
-### [MoviePy](https://github.com/Zulko/moviepy)
+### [MoviePy](MoviePy.md)
 
-用 Python 寫程式剪片的老牌函式庫（`pip install moviepy`）：把影片、音訊、圖片讀成 numpy 陣列，用程式做剪裁、串接、疊字幕與標題、合成與自訂特效，再輸出成 MP4／WebM／GIF。底層呼叫 FFmpeg，比直接用 ffmpeg 慢。本身不是 AI 工具。尚無獨立條目檔，連結直接指向 GitHub。⚠️ v2.0 與 v1 不相容，網路上的舊教學與 AI 生成的程式碼常用 v1 語法。MIT。
+用 Python 寫程式剪片的老牌函式庫（`pip install moviepy`）：把影片、音訊、圖片讀成 numpy 陣列，用程式做剪裁、串接、疊字幕與標題、合成與自訂特效，再輸出成 MP4／WebM／GIF。底層呼叫 FFmpeg，比直接用 ffmpeg 慢。本身不是 AI 工具。⚠️ v2.0 與 v1 不相容，網路上的舊教學與 AI 生成的程式碼常用 v1 語法。MIT。
 
 可以做到：
 - 讓 coding agent 寫腳本，批次剪輯、加字幕與標題、合成素材。
