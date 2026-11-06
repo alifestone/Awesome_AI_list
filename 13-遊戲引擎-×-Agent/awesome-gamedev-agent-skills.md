@@ -81,7 +81,7 @@ claude plugin install gamedev@awesome-gamedev-agent-skills
 ## 相關工具
 
 - 同資料夾：[Unity MCP](Unity-MCP.md)、[Godot AI](Godot-AI.md)、[Unreal Engine MCP](Unreal-Engine-MCP.md)、[PlayCanvas Editor MCP](PlayCanvas-Editor-MCP.md)：讓 agent 直接操作編輯器，可和本 skill 組搭配
-- [Claude Code Game Studios](../06-Agent-框架與編排/Claude-Code-Game-Studios.md)：以多個角色 agent 模擬整個遊戲工作室流程
+- [Claude Code Game Studios](Claude-Code-Game-Studios.md)：以多個角色 agent 模擬整個遊戲工作室流程
 - [threejs-skills](../04-設計---前端/threejs-skills.md)：專注 three.js 的 skill 組
 
 ## 資料來源

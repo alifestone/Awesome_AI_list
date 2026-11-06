@@ -85,12 +85,12 @@ deepeval test run test_chatbot.py
 ## 限制與注意事項
 
 - 多數指標靠 LLM 評審，分數會受評審模型影響，有一定隨機性與成本。
-- 紅隊（對抗攻擊）不是 DeepEval 本身的重點；README 把紅隊列在 Confident AI 平台功能中，若要做資安紅隊，Promptfoo 的覆蓋面較完整。放在資安分類是為了和 Promptfoo 並列比較。
+- 紅隊（對抗攻擊）不是 DeepEval 本身的重點；README 把紅隊列在 Confident AI 平台功能中，若要做資安紅隊，[Promptfoo](Promptfoo.md) 的覆蓋面較完整；兩者並列在本分類的「LLM 評測」，方便比較。
 - README 大力推薦登入 Confident AI；登入後測試案例會自動上傳，處理敏感資料前請先看其資料隱私說明。
 
 ## 相關工具
 
-- [Promptfoo](../09-資安/Promptfoo.md)：YAML 設定的 LLM 評測與紅隊工具，紅隊功能更完整
+- [Promptfoo](Promptfoo.md)：YAML 設定的 LLM 評測與紅隊工具，紅隊功能更完整
 - [Jev 決策模型生態](../07-Jev-決策模型生態/)：DeepEval 的 JevEval 指標使用 Jev
 - [DSPy](DSPy.md)、[CrewAI](CrewAI.md)：可被 DeepEval 評測的 LLM 框架
 

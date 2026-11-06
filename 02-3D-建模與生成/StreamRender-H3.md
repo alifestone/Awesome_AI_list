@@ -1,6 +1,6 @@
 # StreamRender-H3
 
-- **分類**：模型 / 影片生成（互動世界、串流神經渲染）
+- **分類**：3D 建模與生成 / 世界模型（互動世界、串流神經渲染）
 - **連結**：https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/
 - **原始碼**：https://github.com/NVlabs/Sana/tree/sol-engine/models/streamrender_h3
 - **模型權重**：https://huggingface.co/Efficient-Large-Model/StreamRender-H3

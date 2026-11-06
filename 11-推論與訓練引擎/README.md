@@ -1,6 +1,6 @@
 # ⚙️ 推論與訓練引擎
 
-在自己的電腦上執行與微調模型的軟體。
+在自己的電腦上執行與微調模型的軟體，以及讓本地推論更穩的修正檔（如 Qwen chat template）。
 
 ### [Strata](Strata.md)
 
@@ -88,6 +88,14 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 把任意自迴歸模型或 BERT 微調成擴散模型（官方釋出 0.5B／0.6B 的 Tiny-A2D 與 BERT-Chat）。
 - 用 Fast-dLLM 加速推論，或用 diffu-GRPO 做強化學習。
 
+### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
+
+不是模型，而是可直接替換的 Qwen 3.5／3.6／3.8 Jinja chat template，修正官方模板的渲染錯誤、KV cache 失效、空白 `<think>` 污染、agent 卡死等問題。
+
+可以做到：
+- 在 llama.cpp、LM Studio、vLLM、SGLang、MLX 等本地引擎上穩定跑 Qwen。
+- 讓 Qwen 接 Claude Code、Cline、Cursor 等 agent 或工具呼叫流程時不再崩潰或卡住。
+
 ## 怎麼挑
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
@@ -98,4 +106,5 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
 - **想了解超長任務 agent 的大規模 RL 訓練怎麼做（研究參考）**：QwenGyre（只有論文）。
 - **想訓練或研究擴散語言模型（LLaDA、Dream 等）**：dLLM。
+- **本地跑 Qwen 一直出問題（渲染錯誤、KV cache 失效、agent 卡住）**：先換 Qwen Fixed Chat Templates。
 - 可以跑哪些模型，見 [模型](../10-模型/)。

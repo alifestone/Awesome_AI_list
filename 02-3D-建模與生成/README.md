@@ -1,8 +1,8 @@
 # 🧊 3D 建模與生成
 
-讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界，以及從影片重建 3D 環境、編輯高斯點雲。
+讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界、可即時操控的互動世界模型，以及從影片重建 3D 環境、編輯高斯點雲。
 
-> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、HY-World 2.0）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
+> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、HY-World 2.0、Matrix-Game、StreamRender-H3）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
 
 ## CAD / 參數化建模
 
@@ -144,7 +144,7 @@ Meshy 官方 MCP 伺服器，提供 28 個工具，讓 Claude Code、Cursor 等 
 - 人形角色自動綁骨、套動畫、文字生成動作。
 - 3D 列印：可列印性檢查與修復、多色 3MF、自動拆件、送切片軟體。
 
-## AI 生成 3D 世界
+## 世界模型
 
 ### [World Labs](World-Labs.md)
 
@@ -163,6 +163,24 @@ Meshy 官方 MCP 伺服器，提供 28 個工具，讓 Claude Code、Cursor 等 
 - 從一句描述或概念圖生成可自由探索的 3D 場景，匯入 Blender／Unity／UE／Isaac Sim。
 - 用 WorldMirror 2.0 從多張照片或影片一次推論出點雲、深度、相機與 3DGS。
 - 線上產品可用第一人稱或第三人稱角色在生成的世界裡走動（含碰撞）。
+
+### [Matrix-Game](Matrix-Game.md)
+
+Skywork AI 的開源互動世界模型系列。3.0（以 Wan2.2-TI2V-5B 為基底）給一張圖和一段文字，就依鍵盤滑鼠動作即時生成第一人稱畫面，加了長時記憶讓場景前後一致，官方稱 720p 40 FPS。4.0 改成遊戲引擎負責玩法與物理、模型只把低多邊形畫面渲染成精緻畫面，附三個可玩場景。3.0／4.0 為 Apache-2.0（1.0／2.0 為 MIT）。⚠️ 3.0 只在 A／H 系列 GPU 測過；4.0 最低支援 RTX 5070 Ti。
+
+可以做到：
+- 從一張圖生成可用動作操控、一分鐘以上仍保持一致的探索影片。
+- 在消費級顯卡上試玩 AI 神經渲染的射擊與賽車遊戲，或讓 coding agent 改遊戲規則。
+- 研究動作條件影片生成與世界模型（類似 Genie 的開源路線）。
+
+### [StreamRender-H3](StreamRender-H3.md)
+
+NVIDIA Research 的互動世界研究：three.js 寫的賽車遊戲負責地圖、物理與輸入，每幀只輸出語意分割圖，再由以 MiniMax-H3 微調、蒸餾成 2 步的串流影片模型即時畫成寫實畫面；換一張參考圖就能換天氣、時段與風格。程式碼與權重都已公開。⚠️ 需要同一 NVLink 域內 8 張資料中心級 GPU（官方用 GB200）與約 273 GB 磁碟；權重為 MiniMax-H3 社群授權，排除歐盟、英國、南韓與美國；目前只訓練了賽車場景。
+
+可以做到：
+- 研究遊戲引擎＋生成式渲染、串流擴散與少步蒸餾的完整做法。
+- 參考用語意圖當引擎與影片模型之間的介面，讓別的引擎接上渲染器。
+- 在 8 卡 NVLink 叢集（如 GB200／NVL72）上跑可用 WASD 駕駛的即時寫實賽車 demo。
 
 ## 3D 重建與高斯點雲
 
@@ -191,6 +209,7 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 - 要**在 Omniverse／Isaac Sim 裡用 agent**：Kit USD Agents。
 - 要**從圖片生成單一 3D 資產**：想本機跑、可商用選 TRELLIS.2（注意相依套件授權）或 Stable Fast 3D（最快、顯存需求低）；要 PBR 品質選 Hunyuan3D 2.1（注意地區限制）；不想架 GPU、要 agent 一路做到綁骨動畫，用 Meshy MCP Server 或 Hyper3D。
 - 要**整個可探索場景**：World Labs（商業服務）或 HY-World 2.0（開源，需多張 GPU）。
+- 要**可用鍵盤滑鼠即時操控的互動世界／遊戲畫面**：Matrix-Game（消費級顯卡可跑 4.0）；有 8 卡 NVLink 叢集、要研究引擎＋生成式渲染：StreamRender-H3。
 - 要**從真實場景重建**：3DGS for model city；重建後要清理、壓縮、發布點雲：SuperSplat。
 - 要**網頁上的互動 3D**：見 [🎨 設計 / 前端](../04-設計---前端/) 的網頁 3D（three.js、Anatomy）。
 - 要**做遊戲**：見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/)。

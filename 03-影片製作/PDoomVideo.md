@@ -1,6 +1,6 @@
 # PDoomVideo
 
-- **分類**：影片製作 / 程式化影片（程式碼 → 影片）
+- **分類**：影片製作 / 作品與案例
 - **連結**：https://github.com/JohnHeibel/PDoomVideo
 
 ## 原清單說明

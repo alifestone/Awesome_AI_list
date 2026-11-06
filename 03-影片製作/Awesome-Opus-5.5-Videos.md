@@ -1,6 +1,6 @@
 # Awesome Opus 5.5 Videos
 
-- **分類**：影片製作 / 程式化影片（程式碼 → 影片）
+- **分類**：影片製作 / 作品與案例
 - **連結**：https://github.com/yihui-dev/awesome-opus5-5-videos
 - **原作與重製對照頁**：https://skillry.dev/ai-videos/opus-5-5
 

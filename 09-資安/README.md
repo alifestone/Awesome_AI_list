@@ -1,6 +1,6 @@
 # 🔐 資安
 
-AI 輔助的資安工具：逆向工程、滲透測試、程式碼漏洞研究與弱點掃描、LLM 應用的紅隊測試，以及 AI agent 的安全規格。
+AI 輔助的資安工具：逆向工程、滲透測試、程式碼漏洞研究與弱點掃描，以及 AI agent 的安全規格。LLM 應用的紅隊測試工具 Promptfoo 在 [🧠 Agent 框架與編排](../06-Agent-框架與編排/) 的「LLM 評測」。
 
 > ⚠️ 這裡許多工具是雙重用途，**只能用在你擁有或取得書面授權的系統上**。收錄目的是防禦、教學與合法授權測試。
 
@@ -119,22 +119,11 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 - 企業自建 AI 程式碼安全評估系統時，當架構藍圖。
 - 設計 AI 漏洞研究工具時，參考角色分工、驗證與去重的做法。
 
-## LLM 測試 / 紅隊
-
-### [Promptfoo](Promptfoo.md)
-
-LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模型與測試案例，在本機執行。MIT。
-
-可以做到：
-- 並排比較不同模型與 prompt 的輸出。
-- 把 LLM 應用的品質回歸測試放進 CI/CD。
-- 上線前對 chatbot、RAG、agent 做紅隊測試（prompt injection、資料外洩、越權、有害輸出），並為 OWASP LLM Top 10 等合規需求準備證據。
-
 ## 怎麼挑
 
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI。
 - **審查自己的程式碼**：AI 深度審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
-- **測試自己的 LLM 應用**：紅隊與 YAML 設定用 Promptfoo；偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 在 Agent 框架類。
+- **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
 - **設計 AI 資安系統**：Foundry Security Spec；skill 發布前的安全政策可參考 [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)。

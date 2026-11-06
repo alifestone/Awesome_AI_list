@@ -1,6 +1,6 @@
 # Anatomy
 
-- **分類**：設計 / 前端 / 網頁 3D
+- **分類**：設計 / 前端 / 作品與案例
 - **連結**：https://github.com/thebuggeddev/anatomy
 
 ## 原清單說明

@@ -62,14 +62,6 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 - 快速產出 3D 主視覺、GLTF 模型檢視器與互動式 3D 網頁。
 - 自訂 shader、bloom 等後製特效，或滑鼠點選、相機控制等互動。
 
-### [Anatomy](Anatomy.md)
-
-用 Next.js + Three.js 做的互動式 3D 人體器官教學網站（由 GPT 生成），偏參考作品而非工具。⚠️ 未附授權檔，也不適合當醫學參考。
-
-可以做到：
-- 參考 AI 產出的 Three.js 互動 3D 網站長什麼樣子。
-- 參考 3D 熱點標註、測驗互動、多語系（含 RTL）的實作方式。
-
 ## 簡報
 
 ### [open-slide](open-slide.md)
@@ -80,6 +72,16 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 - 用 agent 快速產出技術分享、產品介紹等簡報。
 - 放入互動元件、動畫或程式碼展示，做一般簡報軟體做不到的投影片。
 - 把簡報當程式碼管理（版本控制、PR 審查），匯出 HTML／PDF／PPTX 或直接部署成網站。
+
+## 作品與案例
+
+### [Anatomy](Anatomy.md)
+
+用 Next.js + Three.js 做的互動式 3D 人體器官教學網站（由 GPT 生成），偏參考作品而非工具。⚠️ 未附授權檔，也不適合當醫學參考。
+
+可以做到：
+- 參考 AI 產出的 Three.js 互動 3D 網站長什麼樣子。
+- 參考 3D 熱點標註、測驗互動、多語系（含 RTL）的實作方式。
 
 ## 怎麼挑
 

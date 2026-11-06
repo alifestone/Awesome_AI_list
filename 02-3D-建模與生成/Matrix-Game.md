@@ -1,6 +1,6 @@
 # Matrix-Game
 
-- **分類**：模型 / 影片生成（互動世界模型）
+- **分類**：3D 建模與生成 / 世界模型（互動世界模型）
 - **連結**：https://github.com/SkyworkAI/Matrix-Game
 - **模型權重**：https://huggingface.co/Skywork/Matrix-Game-3.0 ・ 4.0：https://huggingface.co/Skywork/Matrix-Game-4.0
 - **技術報告**：[3.0](https://github.com/SkyworkAI/Matrix-Game/blob/main/Matrix-Game-3/assets/pdf/report.pdf) ・ [4.0](https://github.com/SkyworkAI/Matrix-Game/blob/main/Matrix-Game-4/docs/Matrix_Game_4_0.pdf)
@@ -106,9 +106,9 @@ RTX 顯卡要手動選 `--preset rtx5090`／`rtx5080`／`rtx5070ti`，不會自�
 ## 相關工具
 
 - [StreamRender-H3](StreamRender-H3.md)：NVIDIA 的同類研究，引擎輸出語意圖、MiniMax-H3 串流渲染成寫實畫面；畫質更高但需同一 NVLink 域內 8 張資料中心級 GPU
-- [Index-AniSora](Index-AniSora.md)：同樣以 Wan 系列為基底的影片生成模型（動漫風格）
-- [HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)：騰訊的 3D 世界模型，產出可保存的 3D 資產，而不是即時生成的像素畫面
-- [World Labs](../02-3D-建模與生成/World-Labs.md)：商業版可探索 3D 世界生成
+- [Index-AniSora](../03-影片製作/Index-AniSora.md)：同樣以 Wan 系列為基底的影片生成模型（動漫風格）
+- [HY-World 2.0](HY-World-2.0.md)：騰訊的 3D 世界模型，產出可保存的 3D 資產，而不是即時生成的像素畫面
+- [World Labs](World-Labs.md)：商業版可探索 3D 世界生成
 - [WanGP](../03-影片製作/WanGP.md)：在低階顯卡跑 Wan 等影片模型
 - Wan2.2、Self-Forcing、GameFactory、LightX2V（官方致謝的上游專案）
 

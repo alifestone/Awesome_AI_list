@@ -1,6 +1,6 @@
 # TencentDB Agent Memory
 
-- **分類**：Agent 框架與編排 / Agent 記憶
+- **分類**：RAG、知識庫與記憶 / Agent 記憶
 - **連結**：https://github.com/TencentCloud/TencentDB-Agent-Memory
 - **文件網站**：https://tencentcloud.github.io/TencentDB-Agent-Memory/
 - **npm（v1 OpenClaw 外掛）**：https://www.npmjs.com/package/@tencentdb-agent-memory/memory-tencentdb

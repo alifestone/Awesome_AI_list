@@ -1,6 +1,6 @@
 # Index-AniSora
 
-- **分類**：模型 / 影片生成（動漫風格）
+- **分類**：影片製作 / AI 影片生成（動漫風格）
 - **連結**：https://cnb.cool/dfdfsd/anisora （使用者提供，第三方鏡像）
 - **官方 repo**：https://github.com/bilibili/Index-anisora
 - **模型權重**：https://huggingface.co/IndexTeam/Index-anisora ・ https://www.modelscope.cn/organization/bilibili-index
@@ -64,9 +64,9 @@ Index-AniSora 是 bilibili 開源的動漫影片生成模型，可以一鍵產�
 
 ## 相關工具
 
-- [ViMax](../03-影片製作/ViMax.md)：多 agent 從點子做到成片，可接各種影片模型
-- [PenShot](../03-影片製作/PenShot.md)：把劇本拆成影片模型用的分鏡提示詞（支援動漫劇本）
-- [Qwen-Image-2.1](Qwen-Image-2.1.md)：生圖模型，可用來先做首幀
+- [ViMax](ViMax.md)：多 agent 從點子做到成片，可接各種影片模型
+- [PenShot](PenShot.md)：把劇本拆成影片模型用的分鏡提示詞（支援動漫劇本）
+- [Qwen-Image-2.1](../10-模型/Qwen-Image-2.1.md)：生圖模型，可用來先做首幀
 - CogVideoX、Wan2.1／Wan2.2（AniSora 的基底模型）
 
 ## 資料來源

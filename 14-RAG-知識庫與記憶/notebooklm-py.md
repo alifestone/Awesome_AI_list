@@ -1,6 +1,6 @@
 # notebooklm-py
 
-- **分類**：Agent 框架與編排 / 知識庫 / 文件問答
+- **分類**：RAG、知識庫與記憶 / 知識庫 / 文件問答
 - **連結**：https://github.com/teng-lin/notebooklm-py
 - **延伸閱讀**：https://tenten.co/learning/notebooklm-py-skill/ （中文介紹；撰寫時該網站無法從本環境連線，內容未納入查證）
 
@@ -72,8 +72,8 @@ notebooklm download audio ./podcast.m4a
 
 - Google NotebookLM／Gemini Notebook（被操作的服務）
 - Claude Code、Codex、OpenClaw（可載入其 skill 的 agent）
-- [Claude Code Game Studios](./Claude-Code-Game-Studios.md)、[Claude Octopus](./Claude-Octopus.md)（同為 Claude Code 生態的工作流程工具）
-- [AnythingLLM](./AnythingLLM.md)（本地版文件對話／RAG 替代方案）
+- [Claude Code Game Studios](../13-遊戲引擎-×-Agent/Claude-Code-Game-Studios.md)、[Claude Octopus](../06-Agent-框架與編排/Claude-Octopus.md)（同為 Claude Code 生態的工作流程工具）
+- [AnythingLLM](AnythingLLM.md)（本地版文件對話／RAG 替代方案）
 
 ## 資料來源
 

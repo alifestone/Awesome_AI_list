@@ -1,6 +1,6 @@
 # 🎮 遊戲引擎 × Agent
 
-讓 AI agent 直接操作遊戲引擎編輯器的 MCP 工具：在開著的 Unity、Godot、Unreal 或 PlayCanvas 編輯器裡，用自然語言建場景、寫腳本、調素材、跑遊戲並回頭檢查錯誤與畫面；以及讓 coding agent 寫遊戲程式時懂各引擎寫法的 skill 組。
+讓 AI agent 直接操作遊戲引擎編輯器的 MCP 工具：在開著的 Unity、Godot、Unreal 或 PlayCanvas 編輯器裡，用自然語言建場景、寫腳本、調素材、跑遊戲並回頭檢查錯誤與畫面；以及讓 coding agent 寫遊戲程式時懂各引擎寫法的 skill 組與遊戲開發工作室模板。
 
 ## 桌面遊戲引擎
 
@@ -66,6 +66,15 @@ PlayCanvas 官方的 Editor MCP 伺服器，130 個工具，連接瀏覽器中�
 - 用 `create-game-assets` 先定美術方向，再成批產出、檢查並匯入風格一致的資產。
 - 照 Game Jam、快速原型、Steam／itch.io 上架流程走。
 
+### [Claude Code Game Studios](Claude-Code-Game-Studios.md)
+
+Claude Code 的遊戲開發工作室模板：49 個分層 agent（總監／主管／專才）、74 個 slash 指令、hooks 與路徑規則，支援 Godot、Unity、Unreal。採「提問 → 給選項 → 由你決定」的協作模式，不是全自動。
+
+可以做到：
+- 單人用 AI 從點子、GDD、架構決策、Sprint 到發行檢查，走完整遊戲開發流程。
+- 用 `modes.rigor` 調整流程重量，從 game jam 速度到完整審查。
+- 以 hooks 與規則自動把關 commit、資產與程式碼標準。
+
 ## 怎麼挑
 
 - 看**你已經在用哪個引擎**：這幾個 MCP 工具各綁一個引擎，沒有互通。
@@ -76,4 +85,4 @@ PlayCanvas 官方的 Editor MCP 伺服器，130 個工具，連接瀏覽器中�
 - 用 **Unreal 5.8 以上又用 Claude Code**：優先選 Epic 官方的 Unreal Engine Skills for Claude Code，涵蓋材質、Niagara、Sequencer、GAS 等深度功能；工具本身在引擎裡，用 Cursor、Codex 等也能直接接引擎內建的 MCP 伺服器。
 - 用 **Unreal 5.5～5.7**：Flopperam 的 Unreal Engine MCP，開源本機版適合做場景草稿與基礎 Blueprint；要深度功能得改用託管版或 Aura，並先確認授權與資料政策。
 - 素材從哪來：可搭配 [3D 建模與生成](../02-3D-建模與生成/README.md) 的 Blender、AI 生成 3D 工具，再匯入引擎。
-- 要**整套遊戲開發流程**（企劃、架構、QA 到發行），而不只是操作編輯器：見 Agent 框架類的 [Claude Code Game Studios](../06-Agent-框架與編排/Claude-Code-Game-Studios.md)，可和這裡的 MCP 搭配。
+- 要**整套遊戲開發流程**（企劃、架構、QA 到發行），而不只是操作編輯器：Claude Code Game Studios，可和這裡的 MCP 與 awesome-gamedev-agent-skills 搭配。

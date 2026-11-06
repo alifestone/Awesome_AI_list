@@ -80,7 +80,7 @@ README 另提到 `cat Skills/web/offensive-sqli/SKILL.md | claude --system-file 
 ## 相關工具
 
 - [Pentest Copilot](./Pentest-Copilot.md)、[Pentest Swarm AI](./Pentest-Swarm-AI.md)：AI 滲透測試 agent
-- [Promptfoo](./Promptfoo.md)：LLM 應用紅隊測試
+- [Promptfoo](../06-Agent-框架與編排/Promptfoo.md)：LLM 應用紅隊測試
 - [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)：skill 安全治理政策
 
 ## 資料來源

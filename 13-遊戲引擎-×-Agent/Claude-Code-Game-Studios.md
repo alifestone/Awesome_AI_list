@@ -1,6 +1,6 @@
 # Claude Code Game Studios
 
-- **分類**：Agent 框架與編排 / Coding agent 外掛與 skill 組
+- **分類**：遊戲引擎 × Agent / 遊戲開發 Skill 組
 - **連結**：https://github.com/Donchitos/Claude-Code-Game-Studios
 
 ## 概述
@@ -56,9 +56,9 @@ claude          # 務必在專案根目錄（有 CLAUDE.md 與 project.yaml 處�
 
 ## 相關工具
 
-- [agency-agents](./agency-agents.md)（含遊戲開發在內的專業角色人設集合）
-- [Claude Octopus](./Claude-Octopus.md)（Claude Code 外掛，多模型交叉審查）
-- [awesome-gamedev-agent-skills](../13-遊戲引擎-×-Agent/awesome-gamedev-agent-skills.md)（10 個引擎的遊戲開發 skill 組，偏引擎寫法與類型模板，可補足本模板的引擎知識）
+- [agency-agents](../06-Agent-框架與編排/agency-agents.md)（含遊戲開發在內的專業角色人設集合）
+- [Claude Octopus](../06-Agent-框架與編排/Claude-Octopus.md)（Claude Code 外掛，多模型交叉審查）
+- [awesome-gamedev-agent-skills](awesome-gamedev-agent-skills.md)（10 個引擎的遊戲開發 skill 組，偏引擎寫法與類型模板，可補足本模板的引擎知識）
 - Claude Code（宿主）；Godot、Unity、Unreal Engine（支援的遊戲引擎）
 
 ## 資料來源

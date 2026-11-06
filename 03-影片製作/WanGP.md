@@ -77,7 +77,7 @@ python wgp.py
 
 ## 相關工具
 
-- [Index-AniSora](../10-模型/Index-AniSora.md)：開源動漫影片生成模型
+- [Index-AniSora](Index-AniSora.md)：開源動漫影片生成模型
 - [FLUX 3 Image Klein](../10-模型/FLUX-3-Image-Klein.md)、[Qwen-Image-2.1](../10-模型/Qwen-Image-2.1.md)：WanGP 支援的圖像模型
 - [Hunyuan3D 2.1](../02-3D-建模與生成/Hunyuan3D-2.1.md)、[TRELLIS.2](../02-3D-建模與生成/TRELLIS.2.md)：WanGP 內建的 3D 生成模型
 - [OpenMontage](OpenMontage.md)：可接本地 ComfyUI 的影片製作 agent 系統

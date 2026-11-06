@@ -75,7 +75,7 @@ Claude Code
 
 - 同資料夾：[Unreal Engine MCP](Unreal-Engine-MCP.md)（Flopperam 的第三方 Unreal MCP，支援 5.5+，以程序化建造場景為特色）、[Unity MCP](Unity-MCP.md)、[Godot AI](Godot-AI.md)、[PlayCanvas Editor MCP](PlayCanvas-Editor-MCP.md)
 - [awesome-gamedev-agent-skills](awesome-gamedev-agent-skills.md)：含 6 個以 Unreal 5.8 為準的寫法 skill（Blueprint、C++、Enhanced Input、Behavior Tree、Niagara、打包），可和本外掛一起用
-- [Claude Code Game Studios](../06-Agent-框架與編排/Claude-Code-Game-Studios.md)：完整遊戲開發流程模板，支援 Unreal
+- [Claude Code Game Studios](Claude-Code-Game-Studios.md)：完整遊戲開發流程模板，支援 Unreal
 
 ## 資料來源
 

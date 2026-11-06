@@ -1,6 +1,6 @@
 # Cognee
 
-- **分類**：Agent 框架與編排
+- **分類**：RAG、知識庫與記憶 / Agent 記憶
 - **連結**：https://github.com/topoteretes/cognee
 
 ## 原清單說明

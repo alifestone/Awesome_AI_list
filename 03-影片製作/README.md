@@ -1,6 +1,6 @@
 # 🎬 影片製作
 
-讓 AI 做影片的工具：從「給主題就出片」的全自動系統、用程式碼寫動畫再渲染成影片的框架、呼叫影片模型生成畫面的工具，到讓 agent 剪片、看懂影片、拆解爆紅短片的 skill。
+讓 AI 做影片的工具：從「給主題就出片」的全自動系統、用程式碼寫動畫再渲染成影片的框架、呼叫影片模型生成畫面的工具與開源影片模型，到讓 agent 剪片、看懂影片、拆解爆紅短片的 skill，以及 AI 做的影片作品與 prompt 範例。
 
 ## Agent 影片製作系統（從主題到成片）
 
@@ -130,23 +130,6 @@ HeyGen 的開源框架：寫 HTML／CSS／動畫，渲染成確定性的 MP4，�
 - 用截圖重建 UI 做高畫質運鏡，不必錄螢幕。
 - 參考動態設計的節奏、銜接、運鏡方法論。
 
-### [PDoomVideo](PDoomVideo.md)
-
-Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給了角色設計和「每句歌詞都要有有趣畫面」兩項指示。⚠️ 未附授權檔。
-
-可以做到：
-- 參考 LLM 如何規劃長篇程式化動畫（分鏡文件、subagent 風格指南、分章節程式碼）。
-- 學習 p5.js + headless Chrome 逐幀渲染、再用 ffmpeg 合成的做法。
-
-### [Awesome Opus 5.5 Videos](Awesome-Opus-5.5-Videos.md)
-
-收集社群用 Claude Opus 5.5「寫程式」做出的動畫影片與背後的 prompt：703 個 prompt，分動態設計、解說動畫、3D 場景、遊戲與互動四類，每個都連回創作者的原始貼文；其中 418 個在 Skillry 有重製版可並排對照。MIT（影片與 prompt 版權屬原作者）。⚠️ 約 3 成 prompt 只公開了一部分，且沒有附程式碼。
-
-可以做到：
-- 找現成的動畫 prompt，貼給 Opus 5.5 輸出成單一 HTML 檔再錄成影片。
-- 依類型或技術（Canvas、SVG、Three.js、shader…）找靈感，用 `data/videos.json` 批次篩選。
-- 比較不同人怎麼寫動畫類 prompt。
-
 ## 剪輯 / 處理
 
 ### [ffmpeg-skill](ffmpeg-skill.md)
@@ -223,6 +206,15 @@ AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能
 - 修改場景後重跑，做同一場景的編輯版本。
 - 用 CodeVideoBench 評測可控影片生成。
 
+### [Index-AniSora](Index-AniSora.md)
+
+bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列為基底，V3 系列支援角色 360 度旋轉、任意幀推論、風格轉換與姿態／線稿／音訊引導。Apache 2.0。⚠️ 原清單給的是 cnb.cool 上的第三方鏡像，缺 V3，建議用官方 GitHub。
+
+可以做到：
+- 從立繪或關鍵幀生成番劇、PV、VTuber 等風格的動漫鏡頭。
+- 產生角色轉身影片，輔助多角度一致或 3D 建模。
+- 把現有影片轉成指定的動畫風格。
+
 ## 影片理解
 
 ### [claude-video（/watch）](claude-video（-watch）.md)
@@ -243,15 +235,34 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - 把海外短影音的手法改寫成適合小紅書、視頻號的內容。
 - 累積拆解紀錄，比較多支影片的共同模式。
 
+## 作品與案例
+
+### [PDoomVideo](PDoomVideo.md)
+
+Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給了角色設計和「每句歌詞都要有有趣畫面」兩項指示。⚠️ 未附授權檔。
+
+可以做到：
+- 參考 LLM 如何規劃長篇程式化動畫（分鏡文件、subagent 風格指南、分章節程式碼）。
+- 學習 p5.js + headless Chrome 逐幀渲染、再用 ffmpeg 合成的做法。
+
+### [Awesome Opus 5.5 Videos](Awesome-Opus-5.5-Videos.md)
+
+收集社群用 Claude Opus 5.5「寫程式」做出的動畫影片與背後的 prompt：703 個 prompt，分動態設計、解說動畫、3D 場景、遊戲與互動四類，每個都連回創作者的原始貼文；其中 418 個在 Skillry 有重製版可並排對照。MIT（影片與 prompt 版權屬原作者）。⚠️ 約 3 成 prompt 只公開了一部分，且沒有附程式碼。
+
+可以做到：
+- 找現成的動畫 prompt，貼給 Opus 5.5 輸出成單一 HTML 檔再錄成影片。
+- 依類型或技術（Canvas、SVG、Three.js、shader…）找靈感，用 `data/videos.json` 批次篩選。
+- 比較不同人怎麼寫動畫類 prompt。
+
 ## 怎麼挑
 
 - **給主題就要成片**：OpenMontage（功能最全）、MoneyPrinterTurbo（短影音量產）、video-autopilot-kit（重視品管）、OpenDirector（自架網頁工作室、有角色與分鏡）、ViMax（點子／劇本／小說都能轉，偏長片）。
 - **要一個管理劇本、分鏡、素材一致性與生成任務的短劇製作後台**：Jellyfish。
-- **已有劇本，只要分鏡提示詞**：PenShot；要動漫風格的鏡頭，模型可用 [Index-AniSora](../10-模型/Index-AniSora.md)。
+- **已有劇本，只要分鏡提示詞**：PenShot；要動漫風格的鏡頭，模型可用 [Index-AniSora](Index-AniSora.md)。
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **想找 LLM 寫程式做動畫的範例與 prompt**：Awesome Opus 5.5 Videos（有完整原始碼的範例看 PDoomVideo）。
 - **數學、科學解說動畫**：Manim（新手可先用社群版 Manim CE）。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
-- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
+- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP，要動漫風格用 Index-AniSora；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。

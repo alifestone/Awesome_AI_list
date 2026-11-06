@@ -43,9 +43,11 @@
     - **[Hunyuan3D 2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)** — 騰訊開源圖片生成 3D 系統，形狀＋PBR 貼圖兩階段（⚠️ 社群授權，排除歐盟／英國／南韓）。
     - **[Stable Fast 3D](https://github.com/Stability-AI/stable-fast-3d)** — Stability AI 單圖約 0.5 秒重建已展 UV 的貼圖網格（⚠️ 社群授權，年營收超過 100 萬美元須企業授權）。
     - **[Meshy MCP Server](https://github.com/meshy-dev/meshy-mcp-server)** — Meshy 官方 MCP，讓 agent 生成 3D、重新網格化、重新貼圖、綁骨、做動畫與 3D 列印處理（需付費 API）。
-- **AI 生成 3D 世界**
+- **世界模型**
     - **[World Labs](https://www.worldlabs.ai/)** — 生成可探索 3D 世界的服務（Marble）。
     - **[HY-World 2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0)** — 騰訊混元 3D 世界模型，文字／圖片生成可走動的 3D 世界，也能從照片影片重建（⚠️ 排除歐盟／英國／南韓）。
+    - **[Matrix-Game](https://github.com/SkyworkAI/Matrix-Game)**（Skywork AI）— 開源互動世界模型系列：3.0 依鍵盤滑鼠動作即時生成可探索的第一人稱影片（5B，官方稱 720p 40 FPS，含長時記憶）；4.0 改由遊戲引擎跑玩法、模型把低多邊形畫面神經渲染成精緻畫面，RTX 5070 Ti 起可跑。Apache-2.0（1.0／2.0 為 MIT）。⚠️ 3.0 需 A／H 系列 GPU；HF 模型卡的 clone 與下載指令有誤。
+    - **[StreamRender-H3](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)**（NVIDIA Research）— 「程式碼跑世界、影片模型畫畫面」：three.js 賽車遊戲每幀輸出語意圖，以 MiniMax-H3 蒸餾成 2 步的串流模型即時畫成寫實影片，換參考圖就換天氣與風格。程式碼與權重公開。⚠️ 需同一 NVLink 域內 8 張資料中心級 GPU（官方用 GB200）；權重為 MiniMax-H3 社群授權，排除歐盟／英國／南韓／美國；目前只有賽車場景。
 - **3D 重建與高斯點雲**
     - **[3D Gaussian Splatting for model city](https://github.com/rakeshsuthar6322/3d_gaussian_splatting_for_model_city)** — 手機繞拍影片 → COLMAP + Nerfstudio 訓練 3DGS → 輸出 PLY／USDZ，再生成碰撞網格放進 Isaac Sim 的實景數位分身管線。⚠️ 未附授權檔。
     - **[SuperSplat](https://github.com/playcanvas/supersplat)** — 瀏覽器內檢視、編輯、最佳化並發布 3D 高斯點雲的開源編輯器。
@@ -70,8 +72,6 @@
     - **[Manim](https://github.com/3b1b/manim)**（3Blue1Brown）— 用 Python 寫精準數學動畫的引擎（ManimGL，`pip install manimgl`），3Blue1Brown 影片的製作工具；另有社群版 [Manim CE](https://github.com/ManimCommunity/manim)，兩版不相容。本身不是 AI 工具。MIT。
     - **[Cinetic](https://github.com/Leonxlnx/cinetic)** — 讓 coding agent「導演」短片的 skill：先構思故事，再定品牌、配樂、渲染，最後由多個評審角色檢查。MIT。
     - **[onetake](https://github.com/feitangyuan/onetake)** — Claude Agent Skill，做「一鏡到底」的產品發表片、預告與功能演示動效。⚠️ PolyForm Noncommercial（非商用）。
-    - **[PDoomVideo](https://github.com/JohnHeibel/PDoomVideo)** — Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式化動畫參考。
-    - **[Awesome Opus 5.5 Videos](https://github.com/yihui-dev/awesome-opus5-5-videos)** — 社群用 Claude Opus 5.5 寫程式（Canvas、SVG、Three.js、GSAP、shader）做出的動畫影片清單：703 個 prompt，分動態設計、解說、3D、遊戲四類，每個連回原貼文，418 個可在 Skillry 看重製版對照。MIT。⚠️ 約 3 成 prompt 不完整；只有 prompt、沒有原始碼。
 - **剪輯 / 處理**
     - **[ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill)** — 給 coding agent 的本地 FFmpeg 剪輯 skill：剪接、字幕、響度、調色、平台交付檢查等 42 個工具，也可當 MCP。
     - **[ChatCut](https://github.com/ChatCut-Inc/agent-plugin)** — 線上對話式剪輯服務；agent-plugin 讓 coding agent 透過 MCP 直接改 ChatCut 雲端專案的時間軸。商業服務。
@@ -82,9 +82,13 @@
     - **[Higgsfield MCP](https://higgsfield.ai/mcp)** — 讓 Claude 不需 API key 呼叫 30 多個圖像／影片模型，再串 Blender、After Effects，交付可繼續編輯的 AE 專案。商業服務。
     - **[BeatDesign](https://github.com/BeatAPI/BeatDesign)**（BeatAPI）— 本機版的 Higgsfield：無限畫布生成圖片／影片，接到瀏覽器內的時間軸剪輯並匯出 MP4；29 個 MCP tool 讓 Claude Code 等 agent 操作同一個專案。生成只接 BeatAPI（需自備 key）。Apache-2.0。
     - **[Code Video Model](https://code-video-model.github.io/)** — 研究專案：文字 → 可編輯 Three.js 場景 → 代理影片 + 參考圖 → 影片模型生成，鏡位、動作、物理都能靠改程式控制。Apache-2.0。⚠️ 需 GPU 與多個外部模型／API。
+    - **[Index-AniSora](https://github.com/bilibili/Index-anisora)**（bilibili，IJCAI'25）— 開源動漫影片生成模型：圖生影片、角色 360 度旋轉、任意幀推論、風格轉換、多模態引導。Apache 2.0。⚠️ 原清單連到 [cnb.cool 的第三方鏡像](https://cnb.cool/dfdfsd/anisora)，缺 V3，建議改用官方 repo。
 - **影片理解**
     - **[claude-video（/watch）](https://github.com/bradautomates/claude-video)** — 讓 Claude「看」影片：下載、抽幀、轉錄後交給模型分析。
     - **[hook-lab](https://github.com/hongfamonvAI/hook-lab)** — Claude Code skill：拆解 TikTok／Reels／Shorts 的開場鉤子、腳本結構與爆紅原因，並給小紅書、視頻號的改寫方向。MIT。
+- **作品與案例**
+    - **[PDoomVideo](https://github.com/JohnHeibel/PDoomVideo)** — Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式化動畫參考。
+    - **[Awesome Opus 5.5 Videos](https://github.com/yihui-dev/awesome-opus5-5-videos)** — 社群用 Claude Opus 5.5 寫程式（Canvas、SVG、Three.js、GSAP、shader）做出的動畫影片清單：703 個 prompt，分動態設計、解說、3D、遊戲四類，每個連回原貼文，418 個可在 Skillry 看重製版對照。MIT。⚠️ 約 3 成 prompt 不完整；只有 prompt、沒有原始碼。
 
 ---
 
@@ -99,9 +103,10 @@
 - **網頁 3D**
     - **[three.js](https://github.com/mrdoob/three.js)** — 網頁上最常用的 JavaScript 3D 函式庫，支援 WebGL／WebGPU，MIT。
     - **[threejs-skills](https://github.com/CloudAI-X/threejs-skills)** — 教 Claude Code 正確使用 three.js 的 10 個 skill，從 shader 到後製特效。⚠️ 未附 LICENSE 檔。
-    - **[Anatomy](https://github.com/thebuggeddev/anatomy)** — 用 Three.js 做的互動式 3D 人體解剖瀏覽器（由 GPT 生成），偏參考作品而非工具。（原放在 3D 建模與生成）
 - **簡報**
     - **[open-slide](https://github.com/open-slide/open-slide)** — 為 AI agent 打造的簡報框架：用自然語言描述，由 Claude Code 等 agent 寫 React 投影片，可匯出 HTML／PDF／PPTX。MIT。
+- **作品與案例**
+    - **[Anatomy](https://github.com/thebuggeddev/anatomy)** — 用 Three.js 做的互動式 3D 人體解剖瀏覽器（由 GPT 生成），偏參考作品而非工具。（原放在 3D 建模與生成）
 
 ---
 
@@ -124,17 +129,10 @@
     - **[Claude Octopus](https://github.com/nyldn/claude-octopus)** — Claude Code 外掛，讓 Codex、Gemini 等多個模型交叉審查、辯論，有共識閘門。
     - **[pstack](https://github.com/michael-denyer/pstack-claude)** — Cursor pstack skill 組的移植版，支援 Claude Code、Codex、Copilot、Pi：`poteto-mode` 依任務挑流程，搭配多模型審查（arena、interrogate）、PR 照顧與自我改進 skill。MIT。
     - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — 各種專業角色的 agent 人設集合。
-    - **[Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)** — 把 Claude Code 變成遊戲工作室：49 個 agent、74 個 skills，涵蓋設計、架構、QA 到發行。
     - **[yao-meta-skill](https://github.com/yaojingang/yao-meta-skill)** — 建立、評測、打包與治理 agent skill 的 meta-skill（「Skill OS」），附 skill 供應鏈安全政策（[security/](https://github.com/yaojingang/yao-meta-skill/tree/main/security)）：網路、檔案寫入、子程序權限核准與發布前信任報告。MIT。（原放在資安）
-- **知識庫 / 文件問答**
-    - **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** — 一體化本地 LLM 應用：文件 RAG 對話、agent，可接各家模型。
-    - **[RAG-Anything](https://github.com/HKUDS/RAG-Anything)**（HKUDS）— 建在 LightRAG 上的多模態 RAG 框架：解析 PDF／Office／圖片中的文字、圖、表格、公式，建成多模態知識圖譜做混合檢索。Python 函式庫，可接本機模型。MIT。
-    - **[notebooklm-py](https://github.com/teng-lin/notebooklm-py)** — 非官方 NotebookLM Python API／CLI／agent skill：讓 Claude Code 等 agent 操作 NotebookLM 問答、生成 podcast／簡報／測驗並批次下載。
-- **Agent 記憶**
-    - **[Cognee](https://github.com/topoteretes/cognee)** — 開源 agent 長期記憶平台：把文件、程式碼、對話建成可自架的知識圖譜＋向量索引，`remember`／`recall` 跨 session 取用；免 API key 可用本機小模型跑，附 Claude Code／Codex 外掛與 MCP server。Apache-2.0。
-    - **[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)**（騰訊雲）— 團隊級 agent 記憶中樞：把對話、文件、程式碼整理成 Chat Memory／Skill／Wiki／CodeGraph 四種資產，在面板上審核、設權限並分配給指定 agent；agent 改 base URL 指向 Proxy 即可接入（Claude Code、Codex、CodeBuddy 等）。Docker 自架，MIT。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
+    - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
 
 ---
 
@@ -180,8 +178,6 @@
     - **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli)** — 本機執行的 JS/TS 相依套件弱點掃描，直接給出修正指令；支援 SARIF、SBOM、離線模式。本身不是 AI 工具。MIT。
 - **AI agent 安全規格 / 治理**
     - **[Foundry Security Spec](https://github.com/CiscoDevNet/foundry-security-spec)**（Cisco）— 打造 agentic 安全評估系統的開放規格：8 個核心 agent 角色、11 條憲章原則，搭配 spec-kit 產生實作。不是現成工具。CC BY 4.0。
-- **LLM 測試 / 紅隊**
-    - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
 
 ---
 
@@ -205,12 +201,6 @@
 - **影像生成**
     - **[Qwen-Image-2.1](https://huggingface.co/Qwen/Qwen-Image-2.1)** — 7B 文生圖 + 圖像編輯，支援原生透明 RGBA。⚠️ 授權改為 Qwen Research License（非商用），與先前 Apache 2.0 的版本不同。
     - **[FLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein)**（Black Forest Labs）— 5.6B 文生圖 + 圖像編輯，最多 10 張參考圖，支援 bounding box 排版；需搭配 prompt upsampler。⚠️ FLUX Kommunity License：非商用，年營收低於 US$500 萬者可商用輸出。
-- **影片生成**
-    - **[Index-AniSora](https://github.com/bilibili/Index-anisora)**（bilibili，IJCAI'25）— 開源動漫影片生成模型：圖生影片、角色 360 度旋轉、任意幀推論、風格轉換、多模態引導。Apache 2.0。⚠️ 原清單連到 [cnb.cool 的第三方鏡像](https://cnb.cool/dfdfsd/anisora)，缺 V3，建議改用官方 repo。
-    - **[Matrix-Game](https://github.com/SkyworkAI/Matrix-Game)**（Skywork AI）— 開源互動世界模型系列：3.0 依鍵盤滑鼠動作即時生成可探索的第一人稱影片（5B，官方稱 720p 40 FPS，含長時記憶）；4.0 改由遊戲引擎跑玩法、模型把低多邊形畫面神經渲染成精緻畫面，RTX 5070 Ti 起可跑。Apache-2.0（1.0／2.0 為 MIT）。⚠️ 3.0 需 A／H 系列 GPU；HF 模型卡的 clone 與下載指令有誤。
-    - **[StreamRender-H3](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)**（NVIDIA Research）— 「程式碼跑世界、影片模型畫畫面」：three.js 賽車遊戲每幀輸出語意圖，以 MiniMax-H3 蒸餾成 2 步的串流模型即時畫成寫實影片，換參考圖就換天氣與風格。程式碼與權重公開。⚠️ 需同一 NVLink 域內 8 張資料中心級 GPU（官方用 GB200）；權重為 MiniMax-H3 社群授權，排除歐盟／英國／南韓／美國；目前只有賽車場景。
-- **工具 / 修正檔**
-    - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
 ---
 
@@ -225,6 +215,7 @@
 - **[TurboFieldfare](https://github.com/drumih/turbo-fieldfare)** — 以 Swift＋Metal 自寫的 Gemma 4 26B-A4B 推論引擎：記憶體只放約 2 GB，專家從 SSD 串流，8 GB 的 Apple Silicon Mac 也能跑；附 Mac app、CLI 與本機 OpenAI 相容伺服器。Apache-2.0。⚠️ 僅此一個模型，需 macOS 26。
 - **[QwenGyre](https://arxiv.org/abs/2609.33848)** — 阿里巴巴的超長任務 agent 強化學習訓練框架論文：GPU 在 rollout 與訓練間彈性切換、不中斷執行中的 agent，並把分支執行整理成共享前綴的軌跡樹去重；自測比 Colocate 快最多 1.85×、比 Async 快 1.78×。⚠️ 目前只有論文，未公開程式碼。
 - **[dLLM](https://github.com/ZHZisZZ/dllm)** — 擴散語言模型的訓練、推論與評測函式庫：LLaDA、Dream 範例，MDLM、BD3LM、Edit Flows、Fast-dLLM、diffu-GRPO，可把自迴歸模型或 BERT 改成擴散模型。Apache-2.0。
+- **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
 ---
 
@@ -252,8 +243,20 @@
     - **[PlayCanvas Editor MCP](https://github.com/playcanvas/editor-mcp-server)** — PlayCanvas 官方 MCP：agent 在瀏覽器版 Editor 建場景，再自己啟動遊戲、截圖驗證真的能跑（MIT）。
 - **遊戲開發 Skill 組**
     - **[awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills)** — 74 個遊戲開發 Agent Skills 加 router，涵蓋 Godot、Unity、Unreal、Phaser、PixiJS、three.js、Bevy、pygame、LÖVE、Roblox；自動判斷引擎與任務只載入需要的 skill，另有類型模板、美術資產流程與 Steam／itch 上架。不是連結清單，也不操作編輯器。Apache-2.0。
+    - **[Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)** — 把 Claude Code 變成遊戲工作室：49 個 agent、74 個 skills，涵蓋設計、架構、QA 到發行。
 
-- （另見 Agent 框架的 Claude Code Game Studios：用 Claude Code 走完整遊戲開發流程）
+---
+
+## 🗂️ RAG、知識庫與記憶
+
+- **知識庫 / 文件問答**
+    - **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** — 一體化本地 LLM 應用：文件 RAG 對話、agent，可接各家模型。
+    - **[RAG-Anything](https://github.com/HKUDS/RAG-Anything)**（HKUDS）— 建在 LightRAG 上的多模態 RAG 框架：解析 PDF／Office／圖片中的文字、圖、表格、公式，建成多模態知識圖譜做混合檢索。Python 函式庫，可接本機模型。MIT。
+    - **[notebooklm-py](https://github.com/teng-lin/notebooklm-py)** — 非官方 NotebookLM Python API／CLI／agent skill：讓 Claude Code 等 agent 操作 NotebookLM 問答、生成 podcast／簡報／測驗並批次下載。
+- **Agent 記憶**
+    - **[Cognee](https://github.com/topoteretes/cognee)** — 開源 agent 長期記憶平台：把文件、程式碼、對話建成可自架的知識圖譜＋向量索引，`remember`／`recall` 跨 session 取用；免 API key 可用本機小模型跑，附 Claude Code／Codex 外掛與 MCP server。Apache-2.0。
+    - **[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)**（騰訊雲）— 團隊級 agent 記憶中樞：把對話、文件、程式碼整理成 Chat Memory／Skill／Wiki／CodeGraph 四種資產，在面板上審核、設權限並分配給指定 agent；agent 改 base URL 指向 Proxy 即可接入（Claude Code、Codex、CodeBuddy 等）。Docker 自架，MIT。
+
 ---
 
 ## 📝 這次整理改了什麼
@@ -302,3 +305,4 @@
 - 3D 建模與生成的 CAD / 參數化建模區新增 text-to-cad。
 - 遊戲引擎 × Agent 新增「遊戲開發 Skill 組」小類與 awesome-gamedev-agent-skills。
 - 遊戲引擎 × Agent 的桌面遊戲引擎區新增 Unreal Engine Skills for Claude Code。
+- 分類調整：Agent 框架與編排的「知識庫 / 文件問答」「Agent 記憶」獨立成「🗂️ RAG、知識庫與記憶」；Claude Code Game Studios 移到遊戲引擎 × Agent 的「遊戲開發 Skill 組」；Promptfoo 從資安移到 Agent 框架與編排的「LLM 評測」；Qwen Fixed Chat Templates 從模型移到推論與訓練引擎；Index-AniSora 從模型移到影片製作的「AI 影片生成」；Matrix-Game、StreamRender-H3 從模型移到 3D 建模與生成，「AI 生成 3D 世界」改名「世界模型」；影片製作與設計 / 前端新增「作品與案例」小類（PDoomVideo、Awesome Opus 5.5 Videos、Anatomy）。

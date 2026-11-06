@@ -107,7 +107,7 @@ CGO_ENABLED=0 go build -tags embedui -o artex ./cmd/artex
 ## 相關工具
 
 - [Pentest Copilot](./Pentest-Copilot.md)：同樣是 AI 滲透測試 agent，採 MIT 授權，強調危險指令需人工審批
-- [Promptfoo](./Promptfoo.md)：用於 LLM 應用本身的紅隊與安全評測
+- [Promptfoo](../06-Agent-框架與編排/Promptfoo.md)：用於 LLM 應用本身的紅隊與安全評測
 - ScopeSentry：README 提到可同步其資產資料
 
 ## 資料來源

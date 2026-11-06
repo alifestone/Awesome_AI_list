@@ -86,7 +86,7 @@ for i, page in conv.convert("paper.pdf"):
 
 ## 相關工具
 
-- [RAG-Anything](../06-Agent-框架與編排/RAG-Anything.md)：多模態 RAG 框架，文件解析可用 MinerU、Docling、PaddleOCR；Indra OCR 可當其他選擇做前處理。
+- [RAG-Anything](../14-RAG-知識庫與記憶/RAG-Anything.md)：多模態 RAG 框架，文件解析可用 MinerU、Docling、PaddleOCR；Indra OCR 可當其他選擇做前處理。
 - [Chandra](https://github.com/datalab-to/chandra)：同團隊、精度更高的 OCR 模型，手寫、數學、複雜表格表現較好，但需要較重的硬體或付費平台。
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)、[Tesseract](https://github.com/tesseract-ocr/tesseract)：官方比較對象。
 

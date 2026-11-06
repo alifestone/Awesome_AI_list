@@ -1,6 +1,6 @@
 # Qwen Fixed Chat Templates
 
-- **分類**：模型 / 工具 / 修正檔
+- **分類**：推論與訓練引擎
 - **連結**：https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates
 
 ## 原清單說明

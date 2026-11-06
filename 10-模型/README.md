@@ -1,6 +1,6 @@
 # 🧩 模型
 
-可以下載、自己跑的開放模型：本地推理模型、程式碼模型、端側小模型、embedding 與影像生成模型，以及修正 Qwen 模型問題的 chat template。
+可以下載、自己跑的開放模型：本地推理模型、程式碼模型、資安模型、端側小模型、embedding、OCR 與影像生成模型。用途很明確的模型放在對應分類：動漫影片生成見 [🎬 影片製作](../03-影片製作/)，互動世界模型見 [🧊 3D 建模與生成](../02-3D-建模與生成/)。
 
 ## 本地可跑的通用 / 推理模型
 
@@ -112,51 +112,12 @@ Black Forest Labs 的 5.6B 文生圖 + 圖像編輯模型（另配 Qwen3-VL-4B �
 - 多參考圖合成，依框移動、替換或移除元素。
 - 自架影像生成；微調或 LoRA 改用 Klein Base。
 
-## 影片生成
-
-### [Index-AniSora](Index-AniSora.md)
-
-bilibili 開源的動漫影片生成模型（IJCAI'25），V2 起以 Wan 系列為基底，V3 系列支援角色 360 度旋轉、任意幀推論、風格轉換與姿態／線稿／音訊引導。Apache 2.0。⚠️ 原清單給的是 cnb.cool 上的第三方鏡像，缺 V3，建議用官方 GitHub。
-
-可以做到：
-- 從立繪或關鍵幀生成番劇、PV、VTuber 等風格的動漫鏡頭。
-- 產生角色轉身影片，輔助多角度一致或 3D 建模。
-- 把現有影片轉成指定的動畫風格。
-
-### [Matrix-Game](Matrix-Game.md)
-
-Skywork AI 的開源互動世界模型系列。3.0（以 Wan2.2-TI2V-5B 為基底）給一張圖和一段文字，就依鍵盤滑鼠動作即時生成第一人稱畫面，加了長時記憶讓場景前後一致，官方稱 720p 40 FPS。4.0 改成遊戲引擎負責玩法與物理、模型只把低多邊形畫面渲染成精緻畫面，附三個可玩場景。3.0／4.0 為 Apache-2.0（1.0／2.0 為 MIT）。⚠️ 3.0 只在 A／H 系列 GPU 測過；4.0 最低支援 RTX 5070 Ti。
-
-可以做到：
-- 從一張圖生成可用動作操控、一分鐘以上仍保持一致的探索影片。
-- 在消費級顯卡上試玩 AI 神經渲染的射擊與賽車遊戲，或讓 coding agent 改遊戲規則。
-- 研究動作條件影片生成與世界模型（類似 Genie 的開源路線）。
-
-### [StreamRender-H3](StreamRender-H3.md)
-
-NVIDIA Research 的互動世界研究：three.js 寫的賽車遊戲負責地圖、物理與輸入，每幀只輸出語意分割圖，再由以 MiniMax-H3 微調、蒸餾成 2 步的串流影片模型即時畫成寫實畫面；換一張參考圖就能換天氣、時段與風格。程式碼與權重都已公開。⚠️ 需要同一 NVLink 域內 8 張資料中心級 GPU（官方用 GB200）與約 273 GB 磁碟；權重為 MiniMax-H3 社群授權，排除歐盟、英國、南韓與美國；目前只訓練了賽車場景。
-
-可以做到：
-- 研究遊戲引擎＋生成式渲染、串流擴散與少步蒸餾的完整做法。
-- 參考用語意圖當引擎與影片模型之間的介面，讓別的引擎接上渲染器。
-- 在 8 卡 NVLink 叢集（如 GB200／NVL72）上跑可用 WASD 駕駛的即時寫實賽車 demo。
-
-## 工具 / 修正檔
-
-### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
-
-不是模型，而是可直接替換的 Qwen 3.5／3.6／3.8 Jinja chat template，修正官方模板的渲染錯誤、KV cache 失效、空白 `<think>` 污染、agent 卡死等問題。
-
-可以做到：
-- 在 llama.cpp、LM Studio、vLLM、SGLang、MLX 等本地引擎上穩定跑 Qwen。
-- 讓 Qwen 接 Claude Code、Cline、Cursor 等 agent 或工具呼叫流程時不再崩潰或卡住。
-
 ## 怎麼挑
 
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
 - **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
-- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：Index-AniSora；**可操控的互動世界／遊戲畫面**：Matrix-Game（消費級顯卡可跑 4.0）；有 8 卡 NVLink 叢集、要研究引擎＋生成式渲染：StreamRender-H3。
-- **本地跑 Qwen 一直出問題**：先換 Qwen Fixed Chat Templates。
+- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：見影片製作類的 [Index-AniSora](../03-影片製作/Index-AniSora.md)；**可操控的互動世界／遊戲畫面**：見 3D 類「世界模型」的 [Matrix-Game](../02-3D-建模與生成/Matrix-Game.md)、[StreamRender-H3](../02-3D-建模與生成/StreamRender-H3.md)。
+- **本地跑 Qwen 一直出問題**：先換推論引擎類的 [Qwen Fixed Chat Templates](../11-推論與訓練引擎/Qwen-Fixed-Chat-Templates.md)。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。

@@ -1,6 +1,6 @@
 # RAG-Anything
 
-- **分類**：Agent 框架與編排 / 知識庫 / 文件問答
+- **分類**：RAG、知識庫與記憶 / 知識庫 / 文件問答
 - **連結**：https://github.com/HKUDS/RAG-Anything
 - **論文**：https://arxiv.org/abs/2510.12323
 
