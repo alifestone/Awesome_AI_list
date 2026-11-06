@@ -1,6 +1,6 @@
 # 🤖 機器人與具身智慧
 
-讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent、即時動作生成模型，到物理模擬器、操作任務基準測試，用 LLM 直接指揮機器人的工具，以及全開源的人形機器人硬體平台。
+讓 AI 理解物理空間、控制機器人的工具與研究：從機器人基礎模型的訓練方法、空間推理 agent、即時動作生成模型，到物理模擬器、操作任務基準測試，用 LLM 直接指揮機器人的工具與 robot-use agent harness，以及全開源的人形機器人硬體平台。
 
 ## 研究
 
@@ -68,6 +68,15 @@ UT Austin 的機器人操作基準（NeurIPS 2023），原本用來研究終身�
 - 替 LeRobot SO-101 手臂接上 LLM 高層規劃。
 - 讓多台機器人組成「flock」分工合作。
 
+### [uni-robot-agent](uni-robot-agent.md)
+
+Tsinghua 與 UC Berkeley 的開源 robot-use agent harness（arXiv 2611.01560）：讓模型透過一致的觀察、工具與執行回報操作機器人，可接 Codex、Claude Code 或任何 Responses API 相容模型。論文報告同一個 Qwen3.8-Flash-Next 從 RoboProbe harness 的 RoboDojo Score 1.90 升到 31.39（純 RGB）。MIT。⚠️ 實機整合尚未釋出；分數為作者自行報告。
+
+可以做到：
+- 在 RoboDojo、RoboUse（LIBERO、RoboCasa、ManiSkill 等）、RoboLab（Isaac Lab）跑同一套 agent。
+- Direct 模式直接呼叫機器人工具，或 Hybrid 模式接 Pi0.5 當底層動作模型。
+- 用 Python SDK 寫自己的策略，用 dashboard 即時監看或重播 episode。
+
 ## 開源硬體平台
 
 ### [RP1](RP1.md)
@@ -85,5 +94,5 @@ RoboParty 的全開源人形機器人：身高 1.35 m、約 39 kg、24／30 自�
 - 想讓 **VLM 理解 3D 空間**：看 SpatialClaw。
 - 想**即時生成角色或人形機器人的動作**（補間、移動、物件互動）：MotionBricks。
 - 需要**模擬環境**：MuJoCo；要**評測操作策略或 VLA**：LIBERO；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
-- 想**直接用 Claude 指揮機器人**：quackd。
+- 想**直接用 Claude 指揮機器人**：quackd；要**在多個模擬環境用同一套 harness 評測或研究 robot-use agent**（含開放權重模型）：uni-robot-agent。
 - 想要**整台都能看到原始設計的人形機器人**（機構、電路到 ROS 2 部署）：RP1。
