@@ -113,6 +113,15 @@ HeyGen 的開源框架：寫 HTML／CSS／動畫，渲染成確定性的 MP4，�
 - 讓 coding agent 依文字描述寫出可重跑、可修改的教學動畫。
 - 參考 3Blue1Brown 公開的影片原始碼學寫法。
 
+### [MoviePy](https://github.com/Zulko/moviepy)
+
+用 Python 寫程式剪片的老牌函式庫（`pip install moviepy`）：把影片、音訊、圖片讀成 numpy 陣列，用程式做剪裁、串接、疊字幕與標題、合成與自訂特效，再輸出成 MP4／WebM／GIF。底層呼叫 FFmpeg，比直接用 ffmpeg 慢。本身不是 AI 工具。尚無獨立條目檔，連結直接指向 GitHub。⚠️ v2.0 與 v1 不相容，網路上的舊教學與 AI 生成的程式碼常用 v1 語法。MIT。
+
+可以做到：
+- 讓 coding agent 寫腳本，批次剪輯、加字幕與標題、合成素材。
+- 逐像素處理影格，寫自訂特效或程式化生成畫面。
+- 把影片轉成 GIF，或做大量重複性的影片處理。
+
 ### [Cinetic](Cinetic.md)
 
 讓 coding agent「導演」一支短片的 skill：先構思故事，再定品牌、配樂並渲染，最後用腳本與多個評審角色檢查成品。MIT。
@@ -262,6 +271,7 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 - **有歌要做 MV**：AutoMV（AI 生成畫面與對嘴）；想用程式畫的參考 PDoomVideo。
 - **想找 LLM 寫程式做動畫的範例與 prompt**：Awesome Opus 5.5 Videos（有完整原始碼的範例看 PDoomVideo）。
 - **數學、科學解說動畫**：Manim（新手可先用社群版 Manim CE）。
+- **用 Python 腳本批次剪片、疊字幕、做自訂特效**：MoviePy（要最快的處理速度則直接用 ffmpeg-skill）。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
 - **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP，要動漫風格用 Index-AniSora；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
