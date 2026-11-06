@@ -173,6 +173,7 @@
     - **[Pentest Copilot](https://github.com/bugbasesecurity/pentest-copilot)**（BugBase）— AI 滲透測試助手。
     - **[ARTEX](https://github.com/Hinln/ARTEX)**（備份：[artex-global](https://github.com/jiwoochris/artex-global)、[trhhubsd](https://github.com/trhhubsd/ARTEX)） — AI 自主滲透測試系統，百度「agent+」攻防挑戰賽冠軍專案。AGPL-3.0。
     - **[Pentest Swarm AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)**（Armur AI）— 以 AI agent 蜂群對 API／網頁應用做自主滲透測試，自稱 XBOW 的開源替代。多項功能仍為 alpha／beta。AGPL-3.0。
+    - **[ARES](https://github.com/Mafifrizi/ARES)** — 自架的授權紅隊演練自動化平台，針對 AD／雲端環境，內建範圍強制檢查（ScopeGuard）、攻擊路徑圖與報告產出，可選擇接 LLM 輔助規劃。作者為匿名個人。⚠️ 雙重用途，僅限取得書面授權的系統。MIT。
     - **[Claude-Red](https://github.com/SnailSploit/Claude-Red)** — 攻擊性資安的 Claude Skills 集合（78 個 skill、23 類）。⚠️ 高度雙重用途，僅限授權測試。MIT。
 - **程式碼漏洞研究 / 弱點掃描**
     - **[open-kritt](https://github.com/Kritt-ai/open-kritt)** — 自架的 AI 漏洞研究平台：把研究拆成小任務，交給 Codex／Claude Code 平行執行，再驗證、排序與去重。AGPL-3.0。

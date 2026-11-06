@@ -63,6 +63,15 @@ BugBase 的 AI 滲透測試 agent：連接一台 Kali 攻擊機，自主執行�
 - 用內建靶場（Juice Shop、crAPI）學 API 攻擊手法。
 - 以 GitHub Action 在 CI 中做持續安全測試。
 
+### [ARES](https://github.com/Mafifrizi/ARES)
+
+自架的授權紅隊演練自動化平台，針對 Active Directory 與雲端環境，內建範圍強制檢查（ScopeGuard）、攻擊路徑圖與報告產出，可選擇接 LLM 輔助規劃。作者為匿名個人，尚無獨立條目檔，連結直接指向 GitHub。⚠️ 雙重用途，只能用在取得書面授權的系統上。MIT。
+
+可以做到：
+- 在授權的紅隊演練中，把範圍控管、執行紀錄與報告放在同一個平台。
+- 讓防守方了解這類平台的能力，用於偵測與防禦規劃。
+- 參考「範圍檢查在執行前強制攔截」的設計。
+
 ### [Claude-Red](Claude-Red.md)
 
 攻擊性資安的 Claude Skills 集合（78 個 skill、23 類），每個 skill 針對一個攻擊面，依對話內容按需載入。MIT。
@@ -122,7 +131,7 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 ## 怎麼挑
 
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
-- **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI。
+- **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES。
 - **審查自己的程式碼**：AI 深度審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
 - **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
