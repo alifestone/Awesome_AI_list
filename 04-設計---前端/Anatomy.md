@@ -70,7 +70,7 @@ npm run build    # 建置
 
 - [Three.js](https://threejs.org/)、[GSAP](https://gsap.com/)
 - [vinext](https://github.com/cloudflare/vinext)（Cloudflare 的 Vite 版 Next.js 相容層）
-- 同資料夾：TheLongSilence（另一個由 AI 打造的瀏覽器 3D 作品）
+- [TheLongSilence](../02-3D-建模與生成/TheLongSilence.md)：另一個由 AI 打造的瀏覽器 3D 作品
 
 ## 資料來源
 

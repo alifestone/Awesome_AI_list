@@ -88,7 +88,8 @@ npm run build      # 靜態檔輸出到 dist/
 ## 相關工具
 
 - [BlenderMCP（ahujasid/blender-mcp）](https://github.com/ahujasid/blender-mcp)
-- 同資料夾：cc-blender-skill（另一套更完整的 Blender × Agent skill 組合）、Anatomy（另一個由 AI 打造的瀏覽器 3D 作品）
+- [cc-blender-skill](cc-blender-skill.md)：另一套更完整的 Blender × Agent skill 組合
+- [Anatomy](../04-設計---前端/Anatomy.md)：另一個由 AI 打造的瀏覽器 3D 作品
 
 ## 資料來源
 
