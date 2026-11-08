@@ -101,6 +101,7 @@ RoboParty 的全開源人形機器人：身高 1.35 m、約 39 kg、24／30 自�
 
 - 想**訓練或研究機器人模型**：看 ARC。
 - 想讓 **VLM 理解 3D 空間**：看 SpatialClaw。
+- 需要**在 GPU 上做可微分的相機幾何、位姿估計或特徵匹配**：見電腦視覺類的 [Kornia](../15-電腦視覺/Kornia.md)。
 - 想**即時生成角色或人形機器人的動作**（補間、移動、物件互動）：MotionBricks。
 - 需要**模擬環境**：MuJoCo；要**評測操作策略或 VLA**：LIBERO；手上是 **SO-101／LeRobot 策略**、或想比較 **LLM agent + VLA** 的組合：SO-101 Bench；要**寫實的模擬場景**，見 3D 類的 [3DGS for model city](../02-3D-建模與生成/3D-Gaussian-Splatting-for-model-city.md)（實景重建進 Isaac Sim）、[World Labs](../02-3D-建模與生成/World-Labs.md)、[HY-World 2.0](../02-3D-建模與生成/HY-World-2.0.md)（生成可匯出的 3D 世界）與 [Kit USD Agents](../02-3D-建模與生成/Kit-USD-Agents.md)（Isaac Sim 開發）。
 - 想**直接用 Claude 指揮機器人**：quackd；要**在多個模擬環境用同一套 harness 評測或研究 robot-use agent**（含開放權重模型）：uni-robot-agent。

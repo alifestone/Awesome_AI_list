@@ -268,6 +268,11 @@
     - **[Cognee](https://github.com/topoteretes/cognee)** — 開源 agent 長期記憶平台：把文件、程式碼、對話建成可自架的知識圖譜＋向量索引，`remember`／`recall` 跨 session 取用；免 API key 可用本機小模型跑，附 Claude Code／Codex 外掛與 MCP server。Apache-2.0。
     - **[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)**（騰訊雲）— 團隊級 agent 記憶中樞：把對話、文件、程式碼整理成 Chat Memory／Skill／Wiki／CodeGraph 四種資產，在面板上審核、設權限並分配給指定 agent；agent 改 base URL 指向 Proxy 即可接入（Claude Code、Codex、CodeBuddy 等）。Docker 自架，MIT。
 
+## 👁️ 電腦視覺
+
+- **視覺函式庫**
+    - **[Kornia](https://github.com/kornia/kornia)** — 建立在 PyTorch 上的可微分電腦視覺函式庫：1,200+ 運算子（濾波、相機模型、對極幾何、PnP、RANSAC、LoFTR／LightGlue 特徵匹配、資料增強），整批在 GPU 上執行、大多可反向傳播；可 `torch.compile` 與匯出 ONNX。官網定位「機器人與空間 AI 的電腦視覺」。v0.9.0（2026-10）。Apache-2.0。⚠️ 只有整批 GPU 運算才比 OpenCV 快；半精度支援不完整。
+
 ---
 
 ## 📝 這次整理改了什麼
@@ -322,3 +327,4 @@
 - 更新 awesome-gamedev-agent-skills：77 個 skill、新增 Ebitengine 與 Defold，星數與版本基準更新至 2026-11-06。
 - 學習資源的課程 / 教材區新增 The Ultimate MoE Training Handbook。
 - 機器人與具身智慧的基準測試區新增 SO-101 Bench。
+- 新增「👁️ 電腦視覺」分類（15-電腦視覺），收錄 Kornia。

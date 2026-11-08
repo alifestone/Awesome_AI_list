@@ -28,6 +28,7 @@
 | [📚 學習資源](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md)・[Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md)・[EECS 498 AASE](12-學習資源/EECS-498-AASE.md)・[50 ML Projects to Understand LLMs](12-學習資源/ML4LLM-Book.md)・[Train LLM From Scratch](12-學習資源/Train-LLM-From-Scratch.md)・[The Ultimate MoE Training Handbook](12-學習資源/MoE-Training-Handbook.md)・[AI Engineering from Scratch](12-學習資源/AI-Engineering-From-Scratch.md)・[PaperRead](12-學習資源/PaperRead.md) |
 | [🎮 遊戲引擎 × Agent](13-遊戲引擎-×-Agent/) | [Unity MCP](13-遊戲引擎-×-Agent/Unity-MCP.md)・[Godot AI](13-遊戲引擎-×-Agent/Godot-AI.md)・[Unreal Engine MCP](13-遊戲引擎-×-Agent/Unreal-Engine-MCP.md)・[Unreal Engine Skills for Claude Code](13-遊戲引擎-×-Agent/Unreal-Engine-Skills-for-Claude-Code.md)・[PlayCanvas Editor MCP](13-遊戲引擎-×-Agent/PlayCanvas-Editor-MCP.md)・[awesome-gamedev-agent-skills](13-遊戲引擎-×-Agent/awesome-gamedev-agent-skills.md)・[Claude Code Game Studios](13-遊戲引擎-×-Agent/Claude-Code-Game-Studios.md) |
 | [🗂️ RAG、知識庫與記憶](14-RAG-知識庫與記憶/) | [AnythingLLM](14-RAG-知識庫與記憶/AnythingLLM.md)・[RAG-Anything](14-RAG-知識庫與記憶/RAG-Anything.md)・[notebooklm-py](14-RAG-知識庫與記憶/notebooklm-py.md)・[Cognee](14-RAG-知識庫與記憶/cognee.md)・[TencentDB Agent Memory](14-RAG-知識庫與記憶/TencentDB-Agent-Memory.md) |
+| [👁️ 電腦視覺](15-電腦視覺/) | [Kornia](15-電腦視覺/Kornia.md) |
 
 ### 條目格式
 
@@ -89,6 +90,7 @@ A categorized list of AI tools, models, and learning resources, grouped by purpo
 | [📚 Learning Resources](12-學習資源/) | [Learn Docker and K8s](12-學習資源/Learn-Docker-and-K8s.md) · [Learn Harness Engineering](12-學習資源/Learn-Harness-Engineering.md) · [EECS 498 AASE](12-學習資源/EECS-498-AASE.md) · [50 ML Projects to Understand LLMs](12-學習資源/ML4LLM-Book.md) · [Train LLM From Scratch](12-學習資源/Train-LLM-From-Scratch.md) · [The Ultimate MoE Training Handbook](12-學習資源/MoE-Training-Handbook.md) · [AI Engineering from Scratch](12-學習資源/AI-Engineering-From-Scratch.md) · [PaperRead](12-學習資源/PaperRead.md) |
 | [🎮 Game Engines × Agents](13-遊戲引擎-×-Agent/) | [Unity MCP](13-遊戲引擎-×-Agent/Unity-MCP.md) · [Godot AI](13-遊戲引擎-×-Agent/Godot-AI.md) · [Unreal Engine MCP](13-遊戲引擎-×-Agent/Unreal-Engine-MCP.md) · [Unreal Engine Skills for Claude Code](13-遊戲引擎-×-Agent/Unreal-Engine-Skills-for-Claude-Code.md) · [PlayCanvas Editor MCP](13-遊戲引擎-×-Agent/PlayCanvas-Editor-MCP.md) · [awesome-gamedev-agent-skills](13-遊戲引擎-×-Agent/awesome-gamedev-agent-skills.md) · [Claude Code Game Studios](13-遊戲引擎-×-Agent/Claude-Code-Game-Studios.md) |
 | [🗂️ RAG, Knowledge Bases & Memory](14-RAG-知識庫與記憶/) | [AnythingLLM](14-RAG-知識庫與記憶/AnythingLLM.md) · [RAG-Anything](14-RAG-知識庫與記憶/RAG-Anything.md) · [notebooklm-py](14-RAG-知識庫與記憶/notebooklm-py.md) · [Cognee](14-RAG-知識庫與記憶/cognee.md) · [TencentDB Agent Memory](14-RAG-知識庫與記憶/TencentDB-Agent-Memory.md) |
+| [👁️ Computer Vision](15-電腦視覺/) | [Kornia](15-電腦視覺/Kornia.md) |
 
 ### Entry format
 
