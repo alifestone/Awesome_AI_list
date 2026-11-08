@@ -30,9 +30,19 @@ Lexmount 以 Rust 撰寫的開源無頭瀏覽器，給 AI agent 抓取網頁與�
 - 以 `moli serve` 啟動服務，讓 Playwright 透過 CDP 連線。
 - 在資源受限的環境批次抓取頁面。
 
+### [agent-qa](agent-qa.md)
+
+vostride 的自然語言測試工具，涵蓋網頁、Android 與 iOS，並以 memidex 持久記憶與經驗證的自我改進累積應用知識。
+
+可以做到：
+- 從 CLI、本機儀表板或 MCP 編寫與執行端對端測試。
+- 保留截圖及步驟證據，協助追查回歸問題。
+- 在後續測試重用經驗證的應用知識。
+
 ## 怎麼挑
 
 - **寫測試、跑 CI**：Playwright。
+- **自然語言測試與跨次執行記憶**：agent-qa（也支援 Android 與 iOS）。
 - **讓 AI 即時操作瀏覽器**：Playwright MCP。官方建議：如果主要是 coding agent 寫程式、跑測試又在意 token 成本，改用 Playwright CLI + Skills 比較省。
 - **批次抓取、低記憶體的 agent 瀏覽器**：moli（不追求像素級相容，複雜頁面需自行驗證）。
 - **要更快、更便宜的網頁 agent**：另見 [Jev 決策模型生態](../07-Jev-決策模型生態/) 的 Jev Ultrafast。
