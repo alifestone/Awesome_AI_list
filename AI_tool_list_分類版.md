@@ -137,6 +137,7 @@
     - **[yao-meta-skill](https://github.com/yaojingang/yao-meta-skill)** — 建立、評測、打包與治理 agent skill 的 meta-skill（「Skill OS」），附 skill 供應鏈安全政策（[security/](https://github.com/yaojingang/yao-meta-skill/tree/main/security)）：網路、檔案寫入、子程序權限核准與發布前信任報告。MIT。（原放在資安）
     - **[TokenEconomizer](https://github.com/microsoft/TokenEconomizer)**（Microsoft Research）— coding agent 成本控制外掛（Claude Code、Codex、Copilot CLI、Pi）：從同一 repo 過去的 session 學習，記住 repo 事實、排除沒用到的工具、偵測失敗迴圈並提示換方法，不改 agent 本身。論文自述 SWE-Bench 上平均成本降 18.4–30.9%。Apache-2.0。⚠️ v0.1.0，支援版本範圍窄。
     - **[desloppify](https://github.com/peteromallet/desloppify)** — 讓 coding agent 整理 vibe coding 程式碼的 harness：機械式偵測（死碼、重複、複雜度）+ LLM 主觀審查（命名、抽象、模組邊界）算出健康分數，照優先佇列反覆修，狀態跨 session 保存，設計成難以刷分。支援 Claude Code、Codex、Cursor 等與 29 種語言。⚠️ 授權為作者自訂的 OSNL（非 OSI 開源）：內部使用免費，非開源公司包進產品散布需依營收付費。
+    - **[Matt Pocock Skills](https://github.com/mattpocock/skills)** — Matt Pocock 的個人 agent skill 組（「Skills for Real Engineers」），約 27 個短小、可組合的純 Markdown skill，支援 Claude Code、Codex、Copilot、Gemini CLI 等：`/grill-me`／`/grill-with-docs` 先追問對齊並建立術語表與 ADR，`to-spec` → `to-tickets` → `implement`（TDD + 兩軸 code review），另有 `diagnosing-bugs`、`improve-codebase-architecture` 等。MIT。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
@@ -329,3 +330,4 @@
 - 學習資源的課程 / 教材區新增 The Ultimate MoE Training Handbook。
 - 機器人與具身智慧的基準測試區新增 SO-101 Bench。
 - 新增「👁️ 電腦視覺」分類（15-電腦視覺），收錄 Kornia。
+- Agent 框架的 Coding agent 外掛與 skill 組區新增 Matt Pocock Skills。

@@ -102,6 +102,15 @@ Microsoft Research 與 UC Berkeley 的 coding agent 成本控制外掛，支援 
 
 ⚠️ 授權為作者自訂的 OSNL，非 OSI 開源：內部使用免費，非開源公司把它包進產品散布要依營收付費。分數有 75% 來自 LLM 審查。
 
+### [Matt Pocock Skills](Matt-Pocock-Skills.md)
+
+TypeScript 教育者 Matt Pocock 的個人 skill 組（「Skills for Real Engineers」），約 27 個短小、可組合的純 Markdown skill，支援 Claude Code、Codex、Copilot、Gemini CLI 等。核心是先讓 agent 追問到雙方對齊（`/grill-me`、`/grill-with-docs`），再走 spec → 工單 → TDD 實作 → 兩軸 code review 的流程，並用術語表與 ADR 建立專案共用語言。MIT。
+
+可以做到：
+- 動手前讓 agent 把需求與設計問清楚；替專案建立 `GLOSSARY.md` 與 ADR。
+- 把對話轉成 spec 與工單，再以紅-綠-重構的 TDD 實作、平行子 agent 審查。
+- 用 `diagnosing-bugs` 有紀律地除錯；用 `improve-codebase-architecture` 定期找可重構成深模組的地方。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -126,6 +135,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
-- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify。
+- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
