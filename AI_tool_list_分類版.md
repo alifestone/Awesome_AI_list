@@ -16,6 +16,7 @@
     - **[MuJoCo](https://github.com/google-deepmind/mujoco)** — DeepMind 的物理模擬引擎，機器人與強化學習的標準模擬器。
 - **基準測試**
     - **[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)**（UT Austin，NeurIPS 2023）— 終身機器人學習的操作基準：130 個語言指令任務、四個任務組（Spatial／Object／Goal／100），附人類示範；也是評測 VLA 最常用的模擬基準之一。建立在 robosuite（MuJoCo）上。程式碼 MIT，資料集 CC BY 4.0。
+    - **[SO-101 Bench](https://github.com/5hadytru/so101_bench)**（arXiv 2610.36420）— 低價 SO-101 手臂的語言條件空間操作基準：Isaac Lab 數位分身、四種任務、138 個物體三種泛化切分、主評測 916 episode；五個純模擬訓練策略在實機排名一致（模擬高估成功率）。最佳 VLA／WAM 約 61%，LLM agent（GPT-6.1 Sol + PyRUA-Lean）+ Galaxea 0.5 達 83.2%。支援 LeRobot 評測。程式碼 Apache-2.0。⚠️ 單一作者；測試集不公開，上榜需交 checkpoint 給作者；需 Isaac Sim 5.1 + RTX GPU。
 - **LLM 控制**
     - **[quackd](https://github.com/rokbenko/quackd)** — 用自然語言 + LLM 指揮 Pollen Robotics 的 Microduck 雙足小機器人，內建模擬器與 MCP。⚠️ 原清單標為 LeRobot，實際針對的是 Microduck。
     - **[uni-robot-agent](https://github.com/Open-RUA/uni-robot-agent)**（Tsinghua × UC Berkeley，arXiv 2611.01560）— 統一的 robot-use agent harness：一致的觀察、工具與執行回報，支援 Codex／Claude Code runtime、Direct 或 Hybrid（Pi0.5）模式，涵蓋 RoboDojo、RoboUse、RoboLab。論文報告同一個 Qwen3.8-Flash-Next 從 RoboProbe 的 RoboDojo Score 1.90 升到 31.39。MIT。⚠️ 實機整合尚未釋出；分數為作者自行報告。
@@ -320,3 +321,4 @@
 - 推論與訓練引擎新增 edge0。
 - 更新 awesome-gamedev-agent-skills：77 個 skill、新增 Ebitengine 與 Defold，星數與版本基準更新至 2026-11-06。
 - 學習資源的課程 / 教材區新增 The Ultimate MoE Training Handbook。
+- 機器人與具身智慧的基準測試區新增 SO-101 Bench。
