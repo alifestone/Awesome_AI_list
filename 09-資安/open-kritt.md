@@ -75,6 +75,7 @@ cd open-kritt
 - [Pentest Swarm AI](./Pentest-Swarm-AI.md)：以 agent swarm 進行黑箱滲透測試（同為 AGPL-3.0）
 - [Foundry Security Spec](./Foundry-Security-Spec.md)：Cisco 的 agentic 安全評估系統規格，設計理念相近（拆角色、驗證、去重）
 - [Pentest Copilot](./Pentest-Copilot.md)：AI 滲透測試 agent
+- [Cloudflare Security Audit Skill](./Cloudflare-Security-Audit-Skill.md)：直接在 coding agent 裡跑的多階段資安稽核 skill
 
 ## 資料來源
 

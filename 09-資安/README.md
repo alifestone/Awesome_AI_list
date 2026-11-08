@@ -92,6 +92,15 @@ BugBase 的 AI 滲透測試 agent：連接一台 Kali 攻擊機，自主執行�
 - 審計自家程式碼與相依套件。
 - 參考如何把漏洞研究拆成可重複的 agent 工作流程。
 
+### [Cloudflare Security Audit Skill](Cloudflare-Security-Audit-Skill.md)
+
+Cloudflare 官方的 coding agent skill，也是其內部漏洞挖掘 harness 的起點：主控 agent 協調隔離的子 agent，跑偵查、依覆蓋率搜尋、對抗式驗證、獨立複核與報告六個階段，產出可機器驗證的 `findings.json`。執行目標程式碼前要求 OS 層級沙箱。MIT。
+
+可以做到：
+- 對自家 codebase 做完整 AI 資安稽核，區分「確認／待驗證／已推翻」三種結果。
+- 平常問資安問題或審查特定模組（預設的 guidance mode，不產生檔案）。
+- 重複執行，利用覆蓋率帳本補齊上次的盲點。
+
 ### [Nuclei](Nuclei.md)
 
 ProjectDiscovery 以 YAML 模板為基礎的高效能弱點掃描器，社群持續更新新漏洞的檢測模板；新版可用自然語言產生模板、用 LLM 做語意比對。MIT。
@@ -132,7 +141,7 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES。
-- **審查自己的程式碼**：AI 深度審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
+- **審查自己的程式碼**：直接在 coding agent 裡跑完整稽核用 Cloudflare Security Audit Skill，要自架平台做大規模 AI 審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
 - **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
 - **設計 AI 資安系統**：Foundry Security Spec；skill 發布前的安全政策可參考 [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)。

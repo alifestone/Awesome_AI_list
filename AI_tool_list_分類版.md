@@ -185,6 +185,7 @@
     - **[Claude-Red](https://github.com/SnailSploit/Claude-Red)** — 攻擊性資安的 Claude Skills 集合（78 個 skill、23 類）。⚠️ 高度雙重用途，僅限授權測試。MIT。
 - **程式碼漏洞研究 / 弱點掃描**
     - **[open-kritt](https://github.com/Kritt-ai/open-kritt)** — 自架的 AI 漏洞研究平台：把研究拆成小任務，交給 Codex／Claude Code 平行執行，再驗證、排序與去重。AGPL-3.0。
+    - **[Cloudflare Security Audit Skill](https://github.com/cloudflare/security-audit-skill)**（Cloudflare）— coding agent 資安稽核 skill，其內部漏洞挖掘 harness 的起點：偵查 → 依覆蓋率帳本分派 hunter → 對抗式驗證 → 結構化 `findings.json` → 獨立複核 → 報告；預設只給指引，明確要求才跑完整稽核。執行目標程式碼前要求 OS 層級沙箱。MIT。
     - **[Nuclei](https://github.com/projectdiscovery/nuclei)**（ProjectDiscovery）— 以 YAML 模板為基礎的弱點掃描器，支援以 AI prompt 產生模板與 LLM 語意比對。MIT。（原清單誤拼為「nulcei」）
     - **[Nuclei MCP](https://github.com/addcontent/nuclei-mcp)** — 第三方 MCP server，讓 AI 呼叫 Nuclei 掃描與管理模板。⚠️ 早期專案，README 有佔位符連結。MIT。
     - **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli)** — 本機執行的 JS/TS 相依套件弱點掃描，直接給出修正指令；支援 SARIF、SBOM、離線模式。本身不是 AI 工具。MIT。
@@ -334,3 +335,4 @@
 - 新增「👁️ 電腦視覺」分類（15-電腦視覺），收錄 Kornia。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 Matt Pocock Skills。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 Superpowers、ECC。
+- 資安的程式碼漏洞研究區新增 Cloudflare Security Audit Skill。
