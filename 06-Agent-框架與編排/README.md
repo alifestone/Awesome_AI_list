@@ -1,6 +1,6 @@
 # 🧠 Agent 框架與編排
 
-建構與組織 AI agent 的工具：寫 LLM 應用與多 agent 系統的框架、coding agent 與它的外掛和 skill 組，以及 LLM 應用的評測與紅隊工具。知識庫、RAG 與 agent 記憶另見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
+建構與組織 AI agent 的工具：寫 LLM 應用與多 agent 系統的框架、coding agent 與它的外掛和 skill 組、建在 coding agent 上的應用工作流，以及 LLM 應用的評測與紅隊工具。知識庫、RAG 與 agent 記憶另見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 
 ## 框架
 
@@ -133,6 +133,19 @@ Jesse Vincent（Prime Radiant）的 coding agent 開發方法論：15 個**自�
 
 ⚠️ 體積很大，全裝會吃 context，建議用選擇性或 minimal 安裝；只從官方管道安裝，同一個 harness 不要疊加安裝方式。
 
+## 應用工作流
+
+### [AI Job Search](AI-Job-Search.md)
+
+建在 Claude Code 上的求職工作流框架：`/setup` 從你的文件建立個人檔案，`/scrape` 搜尋職缺、`/rank` 批次評分，`/apply` 先檢查職缺有無隱藏指令再評估適配度，由起草 agent 與全新 context 的審稿 agent 產出 LaTeX CV 與求職信，並反覆編譯到頁數正確、通過 ATS 文字層檢查；另有面試準備、結果追蹤、Gmail／Notion 同步。內建職缺網站以丹麥為主，可用 `/add-portal` 擴充。MIT。
+
+可以做到：
+- 替每個職缺量身改寫 CV 與求職信，只用個人檔案裡真的有的經歷。
+- 產出 ATS 可解析、CV 剛好 2 頁、求職信剛好 1 頁的 PDF。
+- 依面試階段產生準備包並模擬面試；追蹤申請狀態、起草追蹤信。
+
+⚠️ Fork 一定公開，而個人資料會寫進受版本控制的檔案，自用請建私人 repo；agent 會讀不受信任的職缺內容，寄出前請自己檢查。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -158,5 +171,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）。
+- **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。

@@ -140,6 +140,8 @@
     - **[Matt Pocock Skills](https://github.com/mattpocock/skills)** — Matt Pocock 的個人 agent skill 組（「Skills for Real Engineers」），約 27 個短小、可組合的純 Markdown skill，支援 Claude Code、Codex、Copilot、Gemini CLI 等：`/grill-me`／`/grill-with-docs` 先追問對齊並建立術語表與 ADR，`to-spec` → `to-tickets` → `implement`（TDD + 兩軸 code review），另有 `diagnosing-bugs`、`improve-codebase-architecture` 等。MIT。
     - **[Superpowers](https://github.com/obra/superpowers)**（Jesse Vincent／Prime Radiant）— 自動觸發的 coding agent 開發方法論：15 個 skill 經 SessionStart hook 強制套用，流程為 brainstorming 寫設計 → git worktree → 2–5 分鐘小任務計畫 → 子 agent 逐項 TDD 實作與兩階段審查 → merge／PR。支援 Claude Code、Codex、Cursor、Gemini CLI 等十多種 agent。MIT。⚠️ TDD skill 會刪掉沒先寫測試的程式碼；視覺輔助預設回報版本號，可用 `SUPERPOWERS_DISABLE_TELEMETRY` 關閉。
     - **[ECC](https://github.com/affaan-m/ECC)** — 大型 agent harness 系統：71 個 agent、314 個 skill、98 個指令，加上 hooks、語言規範包、跨 session 記憶、持續學習（instincts）與 AgentShield 資安掃描；Claude Code 為主，Codex、Qoder 有原生 plugin。MIT，另有付費 GitHub App。⚠️ 全裝很吃 context，建議選擇性安裝；只從官方管道安裝。
+- **應用工作流**
+    - **[AI Job Search](https://github.com/ai-job-search-dev/ai-job-search)** — 建在 Claude Code 上的求職框架：`/setup` 建個人檔案、`/scrape`／`/rank` 找職缺並評分、`/apply` 經職缺完整性檢查與起草-審稿雙 agent 產出 LaTeX CV 與求職信（反覆編譯到頁數正確並做 ATS 文字層檢查）、`/interview` 面試準備、`/outcome` 追蹤結果。內建職缺網站以丹麥為主，可用 `/add-portal` 擴充。MIT。⚠️ Fork 一定公開，自用請建私人 repo。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
