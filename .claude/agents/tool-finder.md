@@ -8,6 +8,10 @@ tools: Read, Grep, Glob
 
 ## Repo 結構
 
+**先確定 repo 位置**：用 Read 讀 `~/.claude/awesome-ai-list.path`，內容是 repo 的絕對路徑（由 `scripts/install-tool-finder.sh` 寫入）。
+- 讀得到：你可能是在其他專案中被呼叫，以下所有路徑都相對於該目錄；讀檔、搜尋時一律用絕對路徑，回答中引用條目時也給絕對路徑。
+- 讀不到：若目前目錄就有 `AI_tool_list_分類版.md`，表示你在 repo 內，直接用相對路徑；否則告訴使用者清單位置未知，請在 repo 內執行 `bash scripts/install-tool-finder.sh`。
+
 - `AI_tool_list_分類版.md`：總索引。依用途分組，每個工具一行說明，含 ⚠️ 注意事項。**這是你的第一站。**
 - `NN-類別名/`：15 個類別資料夾（01-機器人與具身智慧 … 15-電腦視覺）。
   - `NN-類別名/README.md`：該類別的介紹，含「可以做到」清單與跨類別的指引。

@@ -48,14 +48,14 @@
 
 或直接問「清單裡有沒有能本機跑 OCR 的模型？」，Claude 會自動交給 tool-finder。
 
-**在所有專案中使用**：執行安裝腳本，把 agent 與 `/find-tool` 安裝到 `~/.claude/`（會自動填入你 clone 的位置），重新啟動 Claude Code 即可：
+**在所有專案中使用**：執行安裝腳本，以 symlink 把 agent 與 `/find-tool` 連到 `~/.claude/`（並把你 clone 的位置記在 `~/.claude/awesome-ai-list.path`），重新啟動 Claude Code 即可：
 
 ```bash
-bash scripts/install-tool-finder.sh              # 安裝；repo 更新後重跑一次即可同步
+bash scripts/install-tool-finder.sh              # 安裝；之後 repo 更新會直接生效，不必重跑
 bash scripts/install-tool-finder.sh --uninstall  # 移除
 ```
 
-> 安裝後 agent 會讀取你本機 clone 的清單，記得定期 `git pull` 取得新條目。若之後移動了 repo 位置，請重新執行安裝腳本。
+> 安裝後 agent 會讀取你本機 clone 的清單，記得定期 `git pull` 取得新條目；agent 本身的修改也會在下次啟動 Claude Code 時生效。若之後移動了 repo 位置，請重新執行安裝腳本。
 
 ### 注意事項
 
@@ -110,14 +110,14 @@ The list is getting long, so you can just ask. This repo ships a Claude Code `to
 
 Or just ask, e.g. "Is there a model in the list that does OCR locally?", and Claude will hand it to tool-finder.
 
-**In every project**: run the install script to put the agent and `/find-tool` into `~/.claude/` (it fills in where you cloned the repo), then restart Claude Code:
+**In every project**: run the install script to symlink the agent and `/find-tool` into `~/.claude/` (it records where you cloned the repo in `~/.claude/awesome-ai-list.path`), then restart Claude Code:
 
 ```bash
-bash scripts/install-tool-finder.sh              # install; rerun after pulling updates
+bash scripts/install-tool-finder.sh              # install; later repo updates apply automatically
 bash scripts/install-tool-finder.sh --uninstall  # remove
 ```
 
-> The installed agent reads your local clone, so `git pull` regularly to get new entries. If you move the repo, rerun the install script.
+> The installed agent reads your local clone, so `git pull` regularly to get new entries; changes to the agent itself apply the next time Claude Code starts. If you move the repo, rerun the install script.
 
 ### Notes
 
