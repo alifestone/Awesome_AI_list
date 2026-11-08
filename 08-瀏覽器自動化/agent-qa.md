@@ -44,6 +44,13 @@ MCP 用戶端可藉此編寫測試、執行測試與讀取證據；詳見[MCP �
 
 需要模型設定與對應的瀏覽器或行動裝置環境。本條目依官方文件查證，未做實機測試；沒有引用未驗證的速度或成功率比較。
 
+- **預設傳送匿名使用統計**：`run`、`mcp`、`chat`、daemon 與 `init` 會將匿名事件（指令、平台、結果、耗時、步驟與 token 數等）傳送至 PostHog（`us.i.posthog.com`），不含測試步驟文字、網頁內容或檔案路徑。可在 `agent-qa.config.yaml` 設定以下內容關閉，詳見[官方說明](https://vostride.com/docs/agent-qa/safety)：
+
+  ```yaml
+  analytics:
+    privacy: true
+  ```
+
 ## 相關工具
 
 [Playwright](Playwright.md)、[Playwright MCP](Playwright-MCP.md)。
