@@ -114,6 +114,8 @@ npx skills@latest add mattpocock/skills --skill=<name>
 
 ## 相關工具
 
+- [Superpowers](Superpowers.md)：類似的「先設計 → 計畫 → TDD → 審查」流程，但 skill 會自動觸發、強制套用
+- [ECC](ECC.md)：規模大得多的 harness 系統（數百個 skill、agent、hooks、記憶與資安掃描）
 - [pstack](pstack.md)：同樣是「從調查到驗證」的 coding agent 工作流程 skill 組，偏多模型審查
 - [desloppify](desloppify.md)：專注整理 AI 生成程式碼、追品質分數
 - [yao-meta-skill](yao-meta-skill.md)：想自己製作、評測、打包 skill 時參考

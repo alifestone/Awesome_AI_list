@@ -111,6 +111,28 @@ TypeScript 教育者 Matt Pocock 的個人 skill 組（「Skills for Real Engine
 - 把對話轉成 spec 與工單，再以紅-綠-重構的 TDD 實作、平行子 agent 審查。
 - 用 `diagnosing-bugs` 有紀律地除錯；用 `improve-codebase-architecture` 定期找可重構成深模組的地方。
 
+### [Superpowers](Superpowers.md)
+
+Jesse Vincent（Prime Radiant）的 coding agent 開發方法論：15 個**自動觸發**的 skill，靠 SessionStart hook 讓 agent 每個任務前先找相關 skill。流程是追問需求寫設計 → git worktree 隔離 → 拆成 2–5 分鐘的小任務計畫 → 每項派子 agent 以 TDD 實作並兩階段審查 → 收尾 merge／PR。支援 Claude Code、Codex、Cursor、Gemini CLI、Copilot CLI 等十多種 agent。MIT。
+
+可以做到：
+- 讓 agent 照核准的計畫自主開發好幾個小時，不偏離設計。
+- 不必記指令，TDD、系統化除錯、完成前驗證會自動套用。
+- 用 `diagnosing-superpowers` 分析某次 session 裡 skill 為什麼沒照預期觸發。
+
+⚠️ 流程是強制的，TDD skill 會刪掉沒先寫測試的程式碼；brainstorming 的視覺輔助預設會回報版本號（`SUPERPOWERS_DISABLE_TELEMETRY` 可關）。
+
+### [ECC](ECC.md)
+
+大型「agent harness 作業系統」：71 個 agent、314 個 skill、98 個指令，加上 hooks、20 多種語言規範包、跨 session 記憶、從 session 自動學習的 instincts，以及掃描 agent 設定的 AgentShield。Claude Code 為主要平台，Codex、Qoder 有原生 plugin，其他為 beta 或實驗性轉接。MIT，另有付費 GitHub App（ECC Pro）。
+
+可以做到：
+- 一次取得規劃、TDD、審查、修 build、重構、各語言審查等現成 agent 與 skill。
+- 讓 agent 從過去的 session 累積 instincts，再演化成 skill；從 git 歷史產生 skill。
+- 用 AgentShield 稽核 prompt、hooks、MCP、權限與機密；用 GateGuard 擋破壞性指令。
+
+⚠️ 體積很大，全裝會吃 context，建議用選擇性或 minimal 安裝；只從官方管道安裝，同一個 harness 不要疊加安裝方式。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -135,6 +157,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
-- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills。
+- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
