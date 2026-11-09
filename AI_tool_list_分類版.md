@@ -140,6 +140,7 @@
     - **[Matt Pocock Skills](https://github.com/mattpocock/skills)** — Matt Pocock 的個人 agent skill 組（「Skills for Real Engineers」），約 27 個短小、可組合的純 Markdown skill，支援 Claude Code、Codex、Copilot、Gemini CLI 等：`/grill-me`／`/grill-with-docs` 先追問對齊並建立術語表與 ADR，`to-spec` → `to-tickets` → `implement`（TDD + 兩軸 code review），另有 `diagnosing-bugs`、`improve-codebase-architecture` 等。MIT。
     - **[Superpowers](https://github.com/obra/superpowers)**（Jesse Vincent／Prime Radiant）— 自動觸發的 coding agent 開發方法論：15 個 skill 經 SessionStart hook 強制套用，流程為 brainstorming 寫設計 → git worktree → 2–5 分鐘小任務計畫 → 子 agent 逐項 TDD 實作與兩階段審查 → merge／PR。支援 Claude Code、Codex、Cursor、Gemini CLI 等十多種 agent。MIT。⚠️ TDD skill 會刪掉沒先寫測試的程式碼；視覺輔助預設回報版本號，可用 `SUPERPOWERS_DISABLE_TELEMETRY` 關閉。
     - **[ECC](https://github.com/affaan-m/ECC)** — 大型 agent harness 系統：71 個 agent、314 個 skill、98 個指令，加上 hooks、語言規範包、跨 session 記憶、持續學習（instincts）與 AgentShield 資安掃描；Claude Code 為主，Codex、Qoder 有原生 plugin。MIT，另有付費 GitHub App。⚠️ 全裝很吃 context，建議選擇性安裝；只從官方管道安裝。
+    - **[claude-work-mode](https://github.com/danyuchn/claude-work-mode)** — Claude Code 外掛，用 `/work-mode` 切換 session 工作模式：`auto`（可還原的步驟不停下來問，對外、不可逆的動作留到最後確認）、`out`（批次工作外包給子 agent 或 Codex、Gemini 等外部 CLI，主執行緒負責驗證）、`wrap`（收斂收尾、列出待決事項），可疊加。選用的 `work-mode-gates` 在 `auto` 下把三個 hook 的「詢問」改成「拒絕並說明做法」。MIT。⚠️ 2026-11-08 才建立（v0.5.0），模式只是給模型的指示、不是權限控管；需 Claude Code 2.1.314 以上。
 - **應用工作流**
     - **[AI Job Search](https://github.com/ai-job-search-dev/ai-job-search)** — 建在 Claude Code 上的求職框架：`/setup` 建個人檔案、`/scrape`／`/rank` 找職缺並評分、`/apply` 經職缺完整性檢查與起草-審稿雙 agent 產出 LaTeX CV 與求職信（反覆編譯到頁數正確並做 ATS 文字層檢查）、`/interview` 面試準備、`/outcome` 追蹤結果。內建職缺網站以丹麥為主，可用 `/add-portal` 擴充。MIT。⚠️ Fork 一定公開，自用請建私人 repo。
 - **LLM 評測**
@@ -338,3 +339,4 @@
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 Matt Pocock Skills。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 Superpowers、ECC。
 - 資安的程式碼漏洞研究區新增 Cloudflare Security Audit Skill。
+- Agent 框架的 Coding agent 外掛與 skill 組區新增 claude-work-mode。

@@ -133,6 +133,17 @@ Jesse Vincent（Prime Radiant）的 coding agent 開發方法論：15 個**自�
 
 ⚠️ 體積很大，全裝會吃 context，建議用選擇性或 minimal 安裝；只從官方管道安裝，同一個 harness 不要疊加安裝方式。
 
+### [claude-work-mode](claude-work-mode.md)
+
+Claude Code 外掛，用一個 `/work-mode` 指令切換 session 的工作模式：`auto` 讓 Claude 不為本機檔案、本機 commit、測試這類可還原的步驟停下來問，對外、不可逆的動作記下來最後一次回報；`out` 把可驗證的批次工作外包給子 agent 或外部 CLI（`codex exec`、`gemini`），主執行緒負責驗證；`wrap` 停止開新方向、收尾並列出待決事項。模式可疊加，說明只送一次、不會每輪佔 context。選用的 `work-mode-gates` 在 `auto` 下把三個 hook 的「詢問」改成「拒絕並說明做法」。MIT。
+
+可以做到：
+- 讓 Claude Code 自己跑完一段工作，確認提示集中到最後一次處理。
+- 把大量擷取、分類、摘要丟給較便宜的子 agent 或其他廠商的 CLI，省主模型的 context。
+- Session 收尾時整理出附標籤與建議的決策清單；在自己的 hook 裡依目前模式改變行為。
+
+⚠️ 2026-11-08 才建立（v0.5.0）；模式只是給模型的指示，不是權限控管。需要 Claude Code 2.1.314 以上。
+
 ## 應用工作流
 
 ### [AI Job Search](AI-Job-Search.md)
@@ -170,7 +181,7 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
 - **寫程式的 agent**：Cline。
-- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）。
+- **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）；想切換做事節奏（少問一點自己跑完、把批次工作外包、收尾整理決策）用 claude-work-mode。
 - **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
