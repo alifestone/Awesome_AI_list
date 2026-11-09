@@ -130,6 +130,7 @@
     - **[Pipecat](https://github.com/pipecat-ai/pipecat)** — 即時語音／多模態對話 agent 框架。（原放在 Video，已移到這裡）
 - **Coding agent**
     - **[Cline](https://github.com/cline/cline)** — VS Code 裡的自主 coding agent。
+    - **[dsh-superagent](https://github.com/deepseek-ai/dsh-superagent-prototype)** — DeepSeek 的主動式 coding agent 研究原型（DeepSeek Harness bundle）：常駐一個 GitHub repo，可選接飛書；允許清單上的人 @ 它就開工單，在獨立 session 與目錄裡實作並回原對話回覆或開 PR，後續討論自動送到負責的 executor。主動工作需符合團隊規則，預設只記錄（`observe`）；附監督面板。MIT。⚠️ 非正式產品；worker 以 `danger-full-access`、操作者帳號執行，建議用專用 OS 帳號。
 - **Coding agent 外掛與 skill 組**
     - **[Claude Octopus](https://github.com/nyldn/claude-octopus)** — Claude Code 外掛，讓 Codex、Gemini 等多個模型交叉審查、辯論，有共識閘門。
     - **[pstack](https://github.com/michael-denyer/pstack-claude)** — Cursor pstack skill 組的移植版，支援 Claude Code、Codex、Copilot、Pi：`poteto-mode` 依任務挑流程，搭配多模型審查（arena、interrogate）、PR 照顧與自我改進 skill。MIT。

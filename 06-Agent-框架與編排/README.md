@@ -42,6 +42,17 @@ Stanford NLP 的 Python 框架：用「簽章」描述任務、用程式組合 A
 - 自由切換模型，包含本地模型。
 - 在 CI/CD 裡做自動審查與修測試；用 SDK 自建內部 coding agent。
 
+### [dsh-superagent](dsh-superagent.md)
+
+DeepSeek 的主動式 coding agent 研究原型，以 DeepSeek Harness bundle 執行、負責一個 GitHub repo：監聽 GitHub（選用：飛書），允許清單上的人 @ 它時開工單，在獨立的 session 與目錄裡完成工作，再回原對話回覆或開 PR；之後的討論會自動送到負責的 executor。原則是「盡量少佔用人的注意力」：接單確認一次、工作時安靜、有結果才出聲。主動工作要符合團隊寫的規則，預設只記錄不執行（`observe`）。附面板列出需要人處理的事。MIT。
+
+可以做到：
+- 讓 agent 以團隊成員身分常駐 repo，從 Issue 留言接單、開 PR、跟進 review 與 CI。
+- 在飛書群裡 @ bot 派工給 coding agent。
+- 依團隊規則主動處理某類事（例如 dependabot PR），先觀察它會怎麼做再開 `auto`。
+
+⚠️ 官方聲明是研究原型、非正式產品；worker 以 `danger-full-access`、操作者的 OS 帳號執行且不需核准，建議用只放 agent 憑證的專用 OS 帳號。
+
 ## Coding agent 外掛與 skill 組
 
 ### [Claude Octopus](Claude-Octopus.md)
@@ -181,7 +192,7 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 ## 怎麼挑
 
 - **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
-- **寫程式的 agent**：Cline。
+- **寫程式的 agent**：在 IDE 裡逐步審核用 Cline；想讓 agent 常駐 GitHub repo（或飛書群）、由團隊 @ 它派工並開 PR 用 dsh-superagent（研究原型）。
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）；想切換做事節奏（少問一點自己跑完、把批次工作外包、收尾整理決策）用 claude-work-mode。
 - **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
