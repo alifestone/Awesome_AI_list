@@ -232,6 +232,7 @@
 - **[edge0](https://github.com/Edge0-AI/Edge0)** — 開源串流 MoE 推論框架：SSD 專家卸載＋訓練過的 prerouter 提前預測專家＋Recover-LoRA 補回 4-bit 損失，附 Edge0-35B-A3B／8B-A1B 兩個模型與 macOS、iOS、Android、Windows 原生引擎。Apache-2.0。⚠️ Python 版僅 Apple Silicon；「約 2.5 GB 跑 35B」為 MLX allocator 峰值，非程序 RSS。
 - **[QwenGyre](https://arxiv.org/abs/2609.33848)** — 阿里巴巴的超長任務 agent 強化學習訓練框架論文：GPU 在 rollout 與訓練間彈性切換、不中斷執行中的 agent，並把分支執行整理成共享前綴的軌跡樹去重；自測比 Colocate 快最多 1.85×、比 Async 快 1.78×。⚠️ 目前只有論文，未公開程式碼。
 - **[dLLM](https://github.com/ZHZisZZ/dllm)** — 擴散語言模型的訓練、推論與評測函式庫：LLaDA、Dream 範例，MDLM、BD3LM、Edit Flows、Fast-dLLM、diffu-GRPO，可把自迴歸模型或 BERT 改成擴散模型。Apache-2.0。
+- **[colibri](https://github.com/JustVugg/colibri)** — 純 C 的分層 MoE 推論引擎：熱門專家放 GPU（CUDA／Vulkan／Metal）、溫的放 RAM、冷的從 NVMe 串流；13 個引擎涵蓋 GLM-5.2、Kimi K3、DeepSeek V4／V4.1 Flash、Qwen3.6／3.8 等，可直接讀 GGUF，附一步安裝、OpenAI／Anthropic 相容 API 與 Jev 相容的 System One 決策 API。Apache-2.0。⚠️ 大模型速度由硬碟決定，筆電上可能不到 1 tok/s。
 - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
 ---
@@ -340,3 +341,4 @@
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 Superpowers、ECC。
 - 資安的程式碼漏洞研究區新增 Cloudflare Security Audit Skill。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 claude-work-mode。
+- 推論與訓練引擎新增 colibri。

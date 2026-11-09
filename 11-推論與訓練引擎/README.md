@@ -97,6 +97,16 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 把任意自迴歸模型或 BERT 微調成擴散模型（官方釋出 0.5B／0.6B 的 Tiny-A2D 與 BERT-Chat）。
 - 用 Fast-dLLM 加速推論，或用 diffu-GRPO 做強化學習。
 
+### [colibri](colibri.md)
+
+純 C 寫成的分層 MoE 推論引擎：熱門專家放 GPU（CUDA、Vulkan、Metal），溫的放 RAM，冷的從 NVMe 串流，一套引擎從 8 GB 筆電到多 GPU 主機都能跑；13 個引擎涵蓋 GLM-5.2、Kimi K3（2.8T）、DeepSeek V4／V4.1 Flash、Qwen3.6／3.8 等，也能直接讀 GGUF。一步安裝腳本會依機器推薦模型。Apache-2.0。⚠️ 大模型速度由硬碟決定，筆電上可能每秒不到 1 token。
+
+可以做到：
+- 在沒有大顯卡的電腦上，用 SSD 串流跑數千億到兆級參數的 MoE 模型，資料不上雲。
+- 提供 OpenAI／Anthropic 相容 API（工具呼叫、讀圖、出圖），當 Claude Code 等 coding agent 的本地後端。
+- 用 System One API 對封閉式問題回傳帶機率的決策（與 Jev API 相容）。
+- 在儀表板即時看每個專家何時被觸發、每輪時間花在哪。
+
 ### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
 
 不是模型，而是可直接替換的 Qwen 3.5／3.6／3.8 Jinja chat template，修正官方模板的渲染錯誤、KV cache 失效、空白 `<think>` 污染、agent 卡死等問題。
@@ -109,6 +119,7 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 
 - **想在家用 PC 跑大型 MoE 模型**：Strata；想要繁中圖形介面帶著裝，可試 Strata Easy TW（測試版）。
 - **想用 SSD 串流跑超過 RAM 的 MoE 模型（實驗性）**：Janas。
+- **想用一套引擎跑很多種前沿 MoE 模型（GLM、Kimi、DeepSeek、Qwen），有沒有 GPU 都行**：colibri。
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
 - **想在自己的 GPU 上跑 GLM-5.3-Flash 或 DeepSeek-V4.1-Flash**：Project Maya。
 - **只有一台記憶體不大的 Mac，想跑 Gemma 4 26B-A4B**：TurboFieldfare。
