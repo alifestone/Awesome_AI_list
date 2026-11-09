@@ -2,60 +2,79 @@
 
 - **分類**：Agent 框架與編排 / Coding agent 外掛與 skill 組
 - **連結**：https://github.com/yaojingang/yao-meta-skill
-- **security 政策**：https://github.com/yaojingang/yao-meta-skill/tree/main/security
-
-## 原清單說明
-
-原清單只列名稱與 `security/` 目錄的連結，沒有說明。
-
-> **查證結果**：連結指向的是 yao-meta-skill 專案中的 `security/` 目錄，裡面是 skill 套件的供應鏈安全政策，而不是獨立的資安工具。yao-meta-skill 本身是「建立、評測、打包與治理 agent skill」的 meta-skill，因此本清單把整個專案歸在 Agent 框架與編排，security 政策當作它的特色介紹。
+- **中文 README**：https://github.com/yaojingang/yao-meta-skill/blob/main/docs/README.zh-CN.md
 
 ## 概述
 
-yao-meta-skill（「Yielding AI Outcomes」）是用來製作可重複使用 agent skill 的 meta-skill。1.0 版著重於產生可跨平台安裝的 skill 套件；2.0 版自稱「Skill OS」，涵蓋建模、多目標編譯、測試、發布審查與迭代。輸出目標包括 OpenAI、Claude、通用 Agent Skills 相容套件與 VS Code workflow。README 表示專案已可供 beta 與外部測試。
+yao-meta-skill（中文名「Yao 技能工厂」，YAO 取自「Yielding AI Outcomes」）是一個**用來製作 skill 的 skill**：把重複出現的工作流程、prompt、SOP、對話紀錄或腳本，整理成可重複使用、可跨平台安裝的 agent skill 套件，並負責後續的評測、打包、發布審查與迭代。
 
-`security/` 目錄定義 skill 在發布前必須通過的安全與信任政策。它把腳本與對外發布的 skill 套件視為**供應鏈風險**，要求受治理的 skill 在發布前產出信任報告。
+- **1.0 版**：重點在把工作流程轉成精簡、可讀、可跨平台安裝的 skill 套件。
+- **2.0 版**：自稱「Skill OS」，把 skill 當成需要長期維護的團隊資產，涵蓋整個生命週期：建模 → 多平台編譯 → 測試 → 發布審查 → 上線後追蹤與下一輪迭代。
 
-查閱時 GitHub 顯示約 2.7k stars、252 forks；作者為 GitHub 帳號 `yaojingang`。
+輸出目標包括 OpenAI、Claude、通用 Agent Skills 相容套件與 VS Code／Copilot workflow，也支援匯入 WorkBuddy。README 表示專案已可供 beta 與外部測試，但「世界級」等較強的宣稱仍要等外部與人工證據補齊。
+
+查閱時（2026-11-09）版本為 2.1.1，GitHub 顯示約 2.7k stars、252 forks；作者為 GitHub 帳號 `yaojingang`（skill 內署名 Yao Team），repo 建立於 2026-03。
 
 ## 核心功能／特色
 
-### `security/` 目錄內容
+### 製作 skill 的流程
 
-| 檔案 | 用途 |
-| --- | --- |
-| `trust_policy.md` | 總體信任政策：哪些情況阻擋發布、哪些只發警告 |
-| `permission_policy.json` / `.md` | 高權限能力（網路、檔案寫入、子程序）的核准紀錄 |
-| `network_policy.json` / `.md` | 每個可連網腳本允許連線的主機範圍 |
-| `script_policy.md` | 腳本規範 |
-| `dependency_policy.md` | 相依套件規範 |
-| `secret_policy.md` | 機密資訊（金鑰等）規範 |
+1. **先判斷值不值得做成 skill**：要有「會重複使用」與「可重複使用的輸出格式」兩個條件；一次性需求、摘要、翻譯、純文件、腦力激盪等請求會被排除（附 non-skill 決策樹）。
+2. **意圖對話**：先自行推論，只在核心任務、輸出或方向有分歧時才問，每輪一題、最多兩輪，結論記成結構化假設，不保留完整對話。
+3. **參考掃描**：預設靜默掃描 GitHub 上的同類熱門 repo 與使用者指定的參考，只有真正衝突時才提出來。
+4. **先寫 trigger description**：先把「何時該啟動這個 skill」寫好並測過，再寫內文。
+5. **產生套件**：`SKILL.md` 保持精簡，細節放 `references/`、可決定性的邏輯放 `scripts/`、證據放 `reports/`；只建立真的需要的資料夾。
+6. **產出報告**：每個新 skill 會附雙語 HTML 解讀報告、總覽評分卡，以及 Review Studio 審查頁，另提出三個下一輪迭代方向。
 
-### 信任報告涵蓋項目（依 `trust_policy.md`）
+### 四種模式（依重要性決定要加多少結構）
 
-機密外洩風險、沒有 CLI／help 介面的腳本、`--help` 煙霧測試失敗、互動式或可連網的腳本、每個可連網腳本的主機範圍、高權限能力的審查核准、相依套件是否鎖版、runtime 信任 metadata、套件完整性雜湊。
+| 模式 | 適用 | 預設產出 |
+| --- | --- | --- |
+| Scaffold | 探索性、個人或短期使用 | 只有 `SKILL.md`、`agents/interface.yaml`，必要時少量 references |
+| Production | 團隊會重複使用、誤觸發會浪費時間 | 加上 references、必要的 scripts、trigger 評測、`manifest.json` |
+| Library | 組織內廣泛共用、需要可攜性與維護 | 加上正例／反例／近似例測試集、打包預期、維護 metadata |
+| Governed | 發布關鍵、需要稽核 | 必須有 owner、審查週期、檔案型測試資料、輸出契約、rollback 邊界、信任報告與輸出品質評分卡；缺的證據要標 `missing evidence`，不可捏造 |
 
-### 兩級執行
+### 2.0 版的主要模組
 
-- **阻擋發布**：高風險機密、不受限的遠端 inline 執行、未經有效核准的高權限能力。每筆核准必須寫明審查者、範圍、理由、到期日、證據與對應的目標平台執行方式。
-- **警告**：可連網腳本若在 `network_policy.json` 沒有對應條目，會顯示警告，直到宣告主機範圍為止。
+- **Skill IR**：與平台無關的中介表示，描述意圖、觸發條件、輸入輸出、邊界、參考資料與預期產物；各平台的檔案都從這裡編譯出來。
+- **Target compiler／adapter**：同一份 IR 產生 OpenAI、Claude、generic、Agent Skills、VS Code 各自的套件，並記錄不支援的功能與權限執行方式。
+- **Output Eval Lab**：觸發檢查、輸出斷言、執行時間與 token 證據、可重現的 benchmark、盲測 A/B 評審包與獨立答案卷。
+- **Review Studio 2.0**：單一 HTML 審查頁，彙整意圖、觸發、輸出評測、context 成本、執行時期檢查、信任、豁免、審查註記、阻擋項與逐項修正建議。
+- **發布治理**：套件驗證、安裝模擬、執行時期權限探測、證據一致性檢查，以及阻擋過早對外宣稱的「claim guard」。
+- **SkillOps 迴圈**：只記錄 metadata 的使用與漂移追蹤（不記參數或原始內容）、每日／每週維護報告，以及需人工核准才會寫入的改進提案。
 
-### `permission_policy.json` 範例
+### Trigger 評測
 
-查閱時的版本（schema 1.0，2026-06-13 由 Yao Team 審查）核准三項能力，到期日皆為 2026-09-30：
+這是專案最著重的部分：用 train／dev／holdout 分組、盲測 holdout、對抗性 holdout、獨立 rubric 評審與「路由搶奪」（route confusion）檢查來驗證 description，全部乾淨才允許升版。README 列出的回歸測試集為 21 類、66 個 prompt。
 
-- **網路**：只有 `network_policy.json` 列出的腳本可對外連線，用途限於讀取 GitHub 公開 metadata、查找 benchmark、檢查更新、呼叫已審查的評測端點
-- **檔案寫入**：限報告、registry metadata、測試暫存、套件產物、更新快取，以及使用者明確確認的 skill 安裝
-- **子程序**：限本機驗證、打包、安裝模擬、CI；skill 更新只能透過白名單指令，且需 `--yes` 與更新後驗證
+### Skill 供應鏈安全政策（`security/`）
 
-注意：上述核准的到期日（2026-09-30）在查閱本條目時（2026-10）已過，repo 是否已更新請自行確認。
+專案把腳本與對外發布的 skill 套件視為供應鏈風險，`security/` 目錄定義受治理的 skill 發布前要通過的規則，由 `trust_check.py` 產生信任報告：
+
+- **檢查項目**：機密外洩風險、腳本有沒有 CLI／`--help` 且能通過煙霧測試、互動式或可連網的腳本與其允許的主機範圍、高權限能力的核准、相依套件是否鎖版、套件完整性雜湊等。
+- **兩級執行**：高風險機密、不受限的遠端 inline 執行、未經有效核准的高權限能力會**阻擋發布**；可連網腳本若沒在 `network_policy.json` 宣告主機範圍則只**警告**。
+- **權限核准紀錄**（`permission_policy.json`）：網路、檔案寫入、子程序三項能力各自寫明審查者、範圍、理由、到期日、證據與各目標平台的執行方式。查閱時的版本於 2026-11-09 重新審查，到期日為 2027-02-09。
+
+這套政策也可單獨拿來當自家 skill／plugin 發布流程的範本。
 
 ## 技術架構或運作原理
 
-- 主程式入口為 `SKILL.md`，統一 CLI 為 `scripts/yao.py`
-- `trust_check.py` 產生信任與安全報告，涵蓋腳本、相依套件、機密風險與網路主機政策
-- 其他目錄：`skill-ir/`（平台中立的 skill 中介表示）、`evals/`、`schemas/`、`reports/`、`runtime/conformance/` 等
-- 審查結果可輸出為 HTML gate 頁面（Review Studio 2.0），顯示警告、阻擋項、豁免與修正建議
+```
+輸入（流程筆記／prompt／對話紀錄／文件）
+  → 意圖模型（任務、輸出、排除條件、標準）
+  → Skill IR
+  → skill 套件 ＋ 各平台 adapter
+  → Eval Lab（觸發／輸出／benchmark／執行時期）
+  → Review Studio（gate、警告、豁免）
+  → 發布邊界（套件驗證、安裝模擬、claim guard）
+  → SkillOps（回饋、漂移 → 回到意圖模型）
+```
+
+- 入口為 `SKILL.md`（依 frontmatter 的 description 路由到最輕的模式），統一 CLI 為 `scripts/yao.py`
+- `agents/interface.yaml` 是中立的 metadata 來源，不綁定特定廠商的路徑
+- 其他目錄：`references/`（方法論文件）、`skill-ir/`、`evals/`、`examples/`、`failures/`（反模式與可執行的失敗案例）、`templates/`、`security/`、`reports/`
+- 啟動時會檢查更新（24 小時最多一次，網路失敗不影響任務）；`self-update` 只對已驗證的安裝管道生效，且必須加 `--yes` 才會變更
 
 ## 安裝與使用方式
 
@@ -66,36 +85,54 @@ npx -y skills add yaojingang/yao-meta-skill -a codex -g -y
 npx -y skills add yaojingang/yao-meta-skill -a '*' -g -y
 ```
 
-重新啟動 client 後，直接要求 agent 建立、改善或評測 skill。本機開發需 Python 3.11+，執行 `make ci-test`。
+重新啟動 client 後，直接說「把這個流程做成 skill」「改善這個 skill」「評測這個 skill」「替這個 skill 加評測」即可觸發。產出後建議依序看 `reports/skill-interpretation.html`（雙語解讀，預設簡體中文）、`reports/skill-overview.html`（評分卡）、`reports/review-studio.html`（阻擋項與權限核准）。
 
-若只想參考安全政策，可直接閱讀 `security/` 目錄，作為自家 skill／plugin 發布流程的範本。
+也可以直接用 CLI：
+
+```bash
+python3 scripts/yao.py init my-skill --description "這個 skill 做什麼"
+python3 scripts/yao.py validate my-skill
+python3 scripts/yao.py review-studio my-skill
+python3 scripts/yao.py package my-skill --platform claude --platform openai --output-dir dist --zip
+```
+
+WorkBuddy 使用者可用 `yao.py package . --platform generic --zip --self` 產生 ZIP 後上傳。本機開發需 Python 3.11+，執行 `make ci-test`。
 
 ## 適用情境
 
-- 團隊內部發布 agent skill 前的安全審查流程
-- 參考如何把「網路、檔案寫入、子程序」權限寫成可稽核的核准紀錄
-- 建立 skill 供應鏈的信任報告與阻擋規則
+- 把團隊散落在對話、個人 prompt、口頭習慣裡的流程，整理成可安裝、可維護的 skill
+- 把個人用的 skill 升級成團隊資產：補上介面契約、評測、信任檢查與發布紀錄
+- 同一個 skill 要同時發給 Claude、Codex、VS Code 等多個平台
+- skill 誤觸發或搶走其他 skill 的路由，需要系統化地測試與調整 description
+- 建立團隊內部發布 skill 前的安全審查流程
 
 ## 授權與成本
 
 - **授權**：MIT。
-- **成本**：免費。
+- **成本**：免費；實際花費取決於所用 agent 與模型。
 
 ## 限制與注意事項
 
-- `security/` 是政策文件與設定檔，本身不會掃描任何東西；實際檢查由 `trust_check.py` 等腳本執行。
-- 政策主要針對 yao-meta-skill 自己的 skill 發布流程，套用到其他專案需自行調整。
-- README 的 91.5/100 評分為專案自評。
+- **流程偏重**：2.0 版的指令、報告與 gate 非常多，只是想快速寫一個小 skill 時用 Scaffold 模式即可，或改用更輕量的 skill-creator。
+- **評分為自評**：README 的 91.5/100 加權分數是專案自己打的（對照 Anthropic Skill Creator 67.5、OpenAI Skill Creator 50.5）；人工盲測 5/5 勝出也只有一位評審，README 自己也註明這不是獨立的模型執行證據。
+- **權限只是 metadata**：README 表示目前四個目標平台都是「metadata 宣告」而非平台原生強制執行，殘餘風險需自行評估。
+- 啟動時會連網檢查更新；CLI 使用量統計需設 `YAO_CLI_TELEMETRY=1` 才會開啟。
+- 中文互動預設語氣為「柔和、陪伴式」，產出報告預設簡體中文。
 - README 表示專案處於 beta 階段。
 
 ## 相關工具
 
-- [Claude-Red](../09-資安/Claude-Red.md)：資安領域的 Claude skill 集合（可用本政策的思路審查第三方 skill）
-- [Foundry Security Spec](../09-資安/Foundry-Security-Spec.md)：同樣強調「以基礎設施而非 prompt 做沙箱」的規格
+- [Superpowers](Superpowers.md)：內含 `writing-skills`，照最佳實踐寫新 skill 並測試，流程較輕
+- [Matt Pocock Skills](Matt-Pocock-Skills.md)：輕量、可自行修改的工程紀律 skill 組，可當作被打包的對象
+- [ECC](ECC.md)：大量現成 skill、agent 與資安掃描的整合包
+- [Claude-Red](../09-資安/Claude-Red.md)：資安領域的 Claude skill 集合（可用本專案的信任政策審查第三方 skill）
+- [Foundry Security Spec](../09-資安/Foundry-Security-Spec.md)：同樣強調以基礎設施而非 prompt 做權限控管的規格
 
 ## 資料來源
 
 - https://github.com/yaojingang/yao-meta-skill
+- https://raw.githubusercontent.com/yaojingang/yao-meta-skill/main/README.md
+- https://raw.githubusercontent.com/yaojingang/yao-meta-skill/main/SKILL.md
+- https://raw.githubusercontent.com/yaojingang/yao-meta-skill/main/references/operating-modes.md
 - https://github.com/yaojingang/yao-meta-skill/tree/main/security
-- https://raw.githubusercontent.com/yaojingang/yao-meta-skill/main/security/trust_policy.md
 - https://raw.githubusercontent.com/yaojingang/yao-meta-skill/main/security/permission_policy.json

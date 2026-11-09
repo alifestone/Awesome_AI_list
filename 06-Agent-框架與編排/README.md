@@ -73,12 +73,13 @@ Claude Code 外掛，讓 Codex、Gemini 等多個模型對同一任務各自作�
 
 ### [yao-meta-skill](yao-meta-skill.md)
 
-建立、評測、打包與治理 agent skill 的 meta-skill（2.0 版自稱「Skill OS」），可輸出給 Claude、OpenAI 與通用 Agent Skills 相容平台。附一套 skill 供應鏈安全政策：發布前需核准網路、檔案寫入、子程序權限並產出信任報告。MIT，beta。
+用來製作 skill 的 skill：把重複的工作流程、prompt、SOP 整理成可跨平台安裝的 agent skill，並負責評測、打包、發布審查與迭代（2.0 版自稱「Skill OS」）。依重要性分 Scaffold／Production／Library／Governed 四種模式，從同一份中介表示編譯出 Claude、OpenAI、通用 Agent Skills 與 VS Code 套件；trigger description 會經過盲測與對抗性測試。另附 skill 發布前的安全政策。MIT，beta。
 
 可以做到：
-- 用固定流程製作、測試並打包可跨平台安裝的 agent skill。
-- 建立團隊內部發布 agent skill 前的安全審查流程。
-- 參考如何把權限寫成可稽核的核准紀錄與阻擋規則。
+- 把團隊散落的流程整理成可安裝、可維護的 skill，並產出審查報告。
+- 同一個 skill 同時發給 Claude、Codex、VS Code 等多個平台。
+- 系統化地測試 skill 會不會誤觸發或搶走其他 skill 的路由。
+- 建立團隊內部發布 skill 前的安全審查流程。
 
 ### [TokenEconomizer](TokenEconomizer.md)
 
