@@ -46,6 +46,7 @@
     - **[TRELLIS.2](https://github.com/microsoft/TRELLIS.2)** — Microsoft 開源 4B 參數圖片生成 3D 模型，產出含完整 PBR 材質的 GLB（MIT；⚠️ 相依的 nvdiffrast／nvdiffrec 限非商業）。
     - **[Hunyuan3D 2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)** — 騰訊開源圖片生成 3D 系統，形狀＋PBR 貼圖兩階段（⚠️ 社群授權，排除歐盟／英國／南韓）。
     - **[Stable Fast 3D](https://github.com/Stability-AI/stable-fast-3d)** — Stability AI 單圖約 0.5 秒重建已展 UV 的貼圖網格（⚠️ 社群授權，年營收超過 100 萬美元須企業授權）。
+    - **[Idol](https://github.com/speridlabs/idol-sdk)**（Speridlabs）— 單張圖片生成最多 1,048,576 個 3D 高斯並補出背面，輸出標準 3DGS `.ply`，峰值約 7.2 GB 顯存；建立在 TripoSplat 上，官方基準勝過 TripoSplat、TRELLIS、LGM（自評）。Apache-2.0。⚠️ 需申請 DINOv3 與 FLUX.2-dev（取 VAE）存取權，後者標示非商業授權；輸出是點雲不是網格。
     - **[Meshy MCP Server](https://github.com/meshy-dev/meshy-mcp-server)** — Meshy 官方 MCP，讓 agent 生成 3D、重新網格化、重新貼圖、綁骨、做動畫與 3D 列印處理（需付費 API）。
 - **世界模型**
     - **[World Labs](https://www.worldlabs.ai/)** — 生成可探索 3D 世界的服務（Marble）。
@@ -343,3 +344,4 @@
 - 資安的程式碼漏洞研究區新增 Cloudflare Security Audit Skill。
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 claude-work-mode。
 - 推論與訓練引擎新增 colibri。
+- 3D 建模與生成的 AI 生成 3D 資產區新增 Idol。

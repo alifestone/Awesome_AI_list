@@ -2,7 +2,7 @@
 
 讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界、可即時操控的互動世界模型，以及從影片重建 3D 環境、編輯高斯點雲。
 
-> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、HY-World 2.0、Matrix-Game、StreamRender-H3）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
+> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Idol、HY-World 2.0、Matrix-Game、StreamRender-H3）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
 
 ## CAD / 參數化建模
 
@@ -134,6 +134,15 @@ Stability AI 以 TripoSR 為基礎的單圖快速 3D 重建模型，約 0.5 秒�
 - 三角形或四邊形重新網格化，可指定目標頂點數。
 - ComfyUI 節點；可在 CUDA、Mac MPS（實驗性）、CPU 上執行。
 
+### [Idol](Idol.md)
+
+Speridlabs 的單圖生成 3D 高斯點雲模型：一張渲染圖、生成圖或照片自動去背後，生成最多 1,048,576 個高斯並補出背面，輸出標準 3DGS `.ply`，峰值約 7.2 GB 顯存。Apache-2.0（⚠️ 依賴的 DINOv3、FLUX.2 VAE 各有授權且需申請存取，FLUX.2-dev 標示為非商業授權）。
+
+可以做到：
+- 單張圖片生成可旋轉檢視的 3DGS 物件，照片與渲染圖有各自的前處理模式。
+- 用 Python API 或命令列批次生成，指定高斯數量（32,768～1,048,576）與隨機種子。
+- 輸出可直接交給 SuperSplat 清理、壓縮與發布。
+
 ### [Meshy MCP Server](Meshy-MCP-Server.md)
 
 Meshy 官方 MCP 伺服器，提供 28 個工具，讓 Claude Code、Cursor 等 agent 直接呼叫 Meshy 雲端 3D 生成。伺服器為 MIT 授權，但需要 Pro 以上方案的 API 金鑰並消耗付費點數。
@@ -208,6 +217,7 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 - 要**讓 AI 操作 Blender**：MCP for Blender 是底層連線，再搭 cc-blender-skill 或 TheLongSilence 的 skill 提升品質。
 - 要**在 Omniverse／Isaac Sim 裡用 agent**：Kit USD Agents。
 - 要**從圖片生成單一 3D 資產**：想本機跑、可商用選 TRELLIS.2（注意相依套件授權）或 Stable Fast 3D（最快、顯存需求低）；要 PBR 品質選 Hunyuan3D 2.1（注意地區限制）；不想架 GPU、要 agent 一路做到綁骨動畫，用 Meshy MCP Server 或 Hyper3D。
+- 要**單圖直接生成 3D 高斯點雲**（不是網格）：Idol（約 8 GB 顯存；注意相依編碼器的授權），生成後可用 SuperSplat 清理與發布。
 - 要**整個可探索場景**：World Labs（商業服務）或 HY-World 2.0（開源，需多張 GPU）。
 - 要**可用鍵盤滑鼠即時操控的互動世界／遊戲畫面**：Matrix-Game（消費級顯卡可跑 4.0）；有 8 卡 NVLink 叢集、要研究引擎＋生成式渲染：StreamRender-H3。
 - 要**從真實場景重建**：3DGS for model city；重建後要清理、壓縮、發布點雲：SuperSplat。
