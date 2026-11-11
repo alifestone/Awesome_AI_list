@@ -219,6 +219,7 @@
 - **影像生成**
     - **[Qwen-Image-2.1](https://huggingface.co/Qwen/Qwen-Image-2.1)** — 7B 文生圖 + 圖像編輯，支援原生透明 RGBA。⚠️ 授權改為 Qwen Research License（非商用），與先前 Apache 2.0 的版本不同。
     - **[FLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein)**（Black Forest Labs）— 5.6B 文生圖 + 圖像編輯，最多 10 張參考圖，支援 bounding box 排版；需搭配 prompt upsampler。⚠️ FLUX Kommunity License：非商用，年營收低於 US$500 萬者可商用輸出。
+    - **[MiniMax-H3-Image](https://huggingface.co/MiniMaxAI/MiniMax-H3-Image)**（MiniMax）— 33.1B DiT 文生圖 + 圖像編輯，各種長寬比直出約 16 MP（4096×4096）不經放大，蒸餾到 6 步，最多 16 張參考圖；SGLang、vLLM-Omni、diffusers、ComfyUI 可跑。⚠️ 權重加文字編碼器約 135 GB，需資料中心級 GPU；社群授權排除歐盟／英國／南韓／美國，年營收超過 US$100 萬或提供託管服務須另取授權。
 
 ---
 
@@ -345,3 +346,4 @@
 - Agent 框架的 Coding agent 外掛與 skill 組區新增 claude-work-mode。
 - 推論與訓練引擎新增 colibri。
 - 3D 建模與生成的 AI 生成 3D 資產區新增 Idol。
+- 模型的影像生成區新增 MiniMax-H3-Image。

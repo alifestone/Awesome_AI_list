@@ -112,12 +112,21 @@ Black Forest Labs 的 5.6B 文生圖 + 圖像編輯模型（另配 Qwen3-VL-4B �
 - 多參考圖合成，依框移動、替換或移除元素。
 - 自架影像生成；微調或 LoRA 改用 Klein Base。
 
+### [MiniMax-H3-Image](MiniMax-H3-Image.md)
+
+MiniMax 從影音模型 MiniMax-H3 衍生的 33.1B 文生圖 + 圖像編輯模型（另配約 33B 的 Qwen3-VL 文字編碼器），各種長寬比直接輸出約 16 MP（4096×4096）大圖、不經放大，蒸餾到 6 步。最多 16 張參考圖。⚠️ 本機需資料中心級 GPU（約 135 GB 權重）；授權排除歐盟、英國、南韓、美國，年營收超過 US$100 萬或提供託管服務須另取授權。
+
+可以做到：
+- 一次請求直接生成 4K 級海報、概念美術與角色設定圖。
+- 多參考圖合成（家具放進空房間、產品放進場景），3D 白模轉寫實圖。
+- 用 SGLang 或 vLLM-Omni 自架 OpenAI 相容的生圖 API。
+
 ## 怎麼挑
 
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
 - **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
-- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）；**動漫影片**：見影片製作類的 [Index-AniSora](../03-影片製作/Index-AniSora.md)；**可操控的互動世界／遊戲畫面**：見 3D 類「世界模型」的 [Matrix-Game](../02-3D-建模與生成/Matrix-Game.md)、[StreamRender-H3](../02-3D-建模與生成/StreamRender-H3.md)。
+- **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）、MiniMax-H3-Image（要直出 16 MP 大圖、有資料中心級 GPU 時）；**動漫影片**：見影片製作類的 [Index-AniSora](../03-影片製作/Index-AniSora.md)；**可操控的互動世界／遊戲畫面**：見 3D 類「世界模型」的 [Matrix-Game](../02-3D-建模與生成/Matrix-Game.md)、[StreamRender-H3](../02-3D-建模與生成/StreamRender-H3.md)。
 - **本地跑 Qwen 一直出問題**：先換推論引擎類的 [Qwen Fixed Chat Templates](../11-推論與訓練引擎/Qwen-Fixed-Chat-Templates.md)。
 - 怎麼在本機跑這些模型，見 [推論與訓練引擎](../11-推論與訓練引擎/)。
