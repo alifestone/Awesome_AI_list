@@ -1,6 +1,6 @@
 # 🎨 設計 / 前端
 
-讓 AI 做出好看網頁與簡報的資源：設計提示詞庫、給 agent 的動畫 skill、互動插圖元件、網頁 3D 函式庫、skill 與作品範例，以及 agent 專用的簡報框架。
+讓 AI 做出好看網頁與簡報的資源：設計提示詞庫、教 agent 用現代網頁原生功能的 skill、給 agent 的動畫 skill、互動插圖元件、網頁 3D 函式庫、skill 與作品範例，以及 agent 專用的簡報框架。
 
 ## 網站設計提示詞
 
@@ -12,6 +12,19 @@
 - 快速做出有動態效果的 landing page、Hero 區、作品集或 SaaS 官網。
 - 接案時快速做原型或提案頁。
 - 學習怎麼寫高品質的網站生成提示詞。
+
+## 網頁平台最佳實務
+
+### [Modern Web Guidance](Modern-Web-Guidance.md)
+
+Google Chrome 團隊發起、Edge／Firefox／MDN 共同維護的 coding agent skill：agent 寫 HTML、CSS、前端 JS 前先用 CLI 搜尋並取回指南，改用 `<dialog>`、Popover、Anchor Positioning、container queries 等原生功能，並依 Baseline 相容性決定要不要附退回方案。203 份指南、涵蓋 250 個功能；另附 `chrome-extensions` 套件。Apache-2.0（指南 CC-BY 4.0）。
+
+可以做到：
+- 讓 agent 做 dialog、tooltip、客製下拉選單、深色模式時用原生功能，少裝 UI 套件。
+- 表單驗證、autofill、無障礙與 Core Web Vitals 照現行最佳實務寫。
+- 用 `legacy-scan` 找出舊專案可現代化的寫法；開發或上架 Chrome 擴充功能。
+
+⚠️ 預設開啟遙測（設 `DISABLE_TELEMETRY=1` 關閉）；skill 對所有前端任務都會觸發。
 
 ## 網頁動畫與插圖
 
@@ -86,6 +99,7 @@ GSAP 官方提供給 coding agent 的 skill 組，教 agent 正確使用核心 A
 ## 怎麼挑
 
 - 要**整個網站的設計方向**：MotionSites。
+- 要 **agent 寫出現代、少依賴的 HTML／CSS／JS**（原生 dialog、popover、container queries、表單與無障礙）：Modern Web Guidance。
 - 要**網頁動畫寫得對**：GSAP Skills；要**互動插圖**：Hairline；要**用名稱指定動態效果**：Motion Prompt。
 - 要**網頁 3D**：three.js；讓 Claude Code 寫 three.js 更準，加上 threejs-skills；想看 AI 做出來的 three.js 網站長什麼樣子：Anatomy。
 - 要**簡報**：open-slide。

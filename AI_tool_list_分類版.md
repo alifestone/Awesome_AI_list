@@ -102,6 +102,8 @@
 
 - **網站設計提示詞**
     - **[MotionSites](https://motionsites.ai/)** — 給 Lovable、Bolt、Cursor、Claude 用的高質感（3D／動態）網站 prompt 庫，另有 MCP。
+- **網頁平台最佳實務**
+    - **[Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance)**（Google Chrome）— 讓 coding agent 寫 HTML／CSS／前端 JS 時改用現代原生功能的 skill：本機搜尋 203 份指南（250 個功能），依 Baseline 決定退回方案，附 `legacy-scan` 與 `chrome-extensions` 套件。Apache-2.0（指南 CC-BY 4.0）。⚠️ 預設開啟遙測。
 - **網頁動畫與插圖**
     - **[GSAP Skills](https://github.com/greensock/gsap-skills)**（GreenSock）— 官方給 coding agent 的 GSAP 動畫 skill 組：時間軸、ScrollTrigger、外掛與框架整合。MIT。
     - **[Hairline](https://github.com/lucasmarkes/hairline)** — 會回應滑鼠的細線等角互動插圖（React 元件），附 `hairline-create` skill 讓 agent 畫出風格一致的新圖形。MIT。
@@ -347,3 +349,4 @@
 - 推論與訓練引擎新增 colibri。
 - 3D 建模與生成的 AI 生成 3D 資產區新增 Idol。
 - 模型的影像生成區新增 MiniMax-H3-Image。
+- 設計 / 前端新增「網頁平台最佳實務」小類與 Modern Web Guidance。
