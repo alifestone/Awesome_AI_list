@@ -92,6 +92,8 @@
 - **影片理解**
     - **[claude-video（/watch）](https://github.com/bradautomates/claude-video)** — 讓 Claude「看」影片：下載、抽幀、轉錄後交給模型分析。
     - **[hook-lab](https://github.com/hongfamonvAI/hook-lab)** — Claude Code skill：拆解 TikTok／Reels／Shorts 的開場鉤子、腳本結構與爆紅原因，並給小紅書、視頻號的改寫方向。MIT。
+- **角色參考素材**
+    - **[AIモデル顔データベース](https://ai-portrait-gallery.pages.dev/)**（あぎ）— 免費 AI 人像參考圖庫，讓生圖／影片的角色臉孔一致：1,499 張 AI 生成的虛構人物（正面大頭照 893、半身生活照 606），依髮型篩選、下載原尺寸 PNG，metadata 已移除。日文網站。CC0 1.0。⚠️ 只有年輕東亞女性；不公開模型與 prompt；網站請求勿直接轉載圖檔。
 - **作品與案例**
     - **[PDoomVideo](https://github.com/JohnHeibel/PDoomVideo)** — Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，可當程式化動畫參考。
     - **[Awesome Opus 5.5 Videos](https://github.com/yihui-dev/awesome-opus5-5-videos)** — 社群用 Claude Opus 5.5 寫程式（Canvas、SVG、Three.js、GSAP、shader）做出的動畫影片清單：703 個 prompt，分動態設計、解說、3D、遊戲四類，每個連回原貼文，418 個可在 Skillry 看重製版對照。MIT。⚠️ 約 3 成 prompt 不完整；只有 prompt、沒有原始碼。
@@ -350,3 +352,4 @@
 - 3D 建模與生成的 AI 生成 3D 資產區新增 Idol。
 - 模型的影像生成區新增 MiniMax-H3-Image。
 - 設計 / 前端新增「網頁平台最佳實務」小類與 Modern Web Guidance。
+- 影片製作新增「角色參考素材」小類與 AIモデル顔データベース。
