@@ -206,6 +206,14 @@ AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能
 - 把生成結果排進時間軸，剪輯、疊 logo、上 SRT 字幕，局部片段用 AI 重做。
 - 讓 agent 批次生成並排好時間軸，再由人在瀏覽器裡檢查與微調。
 
+### [LibTV Skills](LibTV-Skills.md)
+
+LiblibAI 旗下 AI 影片平台 LibTV 的官方 agent skill：把使用者的一句話原封不動送給 LibTV 後端 agent，由後端選模型（Seedance、Kling、Wan、NanoBanana、Midjourney 等）、寫 prompt、編排工作流，skill 只負責上傳參考素材、輪詢與下載成品。MIT（生成需 LibTV 會員積分）。⚠️ 不能指定模型與參數、後端會改寫 prompt；動手前不估算積分，有使用者回報一次短片就耗掉七成積分；repo 自 2026-03 後沒有更新。
+
+可以做到：
+- 讓 Claude Code、Codex、OpenClaw 一句話生圖、生影片、改影片，成品自動下載到本機。
+- 一句話出短劇、MV、TVC 或產品展示片的初稿，再到 LibTV 畫布手動修。
+
 ### [Code Video Model](Code-Video-Model.md)
 
 研究專案：文字先變成可編輯的 Three.js 場景程式，渲染成代理影片，再搭配參考圖交給影片模型生成，讓鏡位、動作、物理都能靠改程式控制。Apache-2.0。
@@ -285,6 +293,6 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 - **用 Python 腳本批次剪片、疊字幕、做自訂特效**：MoviePy（要最快的處理速度則直接用 ffmpeg-skill）。
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
-- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP，要動漫風格用 Index-AniSora；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
+- **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP，要動漫風格用 Index-AniSora；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；已有 LibTV 會員、想一句話交給平台出片（不在意模型與 prompt 控制）用 LibTV Skills；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
 - **需要一張固定的虛構角色臉當參考圖**：AIモデル顔データベース（僅年輕東亞女性，CC0）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。

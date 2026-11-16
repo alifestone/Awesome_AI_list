@@ -87,6 +87,7 @@
     - **[WanGP](https://github.com/deepbeepmeep/WanGP)** — 給低階顯卡的本機生成 App：一個網頁介面跑 Wan、LTX、Hunyuan Video、MiniMax H3 等影片模型，另含圖像、TTS 與 3D 模型，部分只要 6 GB VRAM；有 MCP server 與內建 agent Deepy。⚠️ WanGP Community License：免費、作品可商用，但不得轉售或提供付費服務。
     - **[Higgsfield MCP](https://higgsfield.ai/mcp)** — 讓 Claude 不需 API key 呼叫 30 多個圖像／影片模型，再串 Blender、After Effects，交付可繼續編輯的 AE 專案。商業服務。
     - **[BeatDesign](https://github.com/BeatAPI/BeatDesign)**（BeatAPI）— 本機版的 Higgsfield：無限畫布生成圖片／影片，接到瀏覽器內的時間軸剪輯並匯出 MP4；29 個 MCP tool 讓 Claude Code 等 agent 操作同一個專案。生成只接 BeatAPI（需自備 key）。Apache-2.0。
+    - **[LibTV Skills](https://github.com/libtv-labs/libtv-skills)**（LiblibAI）— LibTV 平台的官方 agent skill：把一句話原樣交給 LibTV 後端 agent 選模型（Seedance、Kling、Wan、NanoBanana、Midjourney…）並編排生圖／生影片、短劇、MV，skill 只負責上傳、輪詢、下載。`npx skills add` 安裝。MIT（生成需會員積分）。⚠️ 不能指定模型與參數、後端改寫 prompt；不預估積分，有使用者回報積分快速耗盡；repo 自 2026-03 後未更新。
     - **[Code Video Model](https://code-video-model.github.io/)** — 研究專案：文字 → 可編輯 Three.js 場景 → 代理影片 + 參考圖 → 影片模型生成，鏡位、動作、物理都能靠改程式控制。Apache-2.0。⚠️ 需 GPU 與多個外部模型／API。
     - **[Index-AniSora](https://github.com/bilibili/Index-anisora)**（bilibili，IJCAI'25）— 開源動漫影片生成模型：圖生影片、角色 360 度旋轉、任意幀推論、風格轉換、多模態引導。Apache 2.0。⚠️ 原清單連到 [cnb.cool 的第三方鏡像](https://cnb.cool/dfdfsd/anisora)，缺 V3，建議改用官方 repo。
 - **影片理解**
@@ -353,3 +354,4 @@
 - 模型的影像生成區新增 MiniMax-H3-Image。
 - 設計 / 前端新增「網頁平台最佳實務」小類與 Modern Web Guidance。
 - 影片製作新增「角色參考素材」小類與 AIモデル顔データベース。
+- 影片製作的 AI 影片生成區新增 LibTV Skills。
