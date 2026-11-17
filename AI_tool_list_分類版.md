@@ -134,6 +134,7 @@
     - **[DSPy](https://github.com/stanfordnlp/dspy)** — 用「寫程式」而非手調 prompt 來建構與最佳化 LLM 管線。
     - **[CrewAI](https://github.com/crewAIInc/crewAI)** — 多 agent 角色協作框架。（原放在 Video，已移到這裡）
     - **[Pipecat](https://github.com/pipecat-ai/pipecat)** — 即時語音／多模態對話 agent 框架。（原放在 Video，已移到這裡）
+    - **[Swamp](https://github.com/swamp-club/swamp)**（Elder Swamp Club）— 讓 coding agent 把自動化拆成可重用 behavior（TypeScript 型別 + YAML 定義）並接成 workflow（CEL 串資料的 DAG）的 CLI，含 extension registry、vault、版本化 datastore 與執行紀錄；`swamp repo init` 支援 Claude Code、Cursor、Codex 等九種 agent。範例偏雲端維運。原始碼 AGPLv3，官方執行檔商業授權。⚠️ 每個指令都需 swamp-club.com 帳號；預設開啟使用遙測（可關）。
 - **Coding agent**
     - **[Cline](https://github.com/cline/cline)** — VS Code 裡的自主 coding agent。
     - **[dsh-superagent](https://github.com/deepseek-ai/dsh-superagent-prototype)** — DeepSeek 的主動式 coding agent 研究原型（DeepSeek Harness bundle）：常駐一個 GitHub repo，可選接飛書；允許清單上的人 @ 它就開工單，在獨立 session 與目錄裡實作並回原對話回覆或開 PR，後續討論自動送到負責的 executor。主動工作需符合團隊規則，預設只記錄（`observe`）；附監督面板。MIT。⚠️ 非正式產品；worker 以 `danger-full-access`、操作者帳號執行，建議用專用 OS 帳號。
@@ -355,3 +356,4 @@
 - 設計 / 前端新增「網頁平台最佳實務」小類與 Modern Web Guidance。
 - 影片製作新增「角色參考素材」小類與 AIモデル顔データベース。
 - 影片製作的 AI 影片生成區新增 LibTV Skills。
+- Agent 框架與編排的框架區新增 Swamp。

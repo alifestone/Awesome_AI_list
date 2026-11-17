@@ -31,6 +31,17 @@ Stanford NLP 的 Python 框架：用「簽章」描述任務、用程式組合 A
 - AI 陪伴、教練、會議助理、角色扮演。
 - 語音 + 視訊 + 影像的多模態介面；多個專家 agent 互相交接的語音系統。
 
+### [Swamp](Swamp.md)
+
+讓 coding agent 把自動化拆成可重複使用的 behavior、再接成 workflow 的 CLI（Elder Swamp Club）。Behavior 由 TypeScript 型別加 YAML 定義組成，workflow 是用 CEL 串資料的 DAG，另有 extension registry、vault、版本化 datastore 與完整執行紀錄；定義檔都在 repo 裡、可先審查再執行。`swamp repo init` 會把 skill 寫進 Claude Code、Cursor、Codex、Kiro 等九種 agent。範例偏雲端維運與稽核。
+
+可以做到：
+- 讓 agent 盤點雲端資源、稽核 DNS、檢查伺服器健康，產出可重跑的 workflow 而不是一次性對話。
+- 做憑證輪替這類要存密鑰的自動化，密鑰從 vault 注入並在輸出中遮蔽。
+- 加人工核准關卡、排程執行、遠端 worker；把執行資料放 S3 供團隊共用。
+
+⚠️ 每個指令都要 swamp-club.com 帳號（個人免費，團隊依人數付費）；預設開啟使用遙測（`swamp config set telemetry.collection disabled` 可關）。原始碼 AGPLv3，官方執行檔為商業授權。
+
 ## Coding agent
 
 ### [Cline](Cline.md)
@@ -191,7 +202,7 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 
 ## 怎麼挑
 
-- **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat。
+- **寫 LLM 應用程式**：要自動最佳化品質用 DSPy，要多角色協作用 CrewAI，要語音即時對話用 Pipecat；想讓 coding agent 把維運、稽核等重複工作做成可版控、可重跑的 workflow 用 Swamp（需註冊帳號）。
 - **寫程式的 agent**：在 IDE 裡逐步審核用 Cline；想讓 agent 常駐 GitHub repo（或飛書群）、由團隊 @ 它派工並開 PR 用 dsh-superagent（研究原型）。
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）；想切換做事節奏（少問一點自己跑完、把批次工作外包、收尾整理決策）用 claude-work-mode。
 - **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
