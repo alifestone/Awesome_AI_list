@@ -90,6 +90,24 @@ BugBase 的 AI 滲透測試 agent：連接一台 Kali 攻擊機，自主執行�
 - 依 HackerOne、Bugcrowd 等平台規則寫報告，截圖去敏。
 - 外部紅隊演練中評估企業對外平台並產出客戶報告。
 
+### [CyberStrikeAI](CyberStrikeAI.md)
+
+用 Go 寫的自架 AI 資安作業平台，有 Web 主控台：agent 把自然語言指令轉成 90 多個資安工具的實際呼叫，搭配 MCP、知識庫、圖形化工作流、攻擊鏈分析、資產與漏洞管理、人工審批與稽核紀錄，另內建 WebShell 管理與 C2；可接 OpenAI 相容的任何模型。⚠️ 高度雙重用途，僅限授權系統。Apache-2.0。
+
+可以做到：
+- 團隊在授權演練中共用一個平台管理資產、漏洞、任務與攻擊鏈。
+- 用一句話串起子網域列舉、掃描、弱點驗證，並保留可重播的證據。
+- 透過 Burp／瀏覽器擴充把抓到的流量交給 AI 分析。
+
+### [PentestCode](PentestCode.md)
+
+終端機裡的自主滲透測試 agent，OpenCode 的 hard fork：主導 agent 平行派出 recon、AD、webapp、後滲透等 12 個子 agent，共用一份可跨 session 保存的 engagement state（主機、漏洞、憑證、存取權、關係圖），並推薦攻擊路徑；支援 20+ 個 LLM provider。Beta。⚠️ 高度雙重用途，僅限授權測試。MIT。
+
+可以做到：
+- 授權內網滲透與 AD 測試：從掃描、列舉、憑證噴灑一路到網域管理員，每步附證據。
+- 練 HTB 與 CTF 靶機。
+- 用 `guided` 模式逐步核准每個動作，最後產出報告。
+
 ## 程式碼漏洞研究 / 弱點掃描
 
 ### [open-kritt](open-kritt.md)
@@ -149,7 +167,7 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 ## 怎麼挑
 
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
-- **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；專做 bug bounty 與外部紅隊、要整套流程到報告：Claude-BugHunter；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES。
+- **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；專做 bug bounty 與外部紅隊、要整套流程到報告：Claude-BugHunter；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES；要有 Web 主控台、資產／漏洞管理的團隊平台：CyberStrikeAI；終端機裡打內網與 AD、要跨 session 記住進度：PentestCode。
 - **審查自己的程式碼**：直接在 coding agent 裡跑完整稽核用 Cloudflare Security Audit Skill，要自架平台做大規模 AI 審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
 - **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
