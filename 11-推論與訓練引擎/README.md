@@ -107,6 +107,15 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - 用 System One API 對封閉式問題回傳帶機率的決策（與 Jev API 相容）。
 - 在儀表板即時看每個專家何時被觸發、每輪時間花在哪。
 
+### [Betelgeuse](Betelgeuse.md)
+
+llama.cpp 的 C++／CUDA fork，把 MoE 路由專家按需從 NVMe 分頁進有上限的 VRAM 池，目標是用 RTX 3060 12 GB + 16 GB RAM 跑 DeepSeek-V4.1-Flash（748B）與 Qwen3.8 Flash Next（自測熱跑約 19／22 tok/s）。附 OpenAI 相容的 `bel-server`。MIT。⚠️ 實驗性：只認證 `sm_86`＋Linux＋本機 NVMe，一個程序只能一個 context、記錄的 context 只有 512。
+
+可以做到：
+- 用 12 GB 顯卡、16 GB RAM 在本機跑 748B 的 DeepSeek-V4.1-Flash，資料不上雲。
+- 以 `bel-server` 提供 OpenAI 相容 API，或用 `bel-cli` 互動聊天。
+- 研究 VRAM 熱池、`io_uring` 專家串流與 Engram 表暫存的實作。
+
 ### [Qwen Fixed Chat Templates](Qwen-Fixed-Chat-Templates.md)
 
 不是模型，而是可直接替換的 Qwen 3.5／3.6／3.8 Jinja chat template，修正官方模板的渲染錯誤、KV cache 失效、空白 `<think>` 污染、agent 卡死等問題。
@@ -127,5 +136,6 @@ DeepSeek 官方開源的推論框架，就是 DeepSeek 自家大規模線上服�
 - **有資料中心 GPU／NPU 叢集，要自架 DeepSeek-V4.1-Flash**：DeepInfer。
 - **想了解超長任務 agent 的大規模 RL 訓練怎麼做（研究參考）**：QwenGyre（只有論文）。
 - **想訓練或研究擴散語言模型（LLaDA、Dream 等）**：dLLM。
+- **只有 RTX 3060 12 GB、16 GB RAM，想跑 DeepSeek-V4.1-Flash 或 Qwen3.8 Flash Next（實驗性，限 Linux）**：Betelgeuse。
 - **本地跑 Qwen 一直出問題（渲染錯誤、KV cache 失效、agent 卡住）**：先換 Qwen Fixed Chat Templates。
 - 可以跑哪些模型，見 [模型](../10-模型/)。

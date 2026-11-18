@@ -242,6 +242,7 @@
 - **[QwenGyre](https://arxiv.org/abs/2609.33848)** — 阿里巴巴的超長任務 agent 強化學習訓練框架論文：GPU 在 rollout 與訓練間彈性切換、不中斷執行中的 agent，並把分支執行整理成共享前綴的軌跡樹去重；自測比 Colocate 快最多 1.85×、比 Async 快 1.78×。⚠️ 目前只有論文，未公開程式碼。
 - **[dLLM](https://github.com/ZHZisZZ/dllm)** — 擴散語言模型的訓練、推論與評測函式庫：LLaDA、Dream 範例，MDLM、BD3LM、Edit Flows、Fast-dLLM、diffu-GRPO，可把自迴歸模型或 BERT 改成擴散模型。Apache-2.0。
 - **[colibri](https://github.com/JustVugg/colibri)** — 純 C 的分層 MoE 推論引擎：熱門專家放 GPU（CUDA／Vulkan／Metal）、溫的放 RAM、冷的從 NVMe 串流；13 個引擎涵蓋 GLM-5.2、Kimi K3、DeepSeek V4／V4.1 Flash、Qwen3.6／3.8 等，可直接讀 GGUF，附一步安裝、OpenAI／Anthropic 相容 API 與 Jev 相容的 System One 決策 API。Apache-2.0。⚠️ 大模型速度由硬碟決定，筆電上可能不到 1 tok/s。
+- **[Betelgeuse](https://github.com/Betelgeuse-AI/Betelgeuse)** — llama.cpp 的 C++／CUDA fork：MoE 路由專家按需從 NVMe 分頁進有上限的 VRAM 池，用 RTX 3060 12 GB + 16 GB RAM 跑 DeepSeek-V4.1-Flash（748B）與 Qwen3.8 Flash Next（自測熱跑約 19／22 tok/s），附 OpenAI 相容 `bel-server`。MIT（模型權重另依上游授權）。⚠️ 實驗性：只認證 `sm_86`＋Linux＋本機 NVMe，單一 context、記錄的 context 只有 512。
 - **[Qwen Fixed Chat Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)** — 修正版的 Qwen chat template（依名稱判斷）。
 
 ---
@@ -357,3 +358,4 @@
 - 影片製作新增「角色參考素材」小類與 AIモデル顔データベース。
 - 影片製作的 AI 影片生成區新增 LibTV Skills。
 - Agent 框架與編排的框架區新增 Swamp。
+- 推論與訓練引擎新增 Betelgeuse。
