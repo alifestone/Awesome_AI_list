@@ -151,6 +151,7 @@
     - **[claude-work-mode](https://github.com/danyuchn/claude-work-mode)** — Claude Code 外掛，用 `/work-mode` 切換 session 工作模式：`auto`（可還原的步驟不停下來問，對外、不可逆的動作留到最後確認）、`out`（批次工作外包給子 agent 或 Codex、Gemini 等外部 CLI，主執行緒負責驗證）、`wrap`（收斂收尾、列出待決事項），可疊加。選用的 `work-mode-gates` 在 `auto` 下把三個 hook 的「詢問」改成「拒絕並說明做法」。MIT。⚠️ 2026-11-08 才建立（v0.5.0），模式只是給模型的指示、不是權限控管；需 Claude Code 2.1.314 以上。
 - **應用工作流**
     - **[AI Job Search](https://github.com/ai-job-search-dev/ai-job-search)** — 建在 Claude Code 上的求職框架：`/setup` 建個人檔案、`/scrape`／`/rank` 找職缺並評分、`/apply` 經職缺完整性檢查與起草-審稿雙 agent 產出 LaTeX CV 與求職信（反覆編譯到頁數正確並做 ATS 文字層檢查）、`/interview` 面試準備、`/outcome` 追蹤結果。內建職缺網站以丹麥為主，可用 `/add-portal` 擴充。MIT。⚠️ Fork 一定公開，自用請建私人 repo。
+    - **[PaperOrchestra](https://github.com/google-research/paper-orchestra)**（Google Cloud AI Research）— 多 agent 論文寫作框架：大綱、文獻回顧（Semantic Scholar）、分節撰寫、修潤、畫圖分工，把點子與實驗紀錄轉成套用會議模板（CVPR、ICLR）的 LaTeX 稿件，附 Streamlit 介面與自動評測腳本；預設 Gemini 3.1 Pro。Apache-2.0。⚠️ 非 Google 官方產品；論文評測資料集尚未釋出；內容與引用需人工查核。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
@@ -359,3 +360,4 @@
 - 影片製作的 AI 影片生成區新增 LibTV Skills。
 - Agent 框架與編排的框架區新增 Swamp。
 - 推論與訓練引擎新增 Betelgeuse。
+- Agent 框架與編排的應用工作流新增 PaperOrchestra。

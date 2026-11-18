@@ -180,6 +180,17 @@ Claude Code 外掛，用一個 `/work-mode` 指令切換 session 的工作模式
 
 ⚠️ Fork 一定公開，而個人資料會寫進受版本控制的檔案，自用請建私人 repo；agent 會讀不受信任的職缺內容，寄出前請自己檢查。
 
+### [PaperOrchestra](PaperOrchestra.md)
+
+Google Cloud AI Research 的多 agent 論文寫作框架：大綱、文獻回顧、分節撰寫、修潤、畫圖各由專門 agent 負責，把點子文件與實驗紀錄轉成套用會議模板（內建 CVPR、ICLR）的 LaTeX 稿件，文獻透過 Semantic Scholar 搜尋整合；附 Streamlit 介面與自動評測腳本。預設用 Gemini 3.1 Pro。Apache-2.0。
+
+可以做到：
+- 從研究點子與實驗紀錄產出含文獻回顧、引用與圖表的投稿格式 LaTeX 初稿。
+- 用 plotting agent 從實驗數據寫程式畫圖，並自我批評修正。
+- 用 autoraters 評估論文與文獻回顧品質、引用 F1。
+
+⚠️ 非 Google 官方支援產品；論文的評測資料集尚未釋出；生成內容與引用需人工查核。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -206,5 +217,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - **寫程式的 agent**：在 IDE 裡逐步審核用 Cline；想讓 agent 常駐 GitHub repo（或飛書群）、由團隊 @ 它派工並開 PR 用 dsh-superagent（研究原型）。
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）；想切換做事節奏（少問一點自己跑完、把批次工作外包、收尾整理決策）用 claude-work-mode。
 - **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
+- **把研究點子與實驗紀錄寫成 LaTeX 論文初稿**（含文獻回顧與圖表）：PaperOrchestra。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
