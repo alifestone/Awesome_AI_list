@@ -195,6 +195,7 @@
     - **[Pentest Swarm AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)**（Armur AI）— 以 AI agent 蜂群對 API／網頁應用做自主滲透測試，自稱 XBOW 的開源替代。多項功能仍為 alpha／beta。AGPL-3.0。
     - **[ARES](https://github.com/Mafifrizi/ARES)** — 自架的授權紅隊演練自動化平台，針對 AD／雲端環境，內建範圍強制檢查（ScopeGuard）、攻擊路徑圖與報告產出，可選擇接 LLM 輔助規劃。作者為匿名個人。⚠️ 雙重用途，僅限取得書面授權的系統。MIT。
     - **[Claude-Red](https://github.com/SnailSploit/Claude-Red)** — 攻擊性資安的 Claude Skills 集合（78 個 skill、23 類）。⚠️ 高度雙重用途，僅限授權測試。MIT。
+    - **[Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter)** — Claude Code 的 bug bounty／外部紅隊 skill 組：83 個 skill、15 個 slash command，hunt 類整理自 681 份公開 HackerOne 報告，含企業平台（M365、Okta、VPN、vCenter）攻擊串連、送出前範圍驗證與各平台報告格式，可接 Burp／HackerOne MCP。程式碼 MIT、內容 CC BY 4.0。⚠️ 高度雙重用途，僅限授權測試；只涵蓋外部攻擊面。
 - **程式碼漏洞研究 / 弱點掃描**
     - **[open-kritt](https://github.com/Kritt-ai/open-kritt)** — 自架的 AI 漏洞研究平台：把研究拆成小任務，交給 Codex／Claude Code 平行執行，再驗證、排序與去重。AGPL-3.0。
     - **[Cloudflare Security Audit Skill](https://github.com/cloudflare/security-audit-skill)**（Cloudflare）— coding agent 資安稽核 skill，其內部漏洞挖掘 harness 的起點：偵查 → 依覆蓋率帳本分派 hunter → 對抗式驗證 → 結構化 `findings.json` → 獨立複核 → 報告；預設只給指引，明確要求才跑完整稽核。執行目標程式碼前要求 OS 層級沙箱。MIT。
@@ -361,3 +362,4 @@
 - Agent 框架與編排的框架區新增 Swamp。
 - 推論與訓練引擎新增 Betelgeuse。
 - Agent 框架與編排的應用工作流新增 PaperOrchestra。
+- 資安的滲透測試區新增 Claude-BugHunter。

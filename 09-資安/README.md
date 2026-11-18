@@ -81,6 +81,15 @@ BugBase 的 AI 滲透測試 agent：連接一台 Kali 攻擊機，自主執行�
 - Bug bounty 分流與報告撰寫、CTF 練習。
 - 當撰寫自家資安 skill 的範本。
 
+### [Claude-BugHunter](Claude-BugHunter.md)
+
+給 Claude Code 的 bug bounty／外部紅隊 skill 組：83 個 skill、15 個 slash command，hunt 類整理自 681 份公開 HackerOne 報告，另有 M365／Okta／VPN／vCenter 等企業平台攻擊串連、送出前的範圍驗證關卡與各平台報告格式；可接 Burp MCP、HackerOne MCP，skill 也能裝到 Codex CLI、OpenCode 等。程式碼 MIT、內容 CC BY 4.0。⚠️ 高度雙重用途，僅限授權目標；只涵蓋外部攻擊面。
+
+可以做到：
+- 在授權 bug bounty 中跑偵察、排序攻擊面，依漏洞類別測試並驗證。
+- 依 HackerOne、Bugcrowd 等平台規則寫報告，截圖去敏。
+- 外部紅隊演練中評估企業對外平台並產出客戶報告。
+
 ## 程式碼漏洞研究 / 弱點掃描
 
 ### [open-kritt](open-kritt.md)
@@ -140,7 +149,7 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 ## 怎麼挑
 
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
-- **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES。
+- **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；專做 bug bounty 與外部紅隊、要整套流程到報告：Claude-BugHunter；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES。
 - **審查自己的程式碼**：直接在 coding agent 裡跑完整稽核用 Cloudflare Security Audit Skill，要自架平台做大規模 AI 審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI。
 - **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
