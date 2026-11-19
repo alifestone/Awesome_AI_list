@@ -2,7 +2,7 @@
 
 讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界、可即時操控的互動世界模型，以及從影片重建 3D 環境、編輯高斯點雲。
 
-> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Idol、HY-World 2.0、Matrix-Game、StreamRender-H3）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
+> 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Idol、MeshAnything、HY-World 2.0、Matrix-Game、StreamRender-H3）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
 
 ## CAD / 參數化建模
 
@@ -82,6 +82,15 @@ Claude Opus 5 做的瀏覽器太空探索遊戲。收錄重點是 repo 裡的 `b
 - 查 Blender 4.x 遷移到 5.x 的 API 陷阱。
 - 研究「AI 做出來的完整 WebGL 遊戲」的架構。
 
+### [AnyMachine](AnyMachine.md)
+
+讓 agent（作者用 Claude Code）以 Blender Python 腳本做出真的會動的機械與道具：從生成網格量出關節軸、重建乾淨的可動部件，每個關節一個 0–1 參數並烘成 glTF action，再自動檢查穿模與腳步滑移；也有「概念圖 → 參考板 → 零件清單 → 腳本」的完整流程。代表作是一支腳本生成的 30 公尺液壓步行機 Stilt。MIT；⚠️ 實驗性質，沒有 API。
+
+可以做到：
+- 把 Meshy／Tripo 生成的筆電、四足、蜘蛛變成關節正確、不穿模、能在遊戲引擎用一個參數驅動的 GLB。
+- 讓 agent 照 PIPELINE.md 從一張概念圖做出綁好骨、有動畫的大型機械。
+- 參考零件逐一建模、並排比對的做法，提升 agent 做複雜硬表面道具的品質。
+
 ## OpenUSD / Omniverse × Agent
 
 ### [Kit USD Agents](Kit-USD-Agents.md)
@@ -153,6 +162,15 @@ Meshy 官方 MCP 伺服器，提供 28 個工具，讓 Claude Code、Cursor 等 
 - 人形角色自動綁骨、套動畫、文字生成動作。
 - 3D 列印：可列印性檢查與修復、多色 3MF、自動拆件、送切片軟體。
 
+### [MeshAnything](MeshAnything.md)
+
+ICLR 2025 論文的官方實作（V2 為 ICCV 2025）：用自迴歸 Transformer 把掃描、重建或其他模型生成的稠密網格／點雲，轉成像美術手做的低面數、布線乾淨的網格，相當於 AI 自動重新拓撲。V1 最多 800 面、V2 1,600 面，A6000 上約 7 GB 顯存、30 秒。⚠️ S-Lab 授權，僅限非商業。
+
+可以做到：
+- 把 Marching Cubes 產生的雜亂網格轉成低面數網格，方便美術修改或做動畫。
+- 串在 Rodin 等生成器後面，從文字／圖片一路得到低面數模型。
+- 研究網格 token 化與自迴歸網格生成（V2 附訓練程式碼）。
+
 ## 世界模型
 
 ### [World Labs](World-Labs.md)
@@ -214,9 +232,10 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 ## 怎麼挑
 
 - 要**精確、可製造的工程模型**：FreeCAD MCP、Rhino MCP、MAC，或在 OpenUSD 管線裡用 USD BRep；想讓自己的 agent 一路做到製造檢查、工程圖與送印，用 text-to-cad。
-- 要**讓 AI 操作 Blender**：MCP for Blender 是底層連線，再搭 cc-blender-skill 或 TheLongSilence 的 skill 提升品質。
+- 要**讓 AI 操作 Blender**：MCP for Blender 是底層連線，再搭 cc-blender-skill 或 TheLongSilence 的 skill 提升品質；要做**會動、綁好骨的機械或道具**，參考 AnyMachine 的腳本與流程。
 - 要**在 Omniverse／Isaac Sim 裡用 agent**：Kit USD Agents。
 - 要**從圖片生成單一 3D 資產**：想本機跑、可商用選 TRELLIS.2（注意相依套件授權）或 Stable Fast 3D（最快、顯存需求低）；要 PBR 品質選 Hunyuan3D 2.1（注意地區限制）；不想架 GPU、要 agent 一路做到綁骨動畫，用 Meshy MCP Server 或 Hyper3D。
+- 已經有稠密網格（掃描、重建、生成），要**轉成低面數、布線乾淨的網格**：MeshAnything（非商業、面數上限 1,600），商用可改用 Meshy 的 Smart Topology 或 Stable Fast 3D 的重新網格化。
 - 要**單圖直接生成 3D 高斯點雲**（不是網格）：Idol（約 8 GB 顯存；注意相依編碼器的授權），生成後可用 SuperSplat 清理與發布。
 - 要**整個可探索場景**：World Labs（商業服務）或 HY-World 2.0（開源，需多張 GPU）。
 - 要**可用鍵盤滑鼠即時操控的互動世界／遊戲畫面**：Matrix-Game（消費級顯卡可跑 4.0）；有 8 卡 NVLink 叢集、要研究引擎＋生成式渲染：StreamRender-H3。

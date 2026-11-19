@@ -39,6 +39,7 @@
     - **[cc-blender-skill](https://github.com/RobLe3/cc-blender-skill)** — Claude Code skill 外掛，經 Blender MCP 用自然語言建模、上材質、打光、運鏡、渲染、做動畫與匯出。
     - **[MCP for Blender](https://github.com/ahujasid/mcp-for-blender)** — 社群版 Blender MCP（原 blender-mcp），讓任何 LLM 在執行中的 Blender 裡用提示詞建模與搭場景。
     - **[TheLongSilence](https://github.com/achimala/TheLongSilence)** — Claude Opus 5 做的瀏覽器太空探索遊戲；repo 裡附有 `.claude/skills/blender-hardsurface` 硬表面建模 skill（原清單收錄的應是這個）。
+    - **[AnyMachine](https://github.com/apekshik/anymachine)** — 讓 agent（作者用 Claude Code）以 Blender Python 腳本做出真的會動的機械與道具：鉸鏈、腿、軟質物件，每個關節一個 0–1 參數並烘成 glTF action，自動檢查穿模與腳滑；代表作是一支腳本生成的 30 公尺液壓步行機 Stilt。MIT。⚠️ 實驗性質，沒有 API。
 - **OpenUSD / Omniverse × Agent**
     - **[Kit USD Agents](https://github.com/NVIDIA-Omniverse/kit-usd-agents)** — NVIDIA 官方 Chat USD（白話編輯 Omniverse USD 場景）＋ USD／Kit／OmniUI／Isaac Sim 開發用 MCP 伺服器。
 - **AI 生成 3D 資產**
@@ -48,6 +49,7 @@
     - **[Stable Fast 3D](https://github.com/Stability-AI/stable-fast-3d)** — Stability AI 單圖約 0.5 秒重建已展 UV 的貼圖網格（⚠️ 社群授權，年營收超過 100 萬美元須企業授權）。
     - **[Idol](https://github.com/speridlabs/idol-sdk)**（Speridlabs）— 單張圖片生成最多 1,048,576 個 3D 高斯並補出背面，輸出標準 3DGS `.ply`，峰值約 7.2 GB 顯存；建立在 TripoSplat 上，官方基準勝過 TripoSplat、TRELLIS、LGM（自評）。Apache-2.0。⚠️ 需申請 DINOv3 與 FLUX.2-dev（取 VAE）存取權，後者標示非商業授權；輸出是點雲不是網格。
     - **[Meshy MCP Server](https://github.com/meshy-dev/meshy-mcp-server)** — Meshy 官方 MCP，讓 agent 生成 3D、重新網格化、重新貼圖、綁骨、做動畫與 3D 列印處理（需付費 API）。
+    - **[MeshAnything](https://github.com/buaacyw/MeshAnything)**（ICLR 2025；[V2](https://github.com/buaacyw/MeshAnythingV2) 為 ICCV 2025）— 把掃描、重建或生成的稠密網格／點雲轉成像美術手做的低面數網格（V1 最多 800 面、V2 1,600 面），相當於 AI 自動重新拓撲。⚠️ S-Lab 授權，僅限非商業。
 - **世界模型**
     - **[World Labs](https://www.worldlabs.ai/)** — 生成可探索 3D 世界的服務（Marble）。
     - **[HY-World 2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0)** — 騰訊混元 3D 世界模型，文字／圖片生成可走動的 3D 世界，也能從照片影片重建（⚠️ 排除歐盟／英國／南韓）。
@@ -370,3 +372,4 @@
 - 資安的滲透測試區新增 CyberStrikeAI、PentestCode。
 - 模型的程式碼模型區新增 DaisyRose-27B。
 - 音訊新增 VoiceStudio。
+- 3D 建模與生成新增 AnyMachine（Blender × Agent）、MeshAnything（AI 生成 3D 資產）。
