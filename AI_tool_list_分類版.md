@@ -58,6 +58,7 @@
 - **3D 重建與高斯點雲**
     - **[3D Gaussian Splatting for model city](https://github.com/rakeshsuthar6322/3d_gaussian_splatting_for_model_city)** — 手機繞拍影片 → COLMAP + Nerfstudio 訓練 3DGS → 輸出 PLY／USDZ，再生成碰撞網格放進 Isaac Sim 的實景數位分身管線。⚠️ 未附授權檔。
     - **[SuperSplat](https://github.com/playcanvas/supersplat)** — 瀏覽器內檢視、編輯、最佳化並發布 3D 高斯點雲的開源編輯器。
+    - **[3D Model Anything](https://github.com/wesbos/3d-model-anything)**（Wes Bos）— iPhone LiDAR app 掃房間（RoomPlan、網格、帶位姿照片、深度），再用附的 scan-to-threejs skill 讓 agent 重建成可編輯的 Three.js 場景，並以同機位渲染對照原照片反覆修正；附檢視器與辦公室示範。程式碼與 skill 為 MIT。⚠️ 需 LiDAR iPhone、自行 Xcode 建置；只針對室內。
 
 ---
 
@@ -373,3 +374,4 @@
 - 模型的程式碼模型區新增 DaisyRose-27B。
 - 音訊新增 VoiceStudio。
 - 3D 建模與生成新增 AnyMachine（Blender × Agent）、MeshAnything（AI 生成 3D 資產）。
+- 3D 建模與生成的 3D 重建與高斯點雲區新增 3D Model Anything。

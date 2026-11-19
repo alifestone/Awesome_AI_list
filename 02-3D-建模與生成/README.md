@@ -1,6 +1,6 @@
 # 🧊 3D 建模與生成
 
-讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界、可即時操控的互動世界模型，以及從影片重建 3D 環境、編輯高斯點雲。
+讓 AI 做 3D 的工具：透過 MCP 操作 CAD／Blender／Omniverse 等專業軟體、用文字直接生成工程幾何、AI 從圖片或文字生成 3D 資產與可走動的世界、可即時操控的互動世界模型，以及從影片或 iPhone 掃描重建 3D 環境、編輯高斯點雲。
 
 > 開放權重的 3D 生成模型（TRELLIS.2、Hunyuan3D 2.1、Stable Fast 3D、Idol、MeshAnything、HY-World 2.0、Matrix-Game、StreamRender-H3）依用途收在這裡，不放 [🧩 模型](../10-模型/)。
 
@@ -229,6 +229,15 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 - 在 PLY／SOG／SPZ／splat 等格式間轉換與壓縮，或匯出單一 HTML 檢視器自架。
 - 發布成可分享、可嵌入的 3D 場景頁，加註解、視角與攝影機飛越動畫。
 
+### [3D Model Anything](3D-Model-Anything.md)
+
+Wes Bos 的開源專案：iPhone app 用 LiDAR 掃房間（RoomPlan 牆門窗、LiDAR 網格、帶位姿的照片、深度），再用附的 scan-to-threejs skill 讓 agent 以掃描為量測、照片為參考，建出可編輯的 Three.js 場景，並用同機位渲染和原照片比對、反覆修正。附 Three.js 檢視器與辦公室示範。程式碼與 skill 為 MIT。⚠️ 需 LiDAR iPhone 並自行用 Xcode 建置，App Store 尚未上架；不是一鍵轉換。
+
+可以做到：
+- 把自己的房間、辦公室做成可在網頁上走動、可編輯的 Three.js 場景。
+- 用「同機位渲染 vs. 原照片」的迴圈讓 agent 自己找出並修正建模誤差。
+- 取得帶相機位姿、深度與 LiDAR 網格的室內掃描資料。
+
 ## 怎麼挑
 
 - 要**精確、可製造的工程模型**：FreeCAD MCP、Rhino MCP、MAC，或在 OpenUSD 管線裡用 USD BRep；想讓自己的 agent 一路做到製造檢查、工程圖與送印，用 text-to-cad。
@@ -239,6 +248,6 @@ PlayCanvas 的網頁版 3D 高斯點雲編輯器：在瀏覽器裡檢視、清�
 - 要**單圖直接生成 3D 高斯點雲**（不是網格）：Idol（約 8 GB 顯存；注意相依編碼器的授權），生成後可用 SuperSplat 清理與發布。
 - 要**整個可探索場景**：World Labs（商業服務）或 HY-World 2.0（開源，需多張 GPU）。
 - 要**可用鍵盤滑鼠即時操控的互動世界／遊戲畫面**：Matrix-Game（消費級顯卡可跑 4.0）；有 8 卡 NVLink 叢集、要研究引擎＋生成式渲染：StreamRender-H3。
-- 要**從真實場景重建**：3DGS for model city；重建後要清理、壓縮、發布點雲：SuperSplat。
+- 要**從真實場景重建**：要寫實外觀（點雲）用 3DGS for model city；要把房間做成可編輯的 Three.js 幾何，用 3D Model Anything（需 LiDAR iPhone）；重建後要清理、壓縮、發布點雲：SuperSplat。
 - 要**網頁上的互動 3D**：見 [🎨 設計 / 前端](../04-設計---前端/) 的網頁 3D（three.js、Anatomy）。
 - 要**做遊戲**：見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/)。
