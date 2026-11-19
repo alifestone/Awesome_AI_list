@@ -48,6 +48,15 @@ Microsoft 從 Qwen3.5-4B 只用強化學習訓練的小型程式代理模型，�
 - 軟體工程與長程 coding agent 研究。
 - 在沙箱中替有測試的 Python repo 產出候選 patch，再由人審查。
 
+### [DaisyRose-27B](DaisyRose-27B.md)
+
+RadixArk 的第一個模型：以 Qwen3.8-27B 為底、只用強化學習訓練約 1,200 個長程 agent 任務（每次最多 1.5 小時、上百次工具呼叫）。架構與模板不變，可直接替換 Qwen3.8-27B，保留讀圖與 256K context。官方自報 Terminal Bench 4.1 從 5.6 升到 12.0（基底分數實為 4.0 版），其餘程式與推理基準小幅進步。Apache-2.0，官方有 BF16／FP8／NVFP4，社群有 GGUF。
+
+可以做到：
+- 自架 coding agent／終端機 agent 的後端，處理長時間、多步驟的任務。
+- 用 SGLang 單卡部署（FP8 約 29 GB）；24 GB 顯卡可改用社群 Q4_K_M GGUF（約 16 GiB）。
+- 直接換掉現有流程裡的 Qwen3.8-27B。
+
 ## 資安模型
 
 ### [OrcaCyber Nano 1.0](OrcaCyber-Nano-1.0.md)
@@ -124,7 +133,7 @@ MiniMax 從影音模型 MiniMax-H3 衍生的 33.1B 文生圖 + 圖像編輯模�
 ## 怎麼挑
 
 - **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
-- **程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
+- **自架 coding／終端機 agent 模型**：DaisyRose-27B；**程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
 - **生圖**：Qwen-Image-2.1（注意非商用）、FLUX 3 Image Klein（需要框選排版時）、MiniMax-H3-Image（要直出 16 MP 大圖、有資料中心級 GPU 時）；**動漫影片**：見影片製作類的 [Index-AniSora](../03-影片製作/Index-AniSora.md)；**可操控的互動世界／遊戲畫面**：見 3D 類「世界模型」的 [Matrix-Game](../02-3D-建模與生成/Matrix-Game.md)、[StreamRender-H3](../02-3D-建模與生成/StreamRender-H3.md)。

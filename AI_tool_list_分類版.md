@@ -218,6 +218,7 @@
     - **[Mellum2](https://huggingface.co/blog/JetBrains/mellum2-launch)**（JetBrains）— 12B MoE（每 token 啟用 2.5B），適合路由、RAG、子 agent 與私有部署。Apache 2.0。
 - **程式碼模型**
     - **[FrogNano-4B-2609](https://huggingface.co/microsoft/FrogNano-4B-2609)**（Microsoft）— 從 Qwen3.5-4B 經 RL 訓練的小型程式代理模型，需搭配 Leaf 工具框架；官方自報 SWE-bench Verified 61.5%。
+    - **[DaisyRose-27B](https://huggingface.co/RadixArk/DaisyRose-27B)**（RadixArk）— Qwen3.8-27B 只用 RL 訓練約 1,200 個長程 agent 任務，架構與模板不變、可直接替換基底，保留讀圖與 256K context；官方自報 Terminal Bench 4.1 從 5.6 到 12.0（基底分數實為 4.0 版），其餘基準小幅進步。BF16／FP8／NVFP4，社群有 GGUF。Apache-2.0。
 - **資安模型**
     - **[OrcaCyber Nano 1.0](https://huggingface.co/orcarouter/OrcaCyber-Nano-1.0)**（OrcaRouter）— 27B 視覺語言資安模型，逆向、漏洞分析、程式碼審查、日誌分流，GGUF 可在 16 GB 顯卡本機跑，262K context。需登入 HF 同意條件下載，Qwen 授權。⚠️ 資安評測尚未公布，通用基準為官方自報。
 - **端側小模型**
@@ -366,3 +367,4 @@
 - Agent 框架與編排的應用工作流新增 PaperOrchestra。
 - 資安的滲透測試區新增 Claude-BugHunter。
 - 資安的滲透測試區新增 CyberStrikeAI、PentestCode。
+- 模型的程式碼模型區新增 DaisyRose-27B。
