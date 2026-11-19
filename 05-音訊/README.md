@@ -21,4 +21,13 @@ Spotify 開源的音訊轉 MIDI 輕量模型：輸入一段音訊，輸出含滑
 - 依文字描述從一堆下載的音效檔裡挑出最合適的。
 - 不用錄音，從內建 201 個程式化音效或自寫 recipe 產生 UI 音效、whoosh、logo sting。
 
+### [VoiceStudio](VoiceStudio.md)
+
+本機版的 ElevenLabs 替代品：聲音複製、用文字設計聲音、影片翻譯配音、聽寫、轉錄、有聲書旁白都在自己電腦上完成，不需帳號。預設引擎 OmniVoice（646 種語言），另可切換 CosyVoice、IndexTTS、WhisperX 等數十種開源引擎；有桌面 app、Docker、手機版、本機 API 與 MCP server。AGPL-3.0（模型各有授權）。
+
+可以做到：
+- 用一段參考錄音複製聲音，念旁白、有聲書。
+- 把影片翻成其他語言並配上對齊時間的語音。
+- 讓 agent 透過 MCP 用指定聲音說話或轉錄音檔。
+
 > 語音 agent（語音辨識 + LLM + 語音合成的即時對話）請見 [Agent 框架與編排](../06-Agent-框架與編排/) 的 Pipecat；影片配音、配樂請見 [影片製作](../03-影片製作/)；從整首歌生成 MV 請見 [AutoMV](../03-影片製作/AutoMV.md)；用程式碼做影片請見 [Cinetic](../03-影片製作/Cinetic.md)、[Remotion](../03-影片製作/Remotion.md)，可搭配 earshot 配音效。

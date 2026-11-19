@@ -125,6 +125,7 @@
 
 - **[Basic Pitch](https://github.com/spotify/basic-pitch)**（Spotify）— 音訊轉 MIDI 的輕量模型。
 - **[earshot](https://github.com/Leonxlnx/earshot)** — 給 coding agent 的「耳朵」：描述、比對、搜尋、檢查聲音與影片的聲畫同步，也能用程式碼做音效；本機 CPU 執行，有 CLI 與 MCP server。Cinetic 同作者。MIT。
+- **[VoiceStudio](https://github.com/debpalash/VoiceStudio)**（原名 OmniVoice Studio）— 全本機的 ElevenLabs 替代品：聲音複製、聲音設計、影片翻譯配音、聽寫、轉錄、有聲書；預設 OmniVoice 引擎（646 種語言），可換數十種開源 TTS／ASR 引擎；桌面、Docker、手機版，有本機 API 與 MCP server。AGPL-3.0，模型各有授權。
 
 ---
 
@@ -368,3 +369,4 @@
 - 資安的滲透測試區新增 Claude-BugHunter。
 - 資安的滲透測試區新增 CyberStrikeAI、PentestCode。
 - 模型的程式碼模型區新增 DaisyRose-27B。
+- 音訊新增 VoiceStudio。
