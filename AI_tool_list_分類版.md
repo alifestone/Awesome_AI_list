@@ -266,6 +266,7 @@
     - **[Train LLM From Scratch](https://github.com/FareedKhan-dev/train-llm-from-scratch)** — 用純 PyTorch 從零手寫 LLM 全流程：資料、Transformer（原始版與 RoPE／GQA／MLA／MoE 現代版）、預訓練，再到 SFT、獎勵模型、PPO／DPO／GRPO 與 GSM8K 評測；筆電 CPU 幾分鐘就能訓練出小模型，附 Streamlit 控制台與文件網站（英文，MIT）。
     - **[The Ultimate MoE Training Handbook](https://huggingface.co/spaces/huggingface/moe-blogpost)**（Hugging Face）— 約 7 萬字的 MoE 訓練實戰手冊：router、負載平衡、專家設計、upcycling、all-to-all 通訊與部署，以 Megatron-LM 為主，附互動圖表與自家叢集實驗數據；預設讀者已訓練過 dense 模型（英文，線上免費，未標示授權）。
     - **[AI Engineering from Scratch](https://github.com/rohitg00/ai-engineering-from-scratch)**（Rohit Ghumare）— 542 堂課、20 個階段的開源 AI 工程課程：數學、ML、深度學習、Transformer、從零做 LLM，到 MCP、agent、多 agent 與上線；每堂課從原始數學寫起再用框架重做，並產出可重用的 skill／MCP server。可用 `npx skills add` 讓 coding agent 當家教，另有六冊電子書（課文英文，README 有繁中；MIT）。
+    - **[AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)**（Microsoft）— 18 堂 AI agent 入門課：工具呼叫、Agentic RAG、規劃、多 agent、MCP／A2A、context engineering、記憶、電腦操作 agent、本機 agent 與安全；每堂有課文、Python notebook，前 13 堂附影片，含繁體中文翻譯。MIT。⚠️ 範例用 Microsoft Agent Framework＋Azure Foundry，多數需 Azure 帳號。
 - **學習工具**
     - **[PaperRead](https://github.com/YuriyLin/PaperRead)** — 以繁體中文閱讀學術論文的研究工作區：論文探索、待讀看板、摘要、閱讀路徑、心智圖與 PDF 對照精讀；支援雲端與本地模型。MIT。
 
@@ -375,3 +376,4 @@
 - 音訊新增 VoiceStudio。
 - 3D 建模與生成新增 AnyMachine（Blender × Agent）、MeshAnything（AI 生成 3D 資產）。
 - 3D 建模與生成的 3D 重建與高斯點雲區新增 3D Model Anything。
+- 學習資源的課程 / 教材區新增 AI Agents for Beginners。

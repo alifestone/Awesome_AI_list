@@ -67,6 +67,15 @@ Rohit Ghumare 的大型開源 AI 工程課程：542 堂課、20 個階段，從�
 - 只走 MCP（17 堂）、Agent Skills（5 堂）或逆向工程等專題路線。
 - 下載六冊 EPUB／PDF 電子書，或準備 Claude 認證與 MCPA 考試（非官方教材）。
 
+### [AI Agents for Beginners](AI-Agents-for-Beginners.md)
+
+Microsoft 官方的 AI agent 入門課：18 堂課，每堂有課文、短影片（第 1–13 堂）與 Python notebook，主題涵蓋工具呼叫、Agentic RAG、規劃、多 agent、後設認知、MCP／A2A、context engineering、記憶、電腦操作 agent、本機 agent 與安全。自動翻譯 50 多種語言，含繁體中文（台灣）。MIT。⚠️ 範例用 Microsoft Agent Framework＋Azure Foundry，多數 notebook 需要 Azure 帳號。
+
+可以做到：
+- 用繁中課文有系統地入門 agent 設計模式，每堂獨立、可跳著讀。
+- 跟著 notebook 用 Microsoft Agent Framework 做出會用工具、能規劃、多 agent 協作的範例。
+- 部分範例改接 OpenAI 相容服務，或用 Foundry Local 在本機跑。
+
 ## 學習工具
 
 ### [PaperRead](PaperRead.md)
@@ -85,6 +94,7 @@ Rohit Ghumare 的大型開源 AI 工程課程：542 堂課、20 個階段，從�
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
 - **想要一整學期、有系統的大學課程，或想自己從零寫 agent**：EECS 498 AASE。
 - **想知道 LLM 內部怎麼運作（可解釋性入門）**：50 ML Projects to Understand LLMs。
+- **想用中文有系統地入門 AI agent 概念（設計模式、RAG、MCP、記憶）**：AI Agents for Beginners。
 - **想要一套從數學到 agent 上線的完整路線，或讓 coding agent 當家教**：AI Engineering from Scratch。
 - **想自己從零訓練一個 LLM，連後訓練與 RL 一起學**：Train LLM From Scratch。
 - **已經會訓練 dense 模型，要在叢集上訓練 MoE**：The Ultimate MoE Training Handbook。
