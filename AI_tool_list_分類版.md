@@ -129,6 +129,7 @@
 - **[Basic Pitch](https://github.com/spotify/basic-pitch)**（Spotify）— 音訊轉 MIDI 的輕量模型。
 - **[earshot](https://github.com/Leonxlnx/earshot)** — 給 coding agent 的「耳朵」：描述、比對、搜尋、檢查聲音與影片的聲畫同步，也能用程式碼做音效；本機 CPU 執行，有 CLI 與 MCP server。Cinetic 同作者。MIT。
 - **[VoiceStudio](https://github.com/debpalash/VoiceStudio)**（原名 OmniVoice Studio）— 全本機的 ElevenLabs 替代品：聲音複製、聲音設計、影片翻譯配音、聽寫、轉錄、有聲書；預設 OmniVoice 引擎（646 種語言），可換數十種開源 TTS／ASR 引擎；桌面、Docker、手機版，有本機 API 與 MCP server。AGPL-3.0，模型各有授權。
+- **[ACE-Step 1.5](https://github.com/ace-step/ACE-Step-1.5)**（ACE Studio × StepFun）— 本機音樂生成模型：文字／歌詞生成含人聲的整首歌（10 秒～10 分鐘），RTX 3090 不到 10 秒、最低 4 GB VRAM；支援翻唱、局部重繪、音軌分離、Vocal2BGM、LoRA 微調；Gradio、REST API、VST3 外掛。MIT。
 
 ---
 
@@ -377,3 +378,4 @@
 - 3D 建模與生成新增 AnyMachine（Blender × Agent）、MeshAnything（AI 生成 3D 資產）。
 - 3D 建模與生成的 3D 重建與高斯點雲區新增 3D Model Anything。
 - 學習資源的課程 / 教材區新增 AI Agents for Beginners。
+- 音訊新增 ACE-Step 1.5（本機音樂生成）。
