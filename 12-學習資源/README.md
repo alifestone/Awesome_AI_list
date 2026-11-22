@@ -31,6 +31,15 @@
 - 用 `reset` 腳本建立 demo 工作副本，自己操作 Aider 重現上課示範。
 - 安裝 EGM skills，走「設計文件 → 無上下文 reviewer 審查 → 照文件實作 → 嚴格 code review」流程。
 
+### [Hands-On Large Language Models](Hands-On-LLMs.md)
+
+Jay Alammar 與 Maarten Grootendorst 的 O'Reilly 圖解書《Hands-On Large Language Models》官方配套程式碼：12 章 notebook，從 token、embedding、Transformer 內部，到文本分類、分群與主題建模、提示工程、LangChain agent、語意搜尋與 RAG、多模態，再到微調 embedding 模型、BERT 與生成模型（QLoRA SFT、DPO）。每章都有 Colab 連結，免費 T4 GPU 即可。程式碼 Apache-2.0，書需另購，英文。⚠️ 套件鎖在 2024 年中的版本，部分範例需 OpenAI／Cohere 金鑰。
+
+可以做到：
+- 照章節在 Colab 動手跑，有系統地從概念學到應用。
+- 學會用開源模型做分類、分群、語意搜尋與 RAG。
+- 在免費 GPU 上用 QLoRA 微調小模型，並做 DPO 偏好對齊。
+
 ### [50 ML Projects to Understand LLMs](ML4LLM-Book.md)
 
 Mike X Cohen 的書《50 ML projects to understand LLMs》配套程式碼：50 個專案，把 GPT-2、BERT 的 hidden states、注意力與 embedding 當成資料，用迴歸、分類、RSA、降維等機器學習方法分析 transformer 內部機制。每個專案有 helper（自己補完）與 solution 兩份 notebook，全部可在 Colab 跑。程式碼 MIT，書需另購，英文。
@@ -93,6 +102,7 @@ Microsoft 官方的 AI agent 入門課：18 堂課，每堂有課文、短影片
 - **想學容器與 K8s**：Learn Docker and K8s。
 - **已經在用 coding agent，想讓它更可靠**：Learn Harness Engineering。
 - **想要一整學期、有系統的大學課程，或想自己從零寫 agent**：EECS 498 AASE。
+- **想要一本圖解完整、從概念到 RAG 與微調都能在 Colab 動手做的 LLM 入門書**：Hands-On Large Language Models。
 - **想知道 LLM 內部怎麼運作（可解釋性入門）**：50 ML Projects to Understand LLMs。
 - **想用中文有系統地入門 AI agent 概念（設計模式、RAG、MCP、記憶）**：AI Agents for Beginners。
 - **想要一套從數學到 agent 上線的完整路線，或讓 coding agent 當家教**：AI Engineering from Scratch。

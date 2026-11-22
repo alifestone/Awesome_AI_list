@@ -269,6 +269,7 @@
     - **[Learn Docker and K8s](https://github.com/ericboy0224/learn-docker-and-k8s)** — 在 Claude Code、Cursor 等 AI 編輯器裡玩的互動式 Docker／Linux／網路／Kubernetes 學習遊戲，AI 扮演導師帶你解 DevOps 情境題（英文）。
     - **[Learn Harness Engineering](https://github.com/walkinglabs/learn-harness-engineering)** — 從零到一的 Harness Engineering 課程：如何替 AI coding agent 打造可靠的工作環境（講義 + 實作專案）。
     - **[EECS 498 AASE](https://github.com/eecs498-aase/materials)** — 密西根大學 2026 秋季「應用代理式軟體工程」課程教材：投影片、可自己跑的 Aider demo，以及 Elephant-Goldfish Model 五個 Agent Skills（英文；⚠️ 未附 LICENSE 檔）。
+    - **[Hands-On Large Language Models](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)**（Jay Alammar、Maarten Grootendorst）— O'Reilly 同名圖解書的官方配套 notebook：12 章從 token、embedding、Transformer 內部，到分類、分群、提示工程、語意搜尋與 RAG、多模態、微調 embedding 模型，以及 QLoRA SFT 與 DPO；每章附 Colab 連結，免費 T4 GPU 即可跑（英文；程式碼 Apache-2.0，書需另購）。⚠️ 套件鎖在 2024 年版本，部分範例需 OpenAI／Cohere 金鑰。
     - **[50 ML Projects to Understand LLMs](https://github.com/mikexcohen/ML4LLM_book)** — Mike X Cohen 同名書的配套 notebook：50 個專案用機器學習分析 GPT-2／BERT 的內部活化（斷詞、embedding、logits、attention、MLP），入門機制可解釋性；Colab 可跑（英文；程式碼 MIT，書需另購）。
     - **[Train LLM From Scratch](https://github.com/FareedKhan-dev/train-llm-from-scratch)** — 用純 PyTorch 從零手寫 LLM 全流程：資料、Transformer（原始版與 RoPE／GQA／MLA／MoE 現代版）、預訓練，再到 SFT、獎勵模型、PPO／DPO／GRPO 與 GSM8K 評測；筆電 CPU 幾分鐘就能訓練出小模型，附 Streamlit 控制台與文件網站（英文，MIT）。
     - **[The Ultimate MoE Training Handbook](https://huggingface.co/spaces/huggingface/moe-blogpost)**（Hugging Face）— 約 7 萬字的 MoE 訓練實戰手冊：router、負載平衡、專家設計、upcycling、all-to-all 通訊與部署，以 Megatron-LM 為主，附互動圖表與自家叢集實驗數據；預設讀者已訓練過 dense 模型（英文，線上免費，未標示授權）。
@@ -391,3 +392,4 @@
 - 推論與訓練引擎新增 LlamaFactory（網頁介面零程式碼微調 100+ 種模型）。
 - 影片製作的 AI 影片生成區新增 FreeVideo（8 GB 顯卡本機跑 MiniMax H3）。
 - Agent 框架與編排的應用工作流新增 Fabric（prompt 模板庫與命令列工具，可一行摘要 YouTube 影片）。
+- 學習資源的課程 / 教材區新增 Hands-On Large Language Models（O'Reilly 圖解 LLM 書的 Colab notebook）。
