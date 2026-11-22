@@ -191,6 +191,17 @@ Google Cloud AI Research 的多 agent 論文寫作框架：大綱、文獻回顧
 
 ⚠️ 非 Google 官方支援產品；論文的評測資料集尚未釋出；生成內容與引用需人工查核。
 
+### [last30days](last30days.md)
+
+Matt Van Horn 的研究 skill：`/last30days <主題>` 同時搜尋 Reddit、X、YouTube、TikTok、Hacker News、Polymarket、GitHub 等平台過去 30 天的內容，依讚數、觀看與預測市場賠率排序、跨平台合併同一事件，再寫成附出處的摘要。Reddit、HN、Polymarket、GitHub 免設定，其他來源靠設定精靈或自備金鑰。另有探索熱門話題、公司專利與徵才「秘密訊號」、排程追蹤與本機研究資料庫。支援 Claude Code、Codex、Cursor、Gemini CLI、OpenClaw 等。MIT。
+
+可以做到：
+- 開會或拜訪前，掌握一個人或一家公司這個月在做什麼、社群怎麼評價。
+- 比較工具、追 AI 新做法，看真實使用者的討論而不是 SEO 文章。
+- 找快要爆紅的話題當選題；定期追蹤關鍵字並推送到 Slack。
+
+⚠️ X 預設用你已登入瀏覽器的 cookie 爬取（作者自承有帳號風險），以登入帳號搜尋 Reddit 可能違反 Reddit 條款，兩者都會先徵詢同意；設了推理金鑰時，內容片段會送到該 LLM 供應商排序。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -218,5 +229,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - **替 Claude Code 等 agent 加能力**：多模型審查用 Claude Octopus；從調查到驗證的固定工作流程用 pstack；現成角色用 agency-agents；用 Claude Code 做遊戲見 [🎮 遊戲引擎 × Agent](../13-遊戲引擎-×-Agent/) 的 Claude Code Game Studios；自己做 skill 並在發布前做安全審查用 yao-meta-skill；降低 agent 在常用 repo 的 token 成本用 TokenEconomizer；讓 agent 有系統地整理 AI 生成的程式碼、追一個品質分數用 desloppify；想要輕量、可自行修改的「先追問對齊 → spec → TDD → 審查」工程紀律用 Matt Pocock Skills；同樣的流程想自動套用、讓 agent 照計畫長時間自主開發用 Superpowers；想一次裝齊大量 agent、skill、語言規範、記憶與資安掃描用 ECC（記得挑選安裝）；想切換做事節奏（少問一點自己跑完、把批次工作外包、收尾整理決策）用 claude-work-mode。
 - **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
 - **把研究點子與實驗紀錄寫成 LaTeX 論文初稿**（含文獻回顧與圖表）：PaperOrchestra。
+- **研究某個人、公司或話題最近 30 天的社群動態**（Reddit、X、YouTube、HN、Polymarket 等）：last30days。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
