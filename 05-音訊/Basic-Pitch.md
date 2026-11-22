@@ -116,6 +116,7 @@ model_output, midi_data, note_events = predict("input.wav")
 - **basic-pitch-ts**（Spotify）：TypeScript／npm 版本。
 - **NeuralNote**（DamRsn）：Basic Pitch README 推薦的 VST 外掛版本（VST3／AU／獨立程式）。注意：NeuralNote 2.0.0 已改用 Kyutai 與 Mirelo 的 MuScriptor transformer 模型取代 Basic Pitch，該模型權重為 CC BY-NC 4.0（僅限非商業用途）。
 - 論文中提及的比較對象：Onsets and Frames（鋼琴轉譜）、Vocano（人聲轉譜）、TENT（吉他獨奏轉譜）、MI-AMT（多樂器轉譜基線）、Deep Salience（多音高估計）。
+- [dettato](dettato.md)（KobiMusic）：多樂器音訊轉 MIDI，整首混音直接分軌並轉鼓組，Apache-2.0；作者自評勝過 MuScriptor。
 
 ## 資料來源
 

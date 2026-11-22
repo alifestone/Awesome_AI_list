@@ -130,6 +130,7 @@
 - **[earshot](https://github.com/Leonxlnx/earshot)** — 給 coding agent 的「耳朵」：描述、比對、搜尋、檢查聲音與影片的聲畫同步，也能用程式碼做音效；本機 CPU 執行，有 CLI 與 MCP server。Cinetic 同作者。MIT。
 - **[VoiceStudio](https://github.com/debpalash/VoiceStudio)**（原名 OmniVoice Studio）— 全本機的 ElevenLabs 替代品：聲音複製、聲音設計、影片翻譯配音、聽寫、轉錄、有聲書；預設 OmniVoice 引擎（646 種語言），可換數十種開源 TTS／ASR 引擎；桌面、Docker、手機版，有本機 API 與 MCP server。AGPL-3.0，模型各有授權。
 - **[ACE-Step 1.5](https://github.com/ace-step/ACE-Step-1.5)**（ACE Studio × StepFun）— 本機音樂生成模型：文字／歌詞生成含人聲的整首歌（10 秒～10 分鐘），RTX 3090 不到 10 秒、最低 4 GB VRAM；支援翻唱、局部重繪、音軌分離、Vocal2BGM、LoRA 微調；Gradio、REST API、VST3 外掛。MIT。
+- **[dettato](https://github.com/kobimusic/dettato)**（KobiMusic）— 多樂器音訊轉 MIDI：整首混音輸出每種樂器一軌加鼓軌；四個小模型串成（共 28.1M 參數），作者自評勝過 1.3B 的 MuScriptor；不用版權錄音訓練；分軌仍是弱點，輸出為未量化的演奏 MIDI。Apache-2.0。
 
 ---
 
@@ -381,3 +382,4 @@
 - 學習資源的課程 / 教材區新增 AI Agents for Beginners。
 - 音訊新增 ACE-Step 1.5（本機音樂生成）。
 - 資安的滲透測試區新增 Cairn。
+- 音訊新增 dettato（多樂器音訊轉 MIDI）。
