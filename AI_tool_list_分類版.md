@@ -88,6 +88,7 @@
     - **[FilmCraft](https://github.com/storytold/filmcraft)** — 純 Rust 開源非線性剪輯軟體（alpha），每個操作都是 agent 可呼叫的命令，UI、CLI 與 MCP 共用；內建調色、特效、混音與字幕。MIT 或 Apache-2.0。⚠️ 尚不能開啟 .prproj。
 - **AI 影片生成**
     - **[WanGP](https://github.com/deepbeepmeep/WanGP)** — 給低階顯卡的本機生成 App：一個網頁介面跑 Wan、LTX、Hunyuan Video、MiniMax H3 等影片模型，另含圖像、TTS 與 3D 模型，部分只要 6 GB VRAM；有 MCP server 與內建 agent Deepy。⚠️ WanGP Community License：免費、作品可商用，但不得轉售或提供付費服務。
+    - **[FreeVideo](https://github.com/FlashML-org/FreeVideo)** — 在 8 GB VRAM＋16 GB RAM 的電腦本機跑 MiniMax H3 影片模型（OpenVDN 的 8 步 VDN-H3）：依硬體自動分配權重與精度，ComfyUI 外掛＋Windows／Mac／Linux 一鍵啟動器；文生影片、首尾幀、時間軸剪輯與長影片，可讓 Claude Code 等 agent 操作。Apache-2.0。⚠️ 模型授權排除歐盟／英國／南韓／美國；Mac 版實驗性，10 秒影片約 22～42 分鐘。
     - **[Higgsfield MCP](https://higgsfield.ai/mcp)** — 讓 Claude 不需 API key 呼叫 30 多個圖像／影片模型，再串 Blender、After Effects，交付可繼續編輯的 AE 專案。商業服務。
     - **[BeatDesign](https://github.com/BeatAPI/BeatDesign)**（BeatAPI）— 本機版的 Higgsfield：無限畫布生成圖片／影片，接到瀏覽器內的時間軸剪輯並匯出 MP4；29 個 MCP tool 讓 Claude Code 等 agent 操作同一個專案。生成只接 BeatAPI（需自備 key）。Apache-2.0。
     - **[LibTV Skills](https://github.com/libtv-labs/libtv-skills)**（LiblibAI）— LibTV 平台的官方 agent skill：把一句話原樣交給 LibTV 後端 agent 選模型（Seedance、Kling、Wan、NanoBanana、Midjourney…）並編排生圖／生影片、短劇、MV，skill 只負責上傳、輪詢、下載。`npx skills add` 安裝。MIT（生成需會員積分）。⚠️ 不能指定模型與參數、後端改寫 prompt；不預估積分，有使用者回報積分快速耗盡；repo 自 2026-03 後未更新。
@@ -387,3 +388,4 @@
 - 音訊新增 dettato（多樂器音訊轉 MIDI）。
 - Agent 框架與編排的應用工作流新增 last30days（近 30 天社群動態研究 skill）。
 - 推論與訓練引擎新增 LlamaFactory（網頁介面零程式碼微調 100+ 種模型）。
+- 影片製作的 AI 影片生成區新增 FreeVideo（8 GB 顯卡本機跑 MiniMax H3）。

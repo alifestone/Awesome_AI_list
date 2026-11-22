@@ -189,6 +189,15 @@ HeyGen 的開源框架：寫 HTML／CSS／動畫，渲染成確定性的 MP4，�
 - 用內建的 Deepy 助理從一段 brief 規劃分鏡、生成並檢查整支短片。
 - 透過 MCP server 讓 Claude Code 等 agent 呼叫本機的影片、圖像與語音模型。
 
+### [FreeVideo](FreeVideo.md)
+
+在自己的電腦上跑 MiniMax H3 影片模型的開源引擎：最低 8 GB VRAM＋16 GB 記憶體，依硬體自動調整權重放置與精度；以 ComfyUI 外掛形式提供，附 Windows／Mac／Linux 一鍵啟動器。程式碼 Apache-2.0。⚠️ 模型授權排除歐盟、英國、南韓、美國；Mac 版為實驗性且很慢。
+
+可以做到：
+- 用 8～16 GB 顯卡在本機做文生影片、首尾幀影片，先看半解析度預覽再出完整版。
+- 在時間軸上剪輯、一段接一段生成超過一分鐘的影片。
+- 讓 Claude Code、Codex 等 agent 連進來自行生成、剪輯與匯出影片。
+
 ### [Higgsfield MCP](Higgsfield-MCP.md)
 
 AI 影像／影片生成平台 Higgsfield 的 MCP server，不需 API key 就能讓 Claude 呼叫平台上 30 多個圖像與影片模型。商業服務。
