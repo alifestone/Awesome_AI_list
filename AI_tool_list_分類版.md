@@ -160,6 +160,7 @@
     - **[AI Job Search](https://github.com/ai-job-search-dev/ai-job-search)** — 建在 Claude Code 上的求職框架：`/setup` 建個人檔案、`/scrape`／`/rank` 找職缺並評分、`/apply` 經職缺完整性檢查與起草-審稿雙 agent 產出 LaTeX CV 與求職信（反覆編譯到頁數正確並做 ATS 文字層檢查）、`/interview` 面試準備、`/outcome` 追蹤結果。內建職缺網站以丹麥為主，可用 `/add-portal` 擴充。MIT。⚠️ Fork 一定公開，自用請建私人 repo。
     - **[PaperOrchestra](https://github.com/google-research/paper-orchestra)**（Google Cloud AI Research）— 多 agent 論文寫作框架：大綱、文獻回顧（Semantic Scholar）、分節撰寫、修潤、畫圖分工，把點子與實驗紀錄轉成套用會議模板（CVPR、ICLR）的 LaTeX 稿件，附 Streamlit 介面與自動評測腳本；預設 Gemini 3.1 Pro。Apache-2.0。⚠️ 非 Google 官方產品；論文評測資料集尚未釋出；內容與引用需人工查核。
     - **[last30days](https://github.com/mvanhorn/last30days-skill)**（Matt Van Horn）— 研究近 30 天社群動態的 agent skill：同時搜尋 Reddit、X、YouTube、TikTok、HN、Polymarket、GitHub 等，依互動數與預測市場賠率排序、跨平台合併後寫成附出處的摘要；另有探索模式、公司專利與徵才訊號、排程追蹤與本機研究資料庫。支援 Claude Code、Codex、Cursor、Gemini CLI、OpenClaw 等。MIT。⚠️ X 預設用瀏覽器 cookie 爬取（有帳號風險），以登入帳號搜尋 Reddit 可能違反條款，皆需先同意；設推理金鑰時內容片段會送到該 LLM 供應商。
+    - **[Fabric](https://github.com/danielmiessler/Fabric)**（Daniel Miessler）— 開源 prompt 模板庫＋Go 命令列工具：267 個 Markdown 格式 Pattern（`extract_wisdom`、`analyze_claims`、`summarize_paper` 等）可貼進任何聊天介面，或用 `fabric` 把 stdin、YouTube 字幕、網頁丟給指定 Pattern；支援 OpenAI、Anthropic、Gemini、Ollama 等數十家供應商，附 prompt 策略、REST API 與 Ollama 相容模式。MIT。⚠️ `-y` 只能處理有字幕的影片且需裝 yt-dlp；Patterns 為英文，中文輸出要加 `-g zh-TW`。
 - **LLM 評測**
     - **[DeepEval](https://pypi.org/project/deepeval/)**（Confident AI）— 像 Pytest 的 LLM 評測框架：30 多種指標涵蓋 agent 軌跡、RAG、多輪對話、MCP，可放進 CI。評測為主、紅隊不是重點。Apache-2.0。（原放在資安）
     - **[Promptfoo](https://github.com/promptfoo/promptfoo)** — LLM 應用的評測、回歸測試與紅隊工具。
@@ -389,3 +390,4 @@
 - Agent 框架與編排的應用工作流新增 last30days（近 30 天社群動態研究 skill）。
 - 推論與訓練引擎新增 LlamaFactory（網頁介面零程式碼微調 100+ 種模型）。
 - 影片製作的 AI 影片生成區新增 FreeVideo（8 GB 顯卡本機跑 MiniMax H3）。
+- Agent 框架與編排的應用工作流新增 Fabric（prompt 模板庫與命令列工具，可一行摘要 YouTube 影片）。

@@ -202,6 +202,17 @@ Matt Van Horn 的研究 skill：`/last30days <主題>` 同時搜尋 Reddit、X�
 
 ⚠️ X 預設用你已登入瀏覽器的 cookie 爬取（作者自承有帳號風險），以登入帳號搜尋 Reddit 可能違反 Reddit 條款，兩者都會先徵詢同意；設了推理金鑰時，內容片段會送到該 LLM 供應商排序。
 
+### [Fabric](Fabric.md)
+
+Daniel Miessler 的開源 prompt 模板庫＋命令列工具：把常用任務整理成 267 個 Markdown 格式的 **Pattern**（`extract_wisdom`、`analyze_claims`、`summarize_paper`、`create_micro_summary` 等），可直接貼進任何聊天介面，或用 Go 寫的 `fabric` CLI 把 stdin、YouTube 字幕、網頁丟給指定 Pattern 與模型。支援 OpenAI、Anthropic、Gemini、Ollama、LM Studio 等數十家供應商，另有 prompt 策略（CoT、ToT 等）、REST API 與 Ollama 相容模式。MIT。
+
+可以做到：
+- `fabric -y <YouTube 網址> -p extract_wisdom -g zh-TW -o 筆記.md`，一行把有字幕的影片變成繁中重點筆記。
+- 對新聞或公關稿做事實查核、把會議記錄濃縮成決策與下一步、摘要論文。
+- 不寫程式，只拿 Patterns 當高品質 prompt 範本；或把它串進 shell 腳本與 Obsidian。
+
+⚠️ `-y` 只能處理有字幕的影片，且需另裝 yt-dlp；Patterns 是英文，要中文輸出得加 `-g zh-TW`；網頁擷取會經過 Jina AI，機密內容請用本機模型。
+
 ## LLM 評測
 
 ### [DeepEval](DeepEval.md)
@@ -230,5 +241,6 @@ LLM 應用的評測、回歸測試與紅隊工具：用 YAML 定義 prompt、模
 - **用 Claude Code 跑求職流程**（找職缺、客製 CV 與求職信、面試準備）：AI Job Search。
 - **把研究點子與實驗紀錄寫成 LaTeX 論文初稿**（含文獻回顧與圖表）：PaperOrchestra。
 - **研究某個人、公司或話題最近 30 天的社群動態**（Reddit、X、YouTube、HN、Polymarket 等）：last30days。
+- **把 YouTube、Podcast、文章、會議記錄變成格式固定的摘要或筆記**，或想要一套現成 prompt 範本庫：Fabric。
 - **和文件對話、建知識庫、讓 agent 記住事情**：見 [🗂️ RAG、知識庫與記憶](../14-RAG-知識庫與記憶/)。
 - **評測自己的 LLM 應用**：在 Python 裡寫細緻的 agent／RAG 評測用 DeepEval；用 YAML 設定、比較多個模型或要做紅隊測試用 Promptfoo（其他資安工具見 [🔐 資安](../09-資安/)）。
