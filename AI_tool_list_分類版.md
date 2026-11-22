@@ -247,6 +247,7 @@
 - **[Strata](https://github.com/Niko1221/Strata)** — 在消費級顯卡上跑大型 MoE 模型的本地推論引擎，把專家權重分層放在 VRAM / RAM。MIT。
 - **[Strata Easy TW](https://github.com/encoreh78951-hub/StrataEasyTW)** — Strata 的非官方繁中 Windows 安裝導覽器：左側跑官方安裝腳本、右側中文解說，可選 SC117 第三方低拒答模型。MIT。⚠️ v1.3.0-rc1 為 pre-release，完整安裝流程尚未端到端驗證。
 - **[Unsloth](https://github.com/unslothai/unsloth)** — 在本機執行與訓練 LLM 的開源框架，主打快速、省顯存的微調；除 Python 函式庫外另有 Studio 網頁介面與桌面版。
+- **[LlamaFactory](https://github.com/hiyouga/LlamaFactory)** — 開源 LLM／VLM 微調框架：100+ 種模型，用 YAML 或 LLaMA Board 網頁介面零程式碼微調；LoRA、2～8-bit QLoRA、全參數，以及 PPO／DPO／KTO／ORPO 等後訓練，可接 vLLM／SGLang 開 OpenAI 相容 API；支援 NVIDIA、AMD、昇騰 NPU。Apache-2.0（模型權重依各自授權）。
 - **[Janas](https://github.com/prabanta-dev/janas)** — 純 C 的本地 MoE 推論引擎：權重留在 SSD、專家串流＋快取，可跑超過 RAM 的模型（如 Qwen3-Next-80B）；支援 Vulkan GPU 與 Intel Core Ultra NPU。GPL-3.0+。⚠️ 實驗性質，僅在單一機器測過。
 - **[DeepInfer](https://github.com/deepseek-ai/DeepInfer)** — DeepSeek 官方開源、支撐其線上服務的大規模推論框架：MoE 專家平行、DSpark 推測解碼、決定性推論；目前只支援 DeepSeek-V4.1-Flash，限 NVIDIA SM100／昇騰 950。Apache-2.0。⚠️ 開源版僅離線推論。
 - **[Project Maya](https://github.com/mw00/project-maya)** — 從 Strata 改寫的本地推論引擎，專為 GLM-5.3-Flash（321B）與 DeepSeek-V4.1-Flash-1017（748B）MoE 打造：專家分層放 VRAM／RAM／SSD，1～16 張 GPU，附 OpenAI／Anthropic 相容 API 與儀表板。MIT。⚠️ AMD 與 Windows 為實驗性。
@@ -385,3 +386,4 @@
 - 資安的滲透測試區新增 Cairn。
 - 音訊新增 dettato（多樂器音訊轉 MIDI）。
 - Agent 框架與編排的應用工作流新增 last30days（近 30 天社群動態研究 skill）。
+- 推論與訓練引擎新增 LlamaFactory（網頁介面零程式碼微調 100+ 種模型）。

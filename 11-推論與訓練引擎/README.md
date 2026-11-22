@@ -31,6 +31,17 @@ Strata 的非官方繁體中文 Windows 安裝導覽器：左邊跑官方安裝�
 - 不寫程式，用圖形介面走完「資料集 → 訓練 → 執行 → 匯出」。
 - 用本地模型驅動 Claude Code、Codex。
 
+### [LlamaFactory](LlamaFactory.md)
+
+開源的 LLM／VLM 微調框架，支援 100+ 種模型，用 YAML 設定或 LLaMA Board 網頁介面就能微調，不必寫訓練程式。涵蓋 LoRA、QLoRA、全參數微調與 PPO／DPO／KTO／ORPO 等後訓練。Apache-2.0。
+
+可以做到：
+- 在瀏覽器裡選模型、資料集、超參數，用 4-bit QLoRA 在約 6 GB 顯存上微調 7B 模型（官方估計）。
+- 走完 SFT → 獎勵模型 → PPO／DPO 的完整後訓練流程。
+- 微調圖像、影片、音訊理解等多模態模型。
+- 訓練完在同一介面對話測試、合併匯出，或用 vLLM／SGLang 開 OpenAI 相容 API。
+- 支援 NVIDIA、AMD 與華為昇騰 NPU。
+
 ### [Janas](Janas.md)
 
 純 C 寫成的本地 MoE 推論引擎，權重留在 SSD、需要的專家再串流進記憶體，可跑比 RAM 還大的模型（如 Qwen3-Next-80B）；可搭配 Vulkan GPU 與 Intel Core Ultra 的 NPU 加速讀提示。GPL-3.0+。實驗性質。
@@ -130,6 +141,7 @@ llama.cpp 的 C++／CUDA fork，把 MoE 路由專家按需從 NVMe 分頁進有�
 - **想用 SSD 串流跑超過 RAM 的 MoE 模型（實驗性）**：Janas。
 - **想用一套引擎跑很多種前沿 MoE 模型（GLM、Kimi、DeepSeek、Qwen），有沒有 GPU 都行**：colibri。
 - **想微調模型，或要一個圖形介面跑本地模型**：Unsloth。
+- **想用網頁介面微調 100+ 種模型，或需要 PPO／DPO 等完整後訓練流程**：LlamaFactory。
 - **想在自己的 GPU 上跑 GLM-5.3-Flash 或 DeepSeek-V4.1-Flash**：Project Maya。
 - **只有一台記憶體不大的 Mac，想跑 Gemma 4 26B-A4B**：TurboFieldfare。
 - **想在 Mac、手機或 Windows 上跑 35B MoE，模型與調校一起包好**：edge0。
