@@ -226,6 +226,7 @@
     - **[Qwythos-9B](https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF)**（Empero AI）— 以 Qwen3.5-9B 為底後訓練的推理模型，提供 GGUF，可用 Ollama / LM Studio 跑。
     - **[Ornith 1.5](https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B-GGUF)**（DeepReinforce）— 開放權重家族（397B／35B-A3B MoE／9B，另有手機用 9B-Mobile），提供 9B 與 35B-A3B 的 GGUF（[9B](https://huggingface.co/ornith-ai/Ornith-1.5-9B-GGUF)），256K context，MIT。基準皆官方自報。
     - **[Mellum2](https://huggingface.co/blog/JetBrains/mellum2-launch)**（JetBrains）— 12B MoE（每 token 啟用 2.5B），適合路由、RAG、子 agent 與私有部署。Apache 2.0。
+    - **[Inkling 2 Mini](https://huggingface.co/thinkingmachines/Inkling-2-Mini)**（Thinking Machines Lab）— 26.4B MoE 多模態模型（啟用 3.4B），中間 12 層迴圈三次、等效約 5.4B 啟用；官方檢查點約 20 GB（NVFP4＋MXFP8），32 GB 以上 Mac／DGX Spark 可跑，1M context；Ollama、llama.cpp、MLX、vLLM、SGLang 支援，Unsloth 有 GGUF。官方自報 SWE-bench Verified 79.2%、DeepSWE 48.2%。Apache-2.0。⚠️ 事實知識與中文較弱；用工具時可能未經確認就刪改檔案。
 - **程式碼模型**
     - **[FrogNano-4B-2609](https://huggingface.co/microsoft/FrogNano-4B-2609)**（Microsoft）— 從 Qwen3.5-4B 經 RL 訓練的小型程式代理模型，需搭配 Leaf 工具框架；官方自報 SWE-bench Verified 61.5%。
     - **[DaisyRose-27B](https://huggingface.co/RadixArk/DaisyRose-27B)**（RadixArk）— Qwen3.8-27B 只用 RL 訓練約 1,200 個長程 agent 任務，架構與模板不變、可直接替換基底，保留讀圖與 256K context；官方自報 Terminal Bench 4.1 從 5.6 到 12.0（基底分數實為 4.0 版），其餘基準小幅進步。BF16／FP8／NVFP4，社群有 GGUF。Apache-2.0。
@@ -393,3 +394,4 @@
 - 影片製作的 AI 影片生成區新增 FreeVideo（8 GB 顯卡本機跑 MiniMax H3）。
 - Agent 框架與編排的應用工作流新增 Fabric（prompt 模板庫與命令列工具，可一行摘要 YouTube 影片）。
 - 學習資源的課程 / 教材區新增 Hands-On Large Language Models（O'Reilly 圖解 LLM 書的 Colab notebook）。
+- 模型的本地可跑通用 / 推理模型區新增 Inkling 2 Mini（Thinking Machines 的迴圈 MoE 模型，32 GB Mac 可跑）。

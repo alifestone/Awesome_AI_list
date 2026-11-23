@@ -38,6 +38,15 @@ JetBrains 從零訓練的 MoE 模型，總參數 12B、每個 token 只啟用 2.
 - RAG 前後處理、agent 子任務（規劃、驗證、準備 context），減少呼叫大模型的次數。
 - IDE 內高吞吐的程式功能、私有部署。
 
+### [Inkling 2 Mini](Inkling-2-Mini.md)
+
+Thinking Machines Lab 的 26.4B MoE 多模態模型（啟用 3.4B），中間 12 層共用權重每個 token 跑三次（迴圈 Transformer），等效約 5.4B 啟用。官方檢查點約 20 GB（NVFP4＋MXFP8），32 GB 以上的 Mac 或 DGX Spark 可跑，1M context。官方自報 SWE-bench Verified 79.2%、DeepSWE 48.2%，coding 與 agent 表現接近或超過 Qwen3.8-27B。Apache-2.0。⚠️ 事實知識與中文較弱，用工具時可能未經確認就刪改檔案。
+
+可以做到：
+- 在 Mac 上離線跑 coding／終端機 agent，`ollama launch claude --model inkling-2-mini` 直接接 Claude Code。
+- 讀螢幕截圖做電腦操作、讀文件與圖表。
+- 記憶體不夠時改用 Unsloth GGUF（Q4 約 18 GB，1-bit 約 8 GB，品質遞減）。
+
 ## 程式碼模型
 
 ### [FrogNano-4B-2609](FrogNano-4B-2609.md)
@@ -132,7 +141,7 @@ MiniMax 從影音模型 MiniMax-H3 衍生的 33.1B 文生圖 + 圖像編輯模�
 
 ## 怎麼挑
 
-- **筆電上跑最強的**：Bonsai 2；記憶體更少：Qwythos-9B。
+- **筆電上跑最強的**：Bonsai 2；有 32 GB 記憶體、要跑 agent 或看圖：Inkling 2 Mini；記憶體更少：Qwythos-9B。
 - **自架 coding／終端機 agent 模型**：DaisyRose-27B；**程式碼研究**：FrogNano；**本機資安分析**：OrcaCyber Nano 1.0；**多模型系統裡的小幫手**（路由、RAG、子 agent）：Mellum2。
 - **手機或嵌入式裝置**：Needle；**搜尋與 RAG**：EmbeddingGemma 2。
 - **只用 CPU 把 PDF／掃描檔轉 Markdown**：Indra OCR（手寫、複雜表格、老舊掃描效果差；注意商用門檻）。
