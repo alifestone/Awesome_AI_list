@@ -7,7 +7,7 @@
 
 Inkling 2 Mini 是 Thinking Machines Lab 在 2026-11-20 發布的小型開放權重多模態模型（文字＋圖片 → 文字），Apache-2.0。總參數 26.4B、每個 token 啟用 3.4B 的 MoE，同時是**迴圈 Transformer（looped transformer）**：24 層裡中間 12 層共用權重、每個 token 跑三次，等於用 24 層的權重做 48 層的運算。官方說法是「每個 token 多算一點，就能少寫一些推理 token」。
 
-官方釋出的檢查點本身就是 NVFP4＋MXFP8 混合精度、約 20 GB，可以在 32 GB 以上記憶體的 Mac、DGX Spark 或 32 GB 顯卡上本機跑；社群量化版最小約 8 GB。定位是 Inkling 2 Small（594B）的筆電版，強項同樣是長程 agent、寫程式與讀圖，1M context。
+官方釋出的檢查點本身就是 NVFP4＋MXFP8 混合精度、約 20 GB，可以在 32 GB 以上記憶體的 Mac、DGX Spark 或 32 GB 顯卡上本機跑；社群量化版最小約 8 GB。強項與同系列的 Inkling 2 Small（594B）相近：長程 agent、寫程式與讀圖，1M context。
 
 ## 模型規格
 
@@ -29,7 +29,7 @@ Inkling 2 Mini 是 Thinking Machines Lab 在 2026-11-20 發布的小型開放權
 - **修復**：剪枝後用約 1T tokens 從「一個更大的內部 Inkling 模型」蒸餾（官方沒點名是哪個）。
 - **後訓練**：SFT 資料組成接近 Inkling 2 Small；RL 共 2.2T tokens、2,000 步；最後再用 on-policy distillation 做一輪對齊。
 - **為什麼迴圈中間層**：官方在 28 項評測中有 27 項是「迴圈中間 12 層」勝過「迴圈最後 12 層」；換算成等效算力，中間迴圈約 1.51–1.91 倍、最後迴圈約 1.24–1.36 倍。不剪枝、不迴圈的模型訓練便宜 7.5%，但在 512K tokens 的 agent 軌跡上要多 140% 推論算力才追得上。
-- **可監控性研究**：另外釋出研究用的 `TML-d24-varloop-research`（可設 1–5 次迴圈）。三次迴圈時平均推理長度從 3,703 降到 1,731 tokens，但句子長度與可讀性沒變；官方結論是在這個規模下，迴圈沒有明顯降低「讀思考鏈監督模型」的能力，但 RL 只在 3 次迴圈下做過。
+- **可監控性研究**：另外釋出研究用的 `TML-d24-varloop-research`（可設 1–5 次迴圈）。平均推理長度從 1 次迴圈的 3,703 tokens 降到 3 次迴圈的 1,731 tokens，但句子長度與可讀性沒變；官方結論是在這個規模下，迴圈沒有明顯降低「讀思考鏈監督模型」的能力，但 RL 只在 3 次迴圈下做過。
 
 ## 評測表現（官方自報）
 
@@ -94,7 +94,7 @@ hf download unsloth/Inkling-2-Mini-GGUF \
     --host 127.0.0.1 --port 8080
 ```
 
-- ⚠️ repo 根目錄的 GGUF 用 Unsloth 自己的迴圈層排列，要搭配 Unsloth 的 llama.cpp 版本（b12631-mix-acc0843）；**原生 llama.cpp 請改用 `Mainline_Support` 資料夾裡的檔案**，或 `ggml-org/Inkling-2-Mini-GGUF`（`llama serve -hf ggml-org/Inkling-2-Mini-GGUF:IQ4_NL`）。
+- ⚠️ repo 根目錄的 GGUF 用 Unsloth 自己的迴圈層排列，要搭配 Unsloth 的 llama.cpp 版本（b12631-mix-acc0843）；**原生 llama.cpp 請改用 `Mainline_Support` 資料夾裡的檔案**，或 `ggml-org/Inkling-2-Mini-GGUF`（IQ4_NL／Q8_0）。
 - 只要文字就拿掉 `--mmproj`；不要推測解碼就拿掉 drafter 和 `--model-draft`、`--spec-type`；純 CPU 設 `--n-gpu-layers 0 --n-gpu-layers-draft 0`。
 - Unsloth 桌面版／CLI：`unsloth run --model unsloth/Inkling-2-Mini-GGUF:UD-Q4_K_XL --temp 1.0 --top-p 1.0 --top-k 0 --min-p 0.0`。
 
@@ -103,6 +103,7 @@ hf download unsloth/Inkling-2-Mini-GGUF \
 - **Transformers**：`AutoModelForMultimodalLM` + `AutoProcessor`；推理強度用 `processor.apply_chat_template(..., reasoning_effort="low")` 設定。
 - **MLX**：多模態已併入 `mlx-lm`，可直接讀官方 NVFP4＋MXFP8 檢查點；`mlx-community` 有 4-bit 版。
 - **伺服器部署**：SGLang（官方建議 SM103／B300 級 GPU，`--speculative-algorithm DSPARK`）、vLLM、TokenSpeed、NVIDIA Dynamo。
+- **Llama App**（macOS 選單列／Windows 系統匣，基於 llama.cpp，提供本機 OpenAI 相容 API）：`llama serve -hf ggml-org/Inkling-2-Mini-GGUF:IQ4_NL`。
 - **雲端**：Thinking Machines 的 Tinker 平台提供 API、微調與 Playground。
 - **後訓練**：Miles、SkyRL、NVIDIA AutoModel。
 
