@@ -215,6 +215,8 @@
     - **[Nuclei MCP](https://github.com/addcontent/nuclei-mcp)** — 第三方 MCP server，讓 AI 呼叫 Nuclei 掃描與管理模板。⚠️ 早期專案，README 有佔位符連結。MIT。
     - **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli)** — 本機執行的 JS/TS 相依套件弱點掃描，直接給出修正指令；支援 SARIF、SBOM、離線模式。本身不是 AI 工具。MIT。
     - **[SecurityContext](https://securitycontext.com/)**（ProjectDiscovery）— 開源軟體資安情資查詢服務：公開 GitHub 倉庫、套件、原生函式庫、NVD 產品與 CVE 的暴露情況（相依 advisory、惡意版本、洩漏憑證數、修補歷史、KEV／EPSS／公開 exploit／Nuclei 模板），可批次檢查技術棧、掃描新倉庫、訂閱 RSS。免費免登入，REST（加 `.md` 回 Markdown）＋ MCP（`https://mcp.securitycontext.com`）；匿名每分鐘 60 次。託管服務，未標示授權。
+- **威脅偵測 / 監控**
+    - **[Hugging Face Nightwatch](https://huggingface.co/docs/hub/en/enterprise-nightwatch)**（Hugging Face）— Hub Enterprise 的付費加購「Proactive Agent Security」服務：資安 agent 即時掃描組織的 Hub 活動紀錄並對照外部 OSINT，偵測 token 外洩後大量讀取私有倉庫、私有資料集被異常公開等，透過 Slack 或組織的資安事件系統告警。託管服務，價格需洽業務。
 - **AI agent 安全規格 / 治理**
     - **[Foundry Security Spec](https://github.com/CiscoDevNet/foundry-security-spec)**（Cisco）— 打造 agentic 安全評估系統的開放規格：8 個核心 agent 角色、11 條憲章原則，搭配 spec-kit 產生實作。不是現成工具。CC BY 4.0。
 
@@ -397,3 +399,4 @@
 - 學習資源的課程 / 教材區新增 Hands-On Large Language Models（O'Reilly 圖解 LLM 書的 Colab notebook）。
 - 模型的本地可跑通用 / 推理模型區新增 Inkling 2 Mini（Thinking Machines 的迴圈 MoE 模型，32 GB Mac 可跑）。
 - 資安的程式碼漏洞研究 / 弱點掃描區新增 SecurityContext。
+- 資安新增威脅偵測 / 監控區，收錄 Hugging Face Nightwatch（Hub Enterprise 的 agent 異常活動監控）。

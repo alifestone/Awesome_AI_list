@@ -1,6 +1,6 @@
 # 🔐 資安
 
-AI 輔助的資安工具：逆向工程、滲透測試、程式碼漏洞研究與弱點掃描，以及 AI agent 的安全規格。LLM 應用的紅隊測試工具 Promptfoo 在 [🧠 Agent 框架與編排](../06-Agent-框架與編排/) 的「LLM 評測」。
+AI 輔助的資安工具：逆向工程、滲透測試、程式碼漏洞研究與弱點掃描、威脅偵測與監控，以及 AI agent 的安全規格。LLM 應用的紅隊測試工具 Promptfoo 在 [🧠 Agent 框架與編排](../06-Agent-框架與編排/) 的「LLM 評測」。
 
 > ⚠️ 這裡許多工具是雙重用途，**只能用在你擁有或取得書面授權的系統上**。收錄目的是防禦、教學與合法授權測試。
 
@@ -172,6 +172,17 @@ ProjectDiscovery 的免費資安情資服務：查公開 GitHub 倉庫、套件�
 - 一次檢查整份技術棧的套件版本是否受影響、哪個版本修好。
 - 依「已知被利用」「新出現 exploit」等事件排修補優先，或用 RSS 訂閱。
 
+## 威脅偵測 / 監控
+
+### [Hugging Face Nightwatch](HF-Nightwatch.md)
+
+Hugging Face 給 Enterprise 客戶的付費加購服務：資安 agent 即時掃描組織在 Hub 上的活動紀錄，搭配外部 OSINT 找出可疑行為（token 外洩後大量讀取私有倉庫、私有資料集被異常公開等），用 Slack 發告警，也可轉到組織的資安事件系統。託管服務，價格需洽業務。
+
+可以做到：
+- token 或帳號被盜、私有模型／資料集被大量讀取或 clone 時及早收到通知。
+- 私有倉庫被意外或惡意公開時，馬上知道是誰、從哪裡、有沒有外部下載。
+- 讓 agent 先讀完 Hub 活動紀錄，只把值得處理的事件推給資安團隊。
+
 ## AI agent 安全規格 / 治理
 
 ### [Foundry Security Spec](Foundry-Security-Spec.md)
@@ -187,6 +198,7 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；專做 bug bounty 與外部紅隊、要整套流程到報告：Claude-BugHunter；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES；要有 Web 主控台、資產／漏洞管理的團隊平台：CyberStrikeAI；終端機裡打內網與 AD、要跨 session 記住進度：PentestCode；不分角色、靠共享黑板自主搜尋、可隨時插入人類提示：Cairn。
 - **審查自己的程式碼**：直接在 coding agent 裡跑完整稽核用 Cloudflare Security Audit Skill，要自架平台做大規模 AI 審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI；要讓 agent 查某個套件、倉庫或 CVE 的資安情資（是否被利用、誰受影響）用 SecurityContext。
+- **監控組織在 Hugging Face Hub 上的異常活動**（Enterprise 方案）：Hugging Face Nightwatch。
 - **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。
 - **設計 AI 資安系統**：Foundry Security Spec；skill 發布前的安全政策可參考 [yao-meta-skill](../06-Agent-框架與編排/yao-meta-skill.md)。
