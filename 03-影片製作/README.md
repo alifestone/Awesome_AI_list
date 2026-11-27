@@ -261,6 +261,17 @@ Claude Code skill：輸入 TikTok、Reels 或 Shorts 網址，拆解開場鉤子
 - 把海外短影音的手法改寫成適合小紅書、視頻號的內容。
 - 累積拆解紀錄，比較多支影片的共同模式。
 
+## 虛擬主播 / 2D 虛擬形象
+
+### [Keshin2D](Keshin2D.md)
+
+在瀏覽器裡用 WebGL2 讓分層角色插圖動起來的 2D avatar：轉頭、視線、眨眼、22 種表情、麥克風對嘴、頭髮與飾品擺動，可用滑鼠、網路攝影機（內附 MediaPipe、可離線）或自動演出驅動，透明背景輸出到 OBS。只要 Python 與瀏覽器，不需 Live2D。另附 partsgen：讓 coding agent 用 Codex CLI 生圖，從一張角色圖做出自己的模型。MIT。⚠️ 做模型的流程只在 Windows 驗證、需 OpenAI 訂閱與 GPU，作者自承品質尚不穩定；OBS 上的運作也還沒驗證。
+
+可以做到：
+- 免安裝、離線地用滑鼠、臉部追蹤或聲音驅動 2D 角色，給直播或錄影用。
+- 把一張原創角色圖交給 AI agent，拆成可動的模型。
+- 參考 WebGL2 網格變形、表情 key shape 與瀏覽器內對嘴的實作。
+
 ## 角色參考素材
 
 ### [AIモデル顔データベース](AI-Model-Face-Database.md)
@@ -303,5 +314,6 @@ Claude Opus 5.5 在 Claude Code 裡生成的音樂 MV 原始碼，作者只給�
 - **產品發表片、動態設計**：HyperFrames、Remotion，或用 Cinetic、onetake 這類 skill 加上導演思維。
 - **剪現有素材**：本機用 ffmpeg-skill，要時間軸介面用 Palmier Pro，雲端用 ChatCut。
 - **用 AI 生成畫面**：要在自己顯卡上跑開源影片模型用 WanGP，要動漫風格用 Index-AniSora；要一次接 30 多個商用模型、交付可編輯的 AE 專案用 Higgsfield MCP；要類似 Higgsfield 的畫布＋時間軸、但專案留在本機用 BeatDesign；已有 LibTV 會員、想一句話交給平台出片（不在意模型與 prompt 控制）用 LibTV Skills；要精準控制鏡位與物理用 Code Video Model（需 GPU 與多個外部 API）。
+- **要一個在瀏覽器裡即時動的 2D 虛擬形象（直播、VTuber），或想從一張角色圖做出可動模型**：Keshin2D。
 - **需要一張固定的虛構角色臉當參考圖**：AIモデル顔データベース（僅年輕東亞女性，CC0）。
 - **讓 AI 看懂影片**：claude-video；專門拆短影音：hook-lab。

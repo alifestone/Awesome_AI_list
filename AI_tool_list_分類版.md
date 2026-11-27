@@ -97,6 +97,8 @@
 - **影片理解**
     - **[claude-video（/watch）](https://github.com/bradautomates/claude-video)** — 讓 Claude「看」影片：下載、抽幀、轉錄後交給模型分析。
     - **[hook-lab](https://github.com/hongfamonvAI/hook-lab)** — Claude Code skill：拆解 TikTok／Reels／Shorts 的開場鉤子、腳本結構與爆紅原因，並給小紅書、視頻號的改寫方向。MIT。
+- **虛擬主播 / 2D 虛擬形象**
+    - **[Keshin2D](https://github.com/rotejin/Keshin2D)**（rotejin）— 瀏覽器（WebGL2）裡的 2D 角色 avatar：轉頭、視線、眨眼、22 種表情、麥克風母音對嘴、頭髮飾品擺動；滑鼠／網路攝影機（內附 MediaPipe，離線可用）／自動演出驅動，可透明輸出到 OBS。只需 Python 標準函式庫＋瀏覽器。附 partsgen：讓 coding agent 用 Codex CLI 生圖，從一張角色圖做出模型。[線上試玩](https://rotejin.github.io/Keshin2D/)。MIT。⚠️ 做模型只在 Windows 驗證、需 OpenAI 訂閱與 Vulkan GPU，品質尚不穩定；OBS 上未驗證。
 - **角色參考素材**
     - **[AIモデル顔データベース](https://ai-portrait-gallery.pages.dev/)**（あぎ）— 免費 AI 人像參考圖庫，讓生圖／影片的角色臉孔一致：1,499 張 AI 生成的虛構人物（正面大頭照 893、半身生活照 606），依髮型篩選、下載原尺寸 PNG，metadata 已移除。日文網站。CC0 1.0。⚠️ 只有年輕東亞女性；不公開模型與 prompt；網站請求勿直接轉載圖檔。
 - **作品與案例**
@@ -400,3 +402,4 @@
 - 模型的本地可跑通用 / 推理模型區新增 Inkling 2 Mini（Thinking Machines 的迴圈 MoE 模型，32 GB Mac 可跑）。
 - 資安的程式碼漏洞研究 / 弱點掃描區新增 SecurityContext。
 - 資安新增威脅偵測 / 監控區，收錄 Hugging Face Nightwatch（Hub Enterprise 的 agent 異常活動監控）。
+- 影片製作新增「虛擬主播 / 2D 虛擬形象」小類與 Keshin2D（瀏覽器 2D avatar，可從一張角色圖做模型）。
