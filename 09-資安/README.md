@@ -1,6 +1,6 @@
 # 🔐 資安
 
-AI 輔助的資安工具：逆向工程、滲透測試、程式碼漏洞研究與弱點掃描、威脅偵測與監控，以及 AI agent 的安全規格。LLM 應用的紅隊測試工具 Promptfoo 在 [🧠 Agent 框架與編排](../06-Agent-框架與編排/) 的「LLM 評測」。
+AI 輔助的資安工具：逆向工程、滲透測試、程式碼漏洞研究與弱點掃描、模型檔供應鏈掃描、威脅偵測與監控，以及 AI agent 的安全規格。LLM 應用的紅隊測試工具 Promptfoo 在 [🧠 Agent 框架與編排](../06-Agent-框架與編排/) 的「LLM 評測」。
 
 > ⚠️ 這裡許多工具是雙重用途，**只能用在你擁有或取得書面授權的系統上**。收錄目的是防禦、教學與合法授權測試。
 
@@ -172,6 +172,17 @@ ProjectDiscovery 的免費資安情資服務：查公開 GitHub 倉庫、套件�
 - 一次檢查整份技術棧的套件版本是否受影響、哪個版本修好。
 - 依「已知被利用」「新出現 exploit」等事件排修補優先，或用 RSS 訂閱。
 
+## 模型檔供應鏈掃描
+
+### [GGUF Radar](GGUF-Radar.md)
+
+不執行模型、不渲染模板，靜態檢查 GGUF 檔有沒有在權重後面或 zero-scale 區塊藏程式，以及 chat template 有沒有被下毒（對 coding agent 下隱藏指令、等觸發字的後門、SSTI 等）；也檢查 Safetensors／PyTorch 模型的模板檔。可直接掃 Hugging Face 倉庫（只抓檔頭與檔尾），有問題的 GGUF 能重建成權重相同的乾淨副本。附 YARA 規則。MIT。
+
+可以做到：
+- 下載第三方 GGUF 前先掃一次 Hugging Face 倉庫，幾 GB 的模型只下載幾 MB。
+- 放進 CI，遇到可疑或惡意模型以退出碼 2 擋下。
+- 用 `sanitize` 清掉藏匿空間，順便換回原版 chat template。
+
 ## 威脅偵測 / 監控
 
 ### [Hugging Face Nightwatch](HF-Nightwatch.md)
@@ -198,6 +209,7 @@ Cisco 把內部安全評估系統的設計提煉成的開放規格：8 個核心
 - **分析二進位程式**：Ghidra + GhidraMCP；要一個 MCP 涵蓋原生程式、Electron、APK、WASM 等多種目標：REA。
 - **滲透測試**：先從 Pentest Copilot 或 Claude-Red 開始；專做 bug bounty 與外部紅隊、要整套流程到報告：Claude-BugHunter；要多 agent 自主化：Pentest Swarm AI；要有範圍管控與報告的紅隊演練平台：ARES；要有 Web 主控台、資產／漏洞管理的團隊平台：CyberStrikeAI；終端機裡打內網與 AD、要跨 session 記住進度：PentestCode；不分角色、靠共享黑板自主搜尋、可隨時插入人類提示：Cairn。
 - **審查自己的程式碼**：直接在 coding agent 裡跑完整稽核用 Cloudflare Security Audit Skill，要自架平台做大規模 AI 審查用 open-kritt，已知漏洞掃描用 Nuclei，JS/TS 相依套件用 CVE Lite CLI；要讓 agent 查某個套件、倉庫或 CVE 的資安情資（是否被利用、誰受影響）用 SecurityContext。
+- **檢查下載的模型檔（GGUF、chat template）有沒有被動手腳**：GGUF Radar。
 - **監控組織在 Hugging Face Hub 上的異常活動**（Enterprise 方案）：Hugging Face Nightwatch。
 - **測試自己的 LLM 應用（紅隊）**：[Promptfoo](../06-Agent-框架與編排/Promptfoo.md)，和偏品質評測的 [DeepEval](../06-Agent-框架與編排/DeepEval.md) 一起放在 Agent 框架類的「LLM 評測」。
 - **想在本機用不上雲的資安專用模型**：[OrcaCyber Nano 1.0](../10-模型/OrcaCyber-Nano-1.0.md)（在模型類）。

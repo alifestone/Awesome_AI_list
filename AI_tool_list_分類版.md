@@ -217,6 +217,8 @@
     - **[Nuclei MCP](https://github.com/addcontent/nuclei-mcp)** — 第三方 MCP server，讓 AI 呼叫 Nuclei 掃描與管理模板。⚠️ 早期專案，README 有佔位符連結。MIT。
     - **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli)** — 本機執行的 JS/TS 相依套件弱點掃描，直接給出修正指令；支援 SARIF、SBOM、離線模式。本身不是 AI 工具。MIT。
     - **[SecurityContext](https://securitycontext.com/)**（ProjectDiscovery）— 開源軟體資安情資查詢服務：公開 GitHub 倉庫、套件、原生函式庫、NVD 產品與 CVE 的暴露情況（相依 advisory、惡意版本、洩漏憑證數、修補歷史、KEV／EPSS／公開 exploit／Nuclei 模板），可批次檢查技術棧、掃描新倉庫、訂閱 RSS。免費免登入，REST（加 `.md` 回 Markdown）＋ MCP（`https://mcp.securitycontext.com`）；匿名每分鐘 60 次。託管服務，未標示授權。
+- **模型檔供應鏈掃描**
+    - **[GGUF Radar](https://github.com/Root0ne/gguf-radar)** — 不執行模型就檢查 GGUF 檔是否在權重後、padding 或 zero-scale 區塊藏資料，以及 chat template 是否被下毒（agent 隱藏指令、觸發字後門、SSTI）；也查 Safetensors／PyTorch 的模板檔。可只抓檔頭檔尾掃 Hugging Face 倉庫，`sanitize` 重建權重相同的乾淨副本，附 YARA 規則，退出碼可卡 CI。v0.1.x 新專案。MIT。
 - **威脅偵測 / 監控**
     - **[Hugging Face Nightwatch](https://huggingface.co/docs/hub/en/enterprise-nightwatch)**（Hugging Face）— Hub Enterprise 的付費加購「Proactive Agent Security」服務：資安 agent 即時掃描組織的 Hub 活動紀錄並對照外部 OSINT，偵測 token 外洩後大量讀取私有倉庫、私有資料集被異常公開等，透過 Slack 或組織的資安事件系統告警。託管服務，價格需洽業務。
 - **AI agent 安全規格 / 治理**
@@ -406,3 +408,4 @@
 - 資安新增威脅偵測 / 監控區，收錄 Hugging Face Nightwatch（Hub Enterprise 的 agent 異常活動監控）。
 - 影片製作新增「虛擬主播 / 2D 虛擬形象」小類與 Keshin2D（瀏覽器 2D avatar，可從一張角色圖做模型）。
 - 電腦視覺新增「串流 3D 重建」小類與 LingBot-Map（Robbyant 的影片轉相機軌跡＋點雲模型）。
+- 資安新增「模型檔供應鏈掃描」小類與 GGUF Radar（檢查 GGUF 藏匿程式與被下毒的 chat template）。
