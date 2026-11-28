@@ -315,6 +315,8 @@
 
 - **視覺函式庫**
     - **[Kornia](https://github.com/kornia/kornia)** — 建立在 PyTorch 上的可微分電腦視覺函式庫：1,200+ 運算子（濾波、相機模型、對極幾何、PnP、RANSAC、LoFTR／LightGlue 特徵匹配、資料增強），整批在 GPU 上執行、大多可反向傳播；可 `torch.compile` 與匯出 ONNX。官網定位「機器人與空間 AI 的電腦視覺」。v0.9.0（2026-10）。Apache-2.0。⚠️ 只有整批 GPU 運算才比 OpenCV 快；半精度支援不完整。
+- **串流 3D 重建**
+    - **[LingBot-Map](https://github.com/Robbyant/lingbot-map)**（Robbyant／螞蟻集團）— 前饋式串流 3D 重建模型（ECCV 2026）：逐幀輸入影片，直接輸出相機位姿與深度、累積成點雲與軌跡，不需逐場景最佳化；錨點＋位姿參考視窗＋軌跡記憶，paged KV cache，518×378 約 20 FPS、10,000+ 幀。權重在 [Hugging Face](https://huggingface.co/robbyant/lingbot-map)，[專案頁](https://technology.robbyant.com/lingbot-map)。Apache-2.0。⚠️ 需 NVIDIA GPU；超過約 320 幀要用 keyframe／視窗模式；2.0 版改為 CC BY-NC 4.0。
 
 ---
 
@@ -403,3 +405,4 @@
 - 資安的程式碼漏洞研究 / 弱點掃描區新增 SecurityContext。
 - 資安新增威脅偵測 / 監控區，收錄 Hugging Face Nightwatch（Hub Enterprise 的 agent 異常活動監控）。
 - 影片製作新增「虛擬主播 / 2D 虛擬形象」小類與 Keshin2D（瀏覽器 2D avatar，可從一張角色圖做模型）。
+- 電腦視覺新增「串流 3D 重建」小類與 LingBot-Map（Robbyant 的影片轉相機軌跡＋點雲模型）。
